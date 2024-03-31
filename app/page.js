@@ -8,6 +8,7 @@ import Navbar from "@/app/components/Navbar";
 export default function Home() {
 
 
+
     const [collegeNameIndex, setCollegeNameIndex] = useState(0);
     const collegeNames = [
         "SKC LNCT ",
@@ -90,6 +91,7 @@ export default function Home() {
             </div>
         </div>
     );
+
 }
 
 
