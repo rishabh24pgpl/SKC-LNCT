@@ -275,7 +275,7 @@ export default function Home() {
           <h2 className="font-semibold border-b-2 text-2xl">Thought of the Day</h2>
           <h5 className="font-semibold text-xl py-5 text-justify">
             Sometimes the biggest strength can be found in how you understand
-            and confront your greatest weaknesses.
+            and confront your greatest weaknessesss.
           </h5>
           <h5 className="font-semibold text-2xl">
             <i>--Michael Springer--</i>
