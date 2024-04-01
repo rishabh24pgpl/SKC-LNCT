@@ -6,10 +6,20 @@ import Carousel from "@/app/components/Carousel";
 import Navbar from "@/app/components/Navbar";
 import Counter from "@/app/components/Counter";
 
+import Card from "./components/Card";
+
+
 export default function Home() {
-  const [collegeNameIndex, setCollegeNameIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState("postgraduate");
-  const collegeNames = ["SKC LNCT ", "एसकेसी एलएनसीटी "];
+
+
+
+    const [collegeNameIndex, setCollegeNameIndex] = useState(0);
+    const [activeTab, setActiveTab] = useState('postgraduate');
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const collegeNames = [
+        "SKC LNCT ",
+        "एसकेसी एलएनसीटी ",
+    ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,23 +31,42 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // Set default active tab to 'postgraduate'
+    // Set default active tab to 'postgraduate'
 
-  const handleTabClick = (tabName) => {
-    setActiveTab(tabName);
-  };
+    const handleTabClick = (tabName) => {
+        setActiveTab(tabName);
+    };
+
+
+
+
+    const nextSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+    };
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            nextSlide();
+        }, 2000); // Adjust the interval as needed (currently set to 5000 milliseconds or 5 seconds)
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [currentSlide]);
 
   // Function to toggle submenu
 
-  const images = ["/mainImg.jpeg", "/logo1.png", "/logo1.png"];
-  return (
-    <div className=" text-white">
-      <div className="flex items-center justify-between p-4 bg-orange-600">
-        <div className="items-center flex gap-4 ">
-          <p>Admissions</p>
-          <p>Placement</p>
-          <p>Careers</p>
-        </div>
+    const images = [
+        '/yt.png',
+        '/twitter.png',
+        '/logo1.png',
+    ];
+    return (
+        <div className=" text-white">
+            <div className="flex items-center justify-between p-4 bg-orange-600">
+                <div className="items-center flex gap-4 ">
+                    <p>Admissions</p>
+                    <p>Placement</p>
+                    <p>Careers</p>
+                </div>
 
         <div className="items-center gap-4 flex w-8 h-8 ">
           <img src="/twitter.png" className="rounded-full"></img>
@@ -85,9 +114,15 @@ export default function Home() {
 
       <Navbar />
 
-      <div className="w-full mb-4 ">
-        <Carousel images={images} />
-      </div>
+      <div className="md:w-full lg:w-full sm:w-full w-full">
+            <Image
+              className="duration-500 w-full min-h-[500px] max-h-[500px]"
+              src={images[currentSlide]}
+              alt="Hero Image"
+              width={700}
+              height={650}
+            />
+          </div>
 
       <section className="academic-programe w-11/12 mx-auto  flex justify-center     " style={{background: "url('/baggi.jpg')" , backgroundRepeat:"no-repeat" ,backgroundSize:"cover"  }}>
         <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-orange-900 h-[500px]  ">
@@ -333,6 +368,62 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section>
+            <div
+          className="md:flex md:flex-col lg:flex-row  md:p-4 lg:p-4 sm:p-4 sm:flex-col mt-2  border border-gray-200 rounded-lg  shadow-none lg:shadow-[7px_8px_4px_2px_#00A76F] dark:bg-dpurple"
+          style={{
+            backgroundImage: "url('/HomeBg.svg')",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="md:w-full lg:w-1/2 sm:w-full w-full">
+            <h3 className="font-bold text-3xl text-black">Ranking and Recognition &nbsp; <span className="text-lg">View All</span></h3>
+            <Image
+              className="duration-200 min-h-[300px] max-h-[300px] rounded-lg pt-4"
+              src={images[currentSlide]}
+              alt="Hero Image"
+              width={700}
+              height={650}
+            />
+          </div>
+          <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center ">
+        
+
+            <div className="w-full  rounded-md  sm:p-4  md:p-4 lg:p-5 p-4 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-3   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
+              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 lg:w-full flex-wrap ">
+                <Card
+                    title="Faculty"
+                    content="Tailwind CSS."
+                    imageUrl="https://via.placeholder.com/300"
+                />
+              </div>
+              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 lg:w-full ">
+                <Card
+                 title="Faculty"
+                 content=" Tailwind CSS."
+                 imageUrl="https://via.placeholder.com/300"
+                />
+              </div>
+              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 lg:w-full ">
+                <Card
+                   title="Faculty"
+                   content=" Tailwind CSS."
+                   imageUrl="https://via.placeholder.com/300"
+                />
+              </div>
+              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 lg:w-full ">
+                <Card
+                   title="Faculty"
+                   content="Tailwind CSS."
+                   imageUrl="https://via.placeholder.com/300"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+            </section>
     </div>
   );
 }
