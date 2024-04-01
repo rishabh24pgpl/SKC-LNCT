@@ -1,20 +1,31 @@
 'use client'
-import React, { useState } from 'react';
 
-const Carousel = ({ images }) => {
+import React, { useState, useEffect } from 'react';
+
+const Carousel = ({ images, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, interval);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+    return () => clearInterval(intervalId);
+  }, [images, interval]);
+
+  useEffect(() => {
+    // Reset index to 0 and restart scrolling after displaying all images
+    if (currentIndex === images.length - 1) {
+      const resetIndex = setTimeout(() => {
+        setCurrentIndex(0);
+      }, interval);
+      
+      // Clear the timeout when component unmounts or index changes
+      return () => clearTimeout(resetIndex);
+    }
+  }, [currentIndex, images.length, interval]);
 
   return (
     <div className="relative w-full h-96 overflow-hidden -z-10">
@@ -28,18 +39,6 @@ const Carousel = ({ images }) => {
           }`}
         />
       ))}
-      <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded-full"
-        onClick={prevSlide}
-      >
-        Prev
-      </button>
-      <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded-full"
-        onClick={nextSlide}
-      >
-        Next
-      </button>
     </div>
   );
 };
