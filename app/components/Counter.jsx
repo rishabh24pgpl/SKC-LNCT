@@ -28,12 +28,13 @@ const CounterWidget = ({
   textColor = "black",
   bgColor = "white",
   title = "Counter Widget",
+  color
 }) => {
   const count = useAutoIncrement(initialValue, targetValue, speed);
   return (
-    <div className=" flex-col justify-center items-center  bg-orange-400 rounded-full inline-flex sm:w-full md:w-1/3 lg:w-full  hover:bg-orange-500 hover:scale-105 hover:transition-all duration-700">
+    <div className={`flex-col justify-center items-center rounded-md inline-flex sm:w-full md:w-1/3 lg:w-full   ${color}`}>
     <div
-      className={`p-16 self-stretch text-black text-2xl font-bold     `}
+      className={`p-16 self-stretch text-white text-2xl font-bold     `}
     >
       +{count}
       <p>{text}</p>
