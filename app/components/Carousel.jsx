@@ -28,7 +28,7 @@ const Carousel = ({ images, interval = 3000 }) => {
   }, [currentIndex, images.length, interval]);
 
   return (
-    <div className="relative w-full h-96 overflow-hidden">
+    <div className="relative w-full h-96 overflow-hidden -z-10">
       {images.map((image, index) => (
         <img
           key={index}

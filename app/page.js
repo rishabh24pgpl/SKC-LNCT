@@ -74,6 +74,7 @@ export default function Home() {
           <img src="/insta.png" className="rounded-full"></img>
         </div>
 
+
         {/* Login button */}
         <div className="flex ">
           <Link
