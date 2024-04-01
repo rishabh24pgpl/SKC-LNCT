@@ -93,7 +93,7 @@ export default function Home() {
 
             <Navbar />
 
-            <div>
+            <div className=" -z-20">
 
                 <Carousel images={images} />
             </div>

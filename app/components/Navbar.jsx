@@ -1,30 +1,35 @@
 'use client'
-import React from 'react'
-import { useState } from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
-export default function Navbar() {
+export default function Home() {
 
-    const [openSubMenuId, setOpenSubMenuId] = useState(null);
+  const [openSubMenuId, setOpenSubMenuId] = useState(null);
 
+  // Function to toggle submenu
+  const toggleSubMenu = (submenuId) => {
+    setOpenSubMenuId(openSubMenuId === submenuId ? null : submenuId);
+  };
 
-    const toggleSubMenu = (submenuId) => {
-        setOpenSubMenuId(openSubMenuId === submenuId ? null : submenuId);
-      };
   return (
+    <div className=" text-white">
+   
+
     <div className="flex justify-around bg-orange-400 p-4">
-    <li id="tmenu-institute" class="relative">
+    <div id="tmenu-institute" >
     <a href="#" className="text-white" onClick={() => toggleSubMenu('institute')}>
         Institute
         <span className="submenu-indicator">
           <span className="submenu-indicator-chevron border-white"></span>
         </span>
       </a>
-      <div className={`megamenu-panel nav-submenu right-0 ${openSubMenuId === 'institute' ? '' : 'hidden'}`}>
-        <ul class="menu-row divide-y divide-gray-200 flex justify-around">
-            <li class="py-4">
-                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">About NITR</a></h5>
+      <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu  ${openSubMenuId === 'institute' ? '' : 'hidden'}`}>
+        <ul class=" flex justify-around list-none">
+            <li class="py-4 ">
+                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">Institute</a></h5>
                 <ul>
-                    <li><a id="submenu-welcome" href="/Institute/Welcome" class="text-gray-700 text-sm">Welcome to NITR</a></li>
+                    <li><a id="submenu-welcome" href="/Institute/Welcome" class="text-gray-700 text-sm">Institute</a></li>
                     <li><a id="submenu-vision" href="/Institute/Welcome" class="text-gray-700 text-sm">Vision and Mission</a></li>
                     <li><a id="submenu-exdirectors" href="/Institute/FormerDirectors" class="text-gray-700 text-sm">Former Directors</a></li>
                     <li><a id="submenu-rankings" href="/Institute/RankingRecognition" class="text-gray-700 text-sm">Ranking and Recognition</a></li>
@@ -73,17 +78,17 @@ export default function Navbar() {
             
         </ul>
     </div>
-</li>
+</div>
 
-<li id="tmenu-institute" class="relative">
+<div id="tmenu-institute" >
     <a href="#" className="text-white" onClick={() => toggleSubMenu('academics')}>
        Academics
         <span className="submenu-indicator">
           <span className="submenu-indicator-chevron border-white"></span>
         </span>
       </a>
-      <div className={`megamenu-panel nav-submenu right-0 ${openSubMenuId === 'academics' ? '' : 'hidden'}`}>
-        <ul class="menu-row divide-y divide-gray-200 flex justify-around">
+      <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu  ${openSubMenuId === 'academics' ? '' : 'hidden'}`}>
+        <ul class="flex justify-around">
             <li class="py-4">
                 <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">About NITR</a></h5>
                 <ul>
@@ -136,19 +141,19 @@ export default function Navbar() {
             
         </ul>
     </div>
-</li>
+</div>
 
-<li id="tmenu-institute" class="relative">
+<div id="tmenu-institute" >
     <a href="#" className="text-white" onClick={() => toggleSubMenu('students')}>
       Students
         <span className="submenu-indicator">
           <span className="submenu-indicator-chevron border-white"></span>
         </span>
       </a>
-      <div className={`megamenu-panel nav-submenu right-0 ${openSubMenuId === 'students' ? '' : 'hidden'}`}>
-        <ul class="menu-row divide-y divide-gray-200 flex justify-around">
+      <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'students' ? '' : 'hidden'}`}>
+        <ul class="flex justify-around">
             <li class="py-4">
-                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">About NITR</a></h5>
+                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">Stuents</a></h5>
                 <ul>
                     <li><a id="submenu-welcome" href="/Institute/Welcome" class="text-gray-700 text-sm">Welcome to NITR</a></li>
                     <li><a id="submenu-vision" href="/Institute/Welcome" class="text-gray-700 text-sm">Vision and Mission</a></li>
@@ -199,18 +204,18 @@ export default function Navbar() {
             
         </ul>
     </div>
-</li>
-<li id="tmenu-institute" class="relative">
+</div>
+<div id="tmenu-institute">
     <a href="#" className="text-white" onClick={() => toggleSubMenu('faculty & staff')}>
         Faculty & Staff
         <span className="submenu-indicator">
           <span className="submenu-indicator-chevron border-white"></span>
         </span>
       </a>
-      <div className={`megamenu-panel nav-submenu right-0 ${openSubMenuId === 'faculty & staff' ? '' : 'hidden'}`}>
-        <ul class="menu-row divide-y divide-gray-200 flex justify-around">
+      <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'faculty & staff' ? '' : 'hidden'}`}>
+        <ul class="flex justify-around">
             <li class="py-4">
-                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">About NITR</a></h5>
+                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">Faculty</a></h5>
                 <ul>
                     <li><a id="submenu-welcome" href="/Institute/Welcome" class="text-gray-700 text-sm">Welcome to NITR</a></li>
                     <li><a id="submenu-vision" href="/Institute/Welcome" class="text-gray-700 text-sm">Vision and Mission</a></li>
@@ -261,18 +266,18 @@ export default function Navbar() {
             
         </ul>
     </div>
-</li>
-<li id="tmenu-institute" class="relative">
+</div>
+<div id="tmenu-institute" >
     <a href="#" className="text-white" onClick={() => toggleSubMenu('research')}>
        Research
         <span className="submenu-indicator">
           <span className="submenu-indicator-chevron border-white"></span>
         </span>
       </a>
-      <div className={`megamenu-panel nav-submenu right-0 ${openSubMenuId === 'research' ? '' : 'hidden'}`}>
-        <ul class="menu-row divide-y divide-gray-200 flex justify-around">
+      <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'research' ? '' : 'hidden'}`}>
+        <ul class="flex justify-around">
             <li class="py-4">
-                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">About NITR</a></h5>
+                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">Research</a></h5>
                 <ul>
                     <li><a id="submenu-welcome" href="/Institute/Welcome" class="text-gray-700 text-sm">Welcome to NITR</a></li>
                     <li><a id="submenu-vision" href="/Institute/Welcome" class="text-gray-700 text-sm">Vision and Mission</a></li>
@@ -323,18 +328,18 @@ export default function Navbar() {
             
         </ul>
     </div>
-</li>
-<li id="tmenu-institute" class="relative">
+</div>
+<div id="tmenu-institute">
     <a href="#" className="text-white" onClick={() => toggleSubMenu('alumni')}>
       Alumni
         <span className="submenu-indicator">
           <span className="submenu-indicator-chevron border-white"></span>
         </span>
       </a>
-      <div className={`megamenu-panel nav-submenu right-0 ${openSubMenuId === 'alumni' ? '' : 'hidden'}`}>
-        <ul class="menu-row divide-y divide-gray-200 flex justify-around">
+      <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'alumni' ? '' : 'hidden'}`}>
+        <ul class="flex justify-around">
             <li class="py-4">
-                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">About NITR</a></h5>
+                <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">Alumni</a></h5>
                 <ul>
                     <li><a id="submenu-welcome" href="/Institute/Welcome" class="text-gray-700 text-sm">Welcome to NITR</a></li>
                     <li><a id="submenu-vision" href="/Institute/Welcome" class="text-gray-700 text-sm">Vision and Mission</a></li>
@@ -385,16 +390,16 @@ export default function Navbar() {
             
         </ul>
     </div>
-</li>
-<li id="tmenu-institute" class="relative">
+</div>
+<div id="tmenu-institute">
     <a href="#" className="text-white" onClick={() => toggleSubMenu('resources')}>
         Resources
         <span className="submenu-indicator">
           <span className="submenu-indicator-chevron border-white"></span>
         </span>
       </a>
-      <div className={`megamenu-panel nav-submenu right-0 ${openSubMenuId === 'resources' ? '' : 'hidden'}`}>
-        <ul class="menu-row divide-y divide-gray-200 flex justify-around">
+      <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'resources' ? '' : 'hidden'}`}>
+        <ul class="flex justify-around">
             <li class="py-4">
                 <h5 class="text-lg font-semibold mb-2"><a href="#" class="text-blue-500">NITR</a></h5>
                 <ul>
@@ -447,8 +452,13 @@ export default function Navbar() {
             
         </ul>
     </div>
-</li>
+</div>
 </div>
 
-  )
+  </div>
+  );
 }
+
+
+
+
