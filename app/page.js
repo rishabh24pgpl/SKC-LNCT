@@ -55,9 +55,9 @@ export default function Home() {
   // Function to toggle submenu
 
     const images = [
-        '/yt.png',
-        '/twitter.png',
-        '/logo1.png',
+        '/baggi.jpg',
+        '/mainImg.jpeg',
+        '/baggi.jpg',
     ];
     return (
         <div className=" text-white">
@@ -125,7 +125,7 @@ export default function Home() {
             />
           </div>
 
-      <section className="academic-programe w-11/12 mx-auto  flex justify-center     " style={{background: "url('/baggi.jpg')" , backgroundRepeat:"no-repeat" ,backgroundSize:"cover"  }}>
+      <section className="academic-programe  mx-auto  flex justify-center     " style={{background: "url('/baggi.jpg')" , backgroundRepeat:"no-repeat" ,backgroundSize:"cover"  }}>
         <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-orange-900 h-[500px]  ">
           <nav className="nav flex-col lg:w-1/4 p-4">
             <h2 className="text-3xl w-80 text-white  text-center font-semibold mb-6">
@@ -325,7 +325,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="w-11/12 mx-auto mt-10 rounded-full   sm:p-4  md:p-4 lg:p-5 p-4 shadow-none lg:shadow-[7px_8px_4px_2px_#cb6720] border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple  mb-12">
+        <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple  mb-12">
           <div className=" ">
             <Counter
               initialValue={0}
@@ -334,6 +334,7 @@ export default function Home() {
               text="Seed"
               textColor="text-blue-600"
               title="First Counter"
+              color="bg-[#bd5638]"
             />
           </div>
           <div className=" ">
@@ -344,6 +345,7 @@ export default function Home() {
               text="Seed"
               textColor="text-green-700"
               title="Second Counter"
+              color="bg-[#5a3224]"
             />
           </div>
           <div className="">
@@ -354,6 +356,7 @@ export default function Home() {
               text="Seed"
               textColor="text-red-600"
               title="Third Counter"
+              color="bg-[#223250]"
             />
           </div>
 
@@ -365,13 +368,15 @@ export default function Home() {
               text="Seed"
               textColor="text-red-600"
               title="Third Counter"
+              color="bg-[#22472d]"
             />
           </div>
         </div>
       </section>
       <section>
             <div
-          className="md:flex md:flex-col lg:flex-row  md:p-4 lg:p-4 sm:p-4 sm:flex-col mt-2  border border-gray-200 rounded-lg  shadow-none lg:shadow-[7px_8px_4px_2px_#00A76F] dark:bg-dpurple"
+        //   
+        className="flex "
           style={{
             backgroundImage: "url('/HomeBg.svg')",
             backgroundRepeat: "no-repeat",
@@ -379,46 +384,46 @@ export default function Home() {
             backgroundSize: "cover",
           }}
         >
-          <div className="md:w-full lg:w-1/2 sm:w-full w-full">
-            <h3 className="font-bold text-3xl text-black">Ranking and Recognition &nbsp; <span className="text-lg">View All</span></h3>
+          <div className="md:w-full lg:w-1/2 sm:w-full bg-[#393939] ">
+            <h3 className="font-bold text-3xl p-5  text-white">Ranking and Recognition &nbsp; <span className="text-lg">View All...</span></h3>
             <Image
-              className="duration-200 min-h-[300px] max-h-[300px] rounded-lg pt-4"
+              className="duration-200 min-h-[350px] max-h-[400px] rounded-lg pt-4  p-2 flex mx-auto items-center "
               src={images[currentSlide]}
               alt="Hero Image"
               width={700}
               height={650}
             />
           </div>
-          <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center ">
+          <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center bg-[#393939] ">
         
 
-            <div className="w-full  rounded-md  sm:p-4  md:p-4 lg:p-5 p-4 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-3   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 lg:w-full flex-wrap ">
+            <div className="w-ful rounded-md  sm:p-4  md:p-4 lg:p-5 p-4 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-2   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
+              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap  ">
                 <Card
-                    title="Faculty"
-                    content="Tailwind CSS."
-                    imageUrl="https://via.placeholder.com/300"
+                    title="Department"
+                    content="10"
+                    imageUrl="/department.png"
                 />
               </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 lg:w-full ">
+              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
                 <Card
                  title="Faculty"
-                 content=" Tailwind CSS."
-                 imageUrl="https://via.placeholder.com/300"
+                 content=" 70+"
+                 imageUrl="/staff.png"
                 />
               </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 lg:w-full ">
+              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
                 <Card
                    title="Faculty"
-                   content=" Tailwind CSS."
-                   imageUrl="https://via.placeholder.com/300"
+                   content="3050+"
+                   imageUrl="/student-icon.png"
                 />
               </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 lg:w-full ">
+              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap">
                 <Card
                    title="Faculty"
-                   content="Tailwind CSS."
-                   imageUrl="https://via.placeholder.com/300"
+                   content="100"
+                   imageUrl="/faculty.png"
                 />
               </div>
             </div>
