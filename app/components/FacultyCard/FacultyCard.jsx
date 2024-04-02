@@ -3,7 +3,7 @@ import React from "react";
 
 export default function FacultyCard() {
   return (
-    <div className="w-full my-10  p-2  rounded-lg shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] ">
+    <div className="w-full mt-1 mb-5  p-2  rounded-lg shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] ">
       <div className="w-full flex gap-6 ">
         <div className="w-48 h-40   relative  overflow-hidden rounded-lg">
           <Image
