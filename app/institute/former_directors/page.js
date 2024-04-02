@@ -15,7 +15,7 @@ export default function page() {
         <h1 className=" uppercase font-bold text-5xl">former directors</h1>
       </div>
       <div className="w-full mx-auto flex relative">
-        <div className="w-1/2 p-20 ">
+        <div className="w-1/2 px-20 ">
           <FacultyCard />
           <FacultyCard />
           <FacultyCard />
