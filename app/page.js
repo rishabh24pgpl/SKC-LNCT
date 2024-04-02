@@ -7,6 +7,9 @@ import Navbar from "@/app/components/Navbar";
 import Counter from "@/app/components/Counter";
 
 import Card from "./components/Card";
+import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
+import CampusMap from "./components/CampusMap/CampusMap";
+import AcademicEngineering from "./components/AcademicEngineering/AcademicEngineering";
 
 
 export default function Home() {
@@ -126,7 +129,7 @@ export default function Home() {
           </div>
 
       <section className="academic-programe  mx-auto  flex justify-center     " style={{background: "url('/baggi.jpg')" , backgroundRepeat:"no-repeat" ,backgroundSize:"cover"  }}>
-        <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-orange-900 h-[500px]  ">
+        <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-orange-900 h-[580px]  ">
           <nav className="nav flex-col lg:w-1/4 p-4">
             <h2 className="text-3xl w-80 text-white  text-center font-semibold mb-6">
               Academic Programme
@@ -304,11 +307,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <AbouttheInstitute/>  
+     
   
 
-      <section class=" flex p-10 h-[400px] w- mx-auto gap-4  ">
-        <div class="items flex-1 w-32 bg-blue-500 text-white p-8 text-center rounded-2xl ">
-          <h2 className="font-semibold border-b-2 text-2xl">Thought of the Day</h2>
+      <section class=" flex  h-[300px] w-full mx-auto pt-2  ">
+        <div class="items flex-1 w-full bg-cyan-500 text-white p-8 text-center  ">
+          <h2 className="font-semibold text-2xl">Thought of the Day</h2>
           <h5 className="font-semibold text-xl py-5 text-justify">
             Sometimes the biggest strength can be found in how you understand
             and confront your greatest weaknesses.
@@ -317,8 +323,8 @@ export default function Home() {
             <i>--Michael Springer--</i>
           </h5>
         </div>
-        <div class="item flex-1 w-32 bg-blue-300 p-8 items-center text-center rounded-2xl">
-          <h2 className="font-semibold border-b-2 text-2xl">Word of the Day</h2>
+        <div class="item flex-1 w-full bg-teal-400 p-8 items-center text-center ">
+          <h2 className="font-semibold text-2xl">Word of the Day</h2>
           <h5 className="font-semibold text-xl py-5">कार्यात्मक</h5>
           <h5 className="font-semibold text-2xl">FUNCTIONAL</h5>
         </div>
