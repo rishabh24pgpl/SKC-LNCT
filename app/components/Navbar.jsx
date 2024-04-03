@@ -18,10 +18,12 @@ export default function Home() {
 
     <div className="flex justify-around bg-orange-400 p-4">
     <div id="tmenu-institute" >
-    <a href="#" className="text-white" onClick={() => toggleSubMenu('institute')}>
+    <a href="#" className="text-white flex item-center" onClick={() => toggleSubMenu('institute')}>
         Institute
-        <span className="submenu-indicator">
-          <span className="submenu-indicator-chevron border-white"></span>
+        <span class="ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 17a1 1 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414L10 14.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-6 6A1 1 0 0 1 10 17z" clip-rule="evenodd" />
+            </svg>
         </span>
       </a>
       <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu  ${openSubMenuId === 'institute' ? '' : 'hidden'}`}>
@@ -81,10 +83,12 @@ export default function Home() {
 </div>
 
 <div id="tmenu-institute" >
-    <a href="#" className="text-white" onClick={() => toggleSubMenu('academics')}>
+    <a href="#" className="text-white flex items-center" onClick={() => toggleSubMenu('academics')}>
        Academics
-        <span className="submenu-indicator">
-          <span className="submenu-indicator-chevron border-white"></span>
+       <span class="ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 17a1 1 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414L10 14.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-6 6A1 1 0 0 1 10 17z" clip-rule="evenodd" />
+            </svg>
         </span>
       </a>
       <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu  ${openSubMenuId === 'academics' ? '' : 'hidden'}`}>
@@ -144,10 +148,12 @@ export default function Home() {
 </div>
 
 <div id="tmenu-institute" >
-    <a href="#" className="text-white" onClick={() => toggleSubMenu('students')}>
+    <a href="#" className="text-white flex item-center" onClick={() => toggleSubMenu('students')}>
       Students
-        <span className="submenu-indicator">
-          <span className="submenu-indicator-chevron border-white"></span>
+      <span class="ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 17a1 1 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414L10 14.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-6 6A1 1 0 0 1 10 17z" clip-rule="evenodd" />
+            </svg>
         </span>
       </a>
       <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'students' ? '' : 'hidden'}`}>
@@ -206,10 +212,12 @@ export default function Home() {
     </div>
 </div>
 <div id="tmenu-institute">
-    <a href="#" className="text-white" onClick={() => toggleSubMenu('faculty & staff')}>
+    <a href="#" className="text-white flex item-center" onClick={() => toggleSubMenu('faculty & staff')}>
         Faculty & Staff
-        <span className="submenu-indicator">
-          <span className="submenu-indicator-chevron border-white"></span>
+        <span class="ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 17a1 1 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414L10 14.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-6 6A1 1 0 0 1 10 17z" clip-rule="evenodd" />
+            </svg>
         </span>
       </a>
       <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'faculty & staff' ? '' : 'hidden'}`}>
@@ -268,10 +276,12 @@ export default function Home() {
     </div>
 </div>
 <div id="tmenu-institute" >
-    <a href="#" className="text-white" onClick={() => toggleSubMenu('research')}>
+    <a href="#" className="text-white flex item-center" onClick={() => toggleSubMenu('research')}>
        Research
-        <span className="submenu-indicator">
-          <span className="submenu-indicator-chevron border-white"></span>
+       <span class="ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 17a1 1 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414L10 14.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-6 6A1 1 0 0 1 10 17z" clip-rule="evenodd" />
+            </svg>
         </span>
       </a>
       <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'research' ? '' : 'hidden'}`}>
@@ -330,10 +340,12 @@ export default function Home() {
     </div>
 </div>
 <div id="tmenu-institute">
-    <a href="#" className="text-white" onClick={() => toggleSubMenu('alumni')}>
+    <a href="#" className="text-white flex item-center" onClick={() => toggleSubMenu('alumni')}>
       Alumni
-        <span className="submenu-indicator">
-          <span className="submenu-indicator-chevron border-white"></span>
+      <span class="ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 17a1 1 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414L10 14.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-6 6A1 1 0 0 1 10 17z" clip-rule="evenodd" />
+            </svg>
         </span>
       </a>
       <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'alumni' ? '' : 'hidden'}`}>
@@ -392,10 +404,12 @@ export default function Home() {
     </div>
 </div>
 <div id="tmenu-institute">
-    <a href="#" className="text-white" onClick={() => toggleSubMenu('resources')}>
+    <a href="#" className="text-white flex item-center" onClick={() => toggleSubMenu('resources')}>
         Resources
-        <span className="submenu-indicator">
-          <span className="submenu-indicator-chevron border-white"></span>
+        <span class="ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 17a1 1 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414L10 14.586l5.293-5.293a1 1 0 0 1 1.414 1.414l-6 6A1 1 0 0 1 10 17z" clip-rule="evenodd" />
+            </svg>
         </span>
       </a>
       <div className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${openSubMenuId === 'resources' ? '' : 'hidden'}`}>
