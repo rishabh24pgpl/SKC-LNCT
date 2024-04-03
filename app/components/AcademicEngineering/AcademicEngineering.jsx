@@ -14,7 +14,7 @@ at SKC-LNCT INDORE</h1>
         </div>
         <div className="w-full  relative "> <Image src="/mainImg.jpeg" alt="img" fill /></div>
       </div> 
-      <h1 className="text-3xl bg-orange-600 p-6 px-10 "> DEPARTMENT</h1>   
+      <h1 className="text-3xl bg-orange-600 p-6  text-white "> DEPARTMENT</h1>   
       <div className="w-full grid grid-cols-3 justify-around   bg-orange-600 p-4">
        
       <div className="mx-auto p-4">
@@ -64,6 +64,11 @@ at SKC-LNCT INDORE</h1>
         </div>
       </div>
       <section>
+      <div className=" flex flex-col justify-center  mx-auto items-center p-10">
+    <h1 className="text-orange-600 font-light  text-center  text-4xl">
+    Engineering @ NITR at a glance
+    </h1>
+    </div>
         <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple  mb-12">
           <div className=" ">
             
@@ -113,6 +118,15 @@ at SKC-LNCT INDORE</h1>
           </div>
         </div>
       </section>
+      <div className=" flex flex-col justify-center  mx-auto items-center p-10">
+    <h1 className="text-orange-600 font-light  text-center  text-4xl">
+    Engineering is not only about making things
+work, but about making things work better. 
+    </h1>
+    <p className="text-black text-xl">
+    - Henry Petroski
+    </p>
+      </div>
     </>
   );
 }

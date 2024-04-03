@@ -7,6 +7,7 @@ export default function page() {
    <>
    <Navbar/>
    <AcademicEngineering/>
+   3
    </>
   )
 }
