@@ -34,10 +34,10 @@ const CounterWidget = ({
   return (
     <div className={`flex-col justify-center items-center rounded-md inline-flex sm:w-full md:w-1/3 lg:w-full   ${color}`}>
     <div
-      className={`p-16 self-stretch text-white text-2xl font-bold     `}
+      className={`p-12 self-stretch text-white text-2xl font-bold  text-center  text-3xl `}
     >
       +{count}
-      <p>{text}</p>
+      <p className="text-xl">{text}</p>
     </div>
     </div>
   );

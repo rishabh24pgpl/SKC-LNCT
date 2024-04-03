@@ -2,20 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Carousel from "@/app/components/Carousel";
 import Navbar from "@/app/components/Navbar";
 import Counter from "@/app/components/Counter";
-
 import Card from "./components/Card";
+import Footer from "./components/Footer";
+import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
 import CampusMap from "./components/CampusMap/CampusMap";
 import AcademicEngineering from "./components/AcademicEngineering/AcademicEngineering";
 
 
 export default function Home() {
-
-
-
     const [collegeNameIndex, setCollegeNameIndex] = useState(0);
     const [activeTab, setActiveTab] = useState('postgraduate');
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -24,23 +21,24 @@ export default function Home() {
         "एसकेसी एलएनसीटी ",
     ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCollegeNameIndex((prevIndex) =>
-        prevIndex === collegeNames.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCollegeNameIndex((prevIndex) =>
+                prevIndex === collegeNames.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     // Set default active tab to 'postgraduate'
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
     };
-
-
 
 
     const nextSlide = () => {
@@ -55,7 +53,7 @@ export default function Home() {
         };
     }, [currentSlide]);
 
-  // Function to toggle submenu
+    // Function to toggle submenu
 
     const images = [
         '/baggi.jpg',
@@ -71,62 +69,62 @@ export default function Home() {
                     <p>Careers</p>
                 </div>
 
-        <div className="items-center gap-4 flex w-8 h-8 ">
-          <img src="/twitter.png" className="rounded-full"></img>
-          <img src="/yt.png" className="rounded-full"></img>
-          <img src="/insta.png" className="rounded-full"></img>
-        </div>
+                <div className="items-center gap-4 flex w-8 h-8 ">
+                    <img src="/twitter.png" className="rounded-full"></img>
+                    <img src="/yt.png" className="rounded-full"></img>
+                    <img src="/insta.png" className="rounded-full"></img>
+                </div>
 
 
-        {/* Login button */}
-        <div className="flex ">
-          <Link
-            className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
-            href="\loginPage"
-          >
-            STAFF LOGIN
-          </Link>
-        </div>
-      </div>
+                {/* Login button */}
+                <div className="flex ">
+                    <Link
+                        className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
+                        href="\loginPage"
+                    >
+                        STAFF LOGIN
+                    </Link>
+                </div>
+            </div>
 
-      <div className="flex items-center justify-between px-4 bg-orange-400">
-        {/* Logo and college name */}
-        <div className="flex items-center gap-4">
-          <div className="w-[100px] h-[100px] relative">
-            <Image
-              src="/logo1.png"
-              layout="fill"
-              objectFit="contain"
-              alt="Logo"
-            />
-          </div>
-          <h1 className="text-3xl font-semibold">
-            {collegeNames[collegeNameIndex]}
-          </h1>
-          <div className="slogan">An Institute of National Importance</div>
-        </div>
+            <div className="flex items-center justify-between px-4 bg-orange-400">
+                {/* Logo and college name */}
+                <div className="flex items-center gap-4">
+                    <div className="w-[100px] h-[100px] relative">
+                        <Image
+                            src="/logo1.png"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="Logo"
+                        />
+                    </div>
+                    <h1 className="text-3xl font-semibold">
+                        {collegeNames[collegeNameIndex]}
+                    </h1>
+                    <div className="slogan">An Institute of National Importance</div>
+                </div>
 
-        {/* Search box */}
-        <div>
-          <input
-            type="text"
-            placeholder="Search"
-            className="px-4 py-2 rounded-full border border-white focus:outline-none focus:border-gray-300"
-          />
-        </div>
-      </div>
+                {/* Search box */}
+                <div>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        className="px-4 py-2 rounded-full border border-white focus:outline-none focus:border-gray-300"
+                    />
+                </div>
+            </div>
 
-      <Navbar />
+            <Navbar />
 
-      <div className="md:w-full lg:w-full sm:w-full w-full">
-            <Image
-              className="duration-500 w-full min-h-[500px] max-h-[500px]"
-              src={images[currentSlide]}
-              alt="Hero Image"
-              width={700}
-              height={650}
-            />
-          </div>
+            <div className="md:w-full lg:w-full sm:w-full w-full">
+                <Image
+                    className="duration-500 w-full min-h-[500px] max-h-[500px]"
+                    src={images[currentSlide]}
+                    alt="Hero Image"
+                    width={700}
+                    height={650}
+                />
+            </div>
 
       <section className="academic-programe  mx-auto  flex justify-center     " style={{background: "url('/baggi.jpg')" , backgroundRepeat:"no-repeat" ,backgroundSize:"cover"  }}>
         <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-orange-900 h-[580px]  ">
@@ -330,233 +328,122 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple  mb-12">
-          <div className=" ">
-            <Counter
-              initialValue={0}
-              targetValue={2000}
-              speed={0.001}
-              text="Seed"
-              textColor="text-blue-600"
-              title="First Counter"
-              color="bg-[#bd5638]"
-            />
-          </div>
-          <div className=" ">
-            <Counter
-              initialValue={20}
-              targetValue={100}
-              speed={100}
-              text="Seed"
-              textColor="text-green-700"
-              title="Second Counter"
-              color="bg-[#5a3224]"
-            />
-          </div>
-          <div className="">
-            <Counter
-              initialValue={5}
-              targetValue={15}
-              speed={200}
-              text="Seed"
-              textColor="text-red-600"
-              title="Third Counter"
-              color="bg-[#223250]"
-            />
-          </div>
+            <section>
+                <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple  mb-12">
+                    <div className=" ">
+                        <Counter
+                            initialValue={0}
+                            targetValue={2000}
+                            speed={0.001}
+                            text="Seed"
+                            textColor="text-blue-600"
+                            title="First Counter"
+                            color="bg-[#bd5638]"
+                        />
+                    </div>
+                    <div className=" ">
+                        <Counter
+                            initialValue={20}
+                            targetValue={100}
+                            speed={100}
+                            text="Seed"
+                            textColor="text-green-700"
+                            title="Second Counter"
+                            color="bg-[#5a3224]"
+                        />
+                    </div>
+                    <div className="">
+                        <Counter
+                            initialValue={5}
+                            targetValue={15}
+                            speed={200}
+                            text="Seed"
+                            textColor="text-red-600"
+                            title="Third Counter"
+                            color="bg-[#223250]"
+                        />
+                    </div>
 
-          <div className="">
-            <Counter
-              initialValue={5}
-              targetValue={15}
-              speed={200}
-              text="Seed"
-              textColor="text-red-600"
-              title="Third Counter"
-              color="bg-[#22472d]"
-            />
-          </div>
-        </div>
-      </section>
-      <section>
-            <div
-        //   
-        className="flex "
-          style={{
-            backgroundImage: "url('/HomeBg.svg')",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="md:w-full lg:w-1/2 sm:w-full bg-[#393939] ">
-            <h3 className="font-bold text-3xl p-5  text-white">Ranking and Recognition &nbsp; <span className="text-lg">View All...</span></h3>
-            <Image
-              className="duration-200 min-h-[350px] max-h-[400px] rounded-lg pt-4  p-2 flex mx-auto items-center "
-              src={images[currentSlide]}
-              alt="Hero Image"
-              width={700}
-              height={650}
-            />
-          </div>
-          <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center bg-[#393939] ">
-        
+                    <div className="">
+                        <Counter
+                            initialValue={5}
+                            targetValue={15}
+                            speed={200}
+                            text="Seed"
+                            textColor="text-red-600"
+                            title="Third Counter"
+                            color="bg-[#22472d]"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div
+                    //   
+                    className="flex "
+                    style={{
+                        backgroundImage: "url('/HomeBg.svg')",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                    }}
+                >
+                    <div className="md:w-full lg:w-1/2 sm:w-full bg-[#393939] ">
+                        <h3 className="font-bold text-3xl p-5  text-white">Ranking and Recognition &nbsp; &nbsp;&nbsp;<span className="text-sm">View All...</span></h3>
+                        <Image
+                            className="duration-200 min-h-[350px] max-h-[400px] rounded-lg pt-4  p-2 flex mx-auto items-center rounded-md"
+                            src={images[currentSlide]}
+                            alt="Hero Image"
+                            width={700}
+                            height={650}
+                        />
+                    </div>
+                    <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center bg-[#393939] ">
 
-            <div className="w-ful rounded-md  sm:p-4  md:p-4 lg:p-5 p-4 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-2   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap  ">
-                <Card
-                    title="Department"
-                    content="10"
-                    imageUrl="/department.png"
-                />
-              </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
-                <Card
-                 title="Faculty"
-                 content=" 70+"
-                 imageUrl="/staff.png"
-                />
-              </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
-                <Card
-                   title="Faculty"
-                   content="3050+"
-                   imageUrl="/student-icon.png"
-                />
-              </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap">
-                <Card
-                   title="Faculty"
-                   content="100"
-                   imageUrl="/faculty.png"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+
+                        <div className="w-ful rounded-md  sm:p-4  md:p-4 lg:p-5 p-4 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-2   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
+                            <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap  ">
+                                <Card
+                                    title="Department"
+                                    content="10"
+                                    imageUrl="/department.png"
+                                />
+                            </div>
+                            <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
+                                <Card
+                                    title="Faculty"
+                                    content=" 70+"
+                                    imageUrl="/staff.png"
+                                />
+                            </div>
+                            <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
+                                <Card
+                                    title="Faculty"
+                                    content="3050+"
+                                    imageUrl="/student-icon.png"
+                                />
+                            </div>
+                            <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap">
+                                <Card
+                                    title="Faculty"
+                                    content="100"
+                                    imageUrl="/faculty.png"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
 
-       
+            <Footer />
 
-            <footer class="bg-gray-800 text-white py-12">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="item">
-            <p class="text-center"><img src="/logo1.png" class="w-20 mx-auto mb-4" alt="Logo"></img></p>
-            <p class="font-bold text-center">
-                Lakshmi Narain College of Technology <br></br>
-                Rourkela, Odisha, India, 769008
-            </p>
-            <div class="contact-info text-center mt-4">
-                <ul>
-                    <li><i class="bi bi-telephone"></i> 0661-246-2020 / 2002</li>
-                    <li> <i class="bi bi-envelope"></i> registrar@nitrkl.ac.in</li>
-                </ul>
-            </div>
-            <div class="social-links flex justify-center mt-4">
-                <a href="https://www.instagram.com/nitrourkela1961/" class="outside-link mr-2" target="_blank" title="Instagram"><i class="fab fa-instagram-square"></i></a>
-                <a href="https://twitter.com/nitrourkela" class="outside-link mr-2" target="_blank" title="Twitter"><i class="fab fa-twitter-square"></i></a>
-                <a href="https://www.facebook.com/nitrkl1" class="outside-link mr-2" target="_blank" title="Facebook"><i class="fab fa-facebook-square"></i></a>
-                <a href="https://www.linkedin.com/school/national-institute-of-technology-rourkela/" class="outside-link mr-2" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/@NITROURKELA1961" class="outside-link" target="_blank" title="Youtube"><i class="fab fa-youtube-square"></i></a>
-            </div>
         </div>
-        <div class="item">
-            <h4 class="font-bold">IMPORTANT LINKS</h4>
-            <div class="footer-link">
-                <ul>
-                    <li><a href="https://mail.nitrkl.ac.in/">Webmail</a></li>
-                    <li><a href="https://eapplication.nitrkl.ac.in/nitris/"> NITRis</a></li>
-                    <li><a href="/Academic/Holidays"> Holidays</a></li>
-                    <li><a href="/Academic/AcademicCalendar"> Academic Calendar</a></li>
-                    <li><a href="/Academic/AcademicTimeTable"> Academic TimeTable</a></li>
-                    <li><a href="/Student/Advertisements"> Admission Advt. &amp; Notices</a></li>
-                    <li><a href="https://website.nitrkl.ac.in/FacultyStaff/Career/"> Career</a></li>
-                    <li><a href="https://website.nitrkl.ac.in/FacultyStaff/Stores-Purchase/Tender/">Tenders</a></li>
-                    <li><a href="https://guesthouse.nitrkl.ac.in/">Guest House</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="item">
-            <h4 class="font-bold">OTHER LINKS</h4>
-            <div class="footer-link">
-                <ul>
-                    <li><a href="/Institute/NIRF">NIRF</a></li>
-                    <li><a href="/Institute/NBA"> NBA</a></li>
-                    <li><a href="https://www.ftbi-nitrkl.org/"> FTBI</a></li>
-                    <li><a href="https://website.nitrkl.ac.in/Institute/NAD/"> NAD Cell</a></li>
-                    <li><a href="https://nitrkl.ac.in/UBA/"> Unnat Bharat Abhiyan</a></li>
-                    <li><a href="https://icc.nitrkl.ac.in/">Internal Complaint Cell</a></li>
-                    <li><a href="https://www.ics-nitrkl.in/"> Institute Counselling Service</a></li>
-                    <li><a href="https://nitrkl.ac.in/CRF/">Central Research Facility</a></li>
-                    <li><a href="https://gati.nitrkl.ac.in/">GATI</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="item">
-            {/* <h4 class="font-bold">Photo Gallery</h4> */}
-            <div class="grid grid-cols-2 gap-2 p-4">
-                <div class="item-img">
-                    <a href="/assets/images/gallery1.jpg" data-fancybox="mygallery" data-caption="" title="">
-                        <img src="/logo1.png" class="w-full" alt=""></img>
-                    </a>
-                </div>
-                <div class="item-img">
-                    <a href="/assets/images/gallery2.jpg" data-fancybox="mygallery" data-caption="" title="">
-                        <img src="/logo1.png" class="w-full" alt=""></img>
-                    </a>
-                </div>
-                <div class="item-img">
-                    <a href="/assets/images/gallery3.jpg" data-fancybox="mygallery" data-caption="" title="">
-                        <img src="/logo1.png" class="w-full" alt=""></img>
-                    </a>
-                </div>
-                <div class="item-img">
-                    <a href="/assets/images/gallery3.jpg" data-fancybox="mygallery" data-caption="" title="">
-                        <img src="/logo1.png" class="w-full" alt=""></img>
-                    </a>
-                </div>
-                <div class="item-img">
-                    <a href="/assets/images/gallery3.jpg" data-fancybox="mygallery" data-caption="" title="">
-                        <img src="/logo1.png" class="w-full" alt=""></img>
-                    </a>
-                </div>
-                <div class="item-img">
-                    <a href="/assets/images/gallery3.jpg" data-fancybox="mygallery" data-caption="" title="">
-                        <img src="/logo1.png" class="w-full" alt=""></img>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <hr class="mt-6"></hr>
-    <div class="copy-right-other-links container mx-auto">
-        <div class="flex justify-between items-center">
-            <div class="item-copy">
-                Copyright © 2024 Lakshmi Narain College of Technology. All Rights Reserved.
-            </div>
-            <div class="item-othtes-links ">
-                <ul className="flex px-4 gap-4">
-                    <li><a href="/Home/TermCondition">Terms &amp; Conditions</a></li>
-                    <li><a href="/Home/HyperLink"> Hyperlinking Policy</a></li>
-                    <li><a href="/Home/PrivacyPolicy"> Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <hr class="mt-6"></hr>
-    <section class="gov-logo">
-        <div class="container mx-auto">
-            <div class="owl-carousel owl-theme gov-slider owl-loaded owl-drag">
-              
-            </div>
-        </div>
-    </section>
-</footer>
-
-        
-    </div>
-  );
+    );
 }
+
+
+
+
+
+
