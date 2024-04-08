@@ -41,7 +41,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-welcome"
-                      href="/Institute/Welcome"
+                      href="/institute/welcome"
                       class="text-gray-700 text-sm"
                     >
                       Institute
@@ -50,7 +50,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-vision"
-                      href="/Institute/Welcome"
+                      href="/institute/mission_vision"
                       class="text-gray-700 text-sm"
                     >
                       Vision and Mission
@@ -59,21 +59,13 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-exdirectors"
-                      href="/Institute/FormerDirectors"
+                      href="/institute/former_directors"
                       class="text-gray-700 text-sm"
                     >
                       Former Directors
                     </a>
                   </li>
-                  <li>
-                    <a
-                      id="submenu-rankings"
-                      href="/Institute/RankingRecognition"
-                      class="text-gray-700 text-sm"
-                    >
-                      Ranking and Recognition
-                    </a>
-                  </li>
+                  
                   <li>
                     <a
                       id="submenu-campusfacility"
@@ -83,15 +75,7 @@ export default function Home() {
                       Campus and Facilities
                     </a>
                   </li>
-                  <li>
-                    <a
-                      id="submenu-campusmap"
-                      href="/Institute/CampusMap"
-                      class="text-gray-700 text-sm"
-                    >
-                      Campus Map
-                    </a>
-                  </li>
+                 
                   <li>
                     <a
                       id="submenu-gallery"
@@ -131,7 +115,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-bog"
-                      href="/Institute/BOG"
+                      href="/institute/bog"
                       class="text-gray-700 text-sm"
                     >
                       Board of Governors
@@ -149,7 +133,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-chairperson"
-                      href="/Institute/Chairperson"
+                      href="/institute/chairperson"
                       class="text-gray-700 text-sm"
                     >
                       Chairperson
@@ -158,7 +142,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-director"
-                      href="/Institute/Director"
+                      href="/institute/director"
                       class="text-gray-700 text-sm"
                     >
                       Director
@@ -342,7 +326,7 @@ export default function Home() {
             <ul class="flex justify-around">
               <li class="py-4">
                 <h5 class="text-lg font-semibold mb-2">
-                  <a href="#" class="text-blue-500">
+                  <a href="institute/welcome" class="text-blue-500">
                     About NITR
                   </a>
                 </h5>
@@ -350,7 +334,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-welcome"
-                      href="/Institute/Welcome"
+                      href="/institute/welcome"
                       class="text-gray-700 text-sm"
                     >
                       Welcome to NITR
@@ -359,7 +343,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-vision"
-                      href="/Institute/Welcome"
+                      href="/institute/mission_vision"
                       class="text-gray-700 text-sm"
                     >
                       Vision and Mission
@@ -368,21 +352,13 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-exdirectors"
-                      href="/Institute/FormerDirectors"
+                      href="/institute/former_directors"
                       class="text-gray-700 text-sm"
                     >
                       Former Directors
                     </a>
                   </li>
-                  <li>
-                    <a
-                      id="submenu-rankings"
-                      href="/Institute/RankingRecognition"
-                      class="text-gray-700 text-sm"
-                    >
-                      Ranking and Recognition
-                    </a>
-                  </li>
+                 
                   <li>
                     <a
                       id="submenu-campusfacility"
@@ -440,7 +416,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-bog"
-                      href="/Institute/BOG"
+                      href="/institute/bog"
                       class="text-gray-700 text-sm"
                     >
                       Board of Governors
@@ -458,7 +434,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-chairperson"
-                      href="/Institute/Chairperson"
+                      href="/institute/chairperson"
                       class="text-gray-700 text-sm"
                     >
                       Chairperson
@@ -467,7 +443,7 @@ export default function Home() {
                   <li>
                     <a
                       id="submenu-director"
-                      href="/Institute/Director"
+                      href="/institute/director"
                       class="text-gray-700 text-sm"
                     >
                       Director
