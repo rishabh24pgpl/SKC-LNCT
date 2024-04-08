@@ -226,6 +226,7 @@ export default function Home() {
                 role="tabpanel"
               >
                 <h2 className="text-white font-bold text-3xl">POSTGRADUATE</h2>
+                <p>y</p>
                 <h4 className="text-white mt-5 ">M. Tech.</h4>
                 <p className="text-white text-justify">
                   The courses leading to M. Tech. degree are open to candidates
