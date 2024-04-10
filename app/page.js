@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Navbar from "@/app/components/Navbar";
 import Counter from "@/app/components/Counter";
 import Card from "./components/Card";
+import Seminar from '@/app/components/Seminar'
 import Footer from "./components/Footer";
 import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
@@ -60,6 +61,83 @@ export default function Home() {
         '/mainImg.jpeg',
         '/baggi.jpg',
     ];
+
+
+
+    const EventData = [
+      {
+        title: "Event 1",
+        startDate: "2024-04-10",
+        type: "event",
+        uuid: "event1_uuid"
+      },
+      {
+        title: "Event 2",
+        startDate: "2024-04-15",
+        type: "event",
+        uuid: "event2_uuid"
+      },
+      {
+        title: "Event 3",
+        startDate: "2024-04-20",
+        type: "event",
+        uuid: "event3_uuid"
+      },
+      // Add more events as needed
+    ];
+  
+    const carouselData = [
+      { id: 1, title: "News 1", description: "Description for News 1", imageUrl: "/yt.png" },
+      { id: 2, title: "News 2", description: "Description for News 2", imageUrl: "/yt.png" },
+      { id: 3, title: "News 3", description: "Description for News 3", imageUrl: "/yt.png" },
+      { id: 4, title: "News 4", description: "Description for News 4", imageUrl: "/yt.png" },
+      // Add more news items as needed
+    ];
+
+  const additionalCarouselData = [
+    { id: 1, title: "News 1", description: "Description for News 1", imageUrl: "/yt.png" },
+    { id: 2, title: "News 2", description: "Description for News 2", imageUrl: "/yt.png" },
+    { id: 3, title: "News 3", description: "Description for News 3", imageUrl: "/yt.png" },
+    { id: 4, title: "News 4", description: "Description for News 4", imageUrl: "/yt.png" },
+  ]
+
+    const EventsData = [
+      {
+        title: "Event 1",
+        startDate: "2024-04-10",
+        type: "event",
+        uuid: "event1_uuid"
+      },
+      {
+        title: "Event 2",
+        startDate: "2024-04-15",
+        type: "event",
+        uuid: "event2_uuid"
+      },
+      {
+        title: "Event 3",
+        startDate: "2024-04-20",
+        type: "event",
+        uuid: "event3_uuid"
+      },
+      // Add more events as needed
+    ];
+  
+    const ScarouselData = [
+      { id: 1, title: "News 1", description: "Description for News 1", imageUrl: "/yt.png" },
+      { id: 2, title: "News 2", description: "Description for News 2", imageUrl: "/yt.png" },
+      { id: 3, title: "News 3", description: "Description for News 3", imageUrl: "/yt.png" },
+      { id: 4, title: "News 4", description: "Description for News 4", imageUrl: "/yt.png" },
+      // Add more news items as needed
+    ];
+    const additionalCarouselDataseminar = [
+      { id: 1, title: "News 1", description: "Description for News 1", imageUrl: "/yt.png" },
+      { id: 2, title: "News 2", description: "Description for News 2", imageUrl: "/yt.png" },
+      { id: 3, title: "News 3", description: "Description for News 3", imageUrl: "/yt.png" },
+      { id: 4, title: "News 4", description: "Description for News 4", imageUrl: "/yt.png" },
+      // Add more news items as needed
+    ];
+
     return (
         <div className=" text-white">
             <div className="flex items-center justify-between p-4 bg-orange-600">
@@ -125,6 +203,10 @@ export default function Home() {
                     height={650}
                 />
             </div>
+
+<section className="m-10">
+  <Notices eventData={EventData} carouselData={carouselData} additionalCarouselData={additionalCarouselData} />
+</section>
 
       <section className="academic-programe  mx-auto  flex justify-center     " style={{background: "url('/baggi.jpg')" , backgroundRepeat:"no-repeat" ,backgroundSize:"cover"  }}>
         <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-orange-900 h-[580px]  ">
@@ -435,7 +517,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
+<section>
+  <Seminar eventData={EventsData} carouselData={ScarouselData} additionalCarouselData={additionalCarouselDataseminar}/>
+</section>
 
             <Footer />
 
