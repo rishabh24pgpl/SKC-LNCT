@@ -53,12 +53,13 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
 
   return (
     <>
+    <h1 className="font-semibold text-4xl text-black text-center p-6">Seminar & Upcoming events</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
         <div className="overflow-auto border border-gray-200 rounded-md">
-          <h2 className="text-2xl font-bold text-black text-center">Notices</h2>
+          {/* <h2 className="text-2xl font-bold text-black text-center">Notices</h2> */}
           <ul
             ref={listRef}
-            className="grid grid-cols-1 gap-6 max-h-[300px] overflow-scroll"
+            className="grid grid-cols-1 gap-6 max-w-[700px] max-h-[500px] overflow-scroll"
           >
             {eventData.map((item, index) => (
               <ListItem key={index} item={item} />
@@ -66,24 +67,26 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
           </ul>
         </div>
         <div className="flex justify-center items-center">
-          <div className="w-full h-auto">
+          <div className="w-[400px] h-full border-2 rounded-xl">
             <Slider {...settings} asNavFor={slider2} ref={(slider) => setSlider1(slider)}>
               {carouselData.map((item, index) => (
                 <div key={index}>
-                  <img src={item.imageUrl} alt={item.title} />
-                  <p className="legend text-black">{item.title}</p>
+                  <img src={item.imageUrl} alt={item.title} className="w-[400px]" />
+                  <p className="legend text-black font-bold p-2">{item.title}</p>
+                  <p className="p-2 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
                 </div>
               ))}
             </Slider>
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <div className="w-full h-auto">
-            <Slider {...settings} asNavFor={slider1} ref={(slider) => setSlider2(slider)}>
-              {additionalCarouselData.map((item, index) => (
+        <div className="w-[400px] h-full border-2 rounded-xl">
+            <Slider {...settings} asNavFor={slider2} ref={(slider) => setSlider1(slider)}>
+              {carouselData.map((item, index) => (
                 <div key={index}>
-                  <img src={item.imageUrl} alt={item.title} />
-                  <p className="legend text-black">{item.title}</p>
+                  <img src={item.imageUrl} alt={item.title} className="w-[400px]" />
+                  <p className="legend text-black font-bold p-2">{item.title}</p>
+                  <p className="p-2 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit! &nbsp; Read More...</p>
                 </div>
               ))}
             </Slider>

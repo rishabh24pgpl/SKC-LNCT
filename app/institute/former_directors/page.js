@@ -6,16 +6,16 @@ export default function page() {
   return (
     <div>
       <div
-        className="w-full h-96 flex justify-center  items-center"
+        className="w-full max-h-[300px] min-h-[400px] flex justify-center  items-center"
         style={{
-          backgroundImage: "url('/logo1.png')",
+          backgroundImage: "url('/welcome.jpeg')",
           backgroundSize: "cover",
         }}
       >
         <h1 className=" uppercase font-bold text-5xl">former directors</h1>
       </div>
       <div className="w-full mx-auto flex relative">
-        <div className="w-1/2 px-20 ">
+        <div className="w-1/2 px-20 pt-[36px]">
           <FacultyCard />
           <FacultyCard />
           <FacultyCard />

@@ -120,6 +120,24 @@ export default function Home() {
         type: "event",
         uuid: "event3_uuid"
       },
+            {
+        title: "Event 1",
+        startDate: "2024-04-10",
+        type: "event",
+        uuid: "event1_uuid"
+      },
+      {
+        title: "Event 2",
+        startDate: "2024-04-15",
+        type: "event",
+        uuid: "event2_uuid"
+      },
+      {
+        title: "Event 3",
+        startDate: "2024-04-20",
+        type: "event",
+        uuid: "event3_uuid"
+      },
       // Add more events as needed
     ];
   
@@ -135,12 +153,13 @@ export default function Home() {
       { id: 2, title: "News 2", description: "Description for News 2", imageUrl: "/yt.png" },
       { id: 3, title: "News 3", description: "Description for News 3", imageUrl: "/yt.png" },
       { id: 4, title: "News 4", description: "Description for News 4", imageUrl: "/yt.png" },
+
       // Add more news items as needed
     ];
 
     return (
         <div className=" text-white">
-            <div className="flex items-center justify-between p-4 bg-orange-600">
+            <div className="flex items-center justify-between p-2 bg-orange-600">
                 <div className="items-center flex gap-4 ">
                     <p>Admissions</p>
                     <p>Placement</p>
@@ -412,7 +431,7 @@ export default function Home() {
       </section>
 
             <section>
-                <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple  mb-12">
+                <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-8  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
                     <div className=" ">
                         <Counter
                             initialValue={0}
@@ -484,7 +503,7 @@ export default function Home() {
                     <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center bg-[#393939] ">
 
 
-                        <div className="w-ful rounded-md  sm:p-4  md:p-4 lg:p-5 p-4 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-2   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
+                        <div className="w-ful rounded-md  sm:p-4  md:p-4 lg:p-5 p-8 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-2   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
                             <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap  ">
                                 <Card
                                     title="Department"
