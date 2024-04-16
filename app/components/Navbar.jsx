@@ -1,23 +1,86 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [openSubMenuId, setOpenSubMenuId] = useState(null);
+  const [collegeNameIndex, setCollegeNameIndex] = useState(0);
+
+  const collegeNames = ["SKC LNCT ", "एसकेसी एलएनसीटी "];
 
   // Function to toggle submenu
   const toggleSubMenu = (submenuId) => {
     setOpenSubMenuId(openSubMenuId === submenuId ? null : submenuId);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCollegeNameIndex((prevIndex) =>
+        prevIndex === collegeNames.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className=" text-white ">
-      <div className="flex justify-around  bg-orange-600 p-4">
-        <div id="tmenu-institute   ">
+    <div className=" text-white z-50">
+      <div className="flex items-center justify-between p-2 bg-orange-600">
+        <div className="items-center flex gap-4 ">
+          <p>Admissions</p>
+          <p>Placement</p>
+          <p>Careers</p>
+        </div>
+
+        <div className="items-center gap-4 flex w-8 h-8 ">
+          <img src="/twitter.png" className="rounded-full"></img>
+          <img src="/yt.png" className="rounded-full"></img>
+          <img src="/insta.png" className="rounded-full"></img>
+        </div>
+
+        {/* Login button */}
+        <div className="flex ">
+          <Link
+            className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
+            href="\loginPage"
+          >
+            STAFF LOGIN
+          </Link>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between px-4 bg-orange-400">
+        {/* Logo and college name */}
+        <div className="flex items-center gap-4">
+          <div className="w-[100px] h-[100px] relative">
+            <Image
+              src="/logo1.png"
+              layout="fill"
+              objectFit="contain"
+              alt="Logo"
+            />
+          </div>
+          <h1 className="text-3xl font-semibold">
+            {collegeNames[collegeNameIndex]}
+          </h1>
+          <div className="slogan">An Institute of National Importance</div>
+        </div>
+
+        {/* Search box */}
+        <div>
+          <input
+            type="text"
+            placeholder="Search"
+            className="px-4 py-2 rounded-full border border-white focus:outline-none focus:border-gray-300"
+          />
+        </div>
+      </div>
+      <div className="flex justify-around bg-orange-400 p-4">
+        <div id="tmenu-institute">
           <a
             href="#"
-            className="text-white  "
+            className="text-white"
             onClick={() => toggleSubMenu("institute")}
           >
             Institute
@@ -26,26 +89,23 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-[980px] rounded-2xl mx-auto bg-white nav-submenu  ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu  ${
               openSubMenuId === "institute" ? "" : "hidden"
             }`}
           >
-            <ul className=" flex justify-around list-none">
-              <li className="py-4 ">
-                <h5 className="text-lg font-semibold  mb-2">
-                  <a
-                    href="#"
-                    className="text-orange-500 border-b-2  border-orange-600 text-xl p-1"
-                  >
+            <ul class=" flex justify-around list-none">
+              <li class="py-4 ">
+                <h5 class="text-lg font-semibold mb-2">
+                  <a href="#" class="text-blue-500 text-lg p-2">
                     Institute
                   </a>
                 </h5>
-                <ul className="p-2 ">
+                <ul>
                   <li>
                     <a
                       id="submenu-welcome"
                       href="/institute/welcome"
-                      className="text-gray-700 text-lg hover:text-blue-400 "
+                      class="text-gray-700 text-sm"
                     >
                       Institute
                     </a>
@@ -54,7 +114,7 @@ export default function Navbar() {
                     <a
                       id="submenu-vision"
                       href="/institute/mission_vision"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Vision and Mission
                     </a>
@@ -63,7 +123,7 @@ export default function Navbar() {
                     <a
                       id="submenu-exdirectors"
                       href="/institute/former_directors"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Former Directors
                     </a>
@@ -73,7 +133,7 @@ export default function Navbar() {
                     <a
                       id="submenu-campusfacility"
                       href="/Institute/CampusFacility"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Campus and Facilities
                     </a>
@@ -83,7 +143,7 @@ export default function Navbar() {
                     <a
                       id="submenu-gallery"
                       href="/Institute/Gallery"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Gallery
                     </a>
@@ -91,17 +151,17 @@ export default function Navbar() {
                   <li>
                     <a
                       id="submenu-contactus"
-                      href="/Institute/ContactUs"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      href="/institute/contact"
+                      class="text-gray-700 text-sm"
                     >
                       Contact Us
                     </a>
                   </li>
                 </ul>
               </li>
-              <li className="py-4">
-                <h5 className="text-lg font-semibold mb-2">
-                  <a href="#" className="text-orange-500 border-b-2  border-orange-600 text-xl p-1">
+              <li class="py-4">
+                <h5 class="text-lg font-semibold mb-2">
+                  <a href="#" class="text-blue-500 text-lg p-2">
                     Administration
                   </a>
                 </h5>
@@ -110,7 +170,7 @@ export default function Navbar() {
                     <a
                       id="submenu-council"
                       href="/Institute/NITsCouncil"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Council for NITs
                     </a>
@@ -119,7 +179,7 @@ export default function Navbar() {
                     <a
                       id="submenu-bog"
                       href="/institute/bog"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Board of Governors
                     </a>
@@ -128,7 +188,7 @@ export default function Navbar() {
                     <a
                       id="submenu-senate"
                       href="/Institute/Senate"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       The Senate
                     </a>
@@ -137,7 +197,7 @@ export default function Navbar() {
                     <a
                       id="submenu-chairperson"
                       href="/institute/chairperson"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Chairperson
                     </a>
@@ -146,7 +206,7 @@ export default function Navbar() {
                     <a
                       id="submenu-director"
                       href="/institute/director"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Director
                     </a>
@@ -155,7 +215,7 @@ export default function Navbar() {
                     <a
                       id="submenu-nitradmin"
                       href="/Institute/NITRDirector"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       NITR Administration
                     </a>
@@ -164,7 +224,7 @@ export default function Navbar() {
                     <a
                       id="submenu-fc"
                       href="/Institute/FC"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Finance Committee
                     </a>
@@ -173,16 +233,16 @@ export default function Navbar() {
                     <a
                       id="submenu-bwc"
                       href="/Institute/BWC"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Buildings and Works Committee
                     </a>
                   </li>
                 </ul>
               </li>
-              <li className="py-4">
-                <h5 className="text-lg font-semibold mb-2">
-                  <a href="#" className="text-orange-500 border-b-2  border-orange-600 text-xl p-1">
+              <li class="py-4">
+                <h5 class="text-lg font-semibold mb-2">
+                  <a href="#" class="text-blue-500 text-lg p-2">
                     Key Documents
                   </a>
                 </h5>
@@ -191,7 +251,7 @@ export default function Navbar() {
                     <a
                       id="submenu-actstatues"
                       href="/Institute/Act_Statutes"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Act and Statutes
                     </a>
@@ -200,7 +260,7 @@ export default function Navbar() {
                     <a
                       id="submenu-mcouncil"
                       href="/Institute/Minutes_NITCouncil"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Minutes of NIT Council
                     </a>
@@ -209,7 +269,7 @@ export default function Navbar() {
                     <a
                       id="submenu-mbog"
                       href="/Institute/Minutes_BOG"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Minutes of BOG
                     </a>
@@ -218,7 +278,7 @@ export default function Navbar() {
                     <a
                       id="submenu-mfc"
                       href="/Institute/Minutes_FC"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Minutes of FC
                     </a>
@@ -227,7 +287,7 @@ export default function Navbar() {
                     <a
                       id="submenu-mbwc"
                       href="/Institute/Minutes_BWC"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Minutes of BWC
                     </a>
@@ -236,7 +296,7 @@ export default function Navbar() {
                     <a
                       id="submenu-msenate"
                       href="/Institute/Minutes_Senate"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Minutes of Senate
                     </a>
@@ -245,7 +305,7 @@ export default function Navbar() {
                     <a
                       id="submenu-ruleregulation"
                       href="/Institute/Rules_Regulations"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Rules and Regulations
                     </a>
@@ -254,16 +314,16 @@ export default function Navbar() {
                     <a
                       id="submenu-annualreport"
                       href="/Institute/Annual_Reports"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Annual Reports
                     </a>
                   </li>
                 </ul>
               </li>
-              <li className="py-4">
-                <h5 className="text-lg font-semibold mb-2">
-                  <a href="#" className="text-orange-500 border-b-2  border-orange-600 text-xl p-1">
+              <li class="py-4">
+                <h5 class="text-lg font-semibold mb-2">
+                  <a href="#" class="text-blue-500 text-lg p-2">
                     Accreditation
                   </a>
                 </h5>
@@ -272,7 +332,7 @@ export default function Navbar() {
                     <a
                       id="submenu-nirf"
                       href="/Institute/NIRF"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Data for NIRF
                     </a>
@@ -281,7 +341,7 @@ export default function Navbar() {
                     <a
                       id="submenu-nba"
                       href="/Institute/NBA"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Data for NBA
                     </a>
@@ -290,7 +350,7 @@ export default function Navbar() {
                     <a
                       id="submenu-ariia"
                       href="/Institute/ARIIA"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Data for ARIIA
                     </a>
@@ -299,7 +359,7 @@ export default function Navbar() {
                     <a
                       id="submenu-qs"
                       href="/Institute/QS"
-                      className="text-gray-700 text-lg hover:text-blue-400"
+                      class="text-gray-700 text-sm"
                     >
                       Data for QS
                     </a>
@@ -313,7 +373,7 @@ export default function Navbar() {
         <div id="tmenu-institute">
           <a
             href="#"
-            className="text-white text-lg"
+            className="text-white"
             onClick={() => toggleSubMenu("academics")}
           >
             Academics
@@ -322,25 +382,25 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-white nav-submenu  ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu  ${
               openSubMenuId === "academics" ? "" : "hidden"
             }`}
           >
-            <ul className="flex justify-around text-black p-2 ">
+            <ul class="flex justify-around ">
               <li>
                 <ul>
                   <li>
-                    <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1 " href="">
+                    <a className="text-blue-500 text-lg p-2 " href="">
                       Admissions
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400" id="submenu-acadprograme" href="/Academic/UGProgramme">
+                    <a id="submenu-acadprograme" href="/Academic/UGProgramme">
                       Academic Programmes
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400"
+                    <a
                       id="submenu-acadregulations"
                       href="/Academic/AcademicRegulations"
                     >
@@ -348,7 +408,7 @@ export default function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400"
+                    <a
                       id="submenu-acadcalendar"
                       href="/Academic/AcademicCalendar"
                     >
@@ -356,7 +416,7 @@ export default function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400"
+                    <a
                       id="submenu-acadtimetable"
                       href="/Academic/AcademicTimeTable"
                     >
@@ -365,26 +425,23 @@ export default function Navbar() {
                   </li>
                 </ul>
                 <h5>
-                  <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Technical Service Units
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a className="text-gray-700 text-lg  hover:text-blue-400"
-                    id="submenu-hc" href="/HealthCentre">
+                    <a id="submenu-hc" href="/HealthCentre">
                       Health Centre
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400" 
-                    id="submenu-lg" href="/LawnGarden">
+                    <a id="submenu-lg" href="/LawnGarden">
                       Lawn and Garden
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400" 
-                    id="submenu-pd" href="/PlanningDevelopment/About">
+                    <a id="submenu-pd" href="/PlanningDevelopment/About">
                       Planning and Development
                     </a>
                   </li>
@@ -392,65 +449,60 @@ export default function Navbar() {
               </li>
               <li>
                 <h5>
-                  <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Departments
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400" 
-                    id="submenu-engineering" href="/Academic/Engineering">
+                    <a id="submenu-engineering" href="/Academic/Engineering">
                       Engineering
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400" 
-                     id="submenu-pa" href="/PA">
+                    <a id="submenu-pa" href="/PA">
                       Planning and Architecture
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400" 
-                    id="submenu-science" href="/Academic/Science">
+                    <a id="submenu-science" href="/Academic/Science">
                       Science
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400" 
-                    id="submenu-hs" href="/HS">
+                    <a id="submenu-hs" href="/HS">
                       Humanities and Social Science
                     </a>
                   </li>
                 </ul>
                 <h5>
-                  <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Academic Support Centres
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a 
-                     className="text-gray-700 text-lg hover:text-blue-400" id="submenu-cat" href="/CAT">
+                    <a id="submenu-cat" href="/CAT">
                       Centre for Automation Technology
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400" id="submenu-cdc" href="/CDC">
+                    <a id="submenu-cdc" href="/CDC">
                       Career Development Centre
                     </a>
                   </li>
                   <li>
-                    <a   className="text-gray-700 text-lg hover:text-blue-400" href="https://library.nitrkl.ac.in/">
+                    <a href="https://library.nitrkl.ac.in/">
                       Biju Pattnaik Central Library
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400" id="submenu-sac" href="/SAC">
+                    <a id="submenu-sac" href="/SAC">
                       Student Activity Centre
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 " id="submenu-cic" href="/CIC">
+                    <a id="submenu-cic" href="/CIC">
                       Computer and Informatics Centre
                     </a>
                   </li>
@@ -458,72 +510,71 @@ export default function Navbar() {
               </li>
               <li>
                 <h5>
-                  <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Centres of Research
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a   className="text-gray-700 text-lg hover:text-blue-400 p-2 "
-                    href="/Academic/BIC">
+                    <a href="/Academic/BIC">
                       Bioinformatics and Computational Biology
                     </a>
                   </li>
                   <li>
-                    <a   className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/CVPR">
+                    <a href="/Academic/CVPR">
                       Computer Vision &amp; Pattern Recognition
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/CETS">Excellence for Tribal Studies</a>
+                    <a href="/Academic/CETS">Excellence for Tribal Studies</a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/CEPH">
+                    <a href="/Academic/CEPH">
                       Excellence on Public Health Nutrition
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/CIER">
+                    <a href="/Academic/CIER">
                       Industrial Electronics &amp; Robotics
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/CDNM">Nanomaterials</a>
+                    <a href="/Academic/CDNM">Nanomaterials</a>
                   </li>
                   <li>
-                    <a   className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/PARC">
+                    <a href="/Academic/PARC">
                       Poverty Alleviation Research Centre
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="/Academic/CRES">Renewable Energy Systems</a>
+                    <a href="/Academic/CRES">Renewable Energy Systems</a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/STIC">
+                    <a href="/Academic/STIC">
                       Space Technology Incubation Center
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/SRC">Steel Research Centre</a>
+                    <a href="/Academic/SRC">Steel Research Centre</a>
                   </li>
                 </ul>
 
                 <h5>
-                  <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Facilities
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="javascript:void(0);">Central Workshop</a>
+                    <a href="javascript:void(0);">Central Workshop</a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="https://nitrkl.ac.in/crf/">
+                    <a href="https://nitrkl.ac.in/crf/">
                       Central Research Facility
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-acadhpc" href="/HPCRkl">
+                    <a id="submenu-acadhpc" href="/HPCRkl">
                       High Performance Computing
                     </a>
                   </li>
@@ -536,7 +587,7 @@ export default function Navbar() {
         <div id="tmenu-institute">
           <a
             href="#"
-            className="text-white text-lg"
+            className="text-white"
             onClick={() => toggleSubMenu("students")}
           >
             Students
@@ -545,31 +596,31 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-white nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
               openSubMenuId === "students" ? "" : "hidden"
             }`}
           >
-            <ul className="flex justify-around text-black p-4 ">
+            <ul class="flex justify-around ">
               <li>
                 <h5>
-                  <a className="text-orange-500 border-b-2   border-orange-600 text-xl  " href="">
+                  <a className="text-blue-500 text-lg p-2 " href="">
                     Prospective Students
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-why" href="/Student/WhyNITR">
+                    <a id="submenu-why" href="/Student/WhyNITR">
                       Why NIT Rourkela
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Institute/Gallery">Gallery</a>
+                    <a href="/Institute/Gallery">Gallery</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Institute/CampusFacility">Campus Life</a>
+                    <a href="/Institute/CampusFacility">Campus Life</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "
+                    <a
                       id="submenu-international"
                       href="/Student/InternationalStudents"
                     >
@@ -577,7 +628,7 @@ export default function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "
+                    <a
                       id="submenu-finassist"
                       href="/Student/FinancialAssistance"
                     >
@@ -585,33 +636,33 @@ export default function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/UGProgramme">Academic Programmes</a>
+                    <a href="/Academic/UGProgramme">Academic Programmes</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/CurriculaSyllabi">
+                    <a href="/Academic/CurriculaSyllabi">
                       Curriculum and Syllabi
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-apply" href="/Student/How2Apply">
+                    <a id="submenu-apply" href="/Student/How2Apply">
                       How to Apply
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-process" href="/Student/Process">
+                    <a id="submenu-process" href="/Student/Process">
                       Admission Process
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Student/Advertisements">
+                    <a href="/Student/Advertisements">
                       Admission Advt. and Notices
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/SRICCE/Career">Project Advt. and Notices</a>
+                    <a href="/SRICCE/Career">Project Advt. and Notices</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-faq1" href="/Student/FAQs">
+                    <a id="submenu-faq1" href="/Student/FAQs">
                       FAQs
                     </a>
                   </li>
@@ -619,49 +670,49 @@ export default function Navbar() {
               </li>
               <li>
                 <h5>
-                  <a className="text-orange-500 border-b-2   border-orange-600 text-xl  " href="">
+                  <a className="text-blue-500 text-lg p-2 " href="">
                     Existing Students
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="/Academic/AcademicRegulations">
+                    <a href="/Academic/AcademicRegulations">
                       Rules and Regulations
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-forms" href="/Student/Forms">
+                    <a id="submenu-forms" href="/Student/Forms">
                       Forms
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/AcademicCalendar">Academic Calendar</a>
+                    <a href="/Academic/AcademicCalendar">Academic Calendar</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Academic/AcademicTimeTable">Time Table</a>
+                    <a href="/Academic/AcademicTimeTable">Time Table</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-holidays" href="/Academic/Holidays">
+                    <a id="submenu-holidays" href="/Academic/Holidays">
                       Holidays
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="https://eapplication.nitrkl.ac.in/nitris/">
+                    <a href="https://eapplication.nitrkl.ac.in/nitris/">
                       Academic ERP (NITRis)
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="https://nitrkl.ac.in/parentconnect/">
+                    <a href="https://nitrkl.ac.in/parentconnect/">
                       Parent Connect
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="https://eapplication.nitrkl.ac.in/nitris/">
+                    <a href="https://eapplication.nitrkl.ac.in/nitris/">
                       Examination and Results
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=1509159">
+                    <a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=1509159">
                       Online Fee Payment
                     </a>
                   </li>
@@ -669,42 +720,42 @@ export default function Navbar() {
               </li>
               <li>
                 <h5>
-                  <a className="text-orange-500 border-b-2   border-orange-600 text-xl   " href="">
+                  <a className="text-blue-500 text-lg p-2 " href="">
                     Other Related Links
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  id="submenu-abc" href="/Student/ABC">
+                    <a id="submenu-abc" href="/Student/ABC">
                       UGC NAD / ABC Bureau
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://eapplication.nitrkl.ac.in/internship/">
+                    <a href="https://eapplication.nitrkl.ac.in/internship/">
                       Internship Programmes
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://www.ics-nitrkl.in/">
+                    <a href="https://www.ics-nitrkl.in/">
                       Institute Counselling Service
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="/SAC">Student Activity Centre</a>
+                    <a href="/SAC">Student Activity Centre</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="/CDC">Career Development Centre</a>
+                    <a href="/CDC">Career Development Centre</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://library.nitrkl.ac.in/">Central Library</a>
+                    <a href="https://library.nitrkl.ac.in/">Central Library</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  id="submenu-hall" href="/Hall">
+                    <a id="submenu-hall" href="/Hall">
                       Halls of Residence
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://mondaymorning.nitrkl.ac.in/">
+                    <a href="https://mondaymorning.nitrkl.ac.in/">
                       Monday Morning NEWS
                     </a>
                   </li>
@@ -713,10 +764,10 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-        <div id="tmenu-institute ">
+        <div id="tmenu-institute">
           <a
             href="#"
-            className="text-white text-lg "
+            className="text-white"
             onClick={() => toggleSubMenu("faculty & staff")}
           >
             Faculty & Staff
@@ -725,28 +776,28 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-white nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
               openSubMenuId === "faculty & staff" ? "" : "hidden"
             }`}
           >
-            <ul className="flex justify-around text-black p-4  ">
+            <ul class="flex justify-around">
               <li>
                 <h5>
-                  <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Prospective Employee
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Institute/Welcome">What is NITR</a>
+                    <a href="/Institute/Welcome">What is NITR</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-whynitr" href="/FacultyStaff/WhyNITR">
+                    <a id="submenu-whynitr" href="/FacultyStaff/WhyNITR">
                       Why Join NITR
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="https://website.nitrkl.ac.in/FacultyStaff/Career/">
+                    <a href="https://website.nitrkl.ac.in/FacultyStaff/Career/">
                       Job Openings
                     </a>
                   </li>
@@ -754,31 +805,31 @@ export default function Navbar() {
               </li>
               <li>
                 <h5>
-                  <a  className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Existing Employee
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a id="submenu-faculty"  className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/FacultyStaff/Faculty">
+                    <a id="submenu-faculty" href="/FacultyStaff/Faculty">
                       Faculty Directory
                     </a>
                   </li>
                   <li>
-                    <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 "id="submenu-officer" href="/FacultyStaff/Officer">
+                    <a id="submenu-officer" href="/FacultyStaff/Officer">
                       Officer Directory
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " id="submenu-staff" href="/FacultyStaff/Staff">
+                    <a id="submenu-staff" href="/FacultyStaff/Staff">
                       Staff Directory
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 " href="/Institute/CampusFacility">Campus Life</a>
+                    <a href="/Institute/CampusFacility">Campus Life</a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "
+                    <a
                       id="submenu-ruleregulation"
                       href="/Institute/Rules_Regulations"
                     >
@@ -786,7 +837,7 @@ export default function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "
+                    <a
                       id="submenu-circularnotices"
                       href="/FacultyStaff/CircularNotices"
                     >
@@ -794,7 +845,7 @@ export default function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "
+                    <a
                       id="submenu-officialform"
                       href="/FacultyStaff/OfficialForm"
                     >
@@ -805,38 +856,38 @@ export default function Navbar() {
               </li>
               <li>
                 <h5>
-                  <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Useful Links
                   </a>
                 </h5>
                 <ul>
                   <li>
-                     <a  className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://eapplication.nitrkl.ac.in/nitris/">
+                    <a href="https://eapplication.nitrkl.ac.in/nitris/">
                       ERP (NITRis)
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://oac.nitrkl.ac.in/Hr%5Fpayroll/">
+                    <a href="https://oac.nitrkl.ac.in/Hr%5Fpayroll/">
                       HR and Payroll
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://oac.nitrkl.ac.in/healthcentre/">
+                    <a href="https://oac.nitrkl.ac.in/healthcentre/">
                       Health Centre
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://guesthouse.nitrkl.ac.in/Users/HomePage.aspx">
+                    <a href="https://guesthouse.nitrkl.ac.in/Users/HomePage.aspx">
                       Guest House
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  id="submenu-sricce" href="/SRICCE">
+                    <a id="submenu-sricce" href="/SRICCE">
                       SRICCE
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  id="submenu-purchase" href="/PurchaseSection">
+                    <a id="submenu-purchase" href="/PurchaseSection">
                       Purchase and Store
                     </a>
                   </li>
@@ -844,18 +895,18 @@ export default function Navbar() {
               </li>
               <li>
                 <h5>
-                  <a className="text-orange-500 border-b-2  border-orange-600 text-xl p-1" href="">
+                  <a className="text-blue-500 text-lg p-2" href="">
                     Retired Employee
                   </a>
                 </h5>
                 <ul>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://eapplication.nitrkl.ac.in/nitris/PensionerLogin.aspx">
+                    <a href="https://eapplication.nitrkl.ac.in/nitris/PensionerLogin.aspx">
                       Pensioners
                     </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 text-lg hover:text-blue-400 p-2 "  href="https://eapplication.nitrkl.ac.in/nitris/PensionerLogin.aspx">
+                    <a href="https://eapplication.nitrkl.ac.in/nitris/PensionerLogin.aspx">
                       Pensioner Life Certificate
                     </a>
                   </li>
@@ -867,7 +918,7 @@ export default function Navbar() {
         <div id="tmenu-institute">
           <a
             href="#"
-            className="text-white  text-lg"
+            className="text-white"
             onClick={() => toggleSubMenu("research")}
           >
             Research
@@ -876,19 +927,13 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute  top-30 left-0 w-[300px] bg-white nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
               openSubMenuId === "research" ? "" : "hidden"
             }`}
           >
-            <ul className="nav-dropdown nav-submenu items-center m-10   text-black">
-            <h1 className="text-orange-600 text-2xl text-center border-b-2">Research</h1>
-
-            <div className=" text-justify p-4">
-              
-              
-                
+            <ul class="nav-dropdown nav-submenu">
               <li>
-                <a className="text-gray-700 text-lg font hover:text-blue-400  "
+                <a
                   id="submenu-publication"
                   href="/Research/PublicationsPatents"
                 >
@@ -896,7 +941,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 "
+                <a
                   id="submenu-sponsoredproject"
                   href="/Research/SponsoredProjects"
                 >
@@ -904,7 +949,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 "
+                <a
                   id="submenu-consultancyproject"
                   href="/Research/ConsultancyProjects"
                 >
@@ -912,7 +957,7 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 "
+                <a
                   id="submenu-continuingeducation"
                   href="/Research/ContinuingEducation"
                 >
@@ -920,77 +965,72 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 " id="submenu-conference" href="/Research/Conferences">
+                <a id="submenu-conference" href="/Research/Conferences">
                   Conferences
                 </a>
               </li>
-             
-              
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400  " id="submenu-workshops" href="/Research/Workshops">
+                <a id="submenu-workshops" href="/Research/Workshops">
                   Workshops
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 " id="submenu-seminars" href="/Research/Seminars">
+                <a id="submenu-seminars" href="/Research/Seminars">
                   Seminars
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg  hover:text-blue-400 " id="submenu-ipic" href="/Research/IPIC">
+                <a id="submenu-ipic" href="/Research/IPIC">
                   Intellectual Property Innovation Centre
                 </a>
               </li>
-              
-              </div>
             </ul>
           </div>
         </div>
         <div id="tmenu-institute">
           <a
             href="#"
-            className="text-white text-lg"
+            className="text-white"
             onClick={() => toggleSubMenu("alumni")}
           >
             Alumni
-            <span className="submenu-indicator ">
+            <span className="submenu-indicator">
               <span className="submenu-indicator-chevron border-white"></span>
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-[350px] p-10 bg-white nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
               openSubMenuId === "alumni" ? "" : "hidden"
             }`}
           >
-            <ul className="nav-dropdown nav-submenu text-black ">
-            <h1 className="text-orange-600 text-2xl text-center border-b-2">Alumni</h1>
+            <ul class="nav-dropdown nav-submenu">
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 " id="submenu-alumnirelations" href="/AIIR/AlumniRelations">
+                <a id="submenu-alumnirelations" href="/AIIR/AlumniRelations">
                   Alumni Relations
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 " id="submenu-givingback" href="/AIIR/GivingBack">
+                <a id="submenu-givingback" href="/AIIR/GivingBack">
                   Giving back to Alma Mater
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 " id="submenu-transcripts" href="/AIIR/Transcript">
+                <a id="submenu-transcripts" href="/AIIR/Transcript">
                   Transcripts
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 " id="submenu-transcripts" href="/AIIR/DirectorMessage">
+                <a id="submenu-transcripts" href="/AIIR/DirectorMessage">
                   Director's Message to Alumni
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div id="tmenu-institute ">
+        <div id="tmenu-institute">
           <a
             href="#"
-            className="text-white text-lg"
+            className="text-white"
             onClick={() => toggleSubMenu("resources")}
           >
             Resources
@@ -999,34 +1039,33 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-[500px] bg-white nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
               openSubMenuId === "resources" ? "" : "hidden"
             }`}
           >
-            <ul className="nav-dropdown nav-submenu text-black p-10 ">
-            <h1 className="text-orange-600 text-2xl text-center border-b-2">Resources</h1>
+            <ul class="nav-dropdown nav-submenu">
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 "  id="submenu-crf" href="/Resources/Central_Research_Facility">
+                <a id="submenu-crf" href="/Resources/Central_Research_Facility">
                   Central Research Facility
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 "  id="submenu-industryrelation" href="/TIIR">
+                <a id="submenu-industryrelation" href="/TIIR">
                   Centre for Technology Innovation and Industry Relations
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 "  id="submenu-ftbi" href="/Resources/FTBI">
+                <a id="submenu-ftbi" href="/Resources/FTBI">
                   Foundation for Technology and Business Incubation
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 "  id="submenu-acadhpc" href="/HPCRkl">
+                <a id="submenu-acadhpc" href="/HPCRkl">
                   High Performance Computing
                 </a>
               </li>
               <li>
-                <a className="text-gray-700 text-lg hover:text-blue-400 " 
+                <a
                   id="submenu-industrialconsultancy"
                   href="/Resources/IndustrialConsultancy"
                 >

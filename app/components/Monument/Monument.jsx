@@ -34,7 +34,7 @@ const Monument = () => {
   };
 
   return (
-    <div className="flex flex-col" style={{ height: "calc(100vh - 130px)" }}>
+    <div className="flex flex-col mt-5" style={{ height: "calc(100vh - 130px)" }}>
       <div className="flex px-4 text-xl  justify-center gap-2">
         {sections.map((section) => (
           <button
@@ -52,12 +52,13 @@ const Monument = () => {
       </div>
       <div className="flex flex-grow p-5 gap-6 transition-all duration-700">
         <div className="w-1/3 py-4 ">
-          <div className="relative h-full overflow-hidden rounded-lg">
+          <div className="relative h-full overflow-hidden rounded-lg -z-10">
             <Image
               src={sections[activeSection - 1].img}
               alt="foddiesssss"
               layout="fill"
               objectFit="cover"
+              className=" z-20"
             />
           </div>
         </div>
