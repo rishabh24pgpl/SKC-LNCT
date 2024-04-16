@@ -1,19 +1,15 @@
 import FacultyCard from "@/app/components/FacultyCard/FacultyCard";
+import SliderMain from "@/app/components/SliderMain/SliderMain";
 import Image from "next/image";
 import React from "react";
 
 export default function page() {
+  const images=[
+    "/baggi.jpg", "/mainImg.jpeg", "/baggi.jpg"
+  ]
   return (
     <div>
-      <div
-        className="w-full max-h-[300px] min-h-[400px] flex justify-center  items-center"
-        style={{
-          backgroundImage: "url('/welcome.jpeg')",
-          backgroundSize: "cover",
-        }}
-      >
-        <h1 className=" uppercase font-bold text-5xl">former directors</h1>
-      </div>
+     <SliderMain images={images} heading="Former directors"/>
       <div className="w-full mx-auto flex relative">
         <div className="w-1/2 px-20 pt-[36px]">
           <FacultyCard />

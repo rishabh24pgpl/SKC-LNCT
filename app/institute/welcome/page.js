@@ -6,7 +6,7 @@ import Monument from "@/app/components/Monument/Monument";
 export default function page() {
   return (
     <>
-      <Navbar />
+   
       <div
         className="w-full border-2 h-96 flex justify-center  items-center"
         style={{

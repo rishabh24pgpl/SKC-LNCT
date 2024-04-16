@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Footer from '@/app/components/Footer';
+import Footer from '@/app/components/Footer/Footer';
 import Counter from "@/app/components/Counter";
 
 export default function CentralResearch() {
