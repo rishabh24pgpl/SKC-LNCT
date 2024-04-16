@@ -26,7 +26,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-white nav-submenu  ${
+            className={`megamenu-panel absolute top-30 left-0 w-[980px] rounded-2xl mx-auto bg-white nav-submenu  ${
               openSubMenuId === "institute" ? "" : "hidden"
             }`}
           >
