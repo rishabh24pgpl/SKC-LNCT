@@ -12,6 +12,7 @@ import { IoAirplane } from "react-icons/io5";
 
 export default function Contact() {
   const images = ["/baggi.jpg", "/mainImg.jpeg", "/baggi.jpg"];
+  
 
   return (
     <>
