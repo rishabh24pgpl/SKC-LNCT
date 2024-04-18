@@ -132,7 +132,7 @@ export default function Navbar() {
                   <li>
                     <a
                       id="submenu-campusfacility"
-                      href="/Institute/CampusFacility"
+                      href="/institute/campus_facilities"
                       class="text-gray-700 text-sm"
                     >
                       Campus and Facilities
