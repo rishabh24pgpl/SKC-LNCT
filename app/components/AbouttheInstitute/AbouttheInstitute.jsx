@@ -4,7 +4,7 @@ import React from "react";
 export default function AbouttheInstitute() {
   return (
     <>
-      <div className=" flex justify-around bg-orange-700">
+      <div className=" flex justify-around bg-blue-700">
         <div className="   w-full h-full">
           <h1 className="text-3xl pt-10 pb-5 px-10 ">About the Institute</h1>
           <p className=" text-justify px-10 pb-4">

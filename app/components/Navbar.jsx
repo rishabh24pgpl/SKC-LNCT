@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <div className=" text-white z-50">
-      <div className="flex items-center justify-between p-2 bg-orange-600">
+      <div className="flex items-center justify-between p-2 bg-blue-600">
         <div className="items-center flex gap-4 ">
           <p>Admissions</p>
           <p>Placement</p>
@@ -50,7 +50,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-4 bg-orange-400">
+      <div className="flex items-center justify-between px-4 bg-blue-400">
         {/* Logo and college name */}
         <div className="flex items-center gap-4">
           <div className="w-[100px] h-[100px] relative">
@@ -76,7 +76,7 @@ export default function Navbar() {
           />
         </div>
       </div>
-      <div className="flex justify-around bg-orange-400 p-4">
+      <div className="flex justify-around bg-blue-400 p-4">
         <div id="tmenu-institute">
           <a
             href="#"
@@ -89,7 +89,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu  ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-400 nav-submenu  ${
               openSubMenuId === "institute" ? "" : "hidden"
             }`}
           >
@@ -382,7 +382,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu  ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-400 nav-submenu  ${
               openSubMenuId === "academics" ? "" : "hidden"
             }`}
           >
@@ -596,7 +596,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-400 nav-submenu ${
               openSubMenuId === "students" ? "" : "hidden"
             }`}
           >
@@ -776,7 +776,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-400 nav-submenu ${
               openSubMenuId === "faculty & staff" ? "" : "hidden"
             }`}
           >
@@ -927,7 +927,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-400 nav-submenu ${
               openSubMenuId === "research" ? "" : "hidden"
             }`}
           >
@@ -999,7 +999,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-400 nav-submenu ${
               openSubMenuId === "alumni" ? "" : "hidden"
             }`}
           >
@@ -1039,7 +1039,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-orange-400 nav-submenu ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-400 nav-submenu ${
               openSubMenuId === "resources" ? "" : "hidden"
             }`}
           >
