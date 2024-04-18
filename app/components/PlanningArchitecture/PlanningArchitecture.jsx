@@ -46,7 +46,7 @@ export default function PlanningArchitecture() {
             />
             </div>
             <div className='w-full     fill 'style={{background: "url('/ar-bg-1.jpg')" , backgroundRepeat:"no-repeat" ,backgroundSize:"cover",   }}>
-                <h1 className='text-orange-600 text-5xl p-10'>About the
+                <h1 className='text-blue-600 text-5xl p-10'>About the
 Department</h1>
 <p className='px-10'>The Department of Planning and Architecture (PA) was established in 2013 with the objective of amalgamating the aesthetics and technology together into a piece of art, in a creative way, not only to fulfil the societal need of shelter and to solve the infrastructure problem but also to take care of the emerging concern of energy and environmental issues. The department is providing multidisciplinary research and teaching programmes in the field of architecture and planning. The faculty members have diverse research interests and they conduct basic and applied research in the area of Sustainable Architecture, Energy Efficient Architecture, Green Architecture, Acoustics, Illumination, Landscape Architecture, Interior Design, Urban Planning, Transportation Planning, Infrastructure Planning, Environmental Planning and Housing</p>
                 </div>

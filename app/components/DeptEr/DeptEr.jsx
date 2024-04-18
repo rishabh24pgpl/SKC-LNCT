@@ -63,7 +63,7 @@ export default function DeptEr({dept}) {
         <div className="w-full flex px-20 py-10  gap-7">
           <div className="w-2/3 ">
             <div className="p-10">
-              <h2 className=" text-4xl text-orange-700 my-5">
+              <h2 className=" text-4xl text-blue-700 my-5">
                 About the Department
               </h2>
               <div className="w-full   mt-5">
@@ -157,26 +157,26 @@ export default function DeptEr({dept}) {
         </div>
 
         <div className="w-full flex flex-col px-20 gap-4 py-6">
-          <h1 className="text-4xl text-orange-500 font-bold p-2">
+          <h1 className="text-4xl text-blue-500 font-bold p-2">
             Academic Programmes
           </h1>
           <div className="w-full flex justify-center gap-20 ">
             <ProgramCard
               course={"Undergraduate"}
-              bgcolor={"bg-orange-400"}
+              bgcolor={"bg-blue-400"}
               admission={"JEE"}
               dept={"civil engineering"}
             />
             <ProgramCard
               course={"Post-Graduate"}
-              bgcolor={"bg-orange-600"}
+              bgcolor={"bg-blue-600"}
               admission={"JEE"}
               dept={"civil engineering"}
             />
           </div>
         </div>
         <div className="w-full flex flex-col px-20 gap-4 py-6 ">
-          <h1 className="font-bold text-4xl text-orange-500">
+          <h1 className="font-bold text-4xl text-blue-500">
             Head Of the Department
           </h1>
           <div className="flex justify-between gap-10">

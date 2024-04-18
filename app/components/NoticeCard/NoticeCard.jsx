@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function NoticeCard({img,content,link}) {
   return (
     <>
-      <div className="w-full h-[440px] border-2 border-orange-500 flex flex-col  items-center rounded-lg overflow-hidden">
+      <div className="w-full h-[440px] border-2 border-blue-500 flex flex-col  items-center rounded-lg overflow-hidden">
         <div className="w-full h-[210px]  relative overflow-hidden">
           <Image
             src="/ar-1.jpg"
@@ -18,7 +18,7 @@ export default function NoticeCard({img,content,link}) {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, consequatur commodi. Saepe sint, molestias hic eum perspiciatis tenetur nulla consectetur, iste voluptatibus illum recusandae.
             </p>
         </div>
-        <div className=" h-[60px] w-full  bg-opacity-40 flex justify-between items-center hover:bg-orange-700 hover:text-white text-orange-600 transform transition-all duration-700 border-orange-600 border-t-2">
+        <div className=" h-[60px] w-full  bg-opacity-40 flex justify-between items-center hover:bg-blue-700 hover:text-white text-blue-600 transform transition-all duration-700 border-blue-600 border-t-2">
           <h1 className="p-4 text-xl ">Know More</h1>
           <h1 className="mr-10">
            

@@ -5,10 +5,12 @@ import { useEffect, useState } from "react";
 import Navlink from "./Navlink";
 
 import { FaChevronDown } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [openSubMenuId, setOpenSubMenuId] = useState(null);
   const [collegeNameIndex, setCollegeNameIndex] = useState(0);
+  const menuId = usePathname();
 
   const collegeNames = ["SKC LNCT ", "एसकेसी एलएनसीटी "];
 
@@ -74,12 +76,8 @@ export default function Navbar() {
           name: "Key Documents",
           subchild: [
             {
-              name: "Act and Status",
-              link: "/institute/act-status",
-            },
-            {
               name: "Rules and Regulations",
-              link: "students/rules_regulations",
+              link: "/students/rules_regulations",
             },
 
             {
@@ -434,11 +432,13 @@ export default function Navbar() {
     },
   ];
 
+  useEffect(() => {
+    setOpenSubMenuId(null);
+  }, [menuId]);
+
   // Function to toggle submenu
   const toggleSubMenu = (submenuId) => {
-    console.log(submenuId);
     setOpenSubMenuId(openSubMenuId === submenuId ? null : submenuId);
-    console.log(openSubMenuId, "ooo");
   };
 
   useEffect(() => {
@@ -475,30 +475,32 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <div className="flex items-center justify-between px-4 bg-gradient-to-r from-indigo-400 to-blue-400">
-        {/* Logo and college name */}
-        <div className="flex items-center gap-4">
-          <div className="w-[100px] h-[100px] relative">
-            <Image
-              src="/logo1.png"
-              layout="fill"
-              objectFit="contain"
-              alt="Logo"
+      <div className="bg-gradient-to-r from-indigo-400 to-blue-400">
+        <div className=" w-9/12 mx-auto flex items-center justify-between px-4 ">
+          {/* Logo and college name */}
+          <div className="flex items-center gap-4">
+            <div className="w-[100px] h-[100px] relative">
+              <Image
+                src="/logo1.png"
+                layout="fill"
+                objectFit="contain"
+                alt="Logo"
+              />
+            </div>
+            <h1 className="text-3xl font-semibold">
+              {collegeNames[collegeNameIndex]}
+            </h1>
+            <div className="slogan">An Institute of National Importance</div>
+          </div>
+
+          {/* Search box */}
+          <div>
+            <input
+              type="text"
+              placeholder="Search"
+              className="px-4 py-2 rounded-full border border-white focus:outline-none focus:border-gray-300"
             />
           </div>
-          <h1 className="text-3xl font-semibold">
-            {collegeNames[collegeNameIndex]}
-          </h1>
-          <div className="slogan">An Institute of National Importance</div>
-        </div>
-
-        {/* Search box */}
-        <div>
-          <input
-            type="text"
-            placeholder="Search"
-            className="px-4 py-2 rounded-full border border-white focus:outline-none focus:border-gray-300"
-          />
         </div>
       </div>
 
@@ -508,7 +510,9 @@ export default function Navbar() {
             <div>
               <Link
                 href="#"
-                className=" text-white font-semibold text-lg hover:text-gray-300 hover:bg-blue-800 flex gap-2 items-center px-3  py-4"
+                className={` text-white font-semibold text-lg hover:text-gray-300 hover:bg-blue-700 flex gap-2 items-center px-3  py-4 ${
+                  openSubMenuId == item.main ? "bg-blue-800" : ""
+                }`}
                 onClick={() => toggleSubMenu(item.main)}
               >
                 {item.main}

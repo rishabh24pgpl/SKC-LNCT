@@ -47,7 +47,7 @@ export default function NewsDetails({ img, title, content, heading, para })
   return (
     <>
       {/* Header background with waves */}
-      <div className="relative bg-gradient-to-r from-orange-700 via-red-700 to-red-500 text-white overflow-hidden">
+      <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden">
         {/* SVG Waves */}
         <svg
           id="wave"
@@ -113,7 +113,7 @@ export default function NewsDetails({ img, title, content, heading, para })
             onSubmit={handleSubmit}
             className="space-y-4 bg-white p-4  w-full md:w-full shadow-md flex flex-col border-indigo-200  "
           >
-            <h1 className=" text-xl text-orange-700 ">
+            <h1 className=" text-xl text-blue-700 ">
               Admisson Form
             </h1>
             <input
@@ -181,7 +181,7 @@ export default function NewsDetails({ img, title, content, heading, para })
         </div>
       </div>
       <div className="border w-full h-[400px]    ">
-        <h1 className="text-5xl p-2 text-center border-b border-orange-700 text-orange-700 ">
+        <h1 className="text-5xl p-2 text-center border-b border-blue-700 text-blue-700 ">
           {heading}
         </h1>
         <p className="text-l p-2 text-center">{para}</p>

@@ -14,7 +14,7 @@ export default function Rules_Regulations() {
         <RuleCard bgcolor="bg-red-200" link="/" heading="B.Tech., B.Arch., Int.M.Sc. (5 yr), B.Tech. M.Tech. Dual Degree (5 yr) Summarized"/>
         <RuleCard bgcolor="bg-green-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-gray-200" link="/" heading="heading"/>
-        <RuleCard bgcolor="bg-orange-200" link="/" heading="heading"/>
+        <RuleCard bgcolor="bg-blue-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-pink-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-purple-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-lime-200" link="/" heading="heading"/>

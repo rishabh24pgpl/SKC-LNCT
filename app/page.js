@@ -239,13 +239,13 @@ export default function Home() {
           backgroundSize: "cover",
         }}
       >
-        <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-orange-900 h-[580px]  ">
+        <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-blue-900 h-[580px]  ">
           <nav className="nav flex-col lg:w-1/4 p-4">
             <h2 className="text-3xl w-80 text-white  text-center font-semibold mb-6">
               Academic Programme
             </h2>
             <ul className="space-y-2 bg-white rounded-xl p-4">
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-orange-400">
+              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("undergraduate")}
                   className={`nav-link ${
@@ -256,7 +256,7 @@ export default function Home() {
                   UNDERGRADUATE
                 </button>
               </li>
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-orange-400">
+              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("postgraduate")}
                   className={`nav-link ${
@@ -267,7 +267,7 @@ export default function Home() {
                   POSTGRADUATE
                 </button>
               </li>
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-orange-400">
+              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("doctoral")}
                   className={`nav-link ${
@@ -278,7 +278,7 @@ export default function Home() {
                   DOCTORAL
                 </button>
               </li>
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-orange-400">
+              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("executive")}
                   className={`nav-link ${
@@ -289,7 +289,7 @@ export default function Home() {
                   EXECUTIVE PH.D.
                 </button>
               </li>
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-orange-400">
+              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("parttime")}
                   className={`nav-link ${
