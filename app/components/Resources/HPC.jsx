@@ -54,7 +54,7 @@ export default function HPC() {
                     </ul>
                 </div>
             </div>
-            <Footer />
+            
         </div>
 
     )
