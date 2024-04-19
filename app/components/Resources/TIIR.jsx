@@ -3,8 +3,8 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import Navbar from '@/app/components/Navbar'
-import Footer from '@/app/components/Footer';
+
+import Footer from '../Footer/Footer';
 export default function TIIR() {
     const [collegeNameIndex, setCollegeNameIndex] = useState(0);
 
@@ -15,72 +15,17 @@ export default function TIIR() {
     return (
         <div>
 
-            <div className="flex items-center justify-between p-4 bg-red-800">
-                <div className="items-center flex gap-4 text-white ">
-                    <p>Admissions</p>
-                    <p>Placement</p>
-                    <p>Careers</p>
-                </div>
-
-                <div className="items-center gap-4 flex w-8 h-8 ">
-                    <img src="/twitter.png" className="rounded-full"></img>
-                    <img src="/yt.png" className="rounded-full"></img>
-                    <img src="/insta.png" className="rounded-full"></img>
-                </div>
-
-
-                {/* Login button */}
-                <div className="flex ">
-                    <Link
-                        className="text-xs px-4 py-2 leading-none rounded-full  text-white hover:bg-green-300 hover:text-black border-2"
-                        href="\loginPage"
-                    >
-                        STAFF LOGIN
-                    </Link>
-                </div>
-            </div>
-
-
+        
 
 
             <div className=" w-full h-80 bg-cover capitalize "
                 style={{ backgroundImage: `url('about-banner.jpg')` }}>
-                <div className="flex items-center justify-between px-4  ">
-                    {/* Logo and college name */}
-                    <div className="flex items-center gap-4 ml-24 -mt-8">
-                        <div className="w-[150px] h-[150px] relative">
-                            <Image
-                                src="/logo1.png"
-                                layout="fill"
-                                objectFit="contain"
-                                alt="Logo"
-                            />
-                        </div>
-                        <div>
-                            <h1 className="text-4xl font-bold text-white">
-                                {collegeNames[collegeNameIndex]}
-                            </h1>
-                            <div className="slogan font-bold text-white">An Institute of National Importance</div></div>
-                    </div>
-
-                    {/* Search box */}
-                    <div className='mr-52 mb-8'>
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            className="px-4 py-2 w-72 rounded-full   text-white border-white border-2
-                             focus:outline-none  bg-transparent"
-                          
-                        />
-                        <svg className='w-5 ml-60 -mt-8' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/ ></svg>
-                        
-                    </div>
-                </div>
+               
                 <h2 className="font-bold text-4xl uppercase absolute  
-                top-[200px] left-28 text-white" >
+                 left-28 pt-20 text-white" >
                     TECHNOLOGY INNOVATION AND INDUSTRY RELATIONS
                 </h2>
-                <div className='text-white text-lg ml-96 mt-16'>
+                <div className='text-white text-lg ml-96  pt-40'>
                     <ul className='flex'>
                         <li> <a className='underline' href="">Home</a> / </li>
                         <li>   Academics  / </li>

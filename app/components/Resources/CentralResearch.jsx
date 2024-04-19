@@ -27,7 +27,7 @@ export default function CentralResearch() {
           </div>
         </div>
         <div className='flex mt-2'>
-          <div className='ml-24 flex'>
+          <div className='ml-96 flex'>
             <div>
               <img className='h-14 mr-2' src="logo1.jpeg" alt="" />
             </div>
@@ -37,16 +37,7 @@ export default function CentralResearch() {
               <p className='font-bold text-cyan-500'>Central Research Facility</p>
             </div>
           </div>
-          <div>
-            <ul className='text-cyan-500  text-[14px] flex gap-5 ml-20 mt-5 font-bold'>
-              <li className='hover:text-violet-900'> <a href="">HOME</a></li>
-              <li className='hover:text-violet-900'> <a href="">ABOUT</a></li>
-              <li className='hover:text-violet-900'> <a href="">PEOPLE</a></li>
-              <li className='hover:text-violet-900'> <a href="">SERVICES</a></li>
-              <li className='hover:text-violet-900'> <a href=""> R & D RESOURSES</a></li>
-              <li className='hover:text-violet-900'> <a href="">CONTACT</a></li>
-            </ul>
-          </div>
+         
         </div>
       </div>
       <div >
