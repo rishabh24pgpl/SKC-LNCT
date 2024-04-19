@@ -249,7 +249,7 @@ export default function CentralResearch() {
      
        </div>
        <div className='mt-32'></div>
-       <Footer/>
+       
     </div>
   )
 }

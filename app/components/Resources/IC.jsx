@@ -60,7 +60,7 @@ export default function IC() {
                     </ul>
                 </div>
             </div>
-            <Footer />
+            
         </div>
 
     )
