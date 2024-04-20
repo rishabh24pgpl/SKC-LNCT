@@ -4,10 +4,10 @@ import Sports from '../components/Sports/sports'
 import SliderMain from '../components/SliderMain/SliderMain'
 
 export default function page() {
-    const images = ["/baggi.jpg", "/mainImg.jpeg", "/baggi.jpg"];
+    const images = ["/sport.webp", "/sport.webp", "/sport.webp"];
   return (
     <>
-    <SliderMain images={images} heading="Contact Us" />
+    <SliderMain images={images} heading="Sports" />
     
     <Sports/>
     </>

@@ -9,8 +9,8 @@ import Seminar from "@/app/components/Seminar";
 import Footer from "./components/Footer/Footer";
 import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
-import CampusMap from "./components/CampusMap/CampusMap";
-import AcademicEngineering from "./components/AcademicEngineering/AcademicEngineering";
+
+import Whyskc from "./components/Whyskc/Whyskc";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("postgraduate");
@@ -37,6 +37,7 @@ export default function Home() {
   // Function to toggle submenu
 
   const images = ["/baggi.jpg", "/mainImg.jpeg", "/baggi.jpg"];
+  
 
   const EventData = [
     {
@@ -222,15 +223,16 @@ export default function Home() {
           height={650}
         />
       </div>
-
-      <section className="m-10">
+      
+      <Whyskc img="/number-1.png" title="WHY SKC LNCT" content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."/>
+      <section className="">
         <Notices
           eventData={EventData}
           carouselData={carouselData}
           additionalCarouselData={additionalCarouselData}
         />
       </section>
-
+      
       <section
         className="academic-programe  mx-auto  flex justify-center     "
         style={{
@@ -424,8 +426,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
 
       <AbouttheInstitute />
+     
 
       <section class=" flex  h-[300px] w-full mx-auto pt-2  ">
         <div class="items flex-1 w-full bg-cyan-500 text-white p-8 text-center  ">

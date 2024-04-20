@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import Navbar from "@/app/components/Navbar";
 import Image from 'next/image';
 
 export default function PlanningArchitecture() {
@@ -25,7 +24,7 @@ export default function PlanningArchitecture() {
 
   return (
    <>
-   <Navbar/>
+   
     <div className="md:w-full lg:w-full sm:w-full w-full flex justify-center items-center">
         <h1 className=' absolute text-center text-5xl text-white'>Planning and Architecture</h1>
             <Image

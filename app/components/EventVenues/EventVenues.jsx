@@ -42,7 +42,7 @@ export default function EventVenues() {
         </div>
         <div className="border-2"> 
           <Image 
-          src="/audi3.jpeg"
+          src="/event1.webp"
           alt="img"
           width={500}
           height={900}
