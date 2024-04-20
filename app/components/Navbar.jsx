@@ -28,7 +28,7 @@ export default function Navbar() {
     <div className=" text-white z-50">
       <div className="flex items-center justify-between p-2 bg-blue-600">
         <div className="items-center flex gap-4 ">
-          <p>Admissions</p>
+          <p className=" animate-pulse">Admissions</p>
           <p>Placement</p>
           <p>Careers</p>
         </div>
