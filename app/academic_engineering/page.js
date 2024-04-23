@@ -5,9 +5,9 @@ import AcademicEngineering from '../components/AcademicEngineering/AcademicEngin
 export default function page() {
   return (
    <>
-   <Navbar/>
+  
    <AcademicEngineering/>
-   3
+   
    </>
   )
 }

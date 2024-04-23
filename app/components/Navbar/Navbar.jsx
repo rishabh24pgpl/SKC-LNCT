@@ -104,7 +104,7 @@ export default function Navbar() {
             },
             {
               name: "Academic Regulations",
-              link: "/academic/regulations",
+              link: "/students/rules_regulations",
             },
             {
               name: "Academic Calender",
@@ -175,11 +175,11 @@ export default function Navbar() {
           subchild: [
             {
               name: "Health Care",
-              link: "/department/ae",
+              link: "/health-center",
             },
             {
               name: "Lawn and Garden",
-              link: "/department/cse",
+              link: "/academic/lawn",
             },
           ],
         },
