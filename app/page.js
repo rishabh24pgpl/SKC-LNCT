@@ -11,6 +11,7 @@ import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
 
 import Whyskc from "./components/Whyskc/Whyskc";
+import Contact from "./components/Contact/Contact";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("postgraduate");

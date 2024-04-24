@@ -28,7 +28,8 @@ const CounterWidget = ({
   textColor = "black",
   bgColor = "white",
   title = "Counter Widget",
-  color
+  color,
+ textsize
 }) => {
   const count = useAutoIncrement(initialValue, targetValue, speed);
   return (
@@ -37,7 +38,7 @@ const CounterWidget = ({
       className={`p-12 self-stretch text-white text-2xl font-bold  text-center  text-3xl `}
     >
       +{count}
-      <p className="text-xl">{text}</p>
+      <p className={` ${textsize?textsize:"text-xl"} `}>{text}</p>
     </div>
     </div>
   );
