@@ -158,11 +158,11 @@ export default function Navbar() {
           subchild: [
             {
               name: "Central Workshop",
-              link: "/department/ae",
+              link: "/academic/central-workshop",
             },
             {
               name: "Central Research Facility",
-              link: "/department/cse",
+              link: "/academic/central-research",
             },
             {
               name: "High Performace Computing",
