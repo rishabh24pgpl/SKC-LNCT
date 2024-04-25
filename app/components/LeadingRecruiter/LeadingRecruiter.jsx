@@ -1,12 +1,13 @@
-import React from "react";
-import Image from "next/image";
+import Image from 'next/image'
+import React from 'react'
 
-export default function RegularActivite({ title, content}) {
+export default function LeadingRecruiter({title, content}) {
   return (
     <>
       <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden ">
         {/* SVG Waves */}
         <svg
+        
           id="wave"
           className="absolute bottom-0 left-0 w-full"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
@@ -56,29 +57,25 @@ export default function RegularActivite({ title, content}) {
         </div>
       </div>
       <div className="text-center w-3/4 mx-auto border-blue-600 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-b-2xl ">
-        <h1 className=" font-semibold text-4xl p-2 ">Regular Activite</h1>
-        <p className="text-md pb-2">Department for Career Development</p>
+        <h1 className=" font-semibold text-4xl p-2 ">Leading Recruiters</h1>
+        <p className="text-md pb-2">Hering Companys </p>
       </div>
 
-      <div className="flex mx-auto  px-20 pt-20">
-        <div>
-          <h1 className="text-4xl">Our Activities</h1>
-          <ul className=" p-10 list-disc">
-            <li>
-              Arranging in Campus, Pool Campus and Off Campus for Corporate in
-              Offline and online Mode.
-            </li>
-            <li>Aptitude &Training Classes</li>
-            <li>Personality Development Training</li>
-            <li>Organizing Mock Interviews and GD.</li>
-            <li>Mock Tests and Company Specific Training.</li>
-            <li>Placed students Interactions.</li>
-            <li>Entrepreneurship Cell</li>
-            <li>Industry Institute Partnership Cell</li>
-          </ul>
-        </div>
-        <div>
-          <Image src="/RA1.png" alt="ok" width={500} height={400} />
+     
+      <div className="w-full mx-auto pt-5 pb-10 ml-15">
+        <div className="flex  mx-auto justify-center  items-center shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
+          <div className="bg-white w-[750px]   h-[360px] text-black  p-10 translate-x-[5rem] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  ">
+            <h1 className="text-2xl pb-2 text-center">Overview</h1>
+            <div className=" p-2 justify-center items-center">
+              <h1 className=" pb-2 text-center">
+              Our university is proud to offer a diverse student body of high achievers from all around India. Our students come from a wide range of backgrounds, cultures, and academic disciplines, but they all share a common passion for learning and a drive for success. They are known for their strong work ethic, intellectual curiosity, and innovative thinking, which make them highly sought after by recruiters and employers. Our graduates are well-prepared to tackle the challenges of the workforce, with a deep understanding of their fields and the ability to think critically, communicate effectively, and collaborate with others.
+              </h1>
+              
+            </div>
+          </div>
+          <div className="">
+            <Image src="/audi1.jpeg" alt="asdfghjk" width={700} height={600} />
+          </div>
         </div>
       </div>
 
@@ -87,7 +84,7 @@ export default function RegularActivite({ title, content}) {
           <Image src="/RA1.png" alt="ok" width={800} height={400} />
         </div>
         <div>
-          <h1 className="text-4xl">IT Training</h1>
+          <h1 className="text-4xl">IT Recruiter Required Skills</h1>
           <ul className=" p-10 list-disc ">
             <li>
             Training on C/C++, Java, Python, Data Structure, DBMS, and Competitive Coding to make students ready for IT Industry
@@ -102,7 +99,53 @@ export default function RegularActivite({ title, content}) {
        
       </div>
       
-       
+      <div className=" border-b-2   w-3/4 mx-auto  rounded-b-2xl ">
+        <h1 className=" font-semibold text-4xl p-2  text-center">Regular Activite</h1>
+        </div>  
+        <div className=' flex justify-around p-10'>
+            <Image src="/cp-1.jpg"
+            alt="company logo "
+             width={200}
+             height={200}
+            />
+            <Image src="/cp-2.jpg"
+            alt="company logo "
+             width={200}
+             height={200}
+            />
+            <Image src="/cp-3.jpg"
+            alt="company logo "
+             width={200}
+             height={200}
+            />
+            <Image src="/cp-4.jpg"
+            alt="company logo "
+             width={200}
+             height={200}
+            />
+        </div>
+        <div className=' flex justify-around p-10'>
+            <Image src="/cp-1.jpg"
+            alt="company logo "
+             width={200}
+             height={200}
+            />
+            <Image src="/cp-2.jpg"
+            alt="company logo "
+             width={200}
+             height={200}
+            />
+            <Image src="/cp-4.jpg"
+            alt="company logo "
+             width={200}
+             height={200}
+            />
+            <Image src="/ibm.png"
+            alt="company logo "
+             width={200}
+             height={200}
+            />
+        </div>
     </>
-  );
+  )
 }
