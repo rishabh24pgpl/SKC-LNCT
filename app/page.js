@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
 
+
 import Whyskc from "./components/Whyskc/Whyskc";
 import Contact from "./components/Contact/Contact";
 
@@ -450,6 +451,7 @@ export default function Home() {
         </div>
       </section>
 
+
       <section>
         <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-8  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
           <div className=" ">
@@ -485,6 +487,7 @@ export default function Home() {
               color="bg-[#223250]"
             />
           </div>
+
 
           <div className="">
             <Counter
