@@ -11,6 +11,7 @@ import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
 import CampusMap from "./components/CampusMap/CampusMap";
 import AcademicEngineering from "./components/AcademicEngineering/AcademicEngineering";
+import Table from "./components/Table";
 
 
 export default function Home() {
@@ -520,6 +521,8 @@ export default function Home() {
 <section>
   <Seminar eventData={EventsData} carouselData={ScarouselData} additionalCarouselData={additionalCarouselDataseminar}/>
 </section>
+
+<section><Table/></section>
 
             <Footer />
 
