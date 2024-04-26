@@ -3,6 +3,9 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import DeptCounter from "./DeptCounter/DeptCounter";
+import FacultyCard from "./FacultyCard/FacultyCard";
+import NoticeCard from "./NoticeCard/NoticeCard";
 
 const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
   const listRef = useRef(null);
@@ -53,38 +56,40 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
-        <div className="overflow-auto border border-gray-200 rounded-md">
+      <div className="grid grid-cols-1 lg:flex lg:gap-10 gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
+        <div className="lg:w-[720px] overflow-auto border border-gray-200 rounded-md">
           <h2 className="text-2xl font-bold text-black text-center">Notices</h2>
           <ul
             ref={listRef}
-            className="grid grid-cols-1 gap-6 max-h-[300px] overflow-scroll"
+            className="grid grid-cols-1 gap-6 max-h-[600px] overflow-scroll"
           >
             {eventData.map((item, index) => (
               <ListItem key={index} item={item} />
             ))}
           </ul>
         </div>
-        <div className="flex justify-center items-center">
-          <div className="w-full h-auto">
-            <Slider {...settings} asNavFor={slider2} ref={(slider) => setSlider1(slider)}>
+        <div className="lg:w-[300px] flex justify-center items-center">
+          <div className="w-full h-auto ">
+            <Slider
+              {...settings}
+              asNavFor={slider2}
+              ref={(slider) => setSlider1(slider)}
+            >
               {carouselData.map((item, index) => (
-                <div key={index}>
-                  <img src={item.imageUrl} alt={item.title} />
-                  <p className="legend text-black">{item.title}</p>
-                </div>
+                <NoticeCard />
               ))}
             </Slider>
           </div>
         </div>
-        <div className="flex justify-center items-center">
-          <div className="w-full h-auto">
-            <Slider {...settings} asNavFor={slider1} ref={(slider) => setSlider2(slider)}>
+        <div className="lg:w-[300px] flex justify-center items-center">
+          <div className="w-full h-auto ">
+            <Slider
+              {...settings}
+              asNavFor={slider1}
+              ref={(slider) => setSlider2(slider)}
+            >
               {additionalCarouselData.map((item, index) => (
-                <div key={index}>
-                  <img src={item.imageUrl} alt={item.title} />
-                  <p className="legend text-black">{item.title}</p>
-                </div>
+                 <NoticeCard />
               ))}
             </Slider>
           </div>

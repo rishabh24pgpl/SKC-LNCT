@@ -25,7 +25,7 @@ export default function SliderMain({images,heading}) {
           {heading}
         </h1>
         <Image
-          className="duration-500 w-full min-h-[500px] max-h-[500px]"
+          className="duration-500 w-full min-h-[400px] max-h-[400px]"
           src={images[currentSlide]}
           alt={"i"}
           width={700}
