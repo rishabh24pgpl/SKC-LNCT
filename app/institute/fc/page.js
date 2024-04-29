@@ -9,6 +9,7 @@ export default function page() {
     <div>
       <SliderMain images={images} heading="Finance Commitee" />
       <div className="w-full mx-auto flex relative mt-2  font-semibold text-lg">
+        
         <div className="w-2/3 px-20 ">
           <h1 className="my-1 p-2">Finance Commitee (Members)</h1>
           <GovernorCard />
