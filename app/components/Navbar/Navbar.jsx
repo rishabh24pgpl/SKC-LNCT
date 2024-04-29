@@ -128,18 +128,6 @@ export default function Navbar() {
               link: "/department/cse",
             },
             {
-              name: "Communication Skills",
-              link: "/department/cs",
-            },
-            {
-              name: "Chemistry",
-              link: "/department/cd",
-            },
-            {
-              name: "Civil Engineering",
-              link: "/department/ce",
-            },
-            {
               name: "Electronics & Communication Engineering",
               link: "/department/ece",
             },
@@ -166,7 +154,7 @@ export default function Navbar() {
             },
             {
               name: "High Performace Computing",
-              link: "/department/cse",
+              link: "/academic/hfc",
             },
           ],
         },
@@ -193,7 +181,7 @@ export default function Navbar() {
           subchild: [
             {
               name: "Why LNCT",
-              link: "/institute/welcome",
+              link: "/why_skclnct",
             },
             {
               name: "Gallary",
@@ -201,7 +189,7 @@ export default function Navbar() {
             },
             {
               name: "Campus Life",
-              link: "/institute/former_directors",
+              link: "/student/campuslife",
             },
             {
               name: "Academic Programs",
@@ -334,7 +322,7 @@ export default function Navbar() {
           subchild: [
             {
               name: "Placement Overview",
-              link: "/cdc",
+              link: "/placementview",
             },
             {
               name: "Career Development Cell",
@@ -342,15 +330,15 @@ export default function Navbar() {
             },
             {
               name: "Leading Recruiters",
-              link: "#",
+              link: "leading_recruiters",
             },
             {
               name: "Regular Activities",
-              link: "#",
+              link: "regular_activitie",
             },
             {
               name: "Placement Calender and Process",
-              link: "#",
+              link: "placementcalendar",
             },
           ],
         },
@@ -358,16 +346,8 @@ export default function Navbar() {
           name: "For Students",
           subchild: [
             {
-              name: "Placement Records",
-              link: "/institute/welcome",
-            },
-            {
               name: "Student Testimonial",
-              link: "/institute/mission_vision",
-            },
-            {
-              name: "Skills Enhancement Programs",
-              link: "/institute/former_directors",
+              link: "student_testimonial",
             },
           ],
         },

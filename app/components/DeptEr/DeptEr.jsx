@@ -9,9 +9,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Slider from "../Slider/Slider";
 
-
-
-export default function DeptEr({dept}) {
+export default function DeptEr({ dept }) {
   const images = ["/ar-3.jpg"];
   const counter = [
     {
@@ -51,15 +49,31 @@ export default function DeptEr({dept}) {
     },
   ];
 
-  
- 
+  switch (dept) {
+    case "ae":
+      dept = "Automobile Engineering";
+      break;
+    case "cse":
+      dept = "Computer Science & Engineering";
+      break;
+    case "ece":
+      dept = "Electronics & Communication Engineering";
+      break;
+    case "eet":
+      dept = "Electrical & Electronics Engineering";
+      break;
+    case "it":
+      dept = "Information Technology";
+      break;
+
+    default:
+      break;
+  }
+
   return (
     <div>
       <SliderMain images={images} heading={dept} />
-      <div
-        className="w-full   "
-        
-      >
+      <div className="w-full   ">
         <div className="w-full flex px-20 py-10  gap-7">
           <div className="w-2/3 ">
             <div className="p-10">
@@ -207,13 +221,35 @@ export default function DeptEr({dept}) {
             </div>
           </div>
         </div>
-        <div className="w-full p-2">
-
-      
-        </div>
-       
+        <div className="w-full p-2"></div>
       </div>
-    
+      <div className=" w-10/12 mx-auto p-10">
+        <h1 className="py-3 text-center text-3xl text-blue-500 font-bold">
+          List of Faculties
+        </h1>
+        <div className="overflow-x-auto">
+          <table className="table-auto min-w-full">
+            <thead>
+              <tr className=" border-b ">
+                <th className="px-2 py-3 text-left">Name</th>
+                <th className="px-2 py-3 text-left">Designation</th>
+                <th className="px-2 py-3 text-left">Qualification</th>
+                <th className="px-2 py-3 text-left">Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className=" border-b">
+                <td className=" px-2 py-3">John Doe</td>
+                <td className=" px-2 py-3">Software Engineer</td>
+                <td className=" px-2 py-3">Bachelor's in Computer Science</td>
+                <td className=" px-2 py-3">5 years</td>
+              </tr>
+
+              {/* Add more rows as needed */}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
