@@ -20,12 +20,12 @@ export default function SliderMain({images,heading}) {
  
   return (
     <>
-      <div className="md:w-full lg:w-full sm:w-full w-full flex justify-center items-center">
-        <h1 className=" absolute text-center text-5xl text-white uppercase">
+      <div className="md:w-full lg:w-full sm:w-full w-full flex justify-center items-center ">
+        <h1 className=" absolute text-center text-5xl text-white uppercase -z-10">
           {heading}
         </h1>
         <Image
-          className="duration-500 w-full min-h-[500px] max-h-[500px]"
+          className="duration-500 w-full min-h-[400px] max-h-[400px]"
           src={images[currentSlide]}
           alt={"i"}
           width={700}

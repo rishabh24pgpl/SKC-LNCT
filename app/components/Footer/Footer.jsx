@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
         <div class="item">
             <h4 class="font-bold">IMPORTANT LINKS</h4>
-            <div class="footer-link text-xs">
+            <div class="footer-link text-sm">
                 <ul>
                     <li className='p-2'><a href="https://mail.nitrkl.ac.in/">Webmail</a></li>
                     <li className='p-2'><a href="https://eapplication.nitrkl.ac.in/nitris/"> NITRis</a></li>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
         <div class="item">
             <h4 class="font-bold">OTHER LINKS</h4>
-            <div class="footer-link text-xs">
+            <div class="footer-link text-sm">
                 <ul>
                     <li className='p-2'><a href="/Institute/NIRF">NIRF</a></li>
                     <li className='p-2'><a href="/Institute/NBA"> NBA</a></li>
