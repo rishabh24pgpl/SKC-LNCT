@@ -29,7 +29,9 @@ const CounterWidget = ({
   bgColor = "white",
   title = "Counter Widget",
   color,
-  textsize,
+
+ textsize="3xl"
+
 }) => {
   const count = useAutoIncrement(initialValue, targetValue, speed);
   return (
