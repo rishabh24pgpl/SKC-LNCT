@@ -1,13 +1,12 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
-export default function LeadingRecruiter({title, content}) {
+export default function LeadingRecruiter({ title, content }) {
   return (
     <>
-      <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden ">
+      <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden -z-10 ">
         {/* SVG Waves */}
         <svg
-        
           id="wave"
           className="absolute bottom-0 left-0 w-full"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
@@ -43,7 +42,6 @@ export default function LeadingRecruiter({title, content}) {
           {/* Detail Page SVG or Image */}
           <div className=" lg:w-1/3   relative h-96 order-2 p-10 hidden lg:block ">
             {/* Replace 'detail-page.svg' with your actual SVG */}
-           
           </div>
           {/* Text Content */}
           <div className=" w-full lg:w-2/3 p-2 order-1">
@@ -61,16 +59,24 @@ export default function LeadingRecruiter({title, content}) {
         <p className="text-md pb-2">Hering Companys </p>
       </div>
 
-     
       <div className="w-full mx-auto pt-5 pb-10 ml-15">
         <div className="flex  mx-auto justify-center  items-center shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
           <div className="bg-white w-[750px]   h-[360px] text-black  p-10 translate-x-[5rem] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  ">
             <h1 className="text-2xl pb-2 text-center">Overview</h1>
             <div className=" p-2 justify-center items-center">
               <h1 className=" pb-2 text-center">
-              Our university is proud to offer a diverse student body of high achievers from all around India. Our students come from a wide range of backgrounds, cultures, and academic disciplines, but they all share a common passion for learning and a drive for success. They are known for their strong work ethic, intellectual curiosity, and innovative thinking, which make them highly sought after by recruiters and employers. Our graduates are well-prepared to tackle the challenges of the workforce, with a deep understanding of their fields and the ability to think critically, communicate effectively, and collaborate with others.
+                Our university is proud to offer a diverse student body of high
+                achievers from all around India. Our students come from a wide
+                range of backgrounds, cultures, and academic disciplines, but
+                they all share a common passion for learning and a drive for
+                success. They are known for their strong work ethic,
+                intellectual curiosity, and innovative thinking, which make them
+                highly sought after by recruiters and employers. Our graduates
+                are well-prepared to tackle the challenges of the workforce,
+                with a deep understanding of their fields and the ability to
+                think critically, communicate effectively, and collaborate with
+                others.
               </h1>
-              
             </div>
           </div>
           <div className="">
@@ -80,72 +86,45 @@ export default function LeadingRecruiter({title, content}) {
       </div>
 
       <div className="flex mx-auto  px-20 pt-20">
-      <div className=""> 
+        <div className="">
           <Image src="/RA1.png" alt="ok" width={800} height={400} />
         </div>
         <div>
           <h1 className="text-4xl">IT Recruiter Required Skills</h1>
           <ul className=" p-10 list-disc ">
             <li>
-            Training on C/C++, Java, Python, Data Structure, DBMS, and Competitive Coding to make students ready for IT Industry
+              Training on C/C++, Java, Python, Data Structure, DBMS, and
+              Competitive Coding to make students ready for IT Industry
             </li>
-            <li>Training on Emerging Technologies – Artificial Intelligence, Machine Learning, Cyber Security, Data Science, Cloud Computing, Internet of Things, Block chain and Sales force.</li>
+            <li>
+              Training on Emerging Technologies – Artificial Intelligence,
+              Machine Learning, Cyber Security, Data Science, Cloud Computing,
+              Internet of Things, Block chain and Sales force.
+            </li>
             <li>Programming and IT Subjects Training for Non CS-IT students</li>
             <li>Full stack project training for students</li>
             <li>Regular Programming Assessments and Hackthons.</li>
-           
           </ul>
         </div>
-       
       </div>
-      
+
       <div className=" border-b-2   w-3/4 mx-auto  rounded-b-2xl ">
-        <h1 className=" font-semibold text-4xl p-2  text-center">Regular Activite</h1>
-        </div>  
-        <div className=' flex justify-around p-10'>
-            <Image src="/cp-1.jpg"
-            alt="company logo "
-             width={200}
-             height={200}
-            />
-            <Image src="/cp-2.jpg"
-            alt="company logo "
-             width={200}
-             height={200}
-            />
-            <Image src="/cp-3.jpg"
-            alt="company logo "
-             width={200}
-             height={200}
-            />
-            <Image src="/cp-4.jpg"
-            alt="company logo "
-             width={200}
-             height={200}
-            />
-        </div>
-        <div className=' flex justify-around p-10'>
-            <Image src="/cp-1.jpg"
-            alt="company logo "
-             width={200}
-             height={200}
-            />
-            <Image src="/cp-2.jpg"
-            alt="company logo "
-             width={200}
-             height={200}
-            />
-            <Image src="/cp-4.jpg"
-            alt="company logo "
-             width={200}
-             height={200}
-            />
-            <Image src="/ibm.png"
-            alt="company logo "
-             width={200}
-             height={200}
-            />
-        </div>
+        <h1 className=" font-semibold text-4xl p-2  text-center">
+          Regular Activite
+        </h1>
+      </div>
+      <div className=" flex justify-around p-10">
+        <Image src="/cp-1.jpg" alt="company logo " width={200} height={200} />
+        <Image src="/cp-2.jpg" alt="company logo " width={200} height={200} />
+        <Image src="/cp-3.jpg" alt="company logo " width={200} height={200} />
+        <Image src="/cp-4.jpg" alt="company logo " width={200} height={200} />
+      </div>
+      <div className=" flex justify-around p-10">
+        <Image src="/cp-1.jpg" alt="company logo " width={200} height={200} />
+        <Image src="/cp-2.jpg" alt="company logo " width={200} height={200} />
+        <Image src="/cp-4.jpg" alt="company logo " width={200} height={200} />
+        <Image src="/ibm.png" alt="company logo " width={200} height={200} />
+      </div>
     </>
-  )
+  );
 }
