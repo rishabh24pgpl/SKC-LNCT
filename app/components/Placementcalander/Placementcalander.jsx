@@ -1,13 +1,12 @@
 import Image from "next/image";
 import React from "react";
+import SliderMain from "../SliderMain/SliderMain";
 
 export default function Placementcalander() {
+  const images=[];
   return (
     <>
-      <div className="w-full h-screen  relative ">
-        {" "}
-        <Image src="/mainImg.jpeg" alt="img" fill />
-      </div>
+     <SliderMain images={images} />
       <h1 className=" font-semibold text-4xl border-b-2 p-8 text-center w-3/4 mx-auto border-blue-600 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-b-2xl">
         Placement Process
       </h1>

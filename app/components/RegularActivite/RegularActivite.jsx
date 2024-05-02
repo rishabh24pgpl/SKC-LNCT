@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-export default function RegularActivite({ title, content}) {
+export default function RegularActivite({ title, content }) {
   return (
     <>
-      <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden ">
+      <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden -z-10 ">
         {/* SVG Waves */}
         <svg
           id="wave"
@@ -42,7 +42,6 @@ export default function RegularActivite({ title, content}) {
           {/* Detail Page SVG or Image */}
           <div className=" lg:w-1/3   relative h-96 order-2 p-10 hidden lg:block ">
             {/* Replace 'detail-page.svg' with your actual SVG */}
-           
           </div>
           {/* Text Content */}
           <div className=" w-full lg:w-2/3 p-2 order-1">
@@ -83,26 +82,30 @@ export default function RegularActivite({ title, content}) {
       </div>
 
       <div className="flex mx-auto  px-20 pt-20">
-      <div className=""> 
+        <div className="">
           <Image src="/RA1.png" alt="ok" width={800} height={400} />
         </div>
         <div>
           <h1 className="text-4xl">IT Training</h1>
           <ul className=" p-10 list-disc ">
             <li>
-            Training on C/C++, Java, Python, Data Structure, DBMS, and Competitive Coding to make students ready for IT Industry
+              Training on C/C++, Java, Python, Data Structure, DBMS, and
+              Competitive Coding to make students ready for IT Industry
             </li>
-            <li>Training on Emerging Technologies – Artificial Intelligence, Machine Learning, Cyber Security, Data Science, Cloud Computing, Internet of Things, Block chain and Sales force.</li>
+            <li>
+              Training on Emerging Technologies – Artificial Intelligence,
+              Machine Learning, Cyber Security, Data Science, Cloud Computing,
+              Internet of Things, Block chain and Sales force.
+            </li>
             <li>Programming and IT Subjects Training for Non CS-IT students</li>
             <li>Full stack project training for students</li>
             <li>Regular Programming Assessments and Hackthons.</li>
-           
           </ul>
         </div>
-       
+        <div>
+          
+        </div>
       </div>
-      
-       
     </>
   );
 }
