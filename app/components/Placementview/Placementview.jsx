@@ -4,13 +4,13 @@ import React from "react";
 export default function Placementview() {
   return (
     <>
-      <div className=" p-10 ">
+      <div className=" p-10 -z-10  ">
         <h1 className="text-4xl text-center text-blue-700 border-b-2 border-blue-500 font-semibold ">
           Placement Overview At <span className="text-red-500">SKC</span> LNCT
         </h1>
         <div className="w-full mx-auto pt-5 ml-15">
           <div className="flex  mx-auto justify-center  items-center shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
-            <div className="bg-white w-[750px]   h-[360px] text-black  p-10 translate-x-[5rem] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] ">
+            <div className="bg-white w-[750px]   h-[360px] text-black  p-10 translate-x-[5rem] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] -z-10 ">
               <h1 className="text-2xl pb-2">
                 Bridging the Gap Between Institute and Industry
               </h1>

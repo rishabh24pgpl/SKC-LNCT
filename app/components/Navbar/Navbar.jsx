@@ -249,7 +249,7 @@ export default function Navbar() {
 
             {
               name: "Library",
-              link: "/institute/former_directors",
+              link: "/institute/library",
             },
             {
               name: "Career Development Cell",
