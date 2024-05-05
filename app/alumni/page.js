@@ -241,6 +241,7 @@ const MyComponent = () => {
             />
           </div>
         </div>
+
       </section>
       <h1 className=" font-semibold text-4xl text-center ">ENGAGEMENTS</h1>
       <p className="text-grey text-md text-center p-4 w-1/2 pb-8 mx-auto">
@@ -272,6 +273,7 @@ const MyComponent = () => {
                 lastUpdated={news.lastUpdated}
                 imageUrl={news.imageUrl}
               />
+
             ))}
           </div>
 
