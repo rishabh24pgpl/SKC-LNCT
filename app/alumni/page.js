@@ -234,8 +234,7 @@ const MyComponent = () => {
             <h1 className='text-2xl '>News & Events</h1>
             {newsCard.map((news,index)=>(
                  <AlumniNewsCard
-                 
-                 key={index} // Ensure each card has a unique key
+                 key={index}
                  title={news.title}
                  content={news.content}
                  lastUpdated={news.lastUpdated}
