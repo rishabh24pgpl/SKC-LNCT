@@ -249,7 +249,7 @@ export default function Navbar() {
 
             {
               name: "Library",
-              link: "/institute/former_directors",
+              link: "/institute/library",
             },
             {
               name: "Career Development Cell",
@@ -330,15 +330,15 @@ export default function Navbar() {
             },
             {
               name: "Leading Recruiters",
-              link: "leading_recruiters",
+              link: "/leading_recruiters",
             },
             {
               name: "Regular Activities",
-              link: "regular_activitie",
+              link: "/regular_activite",
             },
             {
               name: "Placement Calender and Process",
-              link: "placementcalendar",
+              link: "/placementcalender",
             },
           ],
         },
