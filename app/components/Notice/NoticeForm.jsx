@@ -3,9 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { addNotice, updateNotice } from "@/app/lib/services/notice/notice";
 import Loader from "@/app/components/Loader/Loader";
 import Notification from "@/app/components/Toast/Notification";
-import { NOTICES, ADMIN } from "@/app/lib/constants/index";
+import { NOTICEINITIAL, ADMIN } from "@/app/lib/constants/index";
 import moment from "moment";
-import { first } from "lodash";
 import { uploadImg } from "@/app/lib/services/files/fileServices";
 
 const fields = [
@@ -21,7 +20,7 @@ const NoticeForm = ({ selectedNoticeId, setSelectedNoticeId, onFormSubmit, notic
   const [validationErrors, setValidationErrors] = useState({});
   const fileInputRef = useRef(null);
   const [notice, setNoticeData] = useState({
-    ...NOTICES,
+    ...NOTICEINITIAL,
     endDate: moment().format("YYYY-MM-DDTHH:mm:ss"),
   });
 
@@ -48,7 +47,7 @@ const NoticeForm = ({ selectedNoticeId, setSelectedNoticeId, onFormSubmit, notic
       }
     } else {
       setNoticeData({
-        ...NOTICES,
+        ...NOTICEINITIAL,
         endDate: moment().format("YYYY-MM-DDTHH:mm"),
       });
       setIsEditMode(false);
@@ -94,7 +93,7 @@ const NoticeForm = ({ selectedNoticeId, setSelectedNoticeId, onFormSubmit, notic
   
 
   const handleCancelEdit = () => {
-    setNoticeData({ ...NOTICES });
+    setNoticeData({ ...NOTICEINITIAL });
     setSelectedNoticeId(null);
     setIsEditMode(false);
     setPrevImagePreview(null);
@@ -114,7 +113,7 @@ const NoticeForm = ({ selectedNoticeId, setSelectedNoticeId, onFormSubmit, notic
       let imgRes = null;
 
       if (notice.file && notice.file !== prevImagePreview) {
-        imgRes = await uploadImg({ img: notice.file, category: "notices" });
+        imgRes = await uploadImg({ img: notice.file, category: "NOTICEINITIAL" });
         setPrevImagePreview(notice.file); // Update previous image preview if a new image is uploaded
         setPrevImagePreviewText("Current Image"); // Update text for current image
       }
@@ -149,7 +148,7 @@ const NoticeForm = ({ selectedNoticeId, setSelectedNoticeId, onFormSubmit, notic
     } finally {
       setIsLoading(false);
       setNoticeData({
-        ...NOTICES,
+        ...NOTICEINITIAL,
         endDate: moment().format("YYYY-MM-DDTHH:mm"),
       });
       const fileInput = document.getElementById("file");

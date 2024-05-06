@@ -21,7 +21,7 @@ const NewsPage = ({ clientProps }) => {
   const fetchNotice = async () => {
     try {
       setIsLoading(true);
-      const noticeData = await getAllNotice(myUuid);
+      const noticeData = await getAllNotice();
       setNoticeList(noticeData);
       console.log(noticeList);
     } catch (error) {
@@ -33,7 +33,7 @@ const NewsPage = ({ clientProps }) => {
 
   const handleFormSubmit = async () => {
     try {
-      const updatedNewsList = await getAllNotice(myUuid);
+      const updatedNewsList = await getAllNotice();
       setNoticeList(updatedNewsList);
       setSelectedNoticeId(null);
     } catch (error) {
