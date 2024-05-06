@@ -10,7 +10,6 @@ import Footer from "./components/Footer/Footer";
 import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
 
-
 import Whyskc from "./components/Whyskc/Whyskc";
 import Contact from "./components/Contact/Contact";
 
@@ -39,7 +38,6 @@ export default function Home() {
   // Function to toggle submenu
 
   const images = ["/baggi.jpg", "/mainImg.jpeg", "/baggi.jpg"];
-  
 
   const EventData = [
     {
@@ -96,13 +94,13 @@ export default function Home() {
       id: 1,
       title: "News 1",
       description: "Description for News 1",
-      imageUrl: "/yt.png",
+      imageUrl: "/ar-1.jpg",
     },
     {
       id: 2,
       title: "News 2",
       description: "Description for News 2",
-      imageUrl: "/yt.png",
+      imageUrl: "/ar-3.jpg",
     },
     {
       id: 3,
@@ -114,7 +112,7 @@ export default function Home() {
       id: 4,
       title: "News 4",
       description: "Description for News 4",
-      imageUrl: "/yt.png",
+      imageUrl: "/ar-2.jpg",
     },
   ];
 
@@ -225,18 +223,22 @@ export default function Home() {
           height={650}
         />
       </div>
-      
-      <Whyskc img="/number-1.png" title="WHY SKC LNCT" content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."/>
-      <section className="">
+
+      <Whyskc
+        img="/number-1.png"
+        title="WHY SKC LNCT"
+        content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."
+      />
+      <section className="  w-11/12 mx-auto">
         <Notices
           eventData={EventData}
           carouselData={carouselData}
           additionalCarouselData={additionalCarouselData}
         />
       </section>
-      
+
       <section
-        className="academic-programe  mx-auto  flex justify-center     "
+        className="academic-programe   mx-auto mt-10 flex justify-center     "
         style={{
           background: "url('/baggi.jpg')",
           backgroundRepeat: "no-repeat",
@@ -428,12 +430,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
 
       <AbouttheInstitute />
-     
 
-      <section class=" flex  h-[300px] w-full mx-auto pt-2  ">
+      <section class=" flex  h-[300px] w-11/12 mx-auto mt-10  ">
         <div class="items flex-1 w-full bg-cyan-500 text-white p-8 text-center  ">
           <h2 className="font-semibold text-2xl">Thought of the Day</h2>
           <h5 className="font-semibold text-xl py-5 text-justify">
@@ -451,108 +451,166 @@ export default function Home() {
         </div>
       </section>
 
-
-      <section>
-        <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-8  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
-          <div className=" ">
-            <Counter
-              initialValue={0}
-              targetValue={2000}
-              speed={0.001}
-              text="Seed"
-              textColor="text-blue-600"
-              title="First Counter"
-              color="bg-[#bd5638]"
-            />
-          </div>
-          <div className=" ">
-            <Counter
-              initialValue={20}
-              targetValue={100}
-              speed={100}
-              text="Seed"
-              textColor="text-green-700"
-              title="Second Counter"
-              color="bg-[#5a3224]"
-            />
-          </div>
-          <div className="">
-            <Counter
-              initialValue={5}
-              targetValue={15}
-              speed={200}
-              text="Seed"
-              textColor="text-red-600"
-              title="Third Counter"
-              color="bg-[#223250]"
-            />
-          </div>
-
-
-          <div className="">
-            <Counter
-              initialValue={5}
-              targetValue={15}
-              speed={200}
-              text="Seed"
-              textColor="text-red-600"
-              title="Third Counter"
-              color="bg-[#22472d]"
-            />
-          </div>
-        </div>
-      </section>
-      <section>
+      <section className=" w-11/12 mx-auto mt-10">
         <div
-          //
-          className="flex "
+          className=""
           style={{
-            backgroundImage: "url('/HomeBg.svg')",
+            backgroundImage: "url('/crystal.jpg')",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         >
-          <div className="md:w-full lg:w-1/2 sm:w-full bg-[#393939] ">
-            <h3 className="font-bold text-3xl p-5  text-white">
-              Ranking and Recognition &nbsp; &nbsp;&nbsp;
-              <span className="text-sm">View All...</span>
-            </h3>
-            <Image
-              className="duration-200 min-h-[350px] max-h-[400px] rounded-lg pt-4  p-2 flex mx-auto items-center rounded-md"
-              src={images[currentSlide]}
-              alt="Hero Image"
-              width={700}
-              height={650}
-            />
+          <div className=" w-8/9   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dpurple  ">
+            <div className="  ">
+              <Counter
+                initialValue={0}
+                targetValue={2000}
+                speed={0.001}
+                text="Highest Package"
+                textColor="text-blue-600"
+                title="First Counter"
+                color=""
+              />
+            </div>
+            <div className=" ">
+              <Counter
+                initialValue={20}
+                targetValue={100}
+                speed={100}
+                text="Dream Company Offers"
+                textColor="text-green-700"
+                title="Second Counter"
+                color=""
+              />
+            </div>
+            <div className="">
+              <Counter
+                initialValue={5}
+                targetValue={15}
+                speed={200}
+                text="Placements Batch 22-23"
+                textColor=""
+                title="Third Counter"
+                color=""
+              />
+            </div>
+            <div className="">
+              <Counter
+                initialValue={5}
+                targetValue={15}
+                speed={200}
+                text="LNCTians Serving MNC"
+                textColor="text-red-600"
+                title="Third Counter"
+                color=""
+              />
+            </div>
           </div>
-          <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center bg-[#393939] ">
-            <div className="w-ful rounded-md  sm:p-4  md:p-4 lg:p-5 p-8 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-2   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap  ">
-                <Card
-                  title="Department"
-                  content="10"
-                  imageUrl="/department.png"
-                />
-              </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
-                <Card title="Faculty" content=" 70+" imageUrl="/staff.png" />
-              </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
-                <Card
-                  title="Faculty"
-                  content="3050+"
-                  imageUrl="/student-icon.png"
-                />
-              </div>
-              <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap">
-                <Card title="Faculty" content="100" imageUrl="/faculty.png" />
+          <div className=" rounded-b-md   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dpurple  mb-12">
+            <div className=" ">
+              <Counter
+                initialValue={0}
+                targetValue={2000}
+                speed={0.001}
+                text="NIRF All India Rank"
+                textColor="text-blue-600"
+                title="First Counter"
+                color=""
+              />
+            </div>
+            <div className=" ">
+              <Counter
+                initialValue={20}
+                targetValue={100}
+                speed={100}
+                text="Companies Visited 2022"
+                textColor="text-green-700"
+                title="Second Counter"
+                color=""
+              />
+            </div>
+            <div className="">
+              <Counter
+                initialValue={5}
+                targetValue={15}
+                speed={200}
+                text="Offers For Core Branch"
+                textColor="text-red-600"
+                title="Third Counter"
+                color=""
+              />
+            </div>
+            <div className="">
+              <Counter
+                initialValue={5}
+                targetValue={15}
+                speed={200}
+                text="Ph.D Faculties"
+                textColor="text-red-600"
+                title="Third Counter"
+                color=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-11/12 mx-auto">
+        <div
+          className=" bg-slate-900"
+         
+        >
+          <div
+            //
+            className="flex "
+            style={{
+              backgroundImage: "url('/HomeBg.svg')",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="md:w-full lg:w-1/2 sm:w-full    ">
+              <h3 className="font-bold text-3xl p-5 ">
+                Ranking and Recognition &nbsp; &nbsp;&nbsp;
+                <span className="text-sm">View All...</span>
+              </h3>
+              <Image
+                className="duration-200 min-h-[350px] max-h-[400px] rounded-lg pt-4  p-2 flex mx-auto items-center rounded-md"
+                src={images[currentSlide]}
+                alt="Hero Image"
+                width={700}
+                height={650}
+              />
+            </div>
+            <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center  ">
+              <div className="w-ful rounded-md  sm:p-4  md:p-4 lg:p-5 p-8 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-2   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
+                <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap  ">
+                  <Card
+                    title="Department"
+                    content="10"
+                    imageUrl="/department.png"
+                  />
+                </div>
+                <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
+                  <Card title="Faculty" content=" 70+" imageUrl="/staff.png" />
+                </div>
+                <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
+                  <Card
+                    title="Faculty"
+                    content="3050+"
+                    imageUrl="/student-icon.png"
+                  />
+                </div>
+                <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap">
+                  <Card title="Faculty" content="100" imageUrl="/faculty.png" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section className="mt-10 w-11/12 mx-auto mb-10">
         <Seminar
           eventData={EventsData}
           carouselData={ScarouselData}
