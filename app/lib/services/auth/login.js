@@ -1,7 +1,7 @@
-import { api, setAuthToken } from "@/lib/middleware/apiInceptor"
+import { api, setAuthToken } from "@/app/lib/middleware/apiInceptor"
 import { LOGIN_URL } from ".."
 import { toast } from "react-toastify"
-import { handleError } from "@/lib/helpers/handleErrors"
+import { handleError } from "@/app/lib/helpers/handleErrors"
 
 export const login = async (payload) => {
   try {

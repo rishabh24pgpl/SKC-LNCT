@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+import {loginPage} from '@/app/loginPage/page'
 export default function Navbar() {
   const [openSubMenuId, setOpenSubMenuId] = useState(null);
   const [collegeNameIndex, setCollegeNameIndex] = useState(0);
@@ -24,6 +24,12 @@ export default function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
+  
+  const handleStuffLogin = () => {
+    router.push('/loginPage')
+  }
+
+
   return (
     <div className=" text-white z-50">
       <div className="flex items-center justify-between p-2 bg-blue-600">
@@ -43,7 +49,7 @@ export default function Navbar() {
         <div className="flex ">
           <Link
             className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
-            href="\loginPage"
+            href="/admin/loginPage" onClick={handleStuffLogin}
           >
             STAFF LOGIN
           </Link>

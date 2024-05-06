@@ -1,7 +1,12 @@
 import moment from "moment";
 
 
-export const BASE_URL = 'https://pgpl-backend-services.vercel.app/api/v1';
+export const BASE_URL = 'https://lnct-backend.vercel.app/api/v1';
+
+export const CREDINITAIL = {
+  email: "",
+  password: "",
+};
 
 export const NOTICEINITIAL = {
   title: "",

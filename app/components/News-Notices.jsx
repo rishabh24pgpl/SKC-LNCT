@@ -3,14 +3,45 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import DeptCounter from "./DeptCounter/DeptCounter";
-import FacultyCard from "./FacultyCard/FacultyCard";
 import NoticeCard from "./NoticeCard/NoticeCard";
+import { getAllNews } from "../lib/services/news/news";
+import { getAllNotice } from "../lib/services/notice/notice";
 
 const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
   const listRef = useRef(null);
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
+  const [newsData, setNewsData] = useState([])
+  const [noticeData, setNoticeData] = useState([])
+  console.log(noticeData)
+  const fetchNews = async () => {
+    try {
+      const newsDatas = await getAllNews();
+      const newsItemsWithType = newsDatas.map((news) => ({
+        ...news,
+        type: "news",
+      }));
+      setNewsData(newsItemsWithType);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+    }
+  };
+
+  
+  const fetchNotice = async () => {
+    try {
+      const noticeDatas = await getAllNotice();
+      const noticeItemsWithType = noticeDatas.map((notice) => ({
+        ...notice,
+        type: "notice",
+      }));
+      setNoticeData(noticeItemsWithType);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+    }
+  };
+
+
 
   useEffect(() => {
     const listElement = listRef.current;
@@ -54,6 +85,13 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
     afterChange: (current, index) => handleCarouselScroll(slider1, index),
   };
 
+
+  
+  useEffect(() => {
+    fetchNews();
+    fetchNotice(1); // Fetch events when the component mounts
+  }, []);
+
   return (
     <>
       <div className="grid grid-cols-1 lg:flex lg:gap-10 gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
@@ -63,7 +101,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
             ref={listRef}
             className="grid grid-cols-1 gap-6 max-h-[600px] overflow-scroll"
           >
-            {eventData.map((item, index) => (
+            {noticeData.map((item, index) => (
               <ListItem key={index} item={item} />
             ))}
           </ul>
@@ -100,7 +138,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
 };
 
 const ListItem = ({ item }) => {
-  const { title, type, uuid } = item;
+  const { title, endDate, uuid } = item;
 
   return (
     <li className="border-gray-400 flex flex-col">
@@ -112,7 +150,7 @@ const ListItem = ({ item }) => {
             </h1>
             <div className="flex justify-start py-4 items-center text-sm font-semibold">
               <h1 className="px-2 p-1 font-semibold rounded-lg capitalize bg-blue-200">
-                {type}
+                {endDate}
               </h1>
             </div>
           </div>
