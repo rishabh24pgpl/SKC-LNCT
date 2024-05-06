@@ -1,13 +1,44 @@
+'use client'
 import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { getEvent } from "@/app/lib/services/events/events";
+import { getAllSeminar } from "@/app/lib/services/seminar/seminar";
 
-const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
+const Seminar = ({ carouselData, additionalCarouselData }) => {
   const listRef = useRef(null);
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
+  const [eventData, setEventData] = useState([]);
+  const [seminarData, setSeminarData] = useState([]);
+
+  const fetchEvent = async () => {
+    try {
+      const eventDatas = await getEvent();
+      const eventItemsWithType = eventDatas.map((event) => ({
+        ...event,
+        type: "event",
+      }));
+      setEventData(eventItemsWithType);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+    }
+  };
+
+  const fetchSeminar = async () => {
+    try {
+      const seminarDatas = await getAllSeminar();
+      const seminarItemsWithType = seminarDatas.map((seminar) => ({
+        ...seminar,
+        type: "seminar",
+      }));
+      setSeminarData(seminarItemsWithType);
+    } catch (error) {
+      console.error("Error fetching news:", error);
+    }
+  };
 
   useEffect(() => {
     const listElement = listRef.current;
@@ -32,13 +63,10 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
     return () => clearInterval(scrollInterval);
   }, []);
 
-  const handleCarouselScroll = (slider, index) => {
-    if (index === 0) {
-      slider2.slickGoTo(slider.currentSlide);
-    } else {
-      slider1.slickGoTo(slider.currentSlide);
-    }
-  };
+  useEffect(() => {
+    fetchEvent();
+    fetchSeminar(); // Fetch events when the component mounts
+  }, []);
 
   const settings = {
     dots: false,
@@ -48,45 +76,54 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
     slidesToScroll: 1,
     autoplay: true,
     arrows: true,
-    afterChange: (current, index) => handleCarouselScroll(slider1, index),
   };
+
+  // Split the eventData array into two halves
+  const halfIndex = Math.ceil(eventData.length / 2);
+  const firstHalfEventData = eventData.slice(0, halfIndex);
+  const secondHalfEventData = eventData.slice(halfIndex);
 
   return (
     <>
-    <h1 className="font-semibold text-4xl text-black text-center p-6">Seminar & Upcoming events</h1>
+      <h1 className="font-semibold text-4xl text-black text-center p-6">
+        Seminar & Upcoming events
+      </h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
         <div className="overflow-auto border border-gray-200 rounded-md">
-          {/* <h2 className="text-2xl font-bold text-black text-center">Notices</h2> */}
           <ul
             ref={listRef}
             className="grid grid-cols-1 gap-6 max-w-[700px] max-h-[500px] overflow-scroll"
           >
-            {eventData.map((item, index) => (
+            {seminarData.map((item, index) => (
               <ListItem key={index} item={item} />
             ))}
           </ul>
         </div>
         <div className="flex justify-center items-center">
           <div className="w-[400px] h-full border-2 rounded-xl">
-            <Slider {...settings} asNavFor={slider2} ref={(slider) => setSlider1(slider)}>
-              {carouselData.map((item, index) => (
+            <Slider {...settings} ref={(slider) => setSlider1(slider)}>
+              {firstHalfEventData.map((item, index) => (
                 <div key={index}>
                   <img src={item.imageUrl} alt={item.title} className="w-[400px]" />
                   <p className="legend text-black font-bold p-2">{item.title}</p>
-                  <p className="p-2 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+                  <p className="p-2 text-black">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit!
+                  </p>
                 </div>
               ))}
             </Slider>
           </div>
         </div>
         <div className="flex justify-center items-center">
-        <div className="w-[400px] h-full border-2 rounded-xl">
-            <Slider {...settings} asNavFor={slider2} ref={(slider) => setSlider1(slider)}>
-              {carouselData.map((item, index) => (
+          <div className="w-[400px] h-full border-2 rounded-xl">
+            <Slider {...settings} ref={(slider) => setSlider2(slider)}>
+              {secondHalfEventData.map((item, index) => (
                 <div key={index}>
                   <img src={item.imageUrl} alt={item.title} className="w-[400px]" />
                   <p className="legend text-black font-bold p-2">{item.title}</p>
-                  <p className="p-2 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit! &nbsp; Read More...</p>
+                  <p className="p-2 text-black">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit! &nbsp; Read More...
+                  </p>
                 </div>
               ))}
             </Slider>
