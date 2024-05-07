@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
 
-export default function NoticeCard({img,content,link}) {
+export default function NoticeCard({img,content,link,title,description}) {
   return (
     <>
       <div className="w-full h-[440px] border-2 border-blue-500 flex flex-col  items-center rounded-lg overflow-hidden">
@@ -15,7 +15,12 @@ export default function NoticeCard({img,content,link}) {
         </div>
         <div className=" w-full h-[170px] overflow-hidden text-black ">
             <p className="p-2 text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, consequatur commodi. Saepe sint, molestias hic eum perspiciatis tenetur nulla consectetur, iste voluptatibus illum recusandae.
+               {title} 
+            </p>
+        </div>
+        <div className=" w-full overflow-hidden text-black ">
+            <p className="p-2 text-justify">
+               {description} 
             </p>
         </div>
         <div className=" h-[60px] w-full  bg-opacity-40 flex justify-between items-center hover:bg-blue-700 hover:text-white text-blue-600 transform transition-all duration-700 border-blue-600 border-t-2">

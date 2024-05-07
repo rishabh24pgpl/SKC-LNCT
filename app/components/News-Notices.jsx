@@ -113,8 +113,11 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
               asNavFor={slider2}
               ref={(slider) => setSlider1(slider)}
             >
-              {carouselData.map((item, index) => (
-                <NoticeCard />
+              {newsData.map((item, index) => (
+                <NoticeCard 
+                title={item.title}
+                description={item.description}
+                />
               ))}
             </Slider>
           </div>
@@ -126,8 +129,11 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
               asNavFor={slider1}
               ref={(slider) => setSlider2(slider)}
             >
-              {additionalCarouselData.map((item, index) => (
-                 <NoticeCard />
+              {newsData.map((item, index) => (
+                 <NoticeCard 
+                 
+                 title={item.title}
+                 description={item.description}/>
               ))}
             </Slider>
           </div>
