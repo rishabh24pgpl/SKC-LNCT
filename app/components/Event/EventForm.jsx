@@ -1,11 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import EventForm from "@/app/components/Event/EventForm"; // Assuming you have an EventForm component
-import { addEvent, updateEvent } from "@/app/lib/services/events/events"; // Replace with your actual API path
+import EventForm from "@/app/components/Event/EventForm"; // Replace with your actual API path
 import Loader from "@/app/components/Loader/Loader";
-import { validator } from "@/app/lib/helpers/validator";
-import Notification from "@/app/components/Toast/Notification";
-import { scrollToTop } from "@/app/lib/helpers/scrollToTopOfContainer";
+import {addEvent,updateEvent} from "@/app/lib/services/events/events"
 import moment from "moment";
 import { uploadImg } from "@/app/lib/services/files/fileServices";
 export const EVENTS_INITIAL = {
