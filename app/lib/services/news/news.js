@@ -8,6 +8,7 @@ import { isEmpty } from "lodash";
 export const addNews = async (payload) => {
   const res = await api.post(NEWS, payload);
   if (res) {
+    console.log(res," hhhhhhhhh");
     return res;
   }
 };

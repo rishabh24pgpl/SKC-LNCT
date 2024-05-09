@@ -16,22 +16,13 @@ export default function IC() {
     return (
         <div>
 
-            <div className=" w-full h-80 bg-cover capitalize "
+            <div className=" w-full h-80 bg-cover capitalize flex justify-center items-center "
                 style={{ backgroundImage: `url('about-banner.jpg')` }}>
 
-                <h2 className="font-bold text-4xl uppercase absolute  
-                 left-[390px] pt-20 text-white" >
+                <h2 className="font-bold text-4xl uppercase  text-center text-white" >
                     INDUSTRIAL CONSULTANCY
                 </h2>
-                <div className='text-white text-lg ml-[420px] pt-40'>
-                    <ul className='flex'>
-                        <li> <a className='underline' href="">Home</a> / </li>
-                        <li>   Academics  / </li>
-                        <li> INDUSTRIAL CONSULTANCY / </li>
-
-
-                    </ul>
-                </div>
+                
 
             </div>
             <div className='grid grid-cols-3 gap-[70px]  mb-20'>

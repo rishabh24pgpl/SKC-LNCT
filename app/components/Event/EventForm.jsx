@@ -8,16 +8,11 @@ import { uploadImg } from "@/app/lib/services/files/fileServices";
 export const EVENTS_INITIAL = {
   title: "",
   description: "",
-  thumbNail: "",
-  location: "",
-  startDate: "",
-  category: "",
-  endDate: "",
-  OrganizationUuid: "89e7bf84-7422-42f4-b5e4-acc76b582dd6",
+  imageUrl: "",
+  startDate: "2024-05-04T15:52:51.463Z",
+  endDate: "2024-05-07T15:52:51.463Z",
   type: "",
-  registrationRequired: false,
-  capacity: 0,
-  registeredParticipants: 0,
+  registrationRequired: false
 };
 const fields = [
   { name: "title", label: "Title", type: "text", placeholder: "Enter Title" },
@@ -28,59 +23,33 @@ const fields = [
     placeholder: "Enter Description",
   },
   {
-    name: "thumbNail",
-    label: "Thumbnail",
+    name: "imageUrl",
+    label: "imageUrl",
     type: "file",
-    placeholder: "Upload Thumbnail",
+    placeholder: "Upload imageUrl",
   },
-  {
-    name: "location",
-    label: "Location",
-    type: "text",
-    placeholder: "Enter Location",
-  },
+ 
   {
     name: "startDate",
     label: "Start Date",
     type: "date-time",
     placeholder: "Select Start Date",
   },
-  {
-    name: "category",
-    label: "Category",
-    type: "text",
-    placeholder: "Enter Category",
-  },
+  
   {
     name: "endDate",
     label: "End Date",
     type: "date-time",
     placeholder: "Select End Date",
   },
-  {
-    name: "OrganizationUuid",
-    label: "Organization UUID",
-    type: "text",
-    placeholder: "Enter Organization UUID",
-  },
+  
   { name: "type", label: "Type", type: "text", placeholder: "Enter Type" },
   {
     name: "registrationRequired",
     label: "Registration Required",
     type: "checkbox",
   },
-  {
-    name: "capacity",
-    label: "Capacity",
-    type: "number",
-    placeholder: "Enter Capacity",
-  },
-  {
-    name: "registeredParticipants",
-    label: "Registered Participants",
-    type: "number",
-    placeholder: "Enter Registered Participants",
-  },
+
 ];
 // NewsForm component
 export default function NewsForm({
@@ -108,7 +77,7 @@ export default function NewsForm({
         setEventData({
           title: selectedEvent.title,
           description: selectedEvent.description,
-          thumbNail: selectedEvent.thumbNail,
+          imageUrl: selectedEvent.imageUrl,
           startDate: moment(selectedEvent.startDate).format(
             "YYYY-MM-DDTHH:mm:ss"
           ),
@@ -136,8 +105,8 @@ export default function NewsForm({
   const handleChange = ({ target }) => {
     const { name, value, type, checked } = target;
     setValidationErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
-    if (name === "thumbNail") {
-      setEventData((prev) => ({ ...prev, thumbNail: target.files[0] }));
+    if (name === "imageUrl") {
+      setEventData((prev) => ({ ...prev, imageUrl: target.files[0] }));
     } else {
       setError({ msg: "", type: "" });
       let rawValue;
@@ -192,7 +161,7 @@ export default function NewsForm({
 
       const formattedDate = moment(eventData.startDate).toISOString();
       const imgRes = await uploadImg({
-        img: eventData.thumbNail,
+        img: eventData.imageUrl,
         category: "events",
       });
 
@@ -200,7 +169,7 @@ export default function NewsForm({
       if (isEditMode) {
         res = await updateEvent({
           ...eventData,
-          thumbNail: imgRes,
+          imageUrl: imgRes,
           startDate: formattedDate,
           endDate: formattedDate,
           uuid: selectedEventId, // Corrected duplicated uuid property
@@ -208,8 +177,7 @@ export default function NewsForm({
       } else {
         res = await addEvent({
           ...eventData,
-          thumbNail: imgRes,
-          publishedDate: formattedDate,
+          imageUrl: imgRes,
         });
       }
 
@@ -260,7 +228,7 @@ export default function NewsForm({
                   id={field.name}
                   type={field.type}
                   value={
-                    field.name === "thumbNail"
+                    field.name === "imageUrl"
                       ? eventData[field.name]?.File?.filename
                       : eventData[field.name]
                   }

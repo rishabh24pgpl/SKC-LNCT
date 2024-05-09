@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 
-export default function NewsDetails({ img, title, content, heading, para })
+export default function NewsDetails({ image, title, content, heading, para })
  
 {const handleChange = ({ target }) => {
     const { name, value } = target;
@@ -47,7 +47,7 @@ export default function NewsDetails({ img, title, content, heading, para })
   return (
     <>
       {/* Header background with waves */}
-      <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden">
+      <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden -z-10">
         {/* SVG Waves */}
         <svg
           id="wave"
@@ -85,8 +85,8 @@ export default function NewsDetails({ img, title, content, heading, para })
           {/* Detail Page SVG or Image */}
           <div className=" lg:w-1/3   relative h-96 order-2 p-10 hidden lg:block ">
             {/* Replace 'detail-page.svg' with your actual SVG */}
-            <Image
-              src={img}
+            <img
+              src={image}
               alt="foddiesssss"
               layout="fill"
               objectFit="contain"
@@ -106,7 +106,7 @@ export default function NewsDetails({ img, title, content, heading, para })
       </div>
       <div className="w-full p-10 flex gap-4 ">
         <div className="border w-full   flex justify-center items-center   relative">
-          <Image src="/sc-main-1.jpg" alt="" fill />
+          <img src="/sc-main-1.jpg" alt="" fill />
         </div>
         <div className="border w-full    ">
         <form

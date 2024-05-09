@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { handleError } from "@/app/lib/helpers/handleErrors";
 
 export const addNotice = async (payload) => {
+ 
   const res = await api.post(NOTICES, payload);
   if (res) {
     console.log(res," hhhhhhhhh");

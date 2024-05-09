@@ -10,7 +10,8 @@ import EventTable from '@/app/components/Event/EventTable';
 
 const EventParent = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [events, setEventList] = useState([]);  // Corrected the name to setEventList
+  const [events, setEventList] = useState([]); 
+  console.log(events,'yyyyyyy') // Corrected the name to setEventList
   const [allEvents, setAllEvents] = useState();  // Renamed setEvents to setAllEvents
 
   const [selectedEventId, setSelectedEventId] = useState(null);
@@ -22,10 +23,9 @@ const EventParent = () => {
       console.log('eventData:', eventData);
   
       // Access the events array under the 'data' property
-      const eventsArray = Array.isArray(eventData.data) ? eventData.data : [];
-      console.log('eventsArray:', eventsArray);
+      
   
-      setEventList(eventsArray);
+      setEventList(eventData);
     } catch (error) {
       console.error('Error fetching events:', error);
     } finally {

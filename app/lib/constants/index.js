@@ -18,12 +18,12 @@ export const NOTICEINITIAL = {
 
 export const ERR_MSG_PREFIX = "The following fields are blank:";
 export const ALERT_TIMEOUT = 3000;
+
 export const NEWSINITAIL = {
   title: "",
-  content: "",
-  thumbNail: "",
+  description: "",
+  imageUrl: "",
   publishedDate: moment().format("YYYY-MM-DD HH:mm:ss"),
-  reDirectedLink: "",
   // OrganizationUuid: ""
 };
 

@@ -16,22 +16,13 @@ export default function HPC() {
     return (
         <div>
 
-            <div className=" w-full h-80 bg-cover capitalize "
+            <div className=" w-full h-80 bg-cover capitalize flex justify-center items-center"
                 style={{ backgroundImage: `url('about-banner.jpg')` }}>
                 
-                <h2 className="font-bold text-4xl uppercase absolute  
-                 left-80 pt-20 text-white" >
+                <h2 className="font-bold text-4xl uppercase  text-white text-center" >
                     HIGH PERFORMANCE COMPUTING
                 </h2>
-                <div className='text-white text-lg ml-96 pt-40'>
-                    <ul className='flex'>
-                        <li> <a className='underline' href="">Home</a> / </li>
-                        <li>   Academics  / </li>
-                        <li> HIGH PERFORMANCE COMPUTING / </li>
-                        <li>  About </li>
-
-                    </ul>
-                </div>
+              
 
             </div>
             <div className='grid grid-cols-3 gap-[70px] '>
