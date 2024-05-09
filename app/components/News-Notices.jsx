@@ -13,7 +13,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
   const [slider2, setSlider2] = useState(null);
   const [newsData, setNewsData] = useState([])
   const [noticeData, setNoticeData] = useState([])
-  console.log(noticeData)
+ 
   const fetchNews = async () => {
     try {
       const newsDatas = await getAllNews();
