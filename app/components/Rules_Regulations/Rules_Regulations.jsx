@@ -10,7 +10,7 @@ export default function Rules_Regulations() {
     <div>
      <SliderMain images={images} heading="Rules and Regulations"/>
      <div className="w-full mx-auto flex relative">
-        <div className="w-2/3 px-20 pt-[36px]   flex flex-wrap gap-5 justify-evenly ">
+        <div className="w-2/3 px-10 pt-[36px]  grid grid-cols-3  gap-5 justify-evenly pb-10 ">
         <RuleCard bgcolor="bg-red-200" link="/" heading="B.Tech., B.Arch., Int.M.Sc. (5 yr), B.Tech. M.Tech. Dual Degree (5 yr) Summarized"/>
         <RuleCard bgcolor="bg-green-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-gray-200" link="/" heading="heading"/>

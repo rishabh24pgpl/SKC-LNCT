@@ -4,7 +4,7 @@ import { FaDownload } from "react-icons/fa6";
 
 export default function CalenderCard({ year, title, link }) {
   return (
-    <div className="w-[250px] h[100px] flex-col flex gap-2 p-5 border-2 text-center rounded-md ">
+    <div className="w-[210px] h[100px] flex-col flex gap-2 p-5 border-2 text-center rounded-md ">
       <h1>
         {year - 1}-{year - 2000}
       </h1>

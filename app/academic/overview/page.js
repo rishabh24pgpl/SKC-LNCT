@@ -13,9 +13,9 @@ export default function page() {
         <h1 className="text-4xl font-bold py-2 border-b-4 border-red-500 inline-block ">
           Overview
         </h1>
-        <div className="w-[650px] h-[440px]  relative my-8">
+        <div className="w-[600px] h-[440px]  relative my-8">
           <Image src="/a-o.png" alt="image" fill />
-          <div className=" absolute w-[770px] h-[400px]  top-5 left-[580px] bg-blue-100 p-8">
+          <div className=" absolute w-[580px] h-[400px]  top-5 left-[580px] bg-blue-100 p-2">
             <h1 className="text-3xl font-bold">
               Programs and Course Structure at SKC LNCT Indore
             </h1>
@@ -41,9 +41,9 @@ export default function page() {
         <h1 className="text-4xl font-bold py-2 border-b-4 border-red-500 inline-block ">
           Admission
         </h1>
-        <div className="w-[850px] h-[540px]  relative my-8 ml-[500px] ">
+        <div className="w-[600px] h-[540px]  relative my-8 ml-[540px] ">
           <Image src="/a-o.png" alt="image" fill />
-          <div className=" absolute w-[720px] h-[320px]  top-24  right-[620px] bg-blue-600 p-8">
+          <div className=" absolute w-[690px] h-[340px]  top-24  right-[480px] bg-blue-600 p-8">
             <h1 className="text-3xl font-bold">Admission at LNCT Indore</h1>
             <p className=" py-2 text-gray-200 p-1">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis

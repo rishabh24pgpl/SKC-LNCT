@@ -18,11 +18,11 @@ export default function page() {
             </h1>
             <div className="w-[530px] h-[440px]  relative my-8">
               <Image src="/a-o.png" alt="image" fill />
-              <div className=" absolute w-[600px] h-[400px]  top-5 left-[320px] bg-blue-100 p-8">
+              <div className=" absolute w-[500px] h-[400px]  top-5 left-[200px] bg-blue-100 p-8">
                 <h1 className="text-2xl font-bold">
                   Nature is pleased with simplicity
                 </h1>
-                <p className=" py-3 text-base">
+                <p className=" py-3 text-sm">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Nobis cumque repellendus id dolore quidem quod, assumenda
                   voluptate, nisi sequi delectus, magnam cum veritatis molestiae
@@ -57,7 +57,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="w-1/3 h-[600px] sticky top-20 left-0 p-10 ">
+        <div className="w-1/3 h-[600px] sticky top-20 left-0 py-10 ">
           <RelatedLink />
         </div>
       </div>

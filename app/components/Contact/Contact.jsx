@@ -19,7 +19,7 @@ export default function Contact() {
       <SliderMain images={images} heading="Contact Us" />
 
       <div className="w-full mx-auto flex relative">
-        <div className="w-2/3 px-20 pt-[36px] ">
+        <div className="w-2/3 px-10 pt-[36px] ">
           <div className="w-full  flex gap-4 justify-between  p-2 items-center">
             <div className=" w-64 h-20  p-2 flex gap-3 rounded-lg bg-gray-100">
               <div className=" flex justify-center items-center">
@@ -32,8 +32,8 @@ export default function Contact() {
                 <h1 className="text-black text-lg font-semibold capitalize">
                   Address
                 </h1>
-                <h2 className=" text-sm">
-                  SKC LNCT, INDORE, Madhya Pradesh, India, 111111
+                <h2 className=" text-xs">
+                  SKC LNCT, INDORE, Madhya Pradesh
                 </h2>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function Contact() {
                 <h1 className="text-black text-lg font-semibold capitalize">
                   Email
                 </h1>
-                <h2 className=" text-sm">skclnct@gmailcom</h2>
+                <h2 className=" text-xs">skclnct@gmailcom</h2>
               </div>
             </div>
             <div className=" w-64 h-20  p-2 flex gap-3 rounded-lg bg-gray-100">
@@ -62,13 +62,13 @@ export default function Contact() {
                 <h1 className="text-black text-lg font-semibold capitalize">
                   Phone Number
                 </h1>
-                <h2 className=" text-sm">(0661) 246 - 2020 / 2002</h2>
+                <h2 className=" text-xs">(0661) 246 - 2020 / 2002</h2>
               </div>
             </div>
           </div>
-          <div className="w-full  border-2 p-2 flex justify-between gap-2  ">
-            <div className="w-1/2 border-2"></div>
-            <div className="w-1/2 border-2 bg-gray-100 p-2">
+          <div className="w-full   p-2 flex justify-between gap-2  ">
+            <div className="w-1/2 "></div>
+            <div className="w-1/2  bg-gray-100 p-2">
               <h1 className="p-2 text-black font-semibold text-xl my-3 ">
                 How to Reach SKC LNCT
               </h1>
@@ -162,7 +162,7 @@ export default function Contact() {
             </table>
           </div>
         </div>
-        <div className="w-1/3 h-[600px] sticky top-20 left-0 p-10 ">
+        <div className="w-1/3 h-[600px] sticky top-20 left-0 py-10 ">
           <div className="relative h-full ">
             <RelatedLink />
           </div>

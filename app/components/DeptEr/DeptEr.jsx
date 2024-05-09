@@ -81,7 +81,7 @@ export default function DeptEr({ dept }) {
                 About the Department
               </h2>
               <div className="w-full   mt-5">
-                <div className="w-full grid grid-cols-4 gap-5 ">
+                <div className="w-full grid grid-cols-3 gap-5 ">
                   {counter.map((count) => (
                     <DeptCounter
                       key={count.title}
