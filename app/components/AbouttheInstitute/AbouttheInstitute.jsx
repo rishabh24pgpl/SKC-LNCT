@@ -4,9 +4,9 @@ import React from "react";
 export default function AbouttheInstitute() {
   return (
     <>
-      <div className="  w-11/12 mx-auto mt-10 justify-around bg-blue-700">
+      <div className="  w-11/12 mx-auto mt-10 justify-around bg-gradient-to-r from-indigo-500 to-blue-800">
         <div className="   ">
-          <h1 className="text-3xl pt-10 pb-5 px-10 ">About the Institute</h1>
+          <h1 className="text-4xl pt-10 pb-5 px-10 ">About the Institute</h1>
           <p className="  px-10 pb-4">
             NIT Rourkela is one of the premier national level institutions for
             technical education in the country and is funded by the Government

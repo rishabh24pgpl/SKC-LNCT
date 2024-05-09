@@ -201,7 +201,7 @@ export default function Navbar() {
             },
             {
               name: "Admission Process",
-              link: "/institute/contact",
+              link: "/admission",
             },
             {
               name: "FAQs",
@@ -486,6 +486,7 @@ export default function Navbar() {
 
       <div className="w-full bg-blue-500">
         <div className="flex w-full mx-auto gap-4 justify-center bg-blue-500 relative ">
+
           {navItems.map((item) => (
             <div>
               <Link
