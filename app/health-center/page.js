@@ -15,9 +15,9 @@ export default function page() {
           <h1 className="text-4xl font-bold py-2 border-b-4 border-red-500 inline-block ">
             Health Centre
           </h1>
-          <div className="w-[850px] h-[540px]  relative my-8 ml-[500px] ">
+          <div className="w-[650px] h-[540px]  relative my-8 ml-[500px] ">
             <Image src="/a-o.png" alt="image" fill />
-            <div className=" absolute w-[720px] h-[320px]  top-24  right-[620px] bg-blue-600 p-8">
+            <div className=" absolute w-[620px] h-[320px]  top-24  right-[520px] bg-blue-600 p-8">
               <h1 className="text-3xl font-bold">Health is Wealth</h1>
               <p className=" py-2 text-gray-200 p-1">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
@@ -40,7 +40,7 @@ export default function page() {
               <FacultyCard />
               </div>
             </div>
-            <div className="w-1/3 h-[600px] sticky top-20 left-0 p-10 ">
+            <div className="w-1/3 h-[600px] sticky top-20 left-0 py-10 ">
               <RelatedLink />
             </div>
           </div>

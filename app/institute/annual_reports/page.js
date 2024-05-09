@@ -9,7 +9,7 @@ export default function page() {
     <div>
       <SliderMain images={images} />
       <div className="w-full mx-auto flex relative mt-2  font-semibold text-lg">
-        <div className="w-2/3 px-20 py-10 grid grid-cols-2 ">
+        <div className="w-2/3 px-10 py-10 grid grid-cols-2 gap-10 ">
           <DocCard link="#" heading="Annual Reports 2022-23" />
           <DocCard link="#" heading="Annual Reports 2022-23" />
           <DocCard link="#" heading="Annual Reports 2022-23" />
@@ -19,7 +19,7 @@ export default function page() {
           <DocCard link="#" heading="Annual Reports 2022-23" />
         </div>
 
-        <div className="w-1/3 h-[600px] sticky top-20 left-0 p-10 ">
+        <div className="w-1/3 h-[600px] sticky top-20 left-0 py-10 px-4 ">
           <RelatedLink />
         </div>
       </div>

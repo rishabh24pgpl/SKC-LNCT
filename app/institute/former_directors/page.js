@@ -12,7 +12,7 @@ export default function page() {
     <div>
      <SliderMain images={images} heading="Former directors"/>
       <div className="w-full mx-auto flex relative">
-        <div className="w-2/3 px-20 pt-[36px]">
+        <div className="w-2/3 px-10 pt-[36px]">
           <FacultyCard />
           <FacultyCard />
           <FacultyCard />
@@ -23,7 +23,7 @@ export default function page() {
           <FacultyCard />
           <FacultyCard />
         </div>
-        <div className="w-1/3 h-[600px] sticky top-20 left-0 p-10 ">
+        <div className="w-1/3 h-[600px] sticky top-20 left-0  py-10 ">
         <RelatedLink/>
         </div>
       </div>

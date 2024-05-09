@@ -20,7 +20,7 @@ export default function page() {
         className="w-full h-screen  "
         style={{ height: "calc(100vh - 60px)" }}
       >
-        <div className="w-full flex px-20 py-20  gap-7">
+        <div className="w-full flex px-5 py-5  gap-5">
           <div className="w-2/3 ">
             <div className="p-10">
               <h2 className=" tracking-[10px] text-lg text-blue-700">WELCOME TO</h2>
