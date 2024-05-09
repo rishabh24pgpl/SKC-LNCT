@@ -117,6 +117,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
                 <NoticeCard 
                 title={item.title}
                 description={item.description}
+                id={item.uuid}
                 />
               ))}
             </Slider>
@@ -133,7 +134,8 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
                  <NoticeCard 
                  
                  title={item.title}
-                 description={item.description}/>
+                 description={item.description}
+                 id={item.uuid}/>
               ))}
             </Slider>
           </div>

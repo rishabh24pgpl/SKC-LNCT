@@ -11,16 +11,16 @@ import { first } from "lodash";
 const fields = [
   { name: "title", label: "Title", type: "text", placeholder: "Enter Title" },
   {
-    name: "content",
-    label: "Content",
+    name: "description",
+    label: "Description",
     type: "text",
-    placeholder: "Enter Content",
+    placeholder: "Enter Description",
   },
   {
-    name: "thumbNail",
-    label: "Thumbnail",
+    name: "imageUrl",
+    label: "ImageUrl",
     type: "file",
-    placeholder: "Upload Thumbnail",
+    placeholder: "Upload ImageUrl",
   },
   {
     name: "publishedDate",
@@ -28,12 +28,7 @@ const fields = [
     type: "date-time",
     placeholder: "Select Date",
   },
-  {
-    name: "reDirectedLink",
-    label: "Redirected Link",
-    type: "text",
-    placeholder: "Enter Redirected Link",
-  },
+ 
 ];
 
 const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ...others }) => {
@@ -57,12 +52,12 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
       if (selectedNews) {
         setNewsData({
           title: selectedNews.title,
-          content: selectedNews.content,
-          thumbNail: selectedNews.thumbNail,
+          description: selectedNews.description,
+          imageUrl: selectedNews.imageUrl,
           publishedDate: moment(selectedNews.publishedDate).format(
             "YYYY-MM-DDTHH:mm:ss"
           ),
-          reDirectedLink: selectedNews.reDirectedLink,
+         
         });
         setIsEditMode(true);
       }
@@ -72,7 +67,7 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
   const validateForm = () => {
     const errors = {};
     fields.forEach((field) => {
-      if (!newsData[field.name] && field.name !== "thumbNail") {
+      if (!newsData[field.name] && field.name !== "imageUrl") {
         errors[field.name] = "This field is required";
       }
     });
@@ -82,10 +77,10 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
-    if (name === "thumbNail") {
+    if (name === "imageUrl") {
       setNewsData((prev) => ({
         ...prev,
-        thumbNail: target.files.length > 0 ? target.files[0] : null,
+        imageUrl: target.files.length > 0 ? target.files[0] : null,
       }));
     } else {
       setError({ msg: "", type: "" });
@@ -106,7 +101,7 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
     e.preventDefault();
     if (!validateForm()) return; // If form validation fails, don't submit
 
-    let imgRes = await uploadImg({ img: newsData.thumbNail, category: "news" });
+    let imgRes = await uploadImg({ img: newsData.imageUrl, category: "news" });
     if (imgRes) {
       const formattedDate = moment(newsData.publishedDate).toISOString();
       setNewsData(NEWSINITAIL);
@@ -123,13 +118,13 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
             ...newsData,
             publishedDate: formattedDate,
             uuid: selectedNewsId,
-            organizationUuid: organization || schoolUuid,
+            
           })
         : await addNews({
             ...newsData,
-            thumbNail: imgRes,
+            imageUrl: imgRes,
             publishedDate: formattedDate,
-            organizationUuid: organization || schoolUuid,
+           
           });
       onFormSubmit();
     } catch (error) {
@@ -138,7 +133,7 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
       setIsLoading(false);
       setNewsData({ ...NEWSINITAIL });
     }
-    const fileInput = document.getElementById("thumbNail");
+    const fileInput = document.getElementById("imageUrl");
     if (fileInput) {
       fileInput.value = ""; // Reset value to empty string
     }
@@ -173,7 +168,7 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
                   id={field.name}
                   type={field.type}
                   value={
-                    field.name === "thumbNail"
+                    field.name === "imageUrl"
                       ? newsData[field.name]?.File?.filename
                       : newsData[field.name]
                   }

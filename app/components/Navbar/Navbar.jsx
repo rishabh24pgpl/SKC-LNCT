@@ -388,23 +388,23 @@ export default function Navbar() {
           subchild: [
             {
               name: "  Central Research Facility",
-              link: "/institute/welcome",
+              link: "/crf",
             },
             {
               name: " Centre for Technology Innovation and Industry Relations",
-              link: "/institute/mission_vision",
+              link: "/relations",
             },
-            {
-              name: " Foundation for Technology and Business Incubation",
-              link: "/institute/former_directors",
-            },
+            // {
+            //   name: " Foundation for Technology and Business Incubation",
+            //   link: "/institute/former_directors",
+            // },
             {
               name: "High Performance Computing",
-              link: "/institute/campus_facilities",
+              link: "/highpc",
             },
             {
               name: " Industrial Consultancy",
-              link: "/institute/contact",
+              link: "/ic",
             },
           ],
         },

@@ -7,6 +7,7 @@ import { isEmpty } from "lodash";
 export const addSeminar = async (payload) => {
   const res = await api.post(SEMINAR, payload);
   if (res) {
+    console.log(res," hhhhhhhhh");
     return res;
   }
 };

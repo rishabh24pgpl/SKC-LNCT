@@ -18,22 +18,13 @@ export default function TIIR() {
         
 
 
-            <div className=" w-full h-80 bg-cover capitalize "
+            <div className=" w-full h-80 bg-cover capitalize flex justify-center items-center "
                 style={{ backgroundImage: `url('about-banner.jpg')` }}>
                
-                <h2 className="font-bold text-4xl uppercase absolute  
-                 left-28 pt-20 text-white" >
+                <h2 className="font-bold text-4xl uppercase  text-white" >
                     TECHNOLOGY INNOVATION AND INDUSTRY RELATIONS
                 </h2>
-                <div className='text-white text-lg ml-96  pt-40'>
-                    <ul className='flex'>
-                        <li> <a className='underline' href="">Home</a> / </li>
-                        <li>   Academics  / </li>
-                        <li> Support Center / </li>
-                        <li> TIIR  </li>
-
-                    </ul>
-                </div>
+                
 
             </div>
             <div className='grid grid-cols-3 gap-[70px] '>

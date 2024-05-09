@@ -95,11 +95,13 @@ import DeleteButton from "@/app/components/Event/delete";
 import Pagination from "@/app/components/Pagination/Pagination"; // Import your Pagination component
 
 const EventTable = ({ events, onDelete, onEdit }) => {
+  console.log(events,'fygjjgg')
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5); // Set your desired items per page
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [selectedEventId, setSelectedEventId] = useState(null);
   const [paginatedEvents, setPaginatedEvents] = useState([]);
+  console.log(paginatedEvents,'gjkjkj');
 
   useEffect(() => {
     const indexOfLastEvent = currentPage * itemsPerPage;

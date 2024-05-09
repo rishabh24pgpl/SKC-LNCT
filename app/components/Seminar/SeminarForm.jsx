@@ -1,42 +1,70 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { addNotice, updateNotice } from "@/app/lib/services/notice/notice";
+import { addSeminar, updateSeminar } from "@/app/lib/services/seminar/seminar";
 import Loader from "@/app/components/Loader/Loader";
 import Notification from "@/app/components/Toast/Notification";
-import { NOTICEINITIAL, ADMIN } from "@/app/lib/constants/index";
+import {
+
+  ADMIN,
+  SEMINARINITIAL,
+} from "@/app/lib/constants/index";
 import moment from "moment";
 import { uploadImg } from "@/app/lib/services/files/fileServices";
 
 const fields = [
   { name: "title", label: "Title", type: "text", placeholder: "Enter Title" },
+  { name: "type", label: "Type", type: "text", placeholder: "Enter Type" },
   {
-    name: "description",
-    label: "Description",
+    name: "department",
+    label: "Department",
     type: "text",
-    placeholder: "Enter Description",
+    placeholder: "Enter Department",
   },
   {
-    name: "endDate",
-    label: "End Date",
-    type: "datetime-local",
-    placeholder: "Select End Date",
+    name: "speakerName",
+    label: "Speaker Name",
+    type: "text",
+    placeholder: "Enter Speaker Name",
   },
-  { name: "file", label: "File", type: "file", placeholder: "Upload File" },
+  { name: "venue", label: "Venue", type: "text", placeholder: "Enter Venue" },
+  {
+    name: "contactPerson",
+    label: "Contact Person",
+    type: "text",
+    placeholder: "Enter Contact Person",
+  },
+  {
+    name: "abstract",
+    label: "Abstract",
+    type: "text",
+    placeholder: "Enter Abstract",
+  },
+  {
+    name: "imageUrl",
+    label: "Image URL",
+    type: "file",
+    placeholder: "Enter Image URL",
+  },
+  {
+    name: "publishedDate",
+    label: "Published Date",
+    type: "datetime-local",
+    placeholder: "Enter Published Date",
+  },
 ];
-
-const NoticeForm = ({
-  selectedNoticeId,
-  setSelectedNoticeId,
+const SeminarForm = ({
+  selectedSeminarId,
+  setSelectedSeminarId,
   onFormSubmit,
-  noticeList,
+  seminarList,
   ...others
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setError] = useState({ msg: "", type: "" });
   const [validationErrors, setValidationErrors] = useState({});
   const fileInputRef = useRef(null);
-  const [notice, setNoticeData] = useState({
-    ...NOTICEINITIAL,
+  const [seminar, setSeminarData] = useState({
+    ...SEMINARINITIAL,
     endDate: moment().format("YYYY-MM-DDTHH:mm:ss"),
   });
 
@@ -47,27 +75,29 @@ const NoticeForm = ({
   );
 
   useEffect(() => {
-    if (selectedNoticeId) {
-      const selectedNotice = noticeList.find(
-        (notice) => notice.uuid === selectedNoticeId
+    if (selectedSeminarId) {
+      const selectedSeminar = seminarList.find(
+        (seminar) => seminar.uuid === selectedSeminarId
       );
 
-      if (selectedNotice) {
-        setNoticeData({
-          title: selectedNotice.title,
-          description: selectedNotice.description,
-          file: selectedNotice.file,
-          endDate: moment(selectedNotice.endDate).format("YYYY-MM-DDTHH:mm:ss"),
+      if (selectedSeminar) {
+        setSeminarData({
+          title: selectedSeminar.title,
+          description: selectedSeminar.description,
+          file: selectedSeminar.file,
+          endDate: moment(selectedSeminar.endDate).format(
+            "YYYY-MM-DDTHH:mm:ss"
+          ),
         });
         setIsEditMode(true);
         // Clear validation errors when entering edit mode
         setValidationErrors({});
-        setPrevImagePreview(selectedNotice.file); // Set previous image preview
+        setPrevImagePreview(selectedSeminar.file); // Set previous image preview
         setPrevImagePreviewText("Current Image"); // Update text for current image
       }
     } else {
-      setNoticeData({
-        ...NOTICEINITIAL,
+      setSeminarData({
+        ...SEMINARINITIAL,
         endDate: moment().format("YYYY-MM-DDTHH:mm"),
       });
       setIsEditMode(false);
@@ -76,13 +106,13 @@ const NoticeForm = ({
       setPrevImagePreview(null); // Clear previous image preview
       setPrevImagePreviewText("Previously Used Image"); // Reset text for previous image
     }
-  }, [selectedNoticeId, noticeList]);
+  }, [selectedSeminarId, seminarList]);
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
 
-    if (name === "file") {
-      setNoticeData((prev) => ({
+    if (name === "imageUrl") {
+      setSeminarData((prev) => ({
         ...prev,
         file: target.files.length > 0 ? target.files[0] : null,
       }));
@@ -100,7 +130,7 @@ const NoticeForm = ({
         rawValue = `${dateValue}T${timeValue}`;
       }
 
-      setNoticeData((prev) => ({ ...prev, [name]: rawValue }));
+      setSeminarData((prev) => ({ ...prev, [name]: rawValue }));
 
       // Clear validation error for the current field
       setValidationErrors((prevErrors) => {
@@ -112,8 +142,8 @@ const NoticeForm = ({
   };
 
   const handleCancelEdit = () => {
-    setNoticeData({ ...NOTICEINITIAL });
-    setSelectedNoticeId(null);
+    setSeminarData({ ...SEMINARINITIAL });
+    setSelectedSeminarId(null);
     setIsEditMode(false);
     setPrevImagePreview(null);
     setPrevImagePreviewText("Previously Used Image");
@@ -122,32 +152,34 @@ const NoticeForm = ({
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError({ msg: "", type: "" });
-
     try {
-      setIsLoading(true);
+        setIsLoading(true);
+       
 
       if (!validateForm()) return;
 
-      const formattedDate = moment(notice.endDate).toISOString();
+      const formattedDate = moment(seminar.endDate).toISOString();
       let imgRes = null;
 
-      if (notice.file && notice.file !== prevImagePreview) {
-        imgRes = await uploadImg({ img: notice.file, category: "NOTICEINITIAL" });
-        setPrevImagePreview(notice.file); // Update previous image preview if a new image is uploaded
+      if (seminar.imageUrl && seminar.imageUrl !== prevImagePreview) {
+        imgRes = await uploadImg({
+          img: seminar.file,
+          category: "SEMINARINITIAL",
+        });
+        setPrevImagePreview(seminar.file); // Update previous image preview if a new image is uploaded
         setPrevImagePreviewText("Current Image"); // Update text for current image
       }
 
       if (isEditMode) {
-        await updateNotice({
-          ...notice,
-          file: imgRes ? imgRes : notice.file,
-          endDate: formattedDate,
-          uuid: selectedNoticeId,
-          organizationUuid: organization || schoolUuid,
+        await updateSeminar({
+          ...seminar,
+          imageUrl: imgRes ? imgRes : seminar.imageUrl,
+
+          uuid: selectedSeminarId,
         });
       } else {
-        const res=await addNotice({
-          ...notice,
+        const res = await addSeminar({
+          ...SEMINARINITIAL,
           file: imgRes,
           endDate: formattedDate,
           // organizationUuid: organization || schoolUuid,
@@ -162,7 +194,7 @@ const NoticeForm = ({
         };
 
         // const res = await addNotice(formData);
-        console.log(res.data.payload,"hhhhhhhhhhhhh")
+        console.log(res.data.payload, "hhhhhhhhhhhhh");
       }
 
       onFormSubmit();
@@ -171,8 +203,8 @@ const NoticeForm = ({
       console.error("Error submitting form:", error);
     } finally {
       setIsLoading(false);
-      setNoticeData({
-        ...NOTICEINITIAL,
+      setSeminarData({
+        ...SEMINARINITIAL,
         endDate: moment().format("YYYY-MM-DDTHH:mm"),
       });
       const fileInput = document.getElementById("file");
@@ -185,7 +217,7 @@ const NoticeForm = ({
   const validateForm = () => {
     const errors = {};
     fields.forEach((field) => {
-      if (field.type !== "file" && !notice[field.name].trim()) {
+      if (field.type !== "file" && !seminar[field.name].trim()) {
         errors[field.name] = "This field is required";
       }
     });
@@ -197,7 +229,7 @@ const NoticeForm = ({
     <>
       <div className="flex flex-col w-full justify-center items-center bg-[url('/MessageSvg.svg')]">
         <h1 className="text-center mx-auto w-full my-3 text-4xl font-bold text-tgreen">
-          Notice Details Form
+          Seminar Details Form
         </h1>
         <div
           className="w-11/12 rounded-lg flex flex-col justify-center items-center bg-bgreen opacity-75 p-5"
@@ -245,7 +277,7 @@ const NoticeForm = ({
                     }`}
                     id={field.name}
                     type={field.type}
-                    value={notice[field.name]}
+                    value={seminar[field.name]}
                     onChange={handleChange}
                     placeholder={field.placeholder}
                     required
@@ -292,4 +324,4 @@ const NoticeForm = ({
   );
 };
 
-export default NoticeForm;
+export default SeminarForm;
