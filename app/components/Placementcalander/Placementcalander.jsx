@@ -11,7 +11,7 @@ export default function Placementcalander() {
         Placement Process
       </h1>
 
-      <div className="flex justify-around p-10">
+      <div className=" w-11/12 mx-auto flex  justify-around p-10">
         {" "}
         <div className="  w-80  flex-col flex  items-center p-2 ">
           <h1 className="p-1 font-semibold">Step 1</h1>
@@ -53,7 +53,7 @@ export default function Placementcalander() {
           </p>
         </div>
       </div>
-      <div className="flex justify-around p-10">
+      <div className="  w-11/12 mx-auto flex justify-around p-10">
         {" "}
         <div className="   w-80  flex-col flex  items-center p-2 ">
           <h1 className="p-1 font-semibold">Step 6</h1>
@@ -103,8 +103,8 @@ export default function Placementcalander() {
       <h1 className=" font-semibold text-4xl border-b-2 p-8 text-center w-3/4 mx-auto border-blue-600">
         Placement Calendar
       </h1>
-      <div className="w-full mx-auto pt-5 pb-10 ml-15">
-        <div className="flex  mx-auto justify-center  items-center shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
+      <div className="w-11/12  mx-auto pt-5 pb-10 ml-15">
+        <div className="flex  mx-auto justify-center  items-center shadow-[0_20px_50px_rgba(0,_0,_00,_0.3)]">
           <div className="bg-white w-[750px]   h-[360px] text-black  p-10 translate-x-[5rem] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  ">
             <h1 className="text-2xl pb-2 text-center">Placement Calendar</h1>
             <div className=" p-2 justify-center items-center">
