@@ -434,7 +434,7 @@ export default function Home() {
       <AbouttheInstitute />
 
       <section class=" flex  h-[300px] w-11/12 mx-auto mt-10  ">
-        <div class="items flex-1 w-full bg-cyan-500 text-white p-8 text-center  ">
+        <div class="items flex-1 w-full bg-cyan-500 text-white p-6 pt-14 text-center  ">
           <h2 className="font-semibold text-2xl">Thought of the Day</h2>
           <h5 className="font-semibold text-xl py-5 text-justify">
             Sometimes the biggest strength can be found in how you understand
@@ -444,7 +444,7 @@ export default function Home() {
             <i>--Michael Springer--</i>
           </h5>
         </div>
-        <div class="item flex-1 w-full bg-teal-400 p-8 items-center text-center ">
+        <div class="item flex-1 w-full bg-teal-400 p-6 pt-14  items-center text-center ">
           <h2 className="font-semibold text-2xl">Word of the Day</h2>
           <h5 className="font-semibold text-xl py-5">कार्यात्मक</h5>
           <h5 className="font-semibold text-2xl">FUNCTIONAL</h5>

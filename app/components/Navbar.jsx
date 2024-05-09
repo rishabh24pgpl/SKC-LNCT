@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import {loginPage} from '@/app/loginPage/page'
+import { loginPage } from "@/app/loginPage/page";
 export default function Navbar() {
   const [openSubMenuId, setOpenSubMenuId] = useState(null);
   const [collegeNameIndex, setCollegeNameIndex] = useState(0);
@@ -24,15 +24,13 @@ export default function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
-  
   const handleStuffLogin = () => {
-    router.push('/loginPage')
-  }
-
+    router.push("/loginPage");
+  };
 
   return (
     <div className=" text-white z-50">
-      <div className="flex items-center justify-between p-2 bg-blue-600">
+      <div className="flex items-center justify-between p-2 bg-blue-700">
         <div className="items-center flex gap-4 ">
           <p className=" animate-pulse">Admissions</p>
           <p>Placement</p>
@@ -49,14 +47,15 @@ export default function Navbar() {
         <div className="flex ">
           <Link
             className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
-            href="/admin/loginPage" onClick={handleStuffLogin}
+            href="/admin/loginPage"
+            onClick={handleStuffLogin}
           >
             STAFF LOGIN
           </Link>
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-4 bg-blue-400">
+      <div className="flex items-center justify-between px-4 bg-blue-700">
         {/* Logo and college name */}
         <div className="flex items-center gap-4">
           <div className="w-[100px] h-[100px] relative">
@@ -82,7 +81,7 @@ export default function Navbar() {
           />
         </div>
       </div>
-      <div className="flex justify-around bg-blue-400 p-4">
+      <div className="flex justify-around bg-blue-700 p-4">
         <div id="tmenu-institute">
           <a
             href="#"
@@ -95,7 +94,7 @@ export default function Navbar() {
             </span>
           </a>
           <div
-            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-400 nav-submenu  ${
+            className={`megamenu-panel absolute top-30 left-0 w-screen bg-blue-700 nav-submenu  ${
               openSubMenuId === "institute" ? "" : "hidden"
             }`}
           >
@@ -776,7 +775,7 @@ export default function Navbar() {
             className="text-white"
             onClick={() => toggleSubMenu("faculty & staff")}
           >
-            Faculty & Staff
+            Faculty
             <span className="submenu-indicator">
               <span className="submenu-indicator-chevron border-white"></span>
             </span>
