@@ -20,7 +20,7 @@ export default function page() {
           <h1 className="my-1 p-2">Finance Commitee (Secretary)</h1>
           <GovernorCard />
         </div>
-        <div className="w-1/3 h-[600px] sticky top-20 left-0 p-10 ">
+        <div className="w-1/3 h-[600px] sticky top-20 left-0 py-10 ">
           <RelatedLink />
         </div>
       </div>

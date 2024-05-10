@@ -77,7 +77,7 @@ export default function page() {
                   ? `Academic Calender for ${selectedYear}`
                   : "Academic Calender for All Years"}
               </h2>
-              <div className="w-full  grid grid-cols-3 gap-3">
+              <div className="w-full  grid grid-cols-3 gap-5">
 
             
               {(selectedYear === "all"
@@ -95,7 +95,7 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="w-1/3 h-[600px] sticky top-20 left-0 p-10 ">
+        <div className="w-1/3 h-[600px] sticky top-20 left-0 py-10 ">
           <RelatedLink />
         </div>
       </div>

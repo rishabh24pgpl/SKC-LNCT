@@ -360,8 +360,10 @@ export default function Navbar() {
           name: "Alumni",
           subchild: [
             {
+
               name: "About Alumni Cell",
               link: "/alumni",
+
             },
            
             {
@@ -481,8 +483,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="w-full bg-blue-700">
-        <div className="flex w-9/12 mx-auto gap-4 justify-center bg-blue-700 relative ">
+      <div className="w-full bg-blue-500">
+        <div className="flex w-full mx-auto gap-4 justify-center bg-blue-500 relative ">
+
           {navItems.map((item) => (
             <div>
               <Link
@@ -500,7 +503,7 @@ export default function Navbar() {
               </Link>
 
               <div
-                className={` absolute top-[62px] left-0 p-3   bg-white nav-submenu w-full  ${
+                className={` absolute top-[60px] left-0 p-3   bg-white nav-submenu w-full  ${
                   openSubMenuId === item.main ? "" : "hidden"
                 }`}
               >

@@ -13,7 +13,7 @@ export default function RelatedLink() {
 ];
   return (
     <>
-      <div className="border-2 w-[400px]  text-black rounded-lg p-3  ">
+      <div className="border-2 w-[370px]  text-black rounded-lg p-3  ">
         <div className="  px-4 p-2 text-xl  font-semibold "> Related-Link</div>
 
         {links.map((link) => (
