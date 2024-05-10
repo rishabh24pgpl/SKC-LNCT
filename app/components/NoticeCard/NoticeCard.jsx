@@ -15,8 +15,8 @@ export default function NoticeCard({
     <>
       <div className="w-full h-[440px] border-2 border-blue-500 flex flex-col  items-center rounded-lg overflow-hidden">
         <div className="w-full h-[210px]  relative overflow-hidden">
-          <Image
-            src="/ar-1.jpg"
+          <img
+            src={img}
             fill
             className=" hover:transform hover:scale-125 duration-500"
           />
