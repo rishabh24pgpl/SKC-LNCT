@@ -87,6 +87,13 @@ const MyComponent = () => {
   ];
   return (
     <>
+      <div className=" w-full h-80 bg-cover capitalize flex justify-center items-center "
+                style={{ backgroundImage: `url('about-banner.jpg')` }}>
+
+                <h2 className="font-bold text-4xl uppercase  text-center text-white" >
+                ALUMNI RELATIONS
+                </h2>
+                </div>
       <div className="flex p-20  mx-auto">
         <div className="w-[25%] mx-auto ">
           {/* Left 30% width */}
