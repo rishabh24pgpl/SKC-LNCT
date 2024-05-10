@@ -32,6 +32,7 @@ export default function page({ images }) {
           className="flex max-w-full overflow-x-scroll scroll-smooth"
           ref={sliderRef}
         >
+          
           {images.map((image) => {
             return (
               <Image
@@ -44,7 +45,9 @@ export default function page({ images }) {
               />
             );
           })}
+       
         </div>
+       
       </div>
       <div className="flex justify-center mt-4">
         <button
@@ -57,8 +60,10 @@ export default function page({ images }) {
             width={30}
             height={30}
           ></Image>
+        
         </button>
         <button onClick={scrollRight} className="px-4 py-2 shadow rounded-md">
+          
           <Image
             alt="image"
             src={"/right-arrow.svg"}

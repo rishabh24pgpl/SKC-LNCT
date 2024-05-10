@@ -284,7 +284,7 @@ export default function Navbar() {
           subchild: [
             {
               name: "Faculty Diretory",
-              link: "/institute/welcome",
+              link: "/faculty",
             },
             {
               name: "Officer Directory",
@@ -360,16 +360,13 @@ export default function Navbar() {
           name: "Alumni",
           subchild: [
             {
-              name: "Alumni Relations",
-              link: "/institu",
+              name: "About Alumni Cell",
+              link: "/alumni",
             },
+           
             {
-              name: "Giving back to Alma Master",
-              link: "/institute/miss",
-            },
-            {
-              name: "Transcripts",
-              link: "/institute/former",
+              name: "Eminent",
+              link: "/eminent",
             },
 
             {
