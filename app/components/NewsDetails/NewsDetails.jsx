@@ -5,23 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-
-export default function NewsDetails({ image, title, content, heading, para })
- 
-{const handleChange = ({ target }) => {
+export default function NewsDetails({ image, title, content }) {
+  const handleChange = ({ target }) => {
     const { name, value } = target;
     setError({ msg: "", type: "" });
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
   const handleForceUpdate = () => setError({ msg: "", type: "" });
-  const FORM_INITIALS ={
-    applicantName: '',
-    applicantPhone: '',
-    applicantEmail: '',
-    instituteName: 'Indore',
-    admissionYear: '',
-    otherQuery:''
-  }
+  const FORM_INITIALS = {
+    applicantName: "",
+    applicantPhone: "",
+    applicantEmail: "",
+    instituteName: "Indore",
+    admissionYear: "",
+    otherQuery: "",
+  };
   const [formData, setFormData] = useState(FORM_INITIALS);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,7 +85,7 @@ export default function NewsDetails({ image, title, content, heading, para })
             {/* Replace 'detail-page.svg' with your actual SVG */}
             <img
               src={image}
-              alt="foddiesssss"
+              alt="image"
               layout="fill"
               objectFit="contain"
               className=" mt-10 "
@@ -98,9 +96,6 @@ export default function NewsDetails({ image, title, content, heading, para })
             <h1 className=" lg:text-left text-center mt-2  lg:px-8 lg:mt-6 text-4xl font-bold text-shadow-[1px_1px_3px_#000000]">
               {title}
             </h1>
-            <p className="lg:px-10  lg:py-6  px-4 py-8 text-sm lg:text-base">
-              {content}
-            </p>
           </div>
         </div>
       </div>
@@ -109,13 +104,11 @@ export default function NewsDetails({ image, title, content, heading, para })
           <img src="/sc-main-1.jpg" alt="" fill />
         </div>
         <div className="border w-full    ">
-        <form
+          <form
             onSubmit={handleSubmit}
             className="space-y-4 bg-white p-4  w-full md:w-full shadow-md flex flex-col border-indigo-200  "
           >
-            <h1 className=" text-xl text-blue-700 ">
-              Admisson Form
-            </h1>
+            <h1 className=" text-xl text-blue-700 ">Admisson Form</h1>
             <input
               type="text"
               name="applicantName"
@@ -151,7 +144,7 @@ export default function NewsDetails({ image, title, content, heading, para })
               className="border border-gray-300 rounded-md px-4 py-2"
             >
               <option value="Indore">Indore</option>
-              
+
               {/* Add your cities here */}
             </select>
             <input
@@ -172,19 +165,21 @@ export default function NewsDetails({ image, title, content, heading, para })
               required
               className="border border-gray-300 rounded-md px-4 py-2"
             />
-            
-            <button className=" bg-green-500 w-1/2 mx-auto h-10 hover:bg-green-400 rounded-xl text-white"
-            onClick={handleSubmit}>
-                Submit
+
+            <button
+              className=" bg-green-500 w-1/2 mx-auto h-10 hover:bg-green-400 rounded-xl text-white"
+              onClick={handleSubmit}
+            >
+              Submit
             </button>
           </form>
         </div>
       </div>
       <div className="border w-full h-[400px]    ">
         <h1 className="text-5xl p-2 text-center border-b border-blue-700 text-blue-700 ">
-          {heading}
+          {title}
         </h1>
-        <p className="text-l p-2 text-center">{para}</p>
+        <p className="text-l p-2 text-center">{content}</p>
       </div>
     </>
   );

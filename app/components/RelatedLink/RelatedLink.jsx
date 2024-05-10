@@ -1,15 +1,16 @@
+import Link from "next/link";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function RelatedLink() {
   const links = [
-    "link1", 
-  "link2",
-  "link21",
-  "link212",
-  "link2121",
-  "link212121",
-  "link21212",
+   {link:"/students/rules_regulations",name:"Rules and Regulations"},
+   {link:"/institute/campus_facilities",name:"Campus and Facilities"},
+   {link:"/institute/annual_reports",name:"Annual Reports"},
+   {link:"/academic/central-workshop",name:"Central Workshop"},
+   {link:"/placementview",name:"Placement Cell"},
+   {link:"/alumni",name:"Alumni Relations"},
+
 ];
   return (
     <>
@@ -17,12 +18,12 @@ export default function RelatedLink() {
         <div className="  px-4 p-2 text-xl  font-semibold "> Related-Link</div>
 
         {links.map((link) => (
-          <div key={link} className="text-gray-600 cursor-pointer border-b-2  mx-auto  hover:text-blue-800 px-4 py-3 w-11/12 flex justify-between items-center ">
-            <h2 className="text-lg ">{link}</h2>
+          <Link href={link.link} key={link} className="text-gray-600 cursor-pointer border-b-2  mx-auto  hover:text-blue-800 px-4 py-3 w-11/12 flex justify-between items-center ">
+            <h2 className="text-lg ">{link.name}</h2>
             <div>
               <IoIosArrowForward size={20} />
             </div>
-          </div>
+          </Link>
         ))}
 
         <h1></h1>
