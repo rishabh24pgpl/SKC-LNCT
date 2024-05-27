@@ -86,6 +86,21 @@ export default function Navbar() {
             },
           ],
         },
+        {
+          name: "Other Important Links",
+          subchild: [
+            
+            {
+              name: "Digital Payments",
+              link: "https://www.pratibhaglobalschool.com/payments/login/40e032b8-a995-47ab-a854-c3aec4812c0e",
+            },
+
+            {
+              name: "AICTC Regulations",
+              link: "https://forms-rit.vercel.app/Payments",
+            },
+          ],
+        },
       ],
     },
     {
