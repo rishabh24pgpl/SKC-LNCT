@@ -179,7 +179,7 @@ const Actions = ({ route }) => {
     },
     {
       name: "Seminar",
-      path: "/admin/users",
+      path: "/admin/seminar",
       icon: (
         <svg
           className="w-5 h-5"

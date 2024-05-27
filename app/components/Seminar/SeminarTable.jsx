@@ -5,6 +5,7 @@ import moment from 'moment';
 import Pagination from '@/app/components/Pagination/Pagination'; // Import your Pagination component
 
 const SeminarTable = ({ seminarList=[], onDelete, onEdit }) => {
+  console.log()
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5); // Set your desired items per page
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
