@@ -326,6 +326,71 @@ export default function Navbar() {
                   </li>
                 </ul>
               </li>
+               <li class="py-4 ">
+                <h5 class="text-lg font-semibold mb-2">
+                  <a href="#" class="text-blue-500 text-lg p-2">
+                    Institute
+                  </a>
+                </h5>
+                <ul>
+                  <li>
+                    <a
+                      id="submenu-welcome"
+                      href="/institute/welcome"
+                      class="text-gray-700 text-sm"
+                    >
+                      Institute
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="submenu-vision"
+                      href="/institute/mission_vision"
+                      class="text-gray-700 text-sm"
+                    >
+                      Vision and Mission
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="submenu-exdirectors"
+                      href="/institute/former_directors"
+                      class="text-gray-700 text-sm"
+                    >
+                      Former Directors
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="submenu-campusfacility"
+                      href="/institute/campus_facilities"
+                      class="text-gray-700 text-sm"
+                    >
+                      Campus and Facilities
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      id="submenu-gallery"
+                      href="/Institute/Gallery"
+                      class="text-gray-700 text-sm"
+                    >
+                      Gallery
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      id="submenu-contactus"
+                      href="/institute/contact"
+                      class="text-gray-700 text-sm"
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                </ul>
+              </li>
               <li class="py-4">
                 <h5 class="text-lg font-semibold mb-2">
                   <a href="#" class="text-blue-500 text-lg p-2">
