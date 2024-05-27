@@ -446,7 +446,7 @@ export default function Navbar() {
   }, []);
   return (
     <div className=" text-white z-50">
-      <div className="flex items-center justify-between p-2 bg-blue-700">
+      <div className="flex items-center justify-between p-2 bg-blue-900">
         <div className="items-center flex gap-4 ">
           <p>Admissions</p>
           <p>Placement</p>
@@ -469,7 +469,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <div className="bg-gradient-to-r from-indigo-400 to-blue-400">
+      <div className="bg-gradient-to-r from-indigo-500 to-blue-800">
         <div className=" w-9/12 mx-auto flex items-center justify-between px-4 ">
           {/* Logo and college name */}
           <div className="flex items-center gap-4">
@@ -498,8 +498,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="w-full bg-blue-500">
-        <div className="flex w-full mx-auto gap-4 justify-center bg-blue-500 relative ">
+      <div className="w-full bg-blue-900">
+        <div className="flex w-full mx-auto gap-4 justify-center bg-blue-900 relative ">
 
           {navItems.map((item) => (
             <div>
