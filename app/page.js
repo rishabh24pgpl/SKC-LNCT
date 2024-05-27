@@ -12,6 +12,8 @@ import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute"
 
 import Whyskc from "./components/Whyskc/Whyskc";
 import Contact from "./components/Contact/Contact";
+import { Lamp } from "./components/Lamp/Lamp";
+import Payment from "./components/Payment/Payment";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("postgraduate");
@@ -37,7 +39,7 @@ export default function Home() {
 
   // Function to toggle submenu
 
-  const images = ["/baggi.jpg", "/mainImg.jpeg", "/baggi.jpg"];
+  const images = ["/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg"];
 
   const EventData = [
     {
@@ -222,6 +224,10 @@ export default function Home() {
           width={700}
           height={650}
         />
+      </div>
+      <div className=' flex  '>
+      <Lamp heading="MISSION" content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."/>
+      <Lamp heading="VISION" content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."/>
       </div>
 
       <Whyskc
@@ -433,8 +439,8 @@ export default function Home() {
 
       <AbouttheInstitute />
 
-      <section class=" flex  h-[300px] w-11/12 mx-auto mt-10  ">
-        <div class="items flex-1 w-full bg-cyan-500 text-white p-6 pt-14 text-center  ">
+      <section class=" flex  h-[300px] w-11/12 mx-auto mt-10  " >
+        <div class="items flex-1 w-full bg-cyan-900 text-white p-6 pt-14 text-center  " >
           <h2 className="font-semibold text-2xl">Thought of the Day</h2>
           <h5 className="font-semibold text-xl py-5 text-justify">
             Sometimes the biggest strength can be found in how you understand
@@ -444,7 +450,7 @@ export default function Home() {
             <i>--Michael Springer--</i>
           </h5>
         </div>
-        <div class="item flex-1 w-full bg-teal-400 p-6 pt-14  items-center text-center ">
+        <div class="item flex-1 w-full bg-blue-900 p-6 pt-14  items-center text-center ">
           <h2 className="font-semibold text-2xl">Word of the Day</h2>
           <h5 className="font-semibold text-xl py-5">कार्यात्मक</h5>
           <h5 className="font-semibold text-2xl">FUNCTIONAL</h5>
@@ -455,7 +461,7 @@ export default function Home() {
         <div
           className=""
           style={{
-            backgroundImage: "url('/crystal.jpg')",
+            backgroundImage: "url('/svg/linessvg.svg')",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
@@ -617,6 +623,9 @@ export default function Home() {
           additionalCarouselData={additionalCarouselDataseminar}
         />
       </section>
+      
+<Payment/>
     </div>
+
   );
 }
