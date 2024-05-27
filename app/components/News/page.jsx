@@ -1,12 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import moment from "moment";
-import { getAllNews } from "@/lib/services/news/index";
-import Card from "@/components/Card/Card";
-import useModalBodyScrollLock from "@/hooks/useModalBodyScrollLock";
-import NewsModal from "@/components/Modal/NewsModal";
-import NewNewsCard from '@/components/Card/NewNewsCard'
-import { myUuid } from "@/lib/constants/school";
+import { getAllNews } from "@/app/lib/services/news/index";
+import NewsModal from "@/app/components/Modal/NewsModal";
+import NewNewsCard from '@/app/components/Card/NewNewsCard'
 
 const NewsCard = ({ news }) => {
   return (
