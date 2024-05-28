@@ -242,16 +242,16 @@ const Actions = ({ route }) => {
         </svg>
       ),
     },
-  
+
   ];
   return (
     <>
       {paths.map(({ name, path, icon }) => (
         <Link href={path}>
           <div
-            className={`${
-              route === path && "bg-green-800"
-            } relative flex flex-row items-center h-11 focus:outline-none hover:bg-green-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6`}
+            key={index}
+            className={`${route === path && "bg-green-800"
+              } relative flex flex-row items-center h-11 focus:outline-none hover:bg-green-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-blue-500 dark:hover:border-gray-800 pr-6`}
           >
             <span className="inline-flex justify-center items-center ml-4">
               {icon}

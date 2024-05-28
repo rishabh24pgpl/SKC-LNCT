@@ -115,6 +115,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
             >
               {newsData.map((item, index) => (
                 <NoticeCard 
+                key={item.uuid}
                 title={item.title}
                 description={item.description}
                 id={item.uuid}
@@ -133,6 +134,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
             >
               {newsData.map((item, index) => (
                  <NoticeCard 
+                 key={item.uuid}
                  img={item.imgeUrl}
                  title={item.title}
                  description={item.description}

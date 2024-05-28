@@ -25,7 +25,7 @@ export default function Placementcalander() {
           <h1 className="p-1 font-semibold">Step 2</h1>
           <Image src="/pc2.png" alt="" width={100} height={100} />
           <p className="p-2">
-            Student's Registration process based on their interest in the JD
+            Student&apos;s Registration process based on their interest in the JD
           </p>
         </div>
         <div className="  w-80  flex-col flex  items-center p-2 ">

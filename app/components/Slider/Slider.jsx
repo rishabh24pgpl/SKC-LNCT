@@ -31,7 +31,7 @@ export default function Slider({ data }) {
           ref={sliderRef}
         >
           {data.map((d) => {
-            return <DeptFacultyCard />;
+            return <DeptFacultyCard key={index} />;
           })}
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function Eminent() {
                 style={{ backgroundImage: `url('/about-banner.jpg')` }}>
 
                 <h2 className="font-bold text-3xl w-4/5 uppercase  text-center text-white" >
-                Alumni Cell SKC-LNCT INDORE | Central India's No. 1 Engineering Institute - indore
+                Alumni Cell SKC-LNCT INDORE | Central Indias No. 1 Engineering Institute - indore
                 </h2>
                 </div>
       <div className=" flex justify-around m-10 p-10 w-11/12 mx-auto">
@@ -20,11 +20,11 @@ export default function Eminent() {
           </h1>
           <h1 className="">
             The Medi-Caps Alumni Association serves as a bridge between the
-            university's past, present, and future. Our alumni network is a
-            crucial stakeholder, actively contributing to the university's
+            university past, present, and future. Our alumni network is a
+            crucial stakeholder, actively contributing to the university
             developmental activities. By fostering closer ties between our
             alumni, students, and the university, we can enrich the student
-            experience and expand our university's development. Our diverse
+            experience and expand our university development. Our diverse
             alumni community includes over 20,000 graduates who have gone on to
             work for prestigious companies like Oracle, Microsoft, and IBM, as
             well as serving in various government positions, including IAS, IES,
