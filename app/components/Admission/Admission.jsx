@@ -42,7 +42,7 @@ export default function Admission() {
                   for internships, live projects, and industrial visits, which
                   help them gain practical experience and prepare them for their
                   future careers. These initiatives have yielded measurable
-                  outcomes, as evidenced by our students' high placement rates
+                  outcomes, as evidenced by our students high placement rates
                   and successful careers after graduation.
                 </p>
               </div>

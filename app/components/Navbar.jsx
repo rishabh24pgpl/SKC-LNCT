@@ -1091,7 +1091,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a id="submenu-transcripts" href="/AIIR/DirectorMessage">
-                  Director's Message to Alumni
+                  Director&apos;s Message to Alumni
                 </a>
               </li>
             </ul>

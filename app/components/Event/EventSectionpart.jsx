@@ -112,7 +112,7 @@ const EventSectionpart = () => {
             students embark on each day. At our kindergarten school, we believe
             that learning goes beyond textbooks, and we strive to create a
             holistic and engaging environment that nurtures every aspect of a
-            child's development.
+            child`&apos;`s development.
           </div>
         </div>
       </section>
@@ -135,6 +135,7 @@ const EventSectionpart = () => {
       <div className="flex flex-wrap justify-center items-center gap-0 sm:gap-10">
         {cardDetails.map((card, i) => (
           <div
+            key={i}
             data-aos={i % 2 !== 0 ? "fade-right" : "fade-up"}
             onClick={() => handleRoute(card.title)}
             className="shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] flex flex-col justify-center items-center max-w-sm mx-auto my-8 transition-transform transform-gpu hover:scale-105"

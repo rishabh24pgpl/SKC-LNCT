@@ -241,7 +241,7 @@ export default function DeptEr({ dept }) {
               <tr className=" border-b">
                 <td className=" px-2 py-3">John Doe</td>
                 <td className=" px-2 py-3">Software Engineer</td>
-                <td className=" px-2 py-3">Bachelor's in Computer Science</td>
+                <td className=" px-2 py-3">Bachelors in Computer Science</td>
                 <td className=" px-2 py-3">5 years</td>
               </tr>
 

@@ -42,7 +42,7 @@ export default function page() {
 
           <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">Workshops Offered</h2>
-          <p className="mb-6">Here, we showcase the variety of workshops available to students. From robotics and electronics to woodworking and metalworking, there's something for everyone. Each workshop is led by experienced instructors and provides participants with valuable skills and knowledge.</p>
+          <p className="mb-6">Here, we showcase the variety of workshops available to students. From robotics and electronics to woodworking and metalworking, theres something for everyone. Each workshop is led by experienced instructors and provides participants with valuable skills and knowledge.</p>
           <div className="relative w-full h-96">
             <Image src="/ar-1.jpg" alt="Workshops Offered Image" layout="fill" objectFit="cover" className="rounded-lg" />
           </div>
@@ -50,7 +50,7 @@ export default function page() {
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">Student Projects</h2>
-          <p className="mb-6">In this section, we highlight the incredible projects that students have completed during our workshops. From innovative gadgets to artistic creations, these projects demonstrate the talent and creativity of our students. Browse through the gallery to see what's possible at our workshop!</p>
+          <p className="mb-6">In this section, we highlight the incredible projects that students have completed during our workshops. From innovative gadgets to artistic creations, these projects demonstrate the talent and creativity of our students. Browse through the gallery to see whats possible at our workshop!</p>
           <div className="relative w-full h-96">
             <Image src="/ar-2.jpg" alt="Student Projects Image" layout="fill" objectFit="cover" className="rounded-lg" />
           </div>

@@ -25,7 +25,7 @@ export default function EventVenues() {
       <div className=" p-20 pt-10  ">
         <h1 className="text-5xl text-gray-700 ">Event Venues</h1>
         <p className="pt-5 text-gray-800">
-        SKC LNCT offers a variety of venues suitable for different purposes, including lectures, seminars, conferences, and personal events. Below, you'll find details about each venue, including their capacity and associated rules.
+        SKC LNCT offers a variety of venues suitable for different purposes, including lectures, seminars, conferences, and personal events. Below, you`&apos;`ll find details about each venue, including their capacity and associated rules.
         </p>
       </div>
 

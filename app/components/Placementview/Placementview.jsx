@@ -30,7 +30,7 @@ export default function Placementview() {
                 regular workshops, seminars, and expert sessions to help
                 students stay up-to-date with the latest industry trends and for
                 their future careers. These initiatives have yielded measurable
-                outcomes, as evidenced by our students' high placement rates and
+                outcomes, as evidenced by our students&apos; high placement rates and
                 successful careers after graduation.
               </p>
             </div>

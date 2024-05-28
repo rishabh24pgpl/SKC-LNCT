@@ -4,7 +4,7 @@ import RelatedLink from "@/app/components/RelatedLink/RelatedLink";
 import SliderMain from "@/app/components/SliderMain/SliderMain";
 import React, { useState } from "react";
 
-export default function page() {
+export default function Page() {  // Capitalized component name
   const [selectedYear, setSelectedYear] = useState("all"); // Initial year selected
 
   const pdfData = {
@@ -14,7 +14,6 @@ export default function page() {
     ],
     2023: [
       { year: 2023, title: "PDF Title 2023", link: "/pdfs/pdf_2023.pdf" },
-      
       // Add PDF data for 2023 here if needed
     ],
     2022: [
@@ -31,6 +30,7 @@ export default function page() {
     ],
     // Add more years and PDF data here if needed
   };
+
   const handleYearChange = (year) => {
     setSelectedYear(year);
   };
@@ -78,20 +78,18 @@ export default function page() {
                   : "Academic Calender for All Years"}
               </h2>
               <div className="w-full  grid grid-cols-3 gap-5">
-
-            
-              {(selectedYear === "all"
-                ? Object.values(pdfData).flat()
-                : pdfData[selectedYear]
-              ).map((pdf) => (
-                <CalenderCard
-                  key={pdf.year}
-                  link={pdf.link}
-                  title={pdf.title}
-                  year={pdf.year}
-                />
-              ))}
-                </div>
+                {(selectedYear === "all"
+                  ? Object.values(pdfData).flat()
+                  : pdfData[selectedYear]
+                ).map((pdf) => (
+                  <CalenderCard
+                    key={pdf.year}
+                    link={pdf.link}
+                    title={pdf.title}
+                    year={pdf.year}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
