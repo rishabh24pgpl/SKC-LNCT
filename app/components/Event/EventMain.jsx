@@ -241,7 +241,7 @@ const EventMain = () => {
             headingDescription:
               "We foster a strong parent-school partnership to ensure seamless communication and collaboration.",
           },
-        ].map((val) => (
+        ].map((val,index) => (
           <CardSvgParagraph key={index} cardDetails={val} />
         ))}
       </div>

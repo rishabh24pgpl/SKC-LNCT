@@ -113,7 +113,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
               asNavFor={slider2}
               ref={(slider) => setSlider1(slider)}
             >
-              {newsData.map((item, index) => (
+              {newsData.map((item) => (
                 <NoticeCard 
                 key={item.uuid}
                 title={item.title}
@@ -132,8 +132,9 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
               asNavFor={slider1}
               ref={(slider) => setSlider2(slider)}
             >
-              {newsData.map((item, index) => (
+              {newsData.map((item) => (
                  <NoticeCard 
+                 
                  key={item.uuid}
                  img={item.imgeUrl}
                  title={item.title}

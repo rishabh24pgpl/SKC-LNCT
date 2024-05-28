@@ -501,7 +501,7 @@ export default function Navbar() {
       <div className="w-full bg-blue-900">
         <div className="flex w-full mx-auto gap-4 justify-center bg-blue-900 relative ">
 
-          {navItems.map((item) => (
+          {navItems.map((item,index) => (
             <div key={index}>
               
               <Link
@@ -524,13 +524,13 @@ export default function Navbar() {
                 }`}
               >
                 <ul className="flex justify-around list-none">
-                  {item.child.map((link) => (
+                  {item.child.map((link,index) => (
                     <li className="p-2" key={index}>
                       <h4 className="text-blue-700 font-bold text-lg">
                         <Link href="#">{link.name}</Link>
                       </h4>
                       <ul className="mt-3">
-                        {link.subchild.map((navlink) => (
+                        {link.subchild.map((navlink,index) => (
                           <li key={index}>
                             <Navlink name={navlink.name} link={navlink.link} />
                           </li>

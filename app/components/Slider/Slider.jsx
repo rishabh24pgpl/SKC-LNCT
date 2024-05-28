@@ -30,7 +30,7 @@ export default function Slider({ data }) {
           className="flex  "
           ref={sliderRef}
         >
-          {data.map((d) => {
+          {data.map((d,index) => {
             return <DeptFacultyCard key={index} />;
           })}
         </div>

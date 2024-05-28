@@ -366,7 +366,7 @@ const Dashboard = ({ clientProps }) => {
             <div className="text-sm text-black dark:text-gray-50 mt-2 max-h-[390px] overflow-auto">
               {/* <div className="bg-white dark:bg-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded mt-1 border-b border-gray-100 dark:border-gray-900 cursor-pointer">Delete all references from the wiki</div>
         <div className="bg-white dark:bg-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded mt-1 border-b border-gray-100 dark:border-gray-900 cursor-pointer">Remove analytics code</div> */}
-              {notice?.map((admission) => (
+              {notice?.map((admission,index) => (
                 <div key={index} className="bg-white dark:bg-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded mt-1 border-b border-gray-100 dark:border-gray-900 cursor-pointer">
                   <div className="flex justify-between items-start">
                     <span>{admission.title}</span>{" "}

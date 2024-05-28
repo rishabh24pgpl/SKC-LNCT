@@ -60,4 +60,3 @@ export default function EventCategory(props) {  // Named the function
   );
 }
 
-const generateClassName = (index) => (index >= 0 && index <= 2) ? 'mt-14' : '';
