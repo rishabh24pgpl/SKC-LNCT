@@ -1,5 +1,5 @@
 import React from 'react'
-import RelatedLink from '../components/relatedlink/RelatedLink'
+import RelatedLink from '@/app/components/RelatedLink/RelatedLink'
 import Navbar from "@/app/components/Navbar";
 
 
