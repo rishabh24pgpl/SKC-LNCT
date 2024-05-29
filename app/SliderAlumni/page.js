@@ -35,6 +35,10 @@ export default function EminmentSlider() {
       id: 1,
       url: "/teach1.jpg",
     },
+    {
+      id: 1,
+      url: "/teach1.jpg",
+    },
   ];
   return (
     <div className="w-11/12 mx-auto">
