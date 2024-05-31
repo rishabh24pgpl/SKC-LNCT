@@ -13,25 +13,6 @@ export default function Faculty() {
                 </div>
       <div className=" mt-10">
         
-        <div className=" text-blue-600    relative  mx-auto ">
-          <Image src="/clg.jpg" alt="" fill />
-          <div className="p-4">
-            <h1 className="  text-5xl relative">200+</h1>
-            <h1 className=" text-white text-2xl relative">
-              Engineering Faculty
-            </h1>
-            <h1 className="  text-5xl relative">30+</h1>
-            <h1 className=" text-white text-2xl relative">
-              Management Faculty
-            </h1>
-            <h1 className="  text-5xl relative">32</h1>
-            <h1 className=" text-white text-2xl relative">Supportive Staff</h1>
-            <h1 className="  text-5xl relative">32</h1>
-            <h1 className=" text-white text-2xl relative">
-              Management Faculty{" "}
-            </h1>
-          </div>
-        </div>
       </div>
       <div className=" p-10 ">
         <h1 className="text-4xl text-center font-semibold ">
@@ -67,6 +48,28 @@ export default function Faculty() {
           </div>
         </div>
       </div>
+        <div className=" text-blue-600 mb-10   relative  mx-auto ">
+          <Image src="/clg.jpg" alt="" fill />
+          <div className="p-4">
+            <h1 className="  text-5xl relative">200+</h1>
+            <h1 className=" text-white text-2xl relative">
+              Engineering Faculty
+            </h1>
+            <h1 className="  text-5xl relative">30+</h1>
+            <h1 className=" text-white text-2xl relative">
+              Management Faculty
+            </h1>
+            <h1 className="  text-5xl relative">32</h1>
+            <h1 className=" text-white text-2xl relative">Supportive Staff</h1>
+            <h1 className="  text-5xl relative">32</h1>
+            <h1 className=" text-white text-2xl relative">
+              Management Faculty{" "}
+            </h1>
+          </div>
+        </div>
+      <h1 className="text-4xl text-center font-semibold ">
+          About Faculty
+        </h1>
 
       <div className="flex  justify-around pt-10 pb-10 ">
         <div className=" shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-80  flex-col flex  items-center p-2 ">

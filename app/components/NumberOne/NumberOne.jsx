@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
-import SliderMain from '../SliderMain/SliderMain'
 
-export default function StudentTestimonial({img,title,content}) {
+export default function NumberOne({img,title,content}) {
   return (
-    <>
-     <div className="relative bg-gradient-to-r from-blue-700 via-blue-500 to-blue-100 text-white overflow-hidden  -z-10">
+   <>
+   
+    <div className="relative bg-gradient-to-r from-blue-900 via-cyan-800 to-cyan-800 text-white overflow-hidden -z-10 ">
           {/* SVG Waves */}
           <svg
-          
             id="wave"
             className="absolute bottom-0 left-0 w-full"
             style={{ transform: "rotate(0deg)", transition: "0.3s" }}
@@ -43,7 +42,7 @@ export default function StudentTestimonial({img,title,content}) {
           {/* Text and Image Content */}
           <div className="flex ">
             {/* Detail Page SVG or Image */}
-            <div className=" lg:w-1/3   relative h-96 order-2 p-10 hidden lg:block ">
+            <div className=" lg:w-1/3   relative h-96 order-2 p-10 hidden lg:block animate-pulse ">
               {/* Replace 'detail-page.svg' with your actual SVG */}
               <Image
                 src={img}
@@ -64,42 +63,6 @@ export default function StudentTestimonial({img,title,content}) {
             </div>
           </div>
         </div>
-        <div className="text-center w-3/4 mx-auto ">
-        <h1 className=" font-semibold text-4xl p-2 ">Student Testimonial</h1>
-        <p className="text-md pb-2">We inspire innovation and discovery at LNCT Group of Colleges.</p>
-      </div>
-      <div className=" flex justify-around m-10 p-10 w-11/12 mx-auto">
-        <div className=" w-full ">
-          <h1 className="  text-blue-600 text-4xl">About</h1>
-          <h1 className=" text-2xl">
-            We serve as a bridge between the university and the alumni
-          </h1>
-          <h1 className="">
-            The Medi-Caps Alumni Association serves as a bridge between the
-            university's past, present, and future. Our alumni network is a
-            crucial stakeholder, actively contributing to the university's
-            developmental activities. By fostering closer ties between our
-            alumni, students, and the university, we can enrich the student
-            experience and expand our university's development. Our diverse
-            alumni community includes over 20,000 graduates who have gone on to
-            work for prestigious companies like Oracle, Microsoft, and IBM, as
-            well as serving in various government positions, including IAS, IES,
-            IPS officers. We are proud to have established city chapters across
-            the country, including in the US, UK, and UAE. At Medi-Caps
-            University, we value our alumni and their contributions, and we
-            strive to maintain a strong relationship with them.
-          </h1>
-        </div>
-        <div
-          className="  w-full"
-          style={{
-            backgroundImage: "url('/about-banner.jpg')",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        ></div>
-      </div>
-    </>
+   </>
   )
 }
