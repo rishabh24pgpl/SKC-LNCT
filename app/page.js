@@ -40,7 +40,7 @@ export default function Home() {
 
   // Function to toggle submenu
 
-  const images = ["/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg"];
+  const images = ["/a-o.png", "/building.png", "/building2.png"];
 
   const EventData = [
     {
