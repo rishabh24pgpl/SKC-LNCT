@@ -6,6 +6,7 @@ import Navlink from "./Navlink";
 
 import { FaChevronDown } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { FaHome } from "react-icons/fa";
 
 export default function Navbar() {
   const [openSubMenuId, setOpenSubMenuId] = useState(null);
@@ -89,7 +90,6 @@ export default function Navbar() {
         {
           name: "Other Important Links",
           subchild: [
-            
             {
               name: "Digital Payments",
               link: "https://www.pratibhaglobalschool.com/payments/login/40e032b8-a995-47ab-a854-c3aec4812c0e",
@@ -97,7 +97,7 @@ export default function Navbar() {
 
             {
               name: "AICTC Regulations",
-              link: "https://forms-rit.vercel.app/Payments",
+              link: "https://forms-peach.vercel.app/",
             },
           ],
         },
@@ -200,7 +200,7 @@ export default function Navbar() {
             },
             {
               name: "Gallary",
-              link: "/institute/mission_vision",
+              link: "/gallary",
             },
             {
               name: "Campus Life",
@@ -208,19 +208,12 @@ export default function Navbar() {
             },
             {
               name: "Academic Programs",
-              link: "/institute/campus_facilities",
+              link: "/academic/programs",
             },
-            {
-              name: "How to Apply",
-              link: "/institute/contact",
-            },
+
             {
               name: "Admission Process",
               link: "/admission",
-            },
-            {
-              name: "FAQs",
-              link: "/institute/contact",
             },
           ],
         },
@@ -230,27 +223,20 @@ export default function Navbar() {
           subchild: [
             {
               name: "Rules and Regulations",
-              link: "/institute/welcome",
+              link: "/students/rules_regulations",
             },
             {
               name: "Academic Calender",
-              link: "/institute/mission_vision",
+              link: "/academic/calender",
             },
             {
               name: "Time Table",
               link: "/institute/former_directors",
             },
-            {
-              name: "Holidays",
-              link: "/institute/campus_facilities",
-            },
-            {
-              name: "Parent Connect",
-              link: "/institute/contact",
-            },
+
             {
               name: "Online Fee Payment",
-              link: "/institute/contact",
+              link: "https://www.pratibhaglobalschool.com/payments/login/40e032b8-a995-47ab-a854-c3aec4812c0e",
             },
           ],
         },
@@ -259,7 +245,7 @@ export default function Navbar() {
           subchild: [
             {
               name: "Internship Programs",
-              link: "/institute/welcome",
+              link: "/placementcalender",
             },
 
             {
@@ -268,67 +254,13 @@ export default function Navbar() {
             },
             {
               name: "Career Development Cell",
-              link: "/institute/campus_facilities",
+              link: "/cdc",
             },
           ],
         },
       ],
     },
-    {
-      main: "Faculty and Staff",
-      child: [
-        {
-          name: "Prospective Employee",
-          subchild: [
-            {
-              name: "What is LNCT",
-              link: "/institute/welcome",
-            },
-            {
-              name: "Why Join LNCT",
-              link: "/institute/mission_vision",
-            },
-            {
-              name: "Job Openings",
-              link: "/institute/former_directors",
-            },
-          ],
-        },
-        {
-          name: "Existing Employee",
-          subchild: [
-            {
-              name: "Faculty Diretory",
-              link: "/faculty",
-            },
-            {
-              name: "Officer Directory",
-              link: "/institute/mission_vision",
-            },
-            {
-              name: "Staff Directory",
-              link: "/institute/former_directors",
-            },
-            {
-              name: "Campus Life",
-              link: "/institute/campus_facilities",
-            },
-            {
-              name: "Rules and Regulations",
-              link: "/institute/contact",
-            },
-            {
-              name: "Circulers and Notices",
-              link: "/institute/contact",
-            },
-            {
-              name: "Official Forms",
-              link: "/institute/contact",
-            },
-          ],
-        },
-      ],
-    },
+    
     {
       main: "Placement",
       child: [
@@ -364,6 +296,10 @@ export default function Navbar() {
               name: "Student Testimonial",
               link: "student_testimonial",
             },
+            {
+              name: "Career",
+              link: "/career",
+            },
           ],
         },
       ],
@@ -375,12 +311,10 @@ export default function Navbar() {
           name: "Alumni",
           subchild: [
             {
-
               name: "About Alumni Cell",
               link: "/alumni",
-
             },
-           
+
             {
               name: "Eminent",
               link: "/eminent",
@@ -448,6 +382,7 @@ export default function Navbar() {
     <div className=" text-white z-50">
       <div className="flex items-center justify-between p-2 bg-blue-900">
         <div className="items-center flex gap-4 ">
+         
           <p>Admissions</p>
           <p>Placement</p>
           <p>Careers</p>
@@ -499,11 +434,12 @@ export default function Navbar() {
       </div>
 
       <div className="w-full bg-blue-900">
-        <div className="flex w-full mx-auto gap-4 justify-center bg-blue-900 relative ">
-
-          {navItems.map((item,index) => (
+        <div className="flex w-full mx-auto gap-4 justify-center bg-blue-900 relative items-center ">
+        <Link href="/" className=" text-3xl p-1 ">
+            <FaHome  className=" hover:scale-105 duration-500  hover:text-gray-400 cursor-pointer" />
+          </Link>
+          {navItems.map((item, index) => (
             <div key={index}>
-              
               <Link
                 href="#"
                 className={` text-white font-semibold text-lg hover:text-gray-300 hover:bg-blue-700 flex gap-2 items-center px-3  py-4 ${
@@ -524,13 +460,13 @@ export default function Navbar() {
                 }`}
               >
                 <ul className="flex justify-around list-none">
-                  {item.child.map((link,index) => (
+                  {item.child.map((link, index) => (
                     <li className="p-2" key={index}>
                       <h4 className="text-blue-700 font-bold text-lg">
                         <Link href="#">{link.name}</Link>
                       </h4>
                       <ul className="mt-3">
-                        {link.subchild.map((navlink,index) => (
+                        {link.subchild.map((navlink, index) => (
                           <li key={index}>
                             <Navlink name={navlink.name} link={navlink.link} />
                           </li>
