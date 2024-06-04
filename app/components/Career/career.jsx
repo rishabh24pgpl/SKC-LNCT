@@ -52,7 +52,7 @@ export default function Career() {
         </h1>
         {currentCareers.map((career, index) => {
           return (
-            <div className="flex flex-col justify-between border-solid border-2 border-orange-100 p-10 shadow-2xl ">
+            <div key={index} className="flex flex-col justify-between border-solid border-2 border-orange-100 p-10 shadow-2xl ">
               <div className="flex justify-between items-center sm:flex justify-between items-center flex-wrap ">
                 <div className="text-lg font-semibold text-bookmark-blue flex space-x-1 items-center mb-2">
                   <svg
