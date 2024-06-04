@@ -5,6 +5,7 @@ export const EVENTS = `${BASE_URL}/event`;
 export const SEMINAR = `${BASE_URL}/seminar`;
 export const NOTICES = `${BASE_URL}/notice`;
 export const LOGIN_URL = `${BASE_URL}/auth/login`;
+export const CAREERS = `${BASE_URL}/careers`;
 
 export const IMG_UPLOAD = "https://pgpl-backend-services.vercel.app/api/v1/files/image";
 

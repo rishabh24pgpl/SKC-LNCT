@@ -1,15 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
-import data from "./data.json";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { getCareer } from "@/app/lib/services/careers/careers";
 
 export default function Career() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [careersPerPage] = useState(4); // Number of careers per page
+  const [careerList, setCareerList] = useState([]);
 
-  const filteredCareers = data.careers.filter((career) =>
+  const filteredCareers = careerList.filter((career) =>
     career.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -20,7 +21,25 @@ export default function Career() {
     indexOfLastCareer
   );
 
+  const fetchCareers = async (page, college) => {
+    try {
+      const careerData = await getCareer({ limit: 6, page, college });
+      console.log("careerData:", careerData);
+
+      // Access the careers array under the 'data' property
+      setCareerList(careerData.data);
+    } catch (error) {
+      console.error("Error fetching careers:", error);
+    } finally {
+      // setIsLoading(false);
+    }
+  };
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  useEffect(() => {
+    fetchCareers(currentPage, "LNCT");
+  }, [currentPage]);
 
   return (
     <div className="container mx-auto px-4">
@@ -52,7 +71,10 @@ export default function Career() {
         </h1>
         {currentCareers.map((career, index) => {
           return (
-            <div key={index} className="flex flex-col justify-between border-solid border-2 border-orange-100 p-10 shadow-2xl ">
+            <div
+              key={index}
+              className="flex flex-col justify-between border-solid border-2 border-orange-100 p-10 shadow-2xl "
+            >
               <div className="flex justify-between items-center sm:flex justify-between items-center flex-wrap ">
                 <div className="text-lg font-semibold text-bookmark-blue flex space-x-1 items-center mb-2">
                   <svg
@@ -109,9 +131,12 @@ export default function Career() {
               </div>
               <div>
                 <div className="mt-5">
-                  <Link href="/careerform"  className="mr-2 my-1 uppercase tracking-wider px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer">
+                  <Link
+                    href="/careerform"
+                    className="mr-2 my-1 uppercase tracking-wider px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer"
+                  >
                     Apply
-                  </Link >
+                  </Link>
                 </div>
               </div>
             </div>
