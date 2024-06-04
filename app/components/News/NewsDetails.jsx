@@ -9,7 +9,7 @@ import Details from "@/components/Deatils-Card/Details";
 import HeadingText from "@/components/HeadingText/heading";
 import { addAdmissionQuery } from "@/lib/services/admission";
 import Loader from "@/components/Loader/Loader";
-import { validator } from "@/lib/helpers/validator";
+import { validator } from "@/app/lib/helpers/validator";
 import {
   ADMISSION_SUCCESS,
   ERR_MSG,

@@ -14,6 +14,7 @@ import Whyskc from "./components/Whyskc/Whyskc";
 import Contact from "./components/Contact/Contact";
 import { Lamp } from "./components/Lamp/Lamp";
 import Payment from "./components/Payment/Payment";
+import NumberOne from "./components/NumberOne/NumberOne";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("postgraduate");
@@ -39,7 +40,7 @@ export default function Home() {
 
   // Function to toggle submenu
 
-  const images = ["/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg"];
+  const images = ["/a-o.png", "/building.png", "/building2.png"];
 
   const EventData = [
     {
@@ -229,8 +230,9 @@ export default function Home() {
       <Lamp heading="MISSION" content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."/>
       <Lamp heading="VISION" content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."/>
       </div>
+       
 
-      <Whyskc
+      <NumberOne
         img="/number-1.png"
         title="WHY SKC LNCT"
         content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."
@@ -242,6 +244,13 @@ export default function Home() {
           additionalCarouselData={additionalCarouselData}
         />
       </section>
+      <section className="mt-10 w-11/12 mx-auto mb-10">
+          <Seminar
+            eventData={EventsData}
+            carouselData={ScarouselData}
+            additionalCarouselData={additionalCarouselDataseminar}
+          />
+        </section>
 
       <section
         className="academic-programe   mx-auto mt-10 flex justify-center     "
@@ -252,6 +261,7 @@ export default function Home() {
         }}
       >
         <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-blue-900 h-[580px]  ">
+     
           <nav className="nav flex-col lg:w-1/4 p-4">
             <h2 className="text-3xl w-80 text-white  text-center font-semibold mb-6">
               Academic Programme
@@ -608,7 +618,7 @@ export default function Home() {
                     imageUrl="/student-icon.png"
                   />
                 </div>
-                <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap">
+                <div className="  flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap">
                   <Card title="Faculty" content="100" imageUrl="/faculty.png" />
                 </div>
               </div>
@@ -616,15 +626,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-10 w-11/12 mx-auto mb-10">
-        <Seminar
-          eventData={EventsData}
-          carouselData={ScarouselData}
-          additionalCarouselData={additionalCarouselDataseminar}
-        />
-      </section>
       
-{/* <Payment/> */}
+
     </div>
 
   );

@@ -18,7 +18,7 @@ export default function page() {
           <div className="w-1/3 flex flex-col gap-2 bg-sky-100">
             <div className="w-full h-72 border-2 relative overflow-hidden">
                 <Image
-                src="/baggi.jpg"
+                src="/md-sir.JPG"
                 alt="chairman"
                 width="500"
                 height="500"
@@ -26,8 +26,8 @@ export default function page() {
                 />
             </div>
             <div>
-              <h1  className="py-2 px-10 font-bold text-2xl">Director Name</h1>
-              <h2 className="py-2 px-10 text-lg">Post or position</h2>
+              <h1  className="py-2 px-10 font-bold text-2xl">Mr.Suprabhat Chouksey</h1>
+              <h2 className="py-2 px-10 text-lg">Director</h2>
               <h3 className="py-2 px-10 ">Some other post</h3>
             </div>
           </div>

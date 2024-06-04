@@ -10,7 +10,7 @@ export default function page() {
       <div
         className="w-full border-2 h-96 flex justify-center  items-center"
         style={{
-          backgroundImage: "url('/logo1.png')",
+          backgroundImage: "url('/clg.jpg')",
           backgroundSize: "cover",
         }}
       >
