@@ -15,6 +15,7 @@ import Contact from "./components/Contact/Contact";
 import { Lamp } from "./components/Lamp/Lamp";
 import Payment from "./components/Payment/Payment";
 import NumberOne from "./components/NumberOne/NumberOne";
+import { ParallaxScroll } from "./components/ParallaxScroll/ParallaxScroll";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("postgraduate");
@@ -159,6 +160,18 @@ export default function Home() {
     // Add more events as needed
   ];
 
+
+  const imagess = [
+   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+  ]
+
   const ScarouselData = [
     {
       id: 1,
@@ -226,10 +239,7 @@ export default function Home() {
           height={650}
         />
       </div>
-      <div className=' flex  '>
-      <Lamp heading="MISSION" content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."/>
-      <Lamp heading="VISION" content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."/>
-      </div>
+     
        
 
       <NumberOne
@@ -251,7 +261,9 @@ export default function Home() {
             additionalCarouselData={additionalCarouselDataseminar}
           />
         </section>
-
+        <div className=" w-11/12 mx-auto">
+        <ParallaxScroll images={imagess}/>
+        </div>
       <section
         className="academic-programe   mx-auto mt-10 flex justify-center     "
         style={{
