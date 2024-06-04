@@ -76,11 +76,11 @@ export default function StudentTestimonial({img,title,content}) {
           </h1>
           <h1 className="">
             The Medi-Caps Alumni Association serves as a bridge between the
-            university's past, present, and future. Our alumni network is a
-            crucial stakeholder, actively contributing to the university's
+            universitys past, present, and future. Our alumni network is a
+            crucial stakeholder, actively contributing to the universitys
             developmental activities. By fostering closer ties between our
             alumni, students, and the university, we can enrich the student
-            experience and expand our university's development. Our diverse
+            experience and expand our universitys development. Our diverse
             alumni community includes over 20,000 graduates who have gone on to
             work for prestigious companies like Oracle, Microsoft, and IBM, as
             well as serving in various government positions, including IAS, IES,
