@@ -624,7 +624,7 @@ export default function Home() {
         />
       </section>
       
-<Payment/>
+{/* <Payment/> */}
     </div>
 
   );
