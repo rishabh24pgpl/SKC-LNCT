@@ -94,7 +94,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:flex lg:gap-10 gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
+      <div className="grid grid-cols-1 lg:flex  gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
         <div className="w-full  border border-gray-200 rounded-md">
           <h2 className="text-2xl font-bold text-black text-center">Notices</h2>
           <ul
@@ -106,7 +106,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
             ))}
           </ul>
         </div>
-        <div className="lg:w-[300px] flex justify-center items-center">
+        <div className="lg:w-[390px] flex justify-center items-center">
           <div className="w-full h-auto ">
             <Slider
               {...settings}
@@ -125,7 +125,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
             </Slider>
           </div>
         </div>
-        <div className="lg:w-[300px] flex justify-center items-center">
+        <div className="lg:w-[390px] flex justify-center items-center">
           <div className="w-full h-auto ">
             <Slider
               {...settings}
