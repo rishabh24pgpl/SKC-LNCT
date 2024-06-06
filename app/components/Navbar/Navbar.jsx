@@ -35,7 +35,7 @@ export default function Navbar() {
               link: "/institute/former_directors",
             },
             {
-              name: " Campus and Facilities",
+              name: "Campus and Facilities",
               link: "/institute/campus_facilities",
             },
             {
@@ -64,11 +64,11 @@ export default function Navbar() {
               link: "/institute/director",
             },
             {
-              name: "Finance Commitee",
+              name: "Finance Committee",
               link: "/institute/fc",
             },
             {
-              name: "Building and Work Commitee",
+              name: "Building and Work Committee",
               link: "/institute/bwc",
             },
           ],
@@ -80,7 +80,6 @@ export default function Navbar() {
               name: "Rules and Regulations",
               link: "/students/rules_regulations",
             },
-
             {
               name: "Annual Reports",
               link: "/institute/annual_reports",
@@ -94,7 +93,6 @@ export default function Navbar() {
               name: "Digital Payments",
               link: "https://www.pratibhaglobalschool.com/payments/login/40e032b8-a995-47ab-a854-c3aec4812c0e",
             },
-
             {
               name: "AICTC Regulations",
               link: "https://forms-peach.vercel.app/",
@@ -122,11 +120,11 @@ export default function Navbar() {
               link: "/students/rules_regulations",
             },
             {
-              name: "Academic Calender",
+              name: "Academic Calendar",
               link: "/academic/calender",
             },
             {
-              name: "Carriculmn and Syllabus",
+              name: "Curriculum and Syllabus",
               link: "/academic/syllabus",
             },
           ],
@@ -168,7 +166,7 @@ export default function Navbar() {
               link: "/academic/central-research",
             },
             {
-              name: "High Performace Computing",
+              name: "High Performance Computing",
               link: "/academic/hfc",
             },
           ],
@@ -199,8 +197,8 @@ export default function Navbar() {
               link: "/why_skclnct",
             },
             {
-              name: "Gallary",
-              link: "/gallary",
+              name: "Gallery",
+              link: "/gallery",
             },
             {
               name: "Campus Life",
@@ -210,14 +208,12 @@ export default function Navbar() {
               name: "Academic Programs",
               link: "/academic/programs",
             },
-
             {
               name: "Admission Process",
               link: "/admission",
             },
           ],
         },
-
         {
           name: "Existing Students",
           subchild: [
@@ -226,14 +222,13 @@ export default function Navbar() {
               link: "/students/rules_regulations",
             },
             {
-              name: "Academic Calender",
+              name: "Academic Calendar",
               link: "/academic/calender",
             },
             {
               name: "Time Table",
               link: "/institute/former_directors",
             },
-
             {
               name: "Online Fee Payment",
               link: "https://www.pratibhaglobalschool.com/payments/login/40e032b8-a995-47ab-a854-c3aec4812c0e",
@@ -241,13 +236,12 @@ export default function Navbar() {
           ],
         },
         {
-          name: "Other Related Link",
+          name: "Other Related Links",
           subchild: [
             {
               name: "Internship Programs",
               link: "/placementcalender",
             },
-
             {
               name: "Library",
               link: "/institute/library",
@@ -260,7 +254,6 @@ export default function Navbar() {
         },
       ],
     },
-    
     {
       main: "Placement",
       child: [
@@ -284,7 +277,7 @@ export default function Navbar() {
               link: "/regular_activite",
             },
             {
-              name: "Placement Calender and Process",
+              name: "Placement Calendar and Process",
               link: "/placementcalender",
             },
           ],
@@ -314,12 +307,10 @@ export default function Navbar() {
               name: "About Alumni Cell",
               link: "/alumni",
             },
-
             {
               name: "Eminent",
               link: "/eminent",
             },
-
             {
               name: "Director's Message to Alumni",
               link: "/institute/contact",
@@ -335,23 +326,19 @@ export default function Navbar() {
           name: "Resources",
           subchild: [
             {
-              name: "  Central Research Facility",
+              name: "Central Research Facility",
               link: "/crf",
             },
             {
-              name: " Centre for Technology Innovation and Industry Relations",
+              name: "Centre for Technology Innovation and Industry Relations",
               link: "/relations",
             },
-            // {
-            //   name: " Foundation for Technology and Business Incubation",
-            //   link: "/institute/former_directors",
-            // },
             {
               name: "High Performance Computing",
               link: "/highpc",
             },
             {
-              name: " Industrial Consultancy",
+              name: "Industrial Consultancy",
               link: "/ic",
             },
           ],
@@ -378,108 +365,131 @@ export default function Navbar() {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
-    <div className=" text-white z-50">
-      <div className="flex items-center justify-between p-2 bg-blue-900">
-        <div className="items-center flex gap-4 ">
-         
-          <p>Admissions</p>
-          <p>Placement</p>
-          <p>Careers</p>
+    <div className="text-white z-50">
+    <div className="flex items-center justify-between p-2 bg-blue-900">
+      <div className="flex items-center gap-4">
+        <p>Admissions</p>
+        <p>Placement</p>
+        <p>Careers</p>
+      </div>
+  
+      <div className="flex items-center gap-4">
+        <img src="/twitter.png" className="w-8 h-8 rounded-full" />
+        <img src="/yt.png" className="w-8 h-8 rounded-full" />
+        <img src="/insta.png" className="w-8 h-8 rounded-full" />
+      </div>
+  
+      <div className="flex">
+        <Link
+          className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
+          href="/loginPage"
+        >
+          STAFF LOGIN
+        </Link>
+      </div>
+    </div>
+  
+    <div className="bg-gradient-to-r from-indigo-500 to-blue-800">
+      <div className="w-9/12 mx-auto flex items-center justify-between px-4">
+        <div className="flex items-center gap-4">
+          <div className="w-[100px] h-[100px] relative">
+            <Image src="/logo1.png" layout="fill" objectFit="contain" alt="Logo" />
+          </div>
+          <h1 className="text-3xl font-semibold">{collegeNames[collegeNameIndex]}</h1>
+          <div className="slogan">An Institute of National Importance</div>
         </div>
-
-        <div className="items-center gap-4 flex w-8 h-8 ">
-          <img src="/twitter.png" className="rounded-full"></img>
-          <img src="/yt.png" className="rounded-full"></img>
-          <img src="/insta.png" className="rounded-full"></img>
-        </div>
-
-        {/* Login button */}
-        <div className="flex ">
-          <Link
-            className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
-            href="\loginPage"
-          >
-            STAFF LOGIN
-          </Link>
+  
+        <div>
+          <input
+            type="text"
+            placeholder="Search"
+            className="px-4 py-2 rounded-full border border-white focus:outline-none focus:border-gray-300"
+          />
         </div>
       </div>
-      <div className="bg-gradient-to-r from-indigo-500 to-blue-800">
-        <div className=" w-9/12 mx-auto flex items-center justify-between px-4 ">
-          {/* Logo and college name */}
-          <div className="flex items-center gap-4">
-            <div className="w-[100px] h-[100px] relative">
-              <Image
-                src="/logo1.png"
-                layout="fill"
-                objectFit="contain"
-                alt="Logo"
-              />
-            </div>
-            <h1 className="text-3xl font-semibold">
-              {collegeNames[collegeNameIndex]}
-            </h1>
-            <div className="slogan">An Institute of National Importance</div>
-          </div>
-
-          {/* Search box */}
-          <div>
-            <input
-              type="text"
-              placeholder="Search"
-              className="px-4 py-2 rounded-full border border-white focus:outline-none focus:border-gray-300"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full bg-blue-900">
-        <div className="flex w-full mx-auto gap-4 justify-center bg-blue-900 relative items-center ">
-        <Link href="/" className=" text-3xl p-1 ">
-            <FaHome  className=" hover:scale-105 duration-500  hover:text-gray-400 cursor-pointer" />
-          </Link>
-          {navItems.map((item, index) => (
-            <div key={index}>
+    </div>
+  
+    <div className="w-full bg-blue-900">
+      <div className="flex flex-wrap w-full mx-auto gap-4 justify-center bg-blue-900 relative items-center">
+        <Link href="/" className="text-3xl p-1">
+          <FaHome className="hover:scale-105 duration-500 hover:text-gray-400 cursor-pointer" />
+        </Link>
+        {navItems.map((item, index) => {
+          let dropdownWidth;
+          let dropdownLeft;
+          switch (item.main) {
+            case "Institute":
+              dropdownWidth = "w-[950px]";
+              dropdownLeft = "left-[-79px]";
+              break;
+            case "Academics":
+              dropdownWidth = "w-[870px]";
+              dropdownLeft = "left-[-460px]";
+              break;
+            case "Students":
+              dropdownWidth = "w-[690px]";
+              dropdownLeft = "left-20";
+              break;
+            case "Placement":
+              dropdownWidth = "w-[590px]";
+              dropdownLeft = "left-30";
+              break;
+            case "Alumni":
+              dropdownWidth = "w-60";
+              dropdownLeft = "left-40";
+              break;
+            case "Resources":
+              dropdownWidth = "w-[300px]";
+              dropdownLeft = "left-50";
+              break;
+            default:
+              dropdownWidth = "w-64";
+              dropdownLeft = "left-[-50px]";
+          }
+  
+          return (
+            <div key={index} className="relative group">
               <Link
                 href="#"
-                className={` text-white font-semibold text-lg hover:text-gray-300 hover:bg-blue-700 flex gap-2 items-center px-3  py-4 ${
-                  openSubMenuId == item.main ? "bg-blue-800" : ""
+                className={`text-white font-semibold text-lg hover:text-gray-300 hover:bg-blue-700 flex gap-2 items-center px-3 py-4 ${
+                  openSubMenuId === item.main ? "bg-blue-800" : ""
                 }`}
                 onClick={() => toggleSubMenu(item.main)}
               >
                 {item.main}
                 <FaChevronDown size={15} />
-                <span className="submenu-indicator">
-                  <span className="submenu-indicator-chevron border-white"></span>
-                </span>
               </Link>
-
+  
               <div
-                className={` absolute top-[60px] left-0 p-3   bg-white nav-submenu w-full  ${
+                className={`absolute top-full mt-2 p-3 bg-white shadow-lg rounded flex ${dropdownWidth} ${
                   openSubMenuId === item.main ? "" : "hidden"
                 }`}
+                style={{ left: dropdownLeft }}
               >
-                <ul className="flex justify-around list-none">
-                  {item.child.map((link, index) => (
-                    <li className="p-2" key={index}>
-                      <h4 className="text-blue-700 font-bold text-lg">
-                        <Link href="#">{link.name}</Link>
-                      </h4>
-                      <ul className="mt-3">
-                        {link.subchild.map((navlink, index) => (
-                          <li key={index}>
-                            <Navlink name={navlink.name} link={navlink.link} />
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                  ))}
-                </ul>
+                {item.child.map((link, index) => (
+                  <div key={index} className="p-2">
+                    <h4 className="text-blue-700 font-bold text-lg">
+                      <Link href="#">{link.name}</Link>
+                    </h4>
+                    <ul className="mt-2 space-y-2">
+                      {link.subchild.map((navlink, index) => (
+                        <li key={index}>
+                          <Navlink name={navlink.name} link={navlink.link} />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </div>
+  </div>
+  
+  
   );
 }
