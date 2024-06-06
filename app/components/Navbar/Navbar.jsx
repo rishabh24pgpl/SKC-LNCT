@@ -378,7 +378,7 @@ export default function Navbar() {
       <div className="flex items-center gap-4">
         <img src="/twitter.png" className="w-8 h-8 rounded-full" />
         <img src="/yt.png" className="w-8 h-8 rounded-full" />
-        <img src="/insta.png" className="w-8 h-8 rounded-full" />
+        {/* <img src="/insta.png" className="w-8 h-8 rounded-full" /> */}
       </div>
   
       <div className="flex">
