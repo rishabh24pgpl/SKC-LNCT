@@ -143,7 +143,7 @@ const NoticeForm = ({
           file: imgRes ? imgRes : notice.file,
           endDate: formattedDate,
           uuid: selectedNoticeId,
-          organizationUuid: organization || schoolUuid,
+          // organizationUuid: organization || schoolUuid,
         });
       } else {
         const res=await addNotice({
@@ -157,7 +157,6 @@ const NoticeForm = ({
           title: "fgdhs",
           file: "C:\\fakepath\\account4.jpg",
           description: "dcbxhs",
-          publishedDate: "2024-05-08",
           endDate: "2024-05-09",
         };
 
