@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
 export default function AbouttheInstitute() {
   return (
     <>
@@ -28,9 +27,7 @@ export default function AbouttheInstitute() {
                 width={80}
                 height={80}
               /> */}
-
               <div>
-
               <h1 className="text-2xl font-semibold text-center mb-2 ">
                 MISSION
               </h1>
@@ -49,7 +46,6 @@ export default function AbouttheInstitute() {
                 width={80}
                 height={80}
               /> */}
-
              <div>
               <h1 className="text-2xl  font-semibold text-center mb-2">
                 VISION
@@ -64,7 +60,6 @@ export default function AbouttheInstitute() {
             </div>
           </div>
         </div>
-
           <h1 className="text-4xl  border-t p-4 px-10  ">Message from Director</h1>
         <div className=" flex justify-between items-center w-full">
           <div className=" flex justify-between pt-1 px-10">

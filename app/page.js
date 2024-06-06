@@ -14,6 +14,8 @@ import Whyskc from "./components/Whyskc/Whyskc";
 import Contact from "./components/Contact/Contact";
 import { Lamp } from "./components/Lamp/Lamp";
 import Payment from "./components/Payment/Payment";
+import { Lamp } from "./components/Lamp/Lamp";
+import Payment from "./components/Payment/Payment";
 import NumberOne from "./components/NumberOne/NumberOne";
 import { ParallaxScroll } from "./components/ParallaxScroll/ParallaxScroll";
 
@@ -41,7 +43,7 @@ export default function Home() {
 
   // Function to toggle submenu
 
-  const images = ["/a-o.png", "/building.png", "/building2.png"];
+  const images = ["/image1.jpg", "/building.png", "/lnct-building.jpg"];
 
   const EventData = [
     {
@@ -289,7 +291,7 @@ export default function Home() {
                 >
                   UNDERGRADUATE
                 </button>
-              </li>
+                </li>
               <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("postgraduate")}
@@ -382,7 +384,7 @@ export default function Home() {
                   or 6.50 CGPA in aggregate in the qualifying examination.
                   Admission for the GATE qualified candidates is made through
                   Common Admission Process called Central Counselling for
-                  Master’s of Technology (CCMT). Relaxation up to 5% of marks or
+                  Master's of Technology (CCMT). Relaxation up to 5% of marks or
                   0.5 CGPA is allowed by senate for sponsored candidates with
                   proven research or profession experience.
                 </p>
@@ -478,7 +480,6 @@ export default function Home() {
           <h5 className="font-semibold text-2xl">FUNCTIONAL</h5>
         </div>
       </section>
-
       <section className=" w-11/12 mx-auto mt-10">
         <div
           className=""
@@ -641,6 +642,6 @@ export default function Home() {
       
 
     </div>
-
+    
   );
 }
