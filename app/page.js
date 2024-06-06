@@ -41,7 +41,7 @@ export default function Home() {
 
   // Function to toggle submenu
 
-  const images = ["/a-o.png", "/building.png", "/building2.png"];
+  const images = ["/image1.jpg", "/building.png", "/lnct-building.jpg"];
 
   const EventData = [
     {
@@ -162,10 +162,10 @@ export default function Home() {
 
 
   const imagess = [
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
+   "/speaker.JPG", "/award.JPG", "/principals.JPG",
+   "/award2.jpg", "/grp.JPG", "/Sports.jpg",
+   "/lnct-awards.jpg", "/lnct-sports.jpg", "/lnct-stunt.jpg",
+   "/ar-1.jpg", "/lnct-awards2.jpg", "/ar-3.jpg",
    "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
    "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
    "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
