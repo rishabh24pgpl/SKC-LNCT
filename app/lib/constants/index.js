@@ -12,7 +12,6 @@ export const NOTICEINITIAL = {
   title: "",
   file: "",
   description: "",
-  publishedDate: "",
   endDate: ""
 };
 

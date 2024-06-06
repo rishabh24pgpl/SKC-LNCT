@@ -95,7 +95,7 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
   return (
     <>
       <div className="grid grid-cols-1 lg:flex lg:gap-10 gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
-        <div className="lg:w-[720px] overflow-auto border border-gray-200 rounded-md">
+        <div className="w-full  border border-gray-200 rounded-md">
           <h2 className="text-2xl font-bold text-black text-center">Notices</h2>
           <ul
             ref={listRef}
