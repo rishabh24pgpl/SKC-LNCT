@@ -12,8 +12,7 @@ import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute"
 
 import Whyskc from "./components/Whyskc/Whyskc";
 import Contact from "./components/Contact/Contact";
-import { Lamp } from "./components/Lamp/Lamp";
-import Payment from "./components/Payment/Payment";
+
 import { Lamp } from "./components/Lamp/Lamp";
 import Payment from "./components/Payment/Payment";
 import NumberOne from "./components/NumberOne/NumberOne";

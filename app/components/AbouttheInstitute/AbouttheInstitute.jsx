@@ -64,7 +64,7 @@ export default function AbouttheInstitute() {
         <div className=" flex justify-between items-center w-full">
           <div className=" flex justify-between pt-1 px-10">
             <div className="w-full">
-            <p className=" p-2   text-pretty  ">
+            <p className=" p-2     ">
               To become an internationally acclaimed institution of higher
               learning that will serve as a source of knowledge and expertise
               for the society and be a preferred destination for undergraduate
@@ -83,7 +83,7 @@ export default function AbouttheInstitute() {
             </p>
             </div>
             <div className="w-full  flex justify-around items-end ">
-            <Image src="/founder.png" alt="" height={230} width={400} />
+            <Image src="/founderr.png" alt="" height={230} width={400} />
             </div>
           </div>
         </div>
