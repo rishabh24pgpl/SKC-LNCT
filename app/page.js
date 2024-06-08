@@ -383,7 +383,7 @@ export default function Home() {
                   or 6.50 CGPA in aggregate in the qualifying examination.
                   Admission for the GATE qualified candidates is made through
                   Common Admission Process called Central Counselling for
-                  Master's of Technology (CCMT). Relaxation up to 5% of marks or
+                  Masters of Technology (CCMT). Relaxation up to 5% of marks or
                   0.5 CGPA is allowed by senate for sponsored candidates with
                   proven research or profession experience.
                 </p>
