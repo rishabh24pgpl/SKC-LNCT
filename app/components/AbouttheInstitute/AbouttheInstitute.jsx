@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
 export default function AbouttheInstitute() {
   return (
     <>
@@ -28,9 +27,7 @@ export default function AbouttheInstitute() {
                 width={80}
                 height={80}
               /> */}
-
               <div>
-
               <h1 className="text-2xl font-semibold text-center mb-2 ">
                 MISSION
               </h1>
@@ -49,7 +46,6 @@ export default function AbouttheInstitute() {
                 width={80}
                 height={80}
               /> */}
-
              <div>
               <h1 className="text-2xl  font-semibold text-center mb-2">
                 VISION
@@ -64,12 +60,11 @@ export default function AbouttheInstitute() {
             </div>
           </div>
         </div>
-
           <h1 className="text-4xl  border-t p-4 px-10  ">Message from Director</h1>
         <div className=" flex justify-between items-center w-full">
           <div className=" flex justify-between pt-1 px-10">
             <div className="w-full">
-            <p className=" p-2   text-pretty  ">
+            <p className=" p-2     ">
               To become an internationally acclaimed institution of higher
               learning that will serve as a source of knowledge and expertise
               for the society and be a preferred destination for undergraduate
@@ -88,7 +83,7 @@ export default function AbouttheInstitute() {
             </p>
             </div>
             <div className="w-full  flex justify-around items-end ">
-            <Image src="/founder.png" alt="" height={230} width={400} />
+            <Image src="/founderr.png" alt="" height={230} width={400} />
             </div>
           </div>
         </div>

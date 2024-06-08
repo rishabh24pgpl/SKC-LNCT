@@ -4,6 +4,7 @@ import Counter from "@/app/components/Counter";
 import Image from "next/image";
 import AlumniCard from "@/app/components/AlumniCard";
 import AlumniNewsCard from "@/app/components/AlumniNewsCard";
+import ChatBox from "../components/ChatBox/ChatBox";
 const MyComponent = () => {
   const cardData = [
     {
@@ -292,7 +293,7 @@ const MyComponent = () => {
           </div>
         </div>
       </section>
-      <section className="">
+      {/* <section className="">
         <div class="flex sm:w-full md:w-1/3 mb-8 md:mb-0 p-5 shadow-md rounded-xl mr-3 ml-3">
           <div class="w-full text-left">
             <span class="flex item-center">
@@ -307,7 +308,8 @@ const MyComponent = () => {
             </span>
           </div>
         </div>
-      </section>
+      </section> */}
+    
       <section
         className=" w-full "
         style={{
