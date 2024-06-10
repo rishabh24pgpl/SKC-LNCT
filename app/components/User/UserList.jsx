@@ -3,7 +3,6 @@ import moment from "moment";
 import React, { useState } from "react";
 
 import Pagination from "../Pagination/Pagination";
-import dynamic from "next/dynamic";
 import { deleteUser, getUsers } from "@/app/lib/services/user/userServices";
 import { useUserConext } from "@/app/components/context/UserContext";
 import { scrollToTop } from "@/app/lib/helpers/scrollToTopOfContainer";
@@ -67,8 +66,8 @@ const UserList = ({ users = {} }) => {
               </tr>
             </thead>
             <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-              {allUsers?.data?.map((user) => (
-                <tr class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
+              {allUsers?.data?.map((user,ind) => (
+                <tr key={ind} class="bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 text-gray-700 dark:text-gray-400">
                   <td class="px-4 py-3">
                     <div class="flex items-center text-sm">
                       <input
