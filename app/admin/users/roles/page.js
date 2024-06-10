@@ -1,4 +1,4 @@
-import RoleForm from "@/components/Roles/RoleForm"
+import RoleForm from "@/app/components/Roles/RoleForm"
 
 const page = () => {
   return (
