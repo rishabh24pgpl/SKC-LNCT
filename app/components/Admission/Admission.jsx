@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import DeptCounter from "../DeptCounter/DeptCounter";
-import AdmissionForm from "../AdmissionForm/AdmissionForm";
+import AdmissionForm from "@/app/components/AdmissionForm/AdmissionForm";
 
 export default function Admission() {
   return (

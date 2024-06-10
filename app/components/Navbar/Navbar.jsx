@@ -291,7 +291,7 @@ export default function Navbar() {
             },
             {
               name: "Career",
-              link: "/career",
+              link: "/career/?college=LNCT",
             },
           ],
         },

@@ -60,4 +60,40 @@ export const SEMINARINITIAL = {
   publishedDate: "2024-05-04T15:52:51.463Z"
 };
 
+
+export const JOB_APPLICATION={
+  
+    applicantName: "",
+    email: "",
+    phone: "",
+    collegeName: "",
+    isOpen: true,
+    qualifications: "",
+    experience: "",
+    resumeLink: "",
+    additionalInfo: "",
+    jobUuid: ""
+  
+  
+}
+
+export const USER_INITIAL = {
+  email: "",
+  phone: "",
+  password: "",
+  firstName: "",
+  lastName: "",
+  isActive: false,
+  type: "",
+  isVerified: true,
+  address: "",
+  state: "",
+  city: "",
+  pinCode: "",
+  profilePicture: "",
+  isSuspicious: false,
+  roles: [],
+};
+
+
 export const ADMIN ='ADMIN'

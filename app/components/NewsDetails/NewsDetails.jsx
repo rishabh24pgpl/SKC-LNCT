@@ -83,25 +83,26 @@ export default function NewsDetails({ image, title, content }) {
           {/* Detail Page SVG or Image */}
           <div className=" lg:w-1/3   relative h-96 order-2 p-10 hidden lg:block ">
             {/* Replace 'detail-page.svg' with your actual SVG */}
-            <img
+            {/* <img
               src={image}
               alt="image"
               layout="fill"
               objectFit="contain"
               className=" mt-10 "
-            />
+            /> */}
           </div>
           {/* Text Content */}
           <div className=" w-full lg:w-2/3 p-2 order-1">
             <h1 className=" lg:text-left text-center mt-2  lg:px-8 lg:mt-6 text-4xl font-bold text-shadow-[1px_1px_3px_#000000]">
               {title}
             </h1>
+            <h1 className="text-2xl p-6">{content}</h1>
           </div>
         </div>
       </div>
       <div className="w-full p-10 flex gap-4 ">
         <div className="border w-full   flex justify-center items-center   relative">
-          <img src="/sc-main-1.jpg" alt="" fill />
+          <img src={image} alt="" fill />
         </div>
         <div className="border w-full    ">
           <form
