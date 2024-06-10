@@ -4,6 +4,7 @@ import "./styles/scrollbar.css"
 
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import FixedButtons from "./components/FixedButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         {children}
+        <FixedButtons />
         <Footer />
       </body>
     </html>
