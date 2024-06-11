@@ -88,12 +88,13 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
 
   return (
     <>
+  
       <div className="grid grid-cols-1 lg:flex gap-4 h-full w-full shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] p-2">
         <div className="w-full border border-gray-200 rounded-md">
-          <h2 className="text-2xl font-bold text-black text-center">Notices</h2>
+          {/* <h2 className="text-2xl font-bold text-black text-center">Notices</h2> */}
           <ul
             ref={listRef}
-            className="grid grid-cols-1 gap-6 max-h-[600px] overflow-scroll"
+            className="grid grid-cols-1 gap-2 max-h-[600px] overflow-scroll"
           >
             {noticeData.map((item, index) => (
               <ListItem key={index} item={item} />
@@ -146,6 +147,14 @@ const Seminar = ({ eventData, carouselData, additionalCarouselData }) => {
 const ListItem = ({ item }) => {
   const { title, endDate, uuid } = item;
 
+
+  const formattedEndDate = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(new Date(endDate));
   return (
     <li className="border-gray-400 flex flex-col">
       <Link href={`/events/${uuid}`}>
@@ -156,7 +165,7 @@ const ListItem = ({ item }) => {
             </h1>
             <div className="flex justify-start py-4 items-center text-sm font-semibold">
               <h1 className="px-2 p-1 font-semibold rounded-lg capitalize bg-blue-200">
-                {endDate}
+                {formattedEndDate}
               </h1>
             </div>
           </div>
