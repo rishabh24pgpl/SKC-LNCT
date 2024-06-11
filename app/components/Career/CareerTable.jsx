@@ -74,7 +74,7 @@ const CareerTable = ({ events, onDelete, onEdit }) => {
               <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {event.title}
               </td>
-              <td className="px-6 py-4">{event.description}</td>
+              <td className="px-6 py-4">{event.aboutJob}</td>
               <td className="px-6 py-4">
                 <button
                   onClick={() => handleDelete(event.uuid)}

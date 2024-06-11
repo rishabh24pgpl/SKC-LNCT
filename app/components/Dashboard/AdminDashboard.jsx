@@ -348,6 +348,7 @@ const Dashboard = ({ clientProps }) => {
           <h3 className="text-lg font-semibold">
             Task summaries of recent sprints
           </h3>
+        <Link href='/admin/approval'>  <h2 className="text-md font-bold text-center bg-blue-400 p-2 w-[300px]">View Waiting For Approval</h2></Link>
         </div>
         <div className="md:col-span-2 xl:col-span-1">
           <div className="rounded bg-gray-200 dark:bg-gray-800 p-3  min-h-[350px] overflow-y-auto">
@@ -413,12 +414,14 @@ const Dashboard = ({ clientProps }) => {
                 View All ...
               </p>
             </div>
+            
           </div>
         </div>
 
         <div className="md:col-span-2 xl:col-span-1">
           <div className="rounded bg-gray-200 dark:bg-gray-800 p-3  min-h-[350px] overflow-y-auto">
             <div className="flex justify-between py-1 text-black dark:text-white ">
+            
               <h3 className="text-md font-semibold">News Update </h3>
               <Link href="/admin/news">
                 <button

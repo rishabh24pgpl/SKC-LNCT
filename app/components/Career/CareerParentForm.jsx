@@ -17,10 +17,12 @@ const CareerParent = () => {
     try {
       setIsLoading(true);
       const params = new URLSearchParams({ college, limit, page });
-      const response = await axios.get(`https://lnct-backend.vercel.app/api/v1/career/?${params.toString()}`);
-      const eventData = response.data;
-      console.log('eventData:', eventData);
+      const response = await axios.get(`https://lnct-backend.vercel.app/api/v1/career/?college=LNCT&limit=5&page=1`);
+      console.log(response.data.payload.data, "rrrrrrrrr");
+      const eventData = response.data.payload.data;
+
       setEventList(eventData);
+      console.log(events, "eeeeeeee");
     } catch (error) {
       console.error('Error fetching events:', error);
     } finally {

@@ -119,11 +119,11 @@ const AdmissionForm = () => {
                   className="border border-gray-300 rounded-md px-4 py-2"
                 >
                   <option value="" disabled>
-                    Which class is he enquiring for?
+                    Which Year is he enquiring for?
                   </option>
-                  {Array.from({ length: 12 }, (_, i) => i + 1).map((value) => (
+                  {Array.from({ length: 4 }, (_, i) => i + 1).map((value) => (
                     <option key={value} value={value}>
-                      Class {value}
+                      Year {value}
                     </option>
                   ))}
                 </select>
@@ -166,7 +166,7 @@ const AdmissionForm = () => {
               
                 <button
                   type="submit"
-                  style={{ background: "blue-400", color: "white" }}
+                  style={{ background: "blue", color: "white" }}
                   className="px-4 py-2 rounded-md"
                 >
                   Submit
@@ -181,7 +181,7 @@ const AdmissionForm = () => {
 
                   <span>
                     {" "}
-                    Towards<br></br> Happy Learning.
+                    Towards<br></br> Your Dream.
                   </span>
                 </h1>
                 <p className="text-lg my-5 font-normal text-gray-500 lg:text-xl dark:text-gray-400">

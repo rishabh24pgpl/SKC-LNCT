@@ -1,101 +1,303 @@
-import React from 'react'
+"use client";
+import React, { useState, useEffect } from 'react';
+import moment from 'moment';
+import { addCareer, updateCareer } from '@/app/lib/services/careers/careers';
+import { uploadImg } from '@/app/lib/services/files/fileServices';
+import Loader from '../Loader/Loader';
 
-export default function CareerForm() {
-  return (
 
-     <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h1 class="text-2xl font-bold mb-6">Job Application Form</h1>
-        <form>
-    
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="collegeName">
-                    College Name
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="collegeName" type="text" placeholder="LNCTs"></input>
-            </div>
+export const CAREER_INITIALS = {
+    collegeName: "",
+    title: "",
+    aboutJob: "",
+    resume: "",
+    package: "",
+    qualification: "",
+    isOpen: true,
+    openPosition: "",
+    skills: "",
+    relaventExperience: "",
+  }
+  
 
-          
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
-                    Job Title
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Software Engineer"></input>
-            </div>
+export default function CareerForm({ selectedCareerId, careers }) {
+    const [careerData, setCareerData] = useState({ ...CAREER_INITIALS });
+    const [isLoading, setIsLoading] = useState(false);
+    const [hasError, setError] = useState({ msg: "", type: "" });
+    const [isEditMode, setIsEditMode] = useState(false);
+    const [validationErrors, setValidationErrors] = useState({});
 
-         
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="aboutJob">
-                    About the Job
-                </label>
-                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="aboutJob" placeholder="Join our dynamic team of software engineers to work on cutting-edge projects."></textarea>
-            </div>
+    useEffect(() => {
+        if (selectedCareerId) {
+            const selectedCareer = careers.find((career) => career.uuid === selectedCareerId);
+            if (selectedCareer) {
+                setCareerData({
+                    collegeName: selectedCareer.collegeName,
+                    title: selectedCareer.title,
+                    aboutJob: selectedCareer.aboutJob,
+                    resume: selectedCareer.resume,
+                    package: selectedCareer.package,
+                    qualification: selectedCareer.qualification,
+                    isOpen: selectedCareer.isOpen,
+                    openPosition: selectedCareer.openPosition,
+                    skills: selectedCareer.skills,
+                    relaventExperience: selectedCareer.relaventExperience,
+                });
+                setIsEditMode(true);
+            }
+        } else {
+            setCareerData({ ...CAREER_INITIALS });
+            setIsEditMode(false);
+        }
+    }, [selectedCareerId, careers]);
 
-          
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="resume">
-                    Resume
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="resume" type="file"></input>
-            </div>
+    const handleChange = ({ target }) => {
+        const { name, value, type, checked } = target;
+        setValidationErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
+        if (type === "file") {
+            setCareerData((prev) => ({ ...prev, [name]: target.files[0] }));
+        } else {
+            setCareerData((prev) => ({
+                ...prev,
+                [name]: type === "checkbox" ? checked : value,
+            }));
+            if (!value && type !== "checkbox") {
+                setValidationErrors((prevErrors) => ({
+                    ...prevErrors,
+                    [name]: "This field is required",
+                }));
+            }
+        }
+    };
 
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="package">
-                    Package (Annual Salary)
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="package" type="number" placeholder="80000"></input>
-            </div>
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setValidationErrors({});
+        console.log("submitting........");
+        setError({ msg: "", type: "" });
 
-          
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="qualification">
-                    Qualification
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="qualification" type="text" placeholder="Bachelor's degree in Computer Science or related field"></input>
-            </div>
+        try {
+            const newValidationErrors = {};
+            Object.keys(CAREER_INITIALS).forEach((field) => {
+                if (!careerData[field] && typeof careerData[field] !== 'boolean') {
+                    newValidationErrors[field] = "This field is required";
+                }
+            });
+            if (Object.keys(newValidationErrors).length > 0) {
+                setValidationErrors(newValidationErrors);
+                return;
+            }
 
-           
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="isOpen">
-                    Is Position Open?
-                </label>
-                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="isOpen">
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-            </div>
+            setIsLoading(true);
 
-          
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="openPosition">
-                    Open Position
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="openPosition" type="text" placeholder="Senior Software Engineer"></input>
-            </div>
+            const imgRes = await uploadImg({
+                img: careerData.resume,
+                category: "resumes",
+            });
 
-           
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="skills">
-                    Skills
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="skills" type="text" placeholder="JavaScript, Python, React, Node.js"></input>
-            </div>
+            let res;
+            if (isEditMode) {
+                res = await updateCareer({
+                    ...careerData,
+                    resume: imgRes,
+                    uuid: selectedCareerId,
+                });
+            } else {
+                res = await addCareer({
+                    ...careerData,
+                    resume: imgRes,
+                });
+            }
 
-          
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="relevantExperience">
-                    Relevant Experience
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="relevantExperience" type="text" placeholder="Minimum 5 years of experience in software development"></input>
-            </div>
+            if (res) {
+                setError({ msg: "Career submitted successfully", type: "success" });
+                setIsEditMode(false);
+                setCareerData({ ...CAREER_INITIALS });
+            }
+        } catch (error) {
+            setError({ msg: error.message || "An error occurred", type: "error" });
+            console.error("Error submitting form:", error);
+        } finally {
+            setIsLoading(false);
+        }
+        console.log("submitted.....")
+    };
 
-          
-            <div class="flex items-center justify-between">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                    Submit
-                </button>
-            </div>
-        </form>
-    </div>
-   
-  )
+    return (
+        <>
+        {isLoading && <Loader />} {/* Display loader if isLoading is true */}
+      
+        <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <h1 className="text-2xl font-bold mb-6">Job Application Form</h1>
+            <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="collegeName">
+                        College Name
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="collegeName"
+                        type="text"
+                        name="collegeName"
+                        placeholder="LNCTs"
+                        value={careerData.collegeName}
+                        onChange={handleChange}
+                    />
+                    {validationErrors.collegeName && <p className="text-red-500">{validationErrors.collegeName}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
+                        Job Title
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="title"
+                        type="text"
+                        name="title"
+                        placeholder="Software Engineer"
+                        value={careerData.title}
+                        onChange={handleChange}
+                    />
+                    {validationErrors.title && <p className="text-red-500">{validationErrors.title}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="aboutJob">
+                        About the Job
+                    </label>
+                    <textarea
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="aboutJob"
+                        name="aboutJob"
+                        placeholder="Join our dynamic team of software engineers to work on cutting-edge projects."
+                        value={careerData.aboutJob}
+                        onChange={handleChange}
+                    />
+                    {validationErrors.aboutJob && <p className="text-red-500">{validationErrors.aboutJob}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="resume">
+                        Resume
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="resume"
+                        type="file"
+                        name="resume"
+                        onChange={handleChange}
+                    />
+                    {validationErrors.resume && <p className="text-red-500">{validationErrors.resume}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="package">
+                        Package (Annual Salary)
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="package"
+                        type="number"
+                        name="package"
+                        placeholder="80000"
+                        value={careerData.package}
+                        onChange={handleChange}
+                    />
+                    {validationErrors.package && <p className="text-red-500">{validationErrors.package}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="qualification">
+                        Qualification
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="qualification"
+                        type="text"
+                        name="qualification"
+                        placeholder="Bachelor's degree in Computer Science or related field"
+                        value={careerData.qualification}
+                        onChange={handleChange}
+                    />
+                    {validationErrors.qualification && <p className="text-red-500">{validationErrors.qualification}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="isOpen">
+                        Is Position Open?
+                    </label>
+                    <select
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="isOpen"
+                        name="isOpen"
+                        value={careerData.isOpen}
+                        onChange={handleChange}
+                    >
+                        <option value={true}>Yes</option>
+                        <option value={false}>No</option>
+                    </select>
+                    {validationErrors.isOpen && <p className="text-red-500">{validationErrors.isOpen}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="openPosition">
+                        Open Position
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="openPosition"
+                        type="text"
+                        name="openPosition"
+                        placeholder="Senior Software Engineer"
+                        value={careerData.openPosition}
+                        onChange={handleChange}
+                    />
+                    {validationErrors.openPosition && <p className="text-red-500">{validationErrors.openPosition}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="skills">
+                        Skills
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="skills"
+                        type="text"
+                        name="skills"
+                        placeholder="JavaScript, Python, React, Node.js"
+                        value={careerData.skills}
+                        onChange={handleChange}
+                    />
+                    {validationErrors.skills && <p className="text-red-500">{validationErrors.skills}</p>}
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="relaventExperience">
+                        Relevant Experience
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="relaventExperience"
+                        type="text"
+                        name="relaventExperience"
+                        placeholder="Minimum 5 years of experience in software development"
+                        value={careerData.relaventExperience}
+                        onChange={handleChange}
+                    />
+                    {validationErrors.relaventExperience && <p className="text-red-500">{validationErrors.relaventExperience}</p>}
+                </div>
+
+                <div className="flex items-center justify-between">
+                    <button
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit"
+                    >
+                        {isEditMode ? 'Update' : 'Submit'}
+                    </button>
+                </div>
+            </form>
+        </div>
+        </>
+    );
 }
