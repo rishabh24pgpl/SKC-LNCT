@@ -281,7 +281,7 @@ const Dashboard = ({ clientProps }) => {
             </div>
           </div>
         </div>
-        <div className="relative flex flex-col min-w-0 break-words bg-gray-50 dark:bg-gray-800 w-full shadow-lg rounded ">
+        <div className="relative flex flex-col min-w-0 break-words bg-gray-50 dark:bg-gray-800 w-full shadow-lg rounded h-[500px] overflow-scroll">
           <div className="rounded-t mb-0 px-0 border-0">
             <div className="flex flex-wrap items-center px-4 py-2">
               <div className="relative w-full max-w-full flex-grow flex-1">
@@ -305,7 +305,7 @@ const Dashboard = ({ clientProps }) => {
             {event?.map((event, index) => (
               <React.Fragment key={index}>
                 {/* Display date header when the date changes */}
-                <div className="block w-full">
+                <div className="block w-full ">
                   <div className="px-4 bg-gray-100 dark:bg-gray-600 text-gray-500 dark:text-gray-100 align-middle border border-solid border-gray-200 dark:border-gray-500 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                   {moment(event.startDate).format("DD-MM-YYYY")}
                   </div>
@@ -364,7 +364,7 @@ const Dashboard = ({ clientProps }) => {
                 <path d="M5 10a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4zm7 0a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4zm7 0a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4z" />
               </svg>
             </div>
-            <div className="text-sm text-black dark:text-gray-50 mt-2 max-h-[390px] overflow-auto">
+            <div className="text-sm text-black dark:text-gray-50 mt-2 min-h-[400px] max-h-[400px] overflow-scroll">
               {/* <div className="bg-white dark:bg-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded mt-1 border-b border-gray-100 dark:border-gray-900 cursor-pointer">Delete all references from the wiki</div>
         <div className="bg-white dark:bg-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded mt-1 border-b border-gray-100 dark:border-gray-900 cursor-pointer">Remove analytics code</div> */}
               {notice?.map((admission,index) => (

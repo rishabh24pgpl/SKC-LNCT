@@ -28,7 +28,7 @@ const AdminLayout = ({ children }) => {
               <span className="hidden md:block mt-2">Zoro</span>
             </div>
             <div className="flex justify-between items-center h-14 bg-blue-800 dark:bg-gray-800 header-right mt-[1px]">
-              <div className="bg-white rounded flex items-center w-full max-w-xl mr-4 p-2 shadow-sm border border-gray-200">
+              {/* <div className="bg-white rounded flex items-center w-full max-w-xl mr-4 p-2 shadow-sm border border-gray-200">
                 <button className="outline-none focus:outline-none">
                   <svg
                     className="w-5 text-gray-600 h-5 cursor-pointer"
@@ -49,7 +49,7 @@ const AdminLayout = ({ children }) => {
                   placeholder="Search"
                   className="w-full pl-3 text-sm text-black outline-none focus:outline-none bg-transparent"
                 />
-              </div>
+              </div> */}
               <ul className="flex items-center">
                 <li>{/* TODO: add theme toggle */}</li>
                 <li>

@@ -366,7 +366,13 @@ export default function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
+  const path = usePathname();
+
   return (
+    <>
+    {path.includes("admin") || path.includes("payments") ? (
+      <></>
+    ) : (
     <div className="text-white z-50">
     <div className="flex items-center justify-between p-2 bg-blue-900">
       <div className="flex items-center gap-4">
@@ -496,7 +502,8 @@ export default function Navbar() {
       </div>
     </div>
   </div>
-  
+    )}
+  </>
   
   );
 }
