@@ -381,12 +381,19 @@ export default function Navbar() {
         {/* <img src="/insta.png" className="w-8 h-8 rounded-full" /> */}
       </div>
   
-      <div className="flex">
+      <div className="flex gap-2">
         <Link
           className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
           href="/loginPage"
         >
           STAFF LOGIN
+        </Link>
+        <Link
+          className="text-xs px-4 py-2 leading-none rounded-full hover:bg-green-300 hover:text-black border-2"
+          href="http://1.22.218.13/AccSoft2/Login.aspx"
+          target="_blank"
+        >
+        LOGIN
         </Link>
       </div>
     </div>

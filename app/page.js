@@ -161,17 +161,32 @@ export default function Home() {
     // Add more events as needed
   ];
 
-
   const imagess = [
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-   "/ar-1.jpg", "/ar-2.jpg", "/ar-3.jpg",
-  ]
+    "/speaker.JPG",
+    "/award.JPG",
+    "/principals.JPG",
+    "/award2.jpg",
+    "/grp.JPG",
+    "/Sports.jpg",
+    "/lnct-awards.jpg",
+    "/lnct-sports.jpg",
+    "/lnct-stunt.jpg",
+    "/ar-1.jpg",
+    "/lnct-awards2.jpg",
+    "/ar-3.jpg",
+    "/ar-1.jpg",
+    "/ar-2.jpg",
+    "/ar-3.jpg",
+    "/ar-1.jpg",
+    "/ar-2.jpg",
+    "/ar-3.jpg",
+    "/ar-1.jpg",
+    "/ar-2.jpg",
+    "/ar-3.jpg",
+    "/ar-1.jpg",
+    "/ar-2.jpg",
+    "/ar-3.jpg",
+  ];
 
   const ScarouselData = [
     {
@@ -240,8 +255,7 @@ export default function Home() {
           height={650}
         />
       </div>
-     
-       
+
       <NumberOne
         img="/number-1.png"
         title="WHY SKC LNCT"
@@ -255,15 +269,15 @@ export default function Home() {
         />
       </section>
       <section className="mt-10 w-11/12 mx-auto mb-10">
-          <Seminar
-            eventData={EventsData}
-            carouselData={ScarouselData}
-            additionalCarouselData={additionalCarouselDataseminar}
-          />
-        </section>
-        <div className=" w-11/12 mx-auto">
-        <ParallaxScroll images={imagess}/>
-        </div>
+        <Seminar
+          eventData={EventsData}
+          carouselData={ScarouselData}
+          additionalCarouselData={additionalCarouselDataseminar}
+        />
+      </section>
+      <div className=" w-11/12 mx-auto">
+        <ParallaxScroll images={imagess} />
+      </div>
       <section
         className="academic-programe   mx-auto mt-10 flex justify-center     "
         style={{
@@ -273,27 +287,26 @@ export default function Home() {
         }}
       >
         <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-blue-900 h-[580px]  ">
-     
           <nav className="nav flex-col lg:w-1/4 p-4">
             <h2 className="text-3xl w-80 text-white  text-center font-semibold mb-6">
               Academic Programme
             </h2>
             <ul className="space-y-2 bg-white rounded-xl p-4">
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
+              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("undergraduate")}
-                  className={`nav-link ${
+                  className={` p-4 nav-link ${
                     activeTab === "undergraduate" ? "active" : ""
                   }`}
                   role="tab"
                 >
                   UNDERGRADUATE
                 </button>
-                </li>
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
+              </li>
+              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("postgraduate")}
-                  className={`nav-link ${
+                  className={` p-4 nav-link ${
                     activeTab === "postgraduate" ? "active" : ""
                   }`}
                   role="tab"
@@ -301,10 +314,10 @@ export default function Home() {
                   POSTGRADUATE
                 </button>
               </li>
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
+              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("doctoral")}
-                  className={`nav-link ${
+                  className={` p-4 nav-link ${
                     activeTab === "doctoral" ? "active" : ""
                   }`}
                   role="tab"
@@ -312,10 +325,10 @@ export default function Home() {
                   DOCTORAL
                 </button>
               </li>
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
+              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("executive")}
-                  className={`nav-link ${
+                  className={` p-4 nav-link ${
                     activeTab === "executive" ? "active" : ""
                   }`}
                   role="tab"
@@ -323,10 +336,10 @@ export default function Home() {
                   EXECUTIVE PH.D.
                 </button>
               </li>
-              <li className="p-4 bg-white rounded-lg text-black hover:bg-blue-400">
+              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
                 <button
                   onClick={() => handleTabClick("parttime")}
-                  className={`nav-link ${
+                  className={` p-4 nav-link ${
                     activeTab === "parttime" ? "active" : ""
                   }`}
                   role="tab"
@@ -461,8 +474,8 @@ export default function Home() {
 
       <AbouttheInstitute />
 
-      <section class=" flex  h-[300px] w-11/12 mx-auto mt-10  " >
-        <div class="items flex-1 w-full bg-cyan-900 text-white p-6 pt-14 text-center  " >
+      <section class=" flex  h-[300px] w-11/12 mx-auto mt-10  ">
+        <div class="items flex-1 w-full bg-cyan-900 text-white p-6 pt-14 text-center  ">
           <h2 className="font-semibold text-2xl">Thought of the Day</h2>
           <h5 className="font-semibold text-xl py-5 text-justify">
             Sometimes the biggest strength can be found in how you understand
@@ -583,10 +596,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-11/12 mx-auto">
-        <div
-          className=" bg-slate-900"
-         
-        >
+        <div className=" bg-slate-900">
           <div
             //
             className="flex "
@@ -600,7 +610,9 @@ export default function Home() {
             <div className="md:w-full lg:w-1/2 sm:w-full    ">
               <h3 className="font-bold text-3xl p-5 ">
                 Ranking and Recognition &nbsp; &nbsp;&nbsp;
-                <span className="text-sm">View All...</span>
+                <Link href="/ranking" className="text-sm">
+                  View All...
+                </Link>
               </h3>
               <Image
                 className="duration-200 min-h-[350px] max-h-[400px] rounded-lg pt-4  p-2 flex mx-auto items-center rounded-md"
@@ -637,9 +649,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-
     </div>
-    
   );
 }
