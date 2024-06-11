@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function SliderMain({images,heading}) {
+export default function SliderMain({ images, heading }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
@@ -17,15 +17,15 @@ export default function SliderMain({images,heading}) {
       clearInterval(intervalId);
     };
   }, [currentSlide]);
- 
+
   return (
     <>
       <div className="md:w-full lg:w-full sm:w-full w-full flex justify-center items-center ">
-        <h1 className=" absolute text-center text-5xl text-white uppercase -z-10">
+        <h1 className=" absolute text-center text-5xl text-white uppercase z-10">
           {heading}
         </h1>
         <Image
-          className="duration-500 w-full min-h-[400px] max-h-[400px]"
+          className="duration-500 w-full min-h-[330px] max-h-[330px]"
           src={images[currentSlide]}
           alt={"i"}
           width={700}

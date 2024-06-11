@@ -8,6 +8,7 @@ import ProgramCard from "../ProgramCard/ProgramCard";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Slider from "../Slider/Slider";
+import { head } from "lodash";
 
 export default function DeptEr({ dept }) {
   const images = ["/ar-3.jpg"];
@@ -49,21 +50,181 @@ export default function DeptEr({ dept }) {
     },
   ];
 
+  let headD;
+  let headImg;
+  let phoneHead;
+  let emailHead;
+  let faculties;
+  let aboutDept;
+  let deptImg;
+  let slogan;
+  let author;
   switch (dept) {
     case "ae":
+      slogan="dfsghj slogan";
+      author="author slogan";
+      deptImg = "/dept-m-v.jpg";
+      aboutDept = "dfvbgsnha";
       dept = "Automobile Engineering";
+      headD = "Head Dept";
+
+      headImg = "/director.png";
+      phoneHead = "1234567890";
+      emailHead = "abc@gmail.com";
+      faculties = [
+        {
+          name: "John Doe",
+          position: "Software Engineer",
+          degree: "Bachelors in Computer Science",
+          experience: "5 years",
+        },
+        {
+          name: "Jane Smith",
+          position: "Data Scientist",
+          degree: "Masters in Data Science",
+          experience: "3 years",
+        },
+        {
+          name: "Emily Johnson",
+          position: "Project Manager",
+          degree: "MBA",
+          experience: "7 years",
+        },
+        // Add more faculty members as needed
+      ];
+
       break;
     case "cse":
+      slogan="dfsghj slogan";
+      author="author slogan";
+      deptImg = "/dept-m-v.jpg";
+      aboutDept = "dfvbgsnha";
       dept = "Computer Science & Engineering";
+      headD = "Head Dept";
+      headImg = "/director.png";
+      phoneHead = "1234567890";
+      emailHead = "abc@gmail.com";
+      faculties = [
+        {
+          name: "John Doe",
+          position: "Software Engineer",
+          degree: "Bachelors in Computer Science",
+          experience: "5 years",
+        },
+        {
+          name: "Jane Smith",
+          position: "Data Scientist",
+          degree: "Masters in Data Science",
+          experience: "3 years",
+        },
+        {
+          name: "Emily Johnson",
+          position: "Project Manager",
+          degree: "MBA",
+          experience: "7 years",
+        },
+        // Add more faculty members as needed
+      ];
+
       break;
     case "ece":
+      slogan="dfsghj slogan";
+      author="author slogan";
+      deptImg = "/dept-m-v.jpg";
+      aboutDept = "dfvbgsnha";
       dept = "Electronics & Communication Engineering";
+      headD = "Head Dept";
+      headImg = "/director.png";
+      phoneHead = "1234567890";
+      emailHead = "abc@gmail.com";
+      faculties = [
+        {
+          name: "John Doe",
+          position: "Software Engineer",
+          degree: "Bachelors in Computer Science",
+          experience: "5 years",
+        },
+        {
+          name: "Jane Smith",
+          position: "Data Scientist",
+          degree: "Masters in Data Science",
+          experience: "3 years",
+        },
+        {
+          name: "Emily Johnson",
+          position: "Project Manager",
+          degree: "MBA",
+          experience: "7 years",
+        },
+        // Add more faculty members as needed
+      ];
+
       break;
     case "eet":
+      slogan="dfsghj slogan";
+      author="author slogan";
+      deptImg = "/dept-m-v.jpg";
+      aboutDept = "dfvbgsnha";
       dept = "Electrical & Electronics Engineering";
+      headD = "Head Dept";
+      headImg = "/director.png";
+      phoneHead = "1234567890";
+      emailHead = "abc@gmail.com";
+      faculties = [
+        {
+          name: "John Doe",
+          position: "Software Engineer",
+          degree: "Bachelors in Computer Science",
+          experience: "5 years",
+        },
+        {
+          name: "Jane Smith",
+          position: "Data Scientist",
+          degree: "Masters in Data Science",
+          experience: "3 years",
+        },
+        {
+          name: "Emily Johnson",
+          position: "Project Manager",
+          degree: "MBA",
+          experience: "7 years",
+        },
+        // Add more faculty members as needed
+      ];
+
       break;
     case "it":
+      slogan="dfsghj slogan";
+      author="author slogan";
+      deptImg = "/dept-m-v.jpg";
+      aboutDept = "dfvbgsnha";
       dept = "Information Technology";
+      headD = "Head Dept";
+      headImg = "/director.png";
+      phoneHead = "1234567890";
+      emailHead = "abc@gmail.com";
+      faculties = [
+        {
+          name: "John Doe",
+          position: "Software Engineer",
+          degree: "Bachelors in Computer Science",
+          experience: "5 years",
+        },
+        {
+          name: "Jane Smith",
+          position: "Data Scientist",
+          degree: "Masters in Data Science",
+          experience: "3 years",
+        },
+        {
+          name: "Emily Johnson",
+          position: "Project Manager",
+          degree: "MBA",
+          experience: "7 years",
+        },
+        // Add more faculty members as needed
+      ];
+
       break;
 
     default:
@@ -97,21 +258,7 @@ export default function DeptEr({ dept }) {
               </div>
 
               <p className=" mt-5 font-extralight text-sm  text-justify  h-[160px]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore totam nesciunt illum, voluptatem obcaecati ut iure
-                accusamus illo reiciendis, commodi quam? Veniam asperiores
-                maiores distinctio consectetur, ratione eius, sunt voluptatum,
-                voluptatem tempore ipsa iusto dignissimos voluptates eum
-                commodi? Eius nobis odio doloribus ipsa, ducimus quos vitae
-                mollitia. Recusandae, mollitia omnis? Quasi, amet numquam
-                voluptatum culpa in voluptas cumque laborum atque iste qui quo
-                harum quis, sed praesentium eius tempore? Perferendis beatae
-                nostrum debitis ad, tempora iusto iure dicta provident illum
-                doloremque aesentium iusto natus aut laudantium animi eligendi
-                veritatis architecto suscipit? Expedita voluptates quae placeat,
-                sed libero, recusandae sequi assumenda est impedit, suscipit aut
-                quisquam animi fugit! Libero ducimus ipsa non, nemo laboriosam
-                minima distinctio doloribus ratione
+                {aboutDept}
               </p>
             </div>
           </div>
@@ -130,7 +277,7 @@ export default function DeptEr({ dept }) {
           <div className="w-3/5 h-[580px]">
             <div className="relative h-full">
               <Image
-                src="/dept-m-v.jpg"
+                src={deptImg}
                 alt="foddiesssss"
                 layout="fill"
                 objectFit="cover"
@@ -191,33 +338,32 @@ export default function DeptEr({ dept }) {
         </div>
         <div className="w-full flex flex-col px-20 gap-4 py-6 ">
           <h1 className="font-bold text-4xl text-blue-500">
-            Head Of the Department
+            Head Of Department
           </h1>
           <div className="flex justify-between gap-10">
             <div className="w-1/2  flex items-center p-4">
               <div className="w-72 h-72 rounded-full border-2 border-black relative overflow-hidden">
-                <Image src="/director.png" fill />
+                <Image src={headImg} fill />
               </div>
               <div className="flex flex-col justify-center  p-10">
-                <h1 className=" font-semibold text-2xl">Name of head</h1>
+                <h1 className=" font-semibold text-2xl">{headD}</h1>
                 <h2 className="text-lg mb-2">Positon</h2>
                 <h1 className="text-sm  mt-1">
                   <FaPhoneAlt className="inline mr-1" />
-                  022-67525656
+                  {phoneHead}
                 </h1>
                 <h1 className="text-sm  mt-1">
                   <MdEmail className="inline mr-1" />
-                  sns@lntecc.com
+                  {emailHead}
                 </h1>
               </div>
             </div>
             <div className="w-1/2  flex flex-col justify-center items-center">
               <p className="p-5 text-3xl text-center">
                 {" "}
-                Lorem, ipsum dolor sit amet cpiditate iste dolores esse, dolorum
-                consequuntur praesentium expedita, optio, temporibus mollitia.
+                {slogan}
               </p>
-              <h1 className=" italic  text-2xl">- name of author</h1>
+              <h1 className=" italic  text-2xl">- {author}</h1>
             </div>
           </div>
         </div>
@@ -238,12 +384,14 @@ export default function DeptEr({ dept }) {
               </tr>
             </thead>
             <tbody>
-              <tr className=" border-b">
-                <td className=" px-2 py-3">John Doe</td>
-                <td className=" px-2 py-3">Software Engineer</td>
-                <td className=" px-2 py-3">Bachelors in Computer Science</td>
-                <td className=" px-2 py-3">5 years</td>
-              </tr>
+              {faculties.map((faculty, index) => (
+                <tr key={index} className="border-b">
+                  <td className="px-2 py-3">{faculty.name}</td>
+                  <td className="px-2 py-3">{faculty.position}</td>
+                  <td className="px-2 py-3">{faculty.degree}</td>
+                  <td className="px-2 py-3">{faculty.experience}</td>
+                </tr>
+              ))}
 
               {/* Add more rows as needed */}
             </tbody>
