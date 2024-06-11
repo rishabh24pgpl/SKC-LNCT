@@ -409,10 +409,10 @@ export default function Navbar() {
     </div>
   
     <div className="bg-gradient-to-r from-indigo-500 to-blue-800">
-      <div className="w-9/12 mx-auto flex items-center justify-between px-4">
+      <div className="w-9/12 mx-auto flex items-center justify-between px-4 py-2">
         <div className="flex items-center gap-4">
-          <div className="w-[100px] h-[100px] relative">
-            <Image src="/logo1.png" layout="fill" objectFit="contain" alt="Logo" />
+          <div className="w-[90px] h-[90px] relative">
+            <Image src="/LNCT-IND.png" layout="fill" objectFit="contain" alt="Logo" />
           </div>
           <h1 className="text-3xl font-semibold">{collegeNames[collegeNameIndex]}</h1>
           <div className="slogan">An Institute of National Importance</div>
