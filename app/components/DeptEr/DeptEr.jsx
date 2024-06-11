@@ -60,142 +60,137 @@ export default function DeptEr({ dept }) {
   let slogan;
   let author;
   switch (dept) {
-    case "ae":
-      slogan="dfsghj slogan";
-      author="author slogan";
+    case "me":
+      slogan = "Engineering Tomorrow, Innovating Today ,Unleash Your Potential with Us!";
+      author = "Nitin Jaiswal";
       deptImg = "/dept-m-v.jpg";
-      aboutDept = "dfvbgsnha";
-      dept = "Automobile Engineering";
-      headD = "Head Dept";
+      aboutDept = "The Mechanical Engineering Department at SKC-LNCT Indore is a hub of innovation and excellence, dedicated to the study and application of mechanical systems. Our department focuses on providing a robust education that combines theoretical knowledge with practical experience. Students engage in a variety of subjects, including thermodynamics, fluid mechanics, materials science, and robotics. Through hands-on projects, state-of-the-art laboratories, and industry collaborations, we prepare our students to solve real-world engineering challenges. Our faculty, renowned for their expertise and research contributions, are committed to mentoring students and fostering a learning environment that encourages creativity and critical thinking. Whether it's designing the next generation of sustainable energy systems or developing advanced manufacturing techniques, our Mechanical Engineering Department is at the forefront of technological advancement and prepares graduates to excel in diverse engineering careers";
+      dept = "Mechanical Engineering";
+      headD = "Nitin Jaiswal";
 
-      headImg = "/director.png";
-      phoneHead = "1234567890";
-      emailHead = "abc@gmail.com";
+      headImg = "/hodme.jpg";
+      phoneHead = "9926085496";
+      emailHead = "hodme.lnct@lnctindore.com";
       faculties = [
         {
-          name: "John Doe",
-          position: "Software Engineer",
-          degree: "Bachelors in Computer Science",
-          experience: "5 years",
-        },
-        {
-          name: "Jane Smith",
-          position: "Data Scientist",
-          degree: "Masters in Data Science",
-          experience: "3 years",
-        },
-        {
-          name: "Emily Johnson",
-          position: "Project Manager",
-          degree: "MBA",
+          name: "MS.DIVYADARSHINI DHAKRE",
+          position: "Assistant Professor",
+          degree: "Master of Engineering",
           experience: "7 years",
         },
+        {
+          name: "MR. CHETANYA SHARMA",
+          position: "Lab Demonstrator",
+          degree: "Bachelor of Engineering",
+          experience: "15.5 years",
+        },
+       
         // Add more faculty members as needed
       ];
 
       break;
     case "cse":
-      slogan="dfsghj slogan";
-      author="author slogan";
+      slogan = "Empowering Innovation, Shaping the Future: Where Technology Meets Excellence";
+      author = "DHIRAJ RAJVAIDHYA";
       deptImg = "/dept-m-v.jpg";
-      aboutDept = "dfvbgsnha";
+      aboutDept = "The Computer Science Department at SKC-LNCT indore is a vibrant and dynamic community dedicated to advancing the frontiers of technology and innovation. Our curriculum is designed to equip students with a solid foundation in computing principles, software development, and data analysis. With courses ranging from artificial intelligence and cybersecurity to software engineering and machine learning, our program prepares students for the rapidly evolving tech industry. Our state-of-the-art labs, collaborative research projects, and industry partnerships provide hands-on experience and practical skills essential for real-world applications. Our distinguished faculty, renowned for their cutting-edge research and industry expertise, are committed to guiding students in their academic and professional growth. Whether you aspire to develop groundbreaking software, solve complex computational problems, or lead technological advancements, the Computer Science Department at SKC-LNCT indore is the ideal place to start your journey.";
       dept = "Computer Science & Engineering";
-      headD = "Head Dept";
-      headImg = "/director.png";
-      phoneHead = "1234567890";
-      emailHead = "abc@gmail.com";
+      headD = "MR. DHIRAJ RAJVAIDHYA";
+      headImg = "/cshod.jpeg";
+      phoneHead = "9407125732";
+      emailHead = "hodit.lnct@lnctindore.com, ";
       faculties = [
         {
-          name: "John Doe",
-          position: "Software Engineer",
-          degree: "Bachelors in Computer Science",
-          experience: "5 years",
+          name: "MS. RAJNI CHATURVEDI",
+          position: "Assistant Professor",
+          degree: "MCA, M.Tech",
+          experience: "16 years",
         },
         {
-          name: "Jane Smith",
-          position: "Data Scientist",
-          degree: "Masters in Data Science",
+          name: "MS. SHARSHTI ATRE",
+          position: "Assistant Professor",
+          degree: "MSc",
           experience: "3 years",
         },
         {
-          name: "Emily Johnson",
-          position: "Project Manager",
-          degree: "MBA",
-          experience: "7 years",
+          name: "Ms. MAMTA GEHLOT",
+          position: "Assistant Professor",
+          degree: "M.E.",
+          experience: "1 years",
         },
         // Add more faculty members as needed
       ];
 
       break;
     case "ece":
-      slogan="dfsghj slogan";
-      author="author slogan";
+      slogan = "Connecting Ideas, Creating Futures: Innovate with Electronics and Communication!";
+      author = "TAMASHRI DHARSIYA";
       deptImg = "/dept-m-v.jpg";
-      aboutDept = "dfvbgsnha";
+      aboutDept = "The Electronics and Communication Engineering (ECE) Department at SKC-LNCT,indore is a hub of technological innovation and academic excellence. Our department focuses on the study and application of electronic systems, communication technologies, and signal processing. Students are immersed in a comprehensive curriculum that covers a wide range of topics, including digital electronics, telecommunications, embedded systems, and VLSI design. With access to cutting-edge laboratories and industry-standard tools, students gain hands-on experience that prepares them for the dynamic field of electronics and communication. Our dedicated faculty, known for their research and industry involvement, mentor students to develop critical thinking and problem-solving skills. The ECE Department is committed to fostering a learning environment that encourages creativity, innovation, and collaboration, ensuring that our graduates are well-equipped to excel in the fast-paced world of technology and communication.";
       dept = "Electronics & Communication Engineering";
-      headD = "Head Dept";
-      headImg = "/director.png";
-      phoneHead = "1234567890";
-      emailHead = "abc@gmail.com";
+      headD = "MS. TAMASHRI DHARSIYA";
+      headImg = "/echod.jpg";
+      phoneHead = "8319778357";
+      emailHead = "hodec.lnct@lnctindore.com";
       faculties = [
         {
-          name: "John Doe",
-          position: "Software Engineer",
-          degree: "Bachelors in Computer Science",
-          experience: "5 years",
+          name: "DR.PIYUSH P. MOGHE",
+          position: "Associate Professor",
+          degree: "PhD",
+          experience: "20 years",
         },
-        {
-          name: "Jane Smith",
-          position: "Data Scientist",
-          degree: "Masters in Data Science",
-          experience: "3 years",
-        },
-        {
-          name: "Emily Johnson",
-          position: "Project Manager",
-          degree: "MBA",
-          experience: "7 years",
-        },
+        // {
+        //   name: "Jane Smith",
+        //   position: "Data Scientist",
+        //   degree: "Masters in Data Science",
+        //   experience: "3 years",
+        // },
+        // {
+        //   name: "Emily Johnson",
+        //   position: "Project Manager",
+        //   degree: "MBA",
+        //   experience: "7 years",
+        // },
         // Add more faculty members as needed
       ];
 
       break;
     case "eet":
-      slogan="dfsghj slogan";
-      author="author slogan";
+      slogan = "Powering Innovation, Electrifying the Future: Harness the Potential with Electrical Engineering!";
+      author = "DILIP SAHASTRABUDHE";
       deptImg = "/dept-m-v.jpg";
-      aboutDept = "dfvbgsnha";
+      aboutDept = "The Electrical Engineering (EE) Department at SKC-LNCT,indore is a center of excellence, dedicated to the study and advancement of electrical systems and technologies. Our curriculum is designed to provide students with a deep understanding of electrical circuits, power systems, control engineering, and renewable energy technologies. Through hands-on laboratory work, innovative research projects, and industry partnerships, students gain practical skills and real-world experience that prepare them for the challenges of the electrical engineering field. Our distinguished faculty, renowned for their research contributions and industry expertise, are committed to mentoring students and fostering an environment of intellectual growth and innovation. The EE Department is devoted to developing the next generation of electrical engineers who will lead advancements in technology and contribute to sustainable solutions for a better future.";
       dept = "Electrical & Electronics Engineering";
-      headD = "Head Dept";
-      headImg = "/director.png";
-      phoneHead = "1234567890";
-      emailHead = "abc@gmail.com";
+      headD = "MR.DILIP SAHASTRABUDHE";
+      headImg = "/exhod.jpg";
+      phoneHead = "7509974000";
+      emailHead = "hodex.lnct@lnctindore.com,";
       faculties = [
         {
-          name: "John Doe",
-          position: "Software Engineer",
-          degree: "Bachelors in Computer Science",
-          experience: "5 years",
+          name: "MS. GARIMA MAHESHWARI",
+          position: "Assistant Professor",
+          degree: "M.E.",
+          experience: "9 years",
         },
-        {
-          name: "Jane Smith",
-          position: "Data Scientist",
-          degree: "Masters in Data Science",
-          experience: "3 years",
-        },
-        {
-          name: "Emily Johnson",
-          position: "Project Manager",
-          degree: "MBA",
-          experience: "7 years",
-        },
+        // {
+        //   name: "Jane Smith",
+        //   position: "Data Scientist",
+        //   degree: "Masters in Data Science",
+        //   experience: "3 years",
+        // },
+        // {
+        //   name: "Emily Johnson",
+        //   position: "Project Manager",
+        //   degree: "MBA",
+        //   experience: "7 years",
+        // },
         // Add more faculty members as needed
       ];
 
       break;
     case "it":
-      slogan="dfsghj slogan";
-      author="author slogan";
+      slogan = "dfsghj slogan";
+      author = "author slogan";
       deptImg = "/dept-m-v.jpg";
       aboutDept = "dfvbgsnha";
       dept = "Information Technology";
@@ -347,7 +342,7 @@ export default function DeptEr({ dept }) {
               </div>
               <div className="flex flex-col justify-center  p-10">
                 <h1 className=" font-semibold text-2xl">{headD}</h1>
-                <h2 className="text-lg mb-2">Positon</h2>
+                <h2 className="text-lg mb-2">Head Of Department</h2>
                 <h1 className="text-sm  mt-1">
                   <FaPhoneAlt className="inline mr-1" />
                   {phoneHead}
