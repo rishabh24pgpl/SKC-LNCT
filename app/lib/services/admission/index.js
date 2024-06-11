@@ -13,3 +13,12 @@ export const getAllAdmissions =async(payload) =>{
 export const addAdmissionQuery =async(payload)=>{
    return await api.post(ADDMISSONS, payload)
 }
+
+export const getAdmissionDetails = async (uuid) => {
+   try {
+     const res = await api.get(`${ADDMISSONS}/${uuid}`);
+     return res.data.payload;
+   } catch (error) {
+     handleError(error);
+   }
+ };

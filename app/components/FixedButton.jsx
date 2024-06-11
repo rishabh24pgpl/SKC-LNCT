@@ -5,7 +5,7 @@ import Link from 'next/link';
 const FixedButtons = () => {
   return (
     <div className="fixed bottom-4 right-4 flex flex-col animate-pulse gap-4">
-      <Link href="/contact-us">
+      <Link href="/contact">
        
         <button href="#_" class="relative px-5 py-2 font-medium text-white group">
 <span class="absolute inset-0 max-w-full max-h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-green-400 group-hover:bg-green-300 group-hover:skew-x-12"></span>

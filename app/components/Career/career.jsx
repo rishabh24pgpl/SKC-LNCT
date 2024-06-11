@@ -140,7 +140,7 @@ export default function Career() {
             <div>
               <div className="mt-5">
                 <Link
-                  href={`/careerform/?college=${college}/${career.uuid}`}
+                  href={`/careerform/?college=${college}&&jobUuid=${career.uuid}`}
                   className="mr-2 my-1 uppercase tracking-wider px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer"
                 >
                   Apply
