@@ -56,6 +56,10 @@ export default function Navbar() {
               link: "/institute/senate",
             },
             {
+              name: "Principal",
+              link: "/principal",
+            },
+            {
               name: "Chairperson",
               link: "/institute/chairperson",
             },
@@ -133,8 +137,8 @@ export default function Navbar() {
           name: "Departments",
           subchild: [
             {
-              name: "Automobile Engineering",
-              link: "/department/ae",
+              name: "Mechanical Engineering",
+              link: "/department/me",
             },
             {
               name: "Computer Science & Engineering",
