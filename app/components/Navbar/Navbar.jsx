@@ -13,7 +13,7 @@ export default function Navbar() {
   const [collegeNameIndex, setCollegeNameIndex] = useState(0);
   const menuId = usePathname();
 
-  const collegeNames = ["SKC LNCT ", "एसकेसी एलएनसीटी "];
+  const collegeNames = ["LNCT ", " एलएनसीटी "];
 
   const navItems = [
     {

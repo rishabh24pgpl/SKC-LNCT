@@ -119,7 +119,7 @@ const AdmissionForm = () => {
                   className="border border-gray-300 rounded-md px-4 py-2"
                 >
                   <option value="" disabled>
-                    Which Year is he enquiring for?
+                    Which Year you are intrested in
                   </option>
                   {Array.from({ length: 4 }, (_, i) => i + 1).map((value) => (
                     <option key={value} value={value}>
