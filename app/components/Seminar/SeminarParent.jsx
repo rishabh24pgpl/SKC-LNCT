@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { getAllSeminar, deleteNotice } from "@/app/lib/services/seminar/seminar.js";
+import { getAllSeminar, deleteSeminar } from "@/app/lib/services/seminar/seminar.js";
 import SeminarForm from "@/app/components/Seminar/SeminarForm";
 import SeminarTable from "@/app/components/Seminar/SeminarTable";
 
