@@ -182,7 +182,7 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNCT-IND.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
@@ -192,7 +192,7 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNCTS-GWL.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
@@ -202,7 +202,7 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNCTS-IND.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
@@ -212,7 +212,37 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNMC-BPL.png" class="w-full" alt=""></img>
+                  </a>
+                </div>
+                {/* <div class="item-img">
+                  <a
+                    href="/assets/images/gallery3.jpg"
+                    data-fancybox="mygallery"
+                    data-caption=""
+                    title=""
+                  >
+                    <img src="/JDCN-IND.png" class="w-full" alt=""></img>
+                  </a>
+                </div> */}
+                {/* <div class="item-img">
+                  <a
+                    href="/assets/images/gallery3.jpg"
+                    data-fancybox="mygallery"
+                    data-caption=""
+                    title=""
+                  >
+                    <img src="/JDCP-IND.png" class="w-full" alt=""></img>
+                  </a>
+                </div> */}
+                <div class="item-img">
+                  <a
+                    href="/assets/images/gallery3.jpg"
+                    data-fancybox="mygallery"
+                    data-caption=""
+                    title=""
+                  >
+                    <img src="/LNCP-IND.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
@@ -222,10 +252,10 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNCPS-IND.png" class="w-full" alt=""></img>
                   </a>
                 </div>
-                <div class="item-img">
+                {/* <div class="item-img">
                   <a
                     href="/assets/images/gallery3.jpg"
                     data-fancybox="mygallery"
@@ -234,8 +264,8 @@ export default function Footer() {
                   >
                     <img src="/logo1.png" class="w-full" alt=""></img>
                   </a>
-                </div>
-                <div class="item-img">
+                </div> */}
+                {/* <div class="item-img">
                   <a
                     href="/assets/images/gallery3.jpg"
                     data-fancybox="mygallery"
@@ -244,37 +274,7 @@ export default function Footer() {
                   >
                     <img src="/logo1.png" class="w-full" alt=""></img>
                   </a>
-                </div>
-                <div class="item-img">
-                  <a
-                    href="/assets/images/gallery3.jpg"
-                    data-fancybox="mygallery"
-                    data-caption=""
-                    title=""
-                  >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
-                  </a>
-                </div>
-                <div class="item-img">
-                  <a
-                    href="/assets/images/gallery3.jpg"
-                    data-fancybox="mygallery"
-                    data-caption=""
-                    title=""
-                  >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
-                  </a>
-                </div>
-                <div class="item-img">
-                  <a
-                    href="/assets/images/gallery3.jpg"
-                    data-fancybox="mygallery"
-                    data-caption=""
-                    title=""
-                  >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
-                  </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
