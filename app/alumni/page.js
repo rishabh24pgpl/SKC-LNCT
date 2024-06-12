@@ -4,7 +4,6 @@ import Counter from "@/app/components/Counter";
 import Image from "next/image";
 import AlumniCard from "@/app/components/AlumniCard";
 import AlumniNewsCard from "@/app/components/AlumniNewsCard";
-import ChatBox from "../components/ChatBox/ChatBox";
 const MyComponent = () => {
   const cardData = [
     {
