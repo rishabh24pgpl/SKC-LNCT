@@ -10,7 +10,7 @@ import Footer from "./components/Footer/Footer";
 import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
 
-import Whyskc from "./components/Whyskc/Whyskc";
+import Why from "./components/Why/Why";
 import Contact from "./components/Contact/Contact";
 
 import { Lamp } from "./components/Lamp/Lamp";
@@ -258,7 +258,7 @@ export default function Home() {
 
       <NumberOne
         img="/number-1.png"
-        title="WHY SKC LNCT"
+        title="WHY  LNCT"
         content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."
       />
       <section className="  w-11/12 mx-auto">

@@ -17,7 +17,7 @@ export default function page() {
           <Image src="/a-o.png" alt="image" fill />
           <div className=" absolute w-[580px] h-[400px]  top-5 left-[580px] bg-blue-100 p-2">
             <h1 className="text-3xl font-bold">
-              Programs and Course Structure at SKC LNCT Indore
+              Programs and Course Structure at  LNCT Indore
             </h1>
             <p className=" py-3">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis

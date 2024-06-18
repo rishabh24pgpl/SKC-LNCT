@@ -112,7 +112,7 @@ export default function page() {
                 Address
               </h1>
               <h2 className=" text-sm">
-                SKC LNCT, INDORE, Madhya Pradesh, India, 111111
+                 LNCT, INDORE, Madhya Pradesh, India, 111111
               </h2>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function page() {
               <h1 className="text-black text-lg font-semibold capitalize">
                 Email
               </h1>
-              <h2 className=" text-sm">skclnct@gmailcom</h2>
+              <h2 className=" text-sm">lnct@gmailcom</h2>
             </div>
           </div>
           <div className=" w-64 h-20  p-2 flex gap-3 rounded-lg bg-gray-100">

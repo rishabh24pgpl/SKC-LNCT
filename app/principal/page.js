@@ -27,15 +27,15 @@ export default function page() {
                         </div>
                         <div>
                             <h1 className="py-2 px-10 font-bold text-2xl">DR.PIYUSH P. MOGHE</h1>
-                            <h2 className="py-2 px-10 text-lg">Principal SKC-Lnct</h2>
+                            <h2 className="py-2 px-10 text-lg">Principal -Lnct</h2>
                             <h3 className="py-2 px-10 ">Associate Professor</h3>
                         </div>
                     </div>
                     <div className="w-2/3 p-10">
                         <p className="text-sm mb-3">
-                            Welcome to another exciting academic year at SKC-LNCT indore ! As the Principal, it is my honor and privilege to lead such a dynamic and vibrant community. Our college is a place where your dreams take flight, and your journey towards academic excellence and personal growth begins.
+                            Welcome to another exciting academic year at -LNCT indore ! As the Principal, it is my honor and privilege to lead such a dynamic and vibrant community. Our college is a place where your dreams take flight, and your journey towards academic excellence and personal growth begins.
 
-                            At SKC-LNCT indore, we are committed to providing you with an environment that fosters learning, innovation, and holistic development. Our dedicated faculty, state-of-the-art facilities, and diverse range of programs are all designed to ensure you receive a top-notch education that prepares you for the challenges of the future.
+                            At -LNCT indore, we are committed to providing you with an environment that fosters learning, innovation, and holistic development. Our dedicated faculty, state-of-the-art facilities, and diverse range of programs are all designed to ensure you receive a top-notch education that prepares you for the challenges of the future.
 
                             Education is not just about acquiring knowledge; it is about developing the skills and character needed to navigate and succeed in a rapidly changing world. We encourage you to take full advantage of the opportunities available to you here. Engage actively in your classes, participate in extracurricular activities, and take on leadership roles. Remember, the more you invest in your education, the greater the rewards will be.
 
@@ -64,7 +64,7 @@ export default function page() {
                             </h1>
                             <h1>
 
-                                SKC-Lnct Indore
+                                -Lnct Indore
                             </h1>
                         </p>
 

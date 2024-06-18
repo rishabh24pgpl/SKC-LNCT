@@ -8,7 +8,7 @@ export default function CDC() {
    <>
    <SliderMain images={images} heading="CDC" />
    <h1 className=" p-10 text-4xl text-center   font-semibold ">
-         Career Development Cell<span className="text-red-500"> At SKC LNCT</span>
+         Career Development Cell<span className="text-red-500"> At  LNCT</span>
         </h1>
     <div className=" w-11/12 flex gap-2 mx-auto   justify-around pt-10 pb-20 ">
         <div className=" shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] w-80  flex-col flex  items-center p-2 ">

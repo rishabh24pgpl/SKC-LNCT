@@ -33,7 +33,7 @@ export default function Contact() {
                   Address
                 </h1>
                 <h2 className=" text-xs">
-                  SKC LNCT, INDORE, Madhya Pradesh
+                   LNCT, INDORE, Madhya Pradesh
                 </h2>
               </div>
             </div>
@@ -48,7 +48,7 @@ export default function Contact() {
                 <h1 className="text-black text-lg font-semibold capitalize">
                   Email
                 </h1>
-                <h2 className=" text-xs">skclnct@gmailcom</h2>
+                <h2 className=" text-xs">lnct@gmailcom</h2>
               </div>
             </div>
             <div className=" w-64 h-20  p-2 flex gap-3 rounded-lg bg-gray-100">
@@ -70,7 +70,7 @@ export default function Contact() {
             <div className="w-1/2 "></div>
             <div className="w-1/2  bg-gray-100 p-2">
               <h1 className="p-2 text-black font-semibold text-xl my-3 ">
-                How to Reach SKC LNCT
+                How to Reach  LNCT
               </h1>
 
               <div className="w-full  p-2 bg-gray-50 my-2">

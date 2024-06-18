@@ -15,7 +15,7 @@ export default function Placementview() {
             </div>
       <div className=" p-10 -z-10  ">
         <h1 className="text-4xl text-center border-b-2  font-semibold ">
-          Placement Overview At <span className="text-red-500">SKC</span> LNCT
+          Placement Overview At <span className="text-red-500"></span> LNCT
         </h1> 
         <div className="w-full mx-auto pt-5 ml-15">
           <div className="flex  mx-auto justify-center  items-center shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">

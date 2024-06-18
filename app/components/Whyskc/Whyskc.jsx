@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import WhySkcCard from "../WhySkcCard/WhySkcCard";
+import WhyCard from "../WhyCard/WhyCard";
 
-export default function Whyskc({ img, title, content }) {
+export default function Why({ img, title, content }) {
   return (
     <>
       <div className=" w-full ">
@@ -65,13 +65,13 @@ export default function Whyskc({ img, title, content }) {
           </div>
         </div>
         <div className="w-11/12  mx-auto   grid grid-cols-4 gap-5 p-4 mt-10  ">
-          <WhySkcCard content="Best Engineering Colleges with 31+ Years of Academic Excellence and Discipline. Highest Chancellor’s Awards and Highest Placements in Central India." />
-          <WhySkcCard
+          <WhyCard content="Best Engineering Colleges with 31+ Years of Academic Excellence and Discipline. Highest Chancellor’s Awards and Highest Placements in Central India." />
+          <WhyCard
             content="
 Other than Best Academics and Placements, Providing Best Sports facilities also. Producing National & International Players in Drop Row Ball, Base Ball, Throw Ball, Kabbaddi etc."
           />
-          <WhySkcCard content="Lush Green Campus having Boys & Girls Hostels with 24 hours Security, Dispensary, Bank ATMs, GYM, Indoor and Outdoor Fields makes it a BEST Infrastructure campus." />
-          <WhySkcCard content="Unbeatable Record Placement of Central India with 1800+ Offers by 40 Companies Closed Campus only for LNCT Group of Colleges" />
+          <WhyCard content="Lush Green Campus having Boys & Girls Hostels with 24 hours Security, Dispensary, Bank ATMs, GYM, Indoor and Outdoor Fields makes it a BEST Infrastructure campus." />
+          <WhyCard content="Unbeatable Record Placement of Central India with 1800+ Offers by 40 Companies Closed Campus only for LNCT Group of Colleges" />
         </div>
       </div>
     </>

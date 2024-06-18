@@ -9,7 +9,7 @@ export default function Eminent() {
                 style={{ backgroundImage: `url('/about-banner.jpg')` }}>
 
                 <h2 className="font-bold text-3xl w-4/5 uppercase  text-center text-white" >
-                Alumni Cell SKC-LNCT INDORE | Central Indias No. 1 Engineering Institute - indore
+                Alumni Cell -LNCT INDORE | Central Indias No. 1 Engineering Institute - indore
                 </h2>
                 </div>
       <div className=" flex justify-around m-10 p-10 w-11/12 mx-auto">
