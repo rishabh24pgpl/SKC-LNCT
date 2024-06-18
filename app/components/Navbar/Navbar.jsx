@@ -467,10 +467,10 @@ export default function Navbar() {
           }
   
           return (
-            <div key={index} className="relative group">
+            <div key={index} className="relative group z-50">
               <Link
                 href="#"
-                className={`text-white font-semibold text-lg hover:text-gray-300 hover:bg-blue-700 flex gap-2 items-center px-3 py-4 ${
+                className={`text-white font-semibold text-lg hover:text-gray-300 hover:bg-blue-700 flex gap-2 items-center px-3 py-4  ${
                   openSubMenuId === item.main ? "bg-blue-800" : ""
                 }`}
                 onClick={() => toggleSubMenu(item.main)}
