@@ -82,45 +82,45 @@ export default function Footer() {
               <div class="footer-link text-sm">
                 <ul>
                   <li className="p-2">
-                    <a href="https://mail.nitrkl.ac.in/">Webmail</a>
+                    <a href="https://mail.nitrkl.ac.in/">Career</a>
                   </li>
                   <li className="p-2">
                     <a href="https://eapplication.nitrkl.ac.in/nitris/">
                       {" "}
-                      NITRis
+                      Gallary
                     </a>
                   </li>
                   <li className="p-2">
-                    <a href="/Academic/Holidays"> Holidays</a>
+                    <a href="/Academic/Holidays"> Campus Life</a>
                   </li>
                   <li className="p-2">
-                    <a href="/Academic/AcademicCalendar"> Academic Calendar</a>
+                    <a href="/Academic/AcademicCalendar">Placement Overview</a>
                   </li>
                   <li className="p-2">
                     <a href="/Academic/AcademicTimeTable">
                       {" "}
-                      Academic TimeTable
+                     Library
                     </a>
                   </li>
                   <li className="p-2">
                     <a href="/Student/Advertisements">
                       {" "}
-                      Admission Advt. &amp; Notices
+                      Online Fee Payment
                     </a>
                   </li>
                   <li className="p-2">
                     <a href="https://website.nitrkl.ac.in/FacultyStaff/Career/">
                       {" "}
-                      Career
+                      Contact Us
                     </a>
                   </li>
                   <li className="p-2">
                     <a href="https://website.nitrkl.ac.in/FacultyStaff/Stores-Purchase/Tender/">
-                      Tenders
+                      Annual Reports
                     </a>
                   </li>
                   <li className="p-2">
-                    <a href="https://guesthouse.nitrkl.ac.in/">Guest House</a>
+                    <a href="https://guesthouse.nitrkl.ac.in/">Rules and Regulations</a>
                   </li>
                 </ul>
               </div>
@@ -130,44 +130,44 @@ export default function Footer() {
               <div class="footer-link text-sm">
                 <ul>
                   <li className="p-2">
-                    <a href="/Institute/NIRF">NIRF</a>
+                    <a href="/Institute/NIRF">Placement Overview</a>
                   </li>
                   <li className="p-2">
-                    <a href="/Institute/NBA"> NBA</a>
+                    <a href="/Institute/NBA"> Leading Recruiters</a>
                   </li>
                   <li className="p-2">
-                    <a href="https://www.ftbi-nitrkl.org/"> FTBI</a>
+                    <a href="https://www.ftbi-nitrkl.org/"> Central Research Facility</a>
                   </li>
                   <li className="p-2">
                     <a href="https://website.nitrkl.ac.in/Institute/NAD/">
                       {" "}
-                      NAD Cell
+                     Health Care
                     </a>
                   </li>
                   <li className="p-2">
                     <a href="https://nitrkl.ac.in/UBA/">
                       {" "}
-                      Unnat Bharat Abhiyan
+                      Academic Programs
                     </a>
                   </li>
                   <li className="p-2">
                     <a href="https://icc.nitrkl.ac.in/">
-                      Internal Complaint Cell
+                     Admission Process
                     </a>
                   </li>
                   <li className="p-2">
                     <a href="https://www.ics-nitrkl.in/">
                       {" "}
-                      Institute Counselling Service
+                     Why LNCT
                     </a>
                   </li>
                   <li className="p-2">
                     <a href="https://nitrkl.ac.in/CRF/">
-                      Central Research Facility
+                    Student Testimonial
                     </a>
                   </li>
                   <li className="p-2">
-                    <a href="https://gati.nitrkl.ac.in/">GATI</a>
+                    <a href="https://gati.nitrkl.ac.in/">Career Development Cell</a>
                   </li>
                 </ul>
               </div>
@@ -182,7 +182,7 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNCT-IND.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
@@ -192,7 +192,7 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNCTS-GWL.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
@@ -202,7 +202,7 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNCTS-IND.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
@@ -212,7 +212,37 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNMC-BPL.png" class="w-full" alt=""></img>
+                  </a>
+                </div>
+                {/* <div class="item-img">
+                  <a
+                    href="/assets/images/gallery3.jpg"
+                    data-fancybox="mygallery"
+                    data-caption=""
+                    title=""
+                  >
+                    <img src="/JDCN-IND.png" class="w-full" alt=""></img>
+                  </a>
+                </div> */}
+                {/* <div class="item-img">
+                  <a
+                    href="/assets/images/gallery3.jpg"
+                    data-fancybox="mygallery"
+                    data-caption=""
+                    title=""
+                  >
+                    <img src="/JDCP-IND.png" class="w-full" alt=""></img>
+                  </a>
+                </div> */}
+                <div class="item-img">
+                  <a
+                    href="/assets/images/gallery3.jpg"
+                    data-fancybox="mygallery"
+                    data-caption=""
+                    title=""
+                  >
+                    <img src="/LNCP-IND.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
@@ -222,10 +252,10 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
+                    <img src="/LNCPS-IND.png" class="w-full" alt=""></img>
                   </a>
                 </div>
-                <div class="item-img">
+                {/* <div class="item-img">
                   <a
                     href="/assets/images/gallery3.jpg"
                     data-fancybox="mygallery"
@@ -234,8 +264,8 @@ export default function Footer() {
                   >
                     <img src="/logo1.png" class="w-full" alt=""></img>
                   </a>
-                </div>
-                <div class="item-img">
+                </div> */}
+                {/* <div class="item-img">
                   <a
                     href="/assets/images/gallery3.jpg"
                     data-fancybox="mygallery"
@@ -244,37 +274,7 @@ export default function Footer() {
                   >
                     <img src="/logo1.png" class="w-full" alt=""></img>
                   </a>
-                </div>
-                <div class="item-img">
-                  <a
-                    href="/assets/images/gallery3.jpg"
-                    data-fancybox="mygallery"
-                    data-caption=""
-                    title=""
-                  >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
-                  </a>
-                </div>
-                <div class="item-img">
-                  <a
-                    href="/assets/images/gallery3.jpg"
-                    data-fancybox="mygallery"
-                    data-caption=""
-                    title=""
-                  >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
-                  </a>
-                </div>
-                <div class="item-img">
-                  <a
-                    href="/assets/images/gallery3.jpg"
-                    data-fancybox="mygallery"
-                    data-caption=""
-                    title=""
-                  >
-                    <img src="/logo1.png" class="w-full" alt=""></img>
-                  </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
