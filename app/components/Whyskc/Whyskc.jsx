@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import WhyCard from "../WhyCard/WhyCard";
+import WhyCard from "@/app/components/WhySkcCard/WhySkcCard";
 
 export default function Why({ img, title, content }) {
   return (
