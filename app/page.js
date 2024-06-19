@@ -9,12 +9,6 @@ import Seminar from "@/app/components/Seminar";
 import Footer from "./components/Footer/Footer";
 import Notices from "./components/News-Notices";
 import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
-
-import Why from "./components/Why/Why";
-import Contact from "./components/Contact/Contact";
-
-import { Lamp } from "./components/Lamp/Lamp";
-import Payment from "./components/Payment/Payment";
 import NumberOne from "./components/NumberOne/NumberOne";
 import { ParallaxScroll } from "./components/ParallaxScroll/ParallaxScroll";
 

@@ -182,7 +182,7 @@ export default function Footer() {
                     data-caption=""
                     title=""
                   >
-                    <img src="/logo1.png" class="w-full " alt=""></img>
+                    <img src="/logo1.png" class="w-full" alt=""></img>
                   </a>
                 </div>
                 <div class="item-img">
