@@ -6,7 +6,7 @@ export default function Officer() {
     <>
       <div className="mb-10">
           <h1 className=" font-semibold text-4xl border-b-2 p-8 text-center w-3/4 mx-auto border-blue-600 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-b-2xl">
-         Officer At SKC LNCT
+         Officer At  LNCT
           </h1>
         </div>
       <div className=" text-blue-600 relative  mb-10  w-full h-[400px]    mx-auto border-2">

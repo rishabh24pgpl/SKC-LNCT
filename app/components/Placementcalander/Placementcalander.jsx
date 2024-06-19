@@ -18,7 +18,7 @@ export default function Placementcalander() {
           <Image src="/pc1.png" alt="" width={100} height={100} />
           <p className="p-2">
             The company shares the Job Description with the Placement Committee
-            with other relevant details via email to SKCLNCT.ac.in
+            with other relevant details via email to LNCT.ac.in
           </p>
         </div>
         <div className="  w-80  flex-col flex  items-center p-2 ">

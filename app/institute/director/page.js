@@ -35,15 +35,15 @@ export default function page() {
             <p className="text-sm mb-3">
               Welcome to [College Name]! As the Director, I am delighted to extend my warmest greetings to all of you as we embark on another remarkable academic year.
 
-              Our institution prides itself on being a beacon of knowledge, innovation, and excellence. At SKC-LNCT indore, we are dedicated to fostering an environment where you can thrive academically, personally, and professionally. Our goal is to provide you with the tools, resources, and support you need to succeed in your educational journey and beyond.
+              Our institution prides itself on being a beacon of knowledge, innovation, and excellence. At -LNCT indore, we are dedicated to fostering an environment where you can thrive academically, personally, and professionally. Our goal is to provide you with the tools, resources, and support you need to succeed in your educational journey and beyond.
 
               We believe that education is a powerful catalyst for change, and we are committed to nurturing your intellectual curiosity and critical thinking skills. Our esteemed faculty, cutting-edge facilities, and diverse programs are tailored to ensure that you receive a comprehensive and enriching educational experience. Whether you are pursuing studies in science, arts, technology, business, or any other field, we are here to guide and support you every step of the way.
 
-              Beyond academics, we encourage you to engage in the vibrant campus life that SKC-LNCT indore offers. Participate in clubs, societies, sports, and cultural activities. These experiences will not only enhance your skills and broaden your horizons but also help you build lasting friendships and create cherished memories.
+              Beyond academics, we encourage you to engage in the vibrant campus life that -LNCT indore offers. Participate in clubs, societies, sports, and cultural activities. These experiences will not only enhance your skills and broaden your horizons but also help you build lasting friendships and create cherished memories.
 
               As you navigate your college years, remember that the journey is as important as the destination. Embrace the challenges, celebrate the achievements, and learn from every experience. Your time here will shape your future, and we are committed to helping you make the most of it.
 
-              Our doors are always open, and we are here to support you in any way we can. Do not hesitate to reach out for guidance, assistance, or simply a listening ear. Together, we will strive to make SKC-LNCT,indore a place of inspiration, growth, and success.
+              Our doors are always open, and we are here to support you in any way we can. Do not hesitate to reach out for guidance, assistance, or simply a listening ear. Together, we will strive to make -LNCT,indore a place of inspiration, growth, and success.
 
               I am excited to witness your academic and personal growth during your time with us. Let us work together to make this academic year a truly exceptional one.
 
@@ -57,7 +57,7 @@ export default function page() {
               Mr. Suprabhat Chouksey
               </p>
               <p>Managing Director</p>
-              <p>SKC-LNCT Group</p>
+              <p>-LNCT Group</p>
          
           </div>
         </div>

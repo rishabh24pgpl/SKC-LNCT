@@ -28,7 +28,7 @@ export default function page() {
             <div>
               <h1  className="py-2 px-10 font-bold text-2xl">Smt. Pratibha Chouksey</h1>
               <h2 className="py-2 px-10 text-lg">Managing Trustee and Chairperson</h2>
-              <h3 className="py-2 px-10 ">SKC LNCT Group</h3>
+              <h3 className="py-2 px-10 "> LNCT Group</h3>
             </div>
           </div>
           <div className="w-2/3 p-10">
@@ -59,7 +59,7 @@ export default function page() {
             Managing Trustee and Chairperson
             </p>
             <p className="text-sm mb-3">
-            SKC LNCT Group
+             LNCT Group
             </p>
             
           </div>

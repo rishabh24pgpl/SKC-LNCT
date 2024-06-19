@@ -9,7 +9,7 @@ export default function AcademicEngineering() {
       <div className="w-full flex h-[650px]  ">
         <div className="w-[850px] h-full flex flex-col justify-center items-center p-4 ">
           <h1 className="text-4xl font-semibold flex items-center text-blue-600 ">
-            Engineering at SKC-LNCT INDORE
+            Engineering at -LNCT INDORE
           </h1>
           <p className="text-black text-justify pt-2">
             {" "}

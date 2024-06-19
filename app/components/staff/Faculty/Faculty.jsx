@@ -8,7 +8,7 @@ export default function Faculty() {
                 style={{ backgroundImage: `url('about-banner.jpg')` }}>
 
                 <h2 className="font-bold text-4xl uppercase  text-center text-white" >
-                Faculty At SKC LNCT
+                Faculty At  LNCT
                 </h2>
                 </div>
       <div className=" mt-10">

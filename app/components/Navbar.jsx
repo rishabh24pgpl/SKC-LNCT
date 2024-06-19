@@ -7,7 +7,7 @@ export default function Navbar() {
   const [openSubMenuId, setOpenSubMenuId] = useState(null);
   const [collegeNameIndex, setCollegeNameIndex] = useState(0);
 
-  const collegeNames = ["SKC LNCT ", "एसकेसी एलएनसीटी "];
+  const collegeNames = [" LNCT ", "एसकेसी एलएनसीटी "];
 
   // Function to toggle submenu
   const toggleSubMenu = (submenuId) => {

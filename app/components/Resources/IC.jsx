@@ -10,7 +10,7 @@ export default function IC() {
     const [collegeNameIndex, setCollegeNameIndex] = useState(0);
 
     const collegeNames = [
-        "SKC LNCT ",
+        " LNCT ",
         "एसकेसी एलएनसीटी ",
     ];
     return (

@@ -14,7 +14,7 @@ export default function page() {
           backgroundSize: "cover",
         }}
       >
-        <h1 className=" uppercase font-bold text-5xl">welcome to SKC-LNCT</h1>
+        <h1 className=" uppercase font-bold text-5xl">welcome to -LNCT</h1>
       </div>
       <div
         className="w-full h-screen  "
@@ -24,7 +24,7 @@ export default function page() {
           <div className="w-2/3 ">
             <div className="p-10">
               <h2 className=" tracking-[10px] text-lg text-blue-700">WELCOME TO</h2>
-              <h1 className="my-6 text-4xl  font-bold">SKC LNCT INDORE</h1>
+              <h1 className="my-6 text-4xl  font-bold"> LNCT INDORE</h1>
 
               <p className=" mt-2 font-extralight text-sm  text-justify">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.

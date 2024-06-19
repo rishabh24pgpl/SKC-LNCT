@@ -51,10 +51,10 @@ export default function Navbar() {
               name: "Board of Governors",
               link: "/institute/bog",
             },
-            {
-              name: "The Senate",
-              link: "/institute/senate",
-            },
+            // {
+            //   name: "The Senate",
+            //   link: "/institute/senate",
+            // },
             {
               name: "Principal",
               link: "/principal",
@@ -98,7 +98,7 @@ export default function Navbar() {
               link: "https://www.pratibhaglobalschool.com/payments/login/40e032b8-a995-47ab-a854-c3aec4812c0e",
             },
             {
-              name: "AICTC Regulations",
+              name: "AICTE Regulations",
               link: "https://forms-peach.vercel.app/",
             },
           ],
@@ -198,7 +198,7 @@ export default function Navbar() {
           subchild: [
             {
               name: "Why LNCT",
-              link: "/why_skclnct",
+              link: "/why_lnct",
             },
             {
               name: "Gallery",
