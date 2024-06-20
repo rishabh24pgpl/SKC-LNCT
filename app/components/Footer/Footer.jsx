@@ -26,11 +26,11 @@ export default function Footer() {
               <div class="contact-info text-center mt-8">
                 <ul>
                   <li>
-                    <i class="bi bi-telephone"></i> 0661-246-2020 / 2002
+                    <i class="bi bi-telephone"></i> +91-9752410847 / +91-9752410844
                   </li>
                   <li>
                     {" "}
-                    <i class="bi bi-envelope"></i> registrar@nitrkl.ac.in
+                    <i class="bi bi-envelope"></i> admission@lnctindore.com
                   </li>
                 </ul>
               </div>
