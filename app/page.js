@@ -2,15 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Navbar from "@/app/components/Navbar";
 import Counter from "@/app/components/Counter";
-import Card from "./components/Card";
+import Card from "@/app/components/Card";
 import Seminar from "@/app/components/Seminar";
-import Footer from "./components/Footer/Footer";
-import Notices from "./components/News-Notices";
-import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
-import NumberOne from "./components/NumberOne/NumberOne";
-import { ParallaxScroll } from "./components/ParallaxScroll/ParallaxScroll";
+import Notices from "@/app/components/News-Notices";
+import AbouttheInstitute from "@/app/components/AbouttheInstitute/AbouttheInstitute";
+import NumberOne from "@/app/components/NumberOne/NumberOne";
+import { ParallaxScroll } from "@/app/components/ParallaxScroll/ParallaxScroll";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("postgraduate");

@@ -13,7 +13,8 @@ const Dashboard = ({ clientProps }) => {
     news = [],
     event = [],
     seminar = [],
-    notice = []
+    notice = [],
+    profie = {},
   } = clientProps;
 
   if (isFailed) {
@@ -124,7 +125,7 @@ const Dashboard = ({ clientProps }) => {
             <div className="flex flex-wrap items-center px-4 py-2">
               <div className="relative w-full max-w-full flex-grow flex-1">
                 <h3 className="font-semibold text-base text-gray-900 dark:text-gray-50">
-                  Other Schools Traffic
+                  User Traffic
                 </h3>
               </div>
               <div className="relative w-full max-w-full flex-grow flex-1 text-right">
@@ -152,14 +153,14 @@ const Dashboard = ({ clientProps }) => {
                 <tbody>
                   <tr className="text-gray-700 dark:text-gray-100">
                     <th className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                      Bhaurasa
+                      INDORE
                     </th>
                     <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      5,480
+                      12
                     </td>
                     <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                       <div className="flex items-center">
-                        <span className="mr-2">70%</span>
+                        <span className="mr-2">10%</span>
                         <div className="relative w-full">
                           <div className="overflow-hidden h-2 text-xs flex rounded bg-purple-200">
                             <div
@@ -171,111 +172,7 @@ const Dashboard = ({ clientProps }) => {
                       </div>
                     </td>
                   </tr>
-                  <tr className="text-gray-700 dark:text-gray-100">
-                    <th className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                      Bagli
-                    </th>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      3,380
-                    </td>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      <div className="flex items-center">
-                        <span className="mr-2">40%</span>
-                        <div className="relative w-full">
-                          <div className="overflow-hidden h-2 text-xs flex rounded bg-purple-200">
-                            <div
-                              style={{ width: "40%" }}
-                              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="text-gray-700 dark:text-gray-100">
-                    <th className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                      Gwaliour
-                    </th>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      4,105
-                    </td>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      <div className="flex items-center">
-                        <span className="mr-2">45%</span>
-                        <div className="relative w-full">
-                          <div className="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
-                            <div
-                              style={{ width: "45%" }}
-                              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="text-gray-700 dark:text-gray-100">
-                    <th className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                      Sonkach
-                    </th>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      4,985
-                    </td>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      <div className="flex items-center">
-                        <span className="mr-2">60%</span>
-                        <div className="relative w-full">
-                          <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-                            <div
-                              style={{ width: "60%" }}
-                              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="text-gray-700 dark:text-gray-100">
-                    <th className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                      Dewas
-                    </th>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      2,250
-                    </td>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      <div className="flex items-center">
-                        <span className="mr-2">30%</span>
-                        <div className="relative w-full">
-                          <div className="overflow-hidden h-2 text-xs flex rounded bg-purple-200">
-                            <div
-                              style={{ width: "30%" }}
-                              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-700"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="text-gray-700 dark:text-gray-100">
-                    <th className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                      bhaurasa
-                    </th>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      2,250
-                    </td>
-                    <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      <div className="flex items-center">
-                        <span className="mr-2">30%</span>
-                        <div className="relative w-full">
-                          <div className="overflow-hidden h-2 text-xs flex rounded bg-purple-200">
-                            <div
-                              style={{ width: "30%" }}
-                              className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-700"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
+                 
                 </tbody>
               </table>
             </div>

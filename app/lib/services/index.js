@@ -9,6 +9,7 @@ export const LOGIN_URL = `${BASE_URL}/auth/login`;
 export const CAREERS = `${BASE_URL}/career/add-job`;
 export const JOBAPPLICATION = `${BASE_URL}/jobApplication`;
 export const ROLES = `${BASE_URL}/roles`
+export const COLLEGE = `${BASE_URL}/college`
 export const USERS = `${BASE_URL}/user`
 export const IMG_UPLOAD = "https://pgpl-backend-services.vercel.app/api/v1/files/image";
 
