@@ -1,24 +1,28 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { getEvent, deleteEvent} from '@/app/lib/services/events/events';
-// import EventForm from '@/components/UploadEvents/EventForm/EventForm';
-// import EventTable from '@/components/UploadEvents/EventTable/EventTable'
 import { getAuthToken } from '@/app/lib/middleware/apiInceptor';
 import EventForm from '@/app/components/Event/EventForm';
 import EventTable from '@/app/components/Event/EventTable';
 
 
-const EventParent = () => {
+const EventParent = ({clientProps}) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [events, setEventList] = useState([]); 
-  console.log(events,'yyyyyyy') // Corrected the name to setEventList
-  const [allEvents, setAllEvents] = useState();  // Renamed setEvents to setAllEvents
+  const [events, setEventList] = useState([]);   // Renamed setEvents to setAllEvents
+  const {
+    colleges = [],
+    collegeUuid = "",
+    profie = {},
+   
+  } = clientProps;
+
+  console.log(colleges,"hhhhhhhhhhhkkkkkkk");
 
   const [selectedEventId, setSelectedEventId] = useState(null);
   const fetchEvents = async (page) => {
     try {
       setIsLoading(true);
-      const eventData = await getEvent({ limit: 6, page });
+      const eventData = await getEvent({collegeUuid, limit: 6, page });
   
       console.log('eventData:', eventData);
   
@@ -79,7 +83,7 @@ const EventParent = () => {
 
   return (
     <div className="news-page">
-      <EventForm onFormSubmit={handleFormSubmit} events={events} selectedEventId={selectedEventId} />
+      <EventForm onFormSubmit={handleFormSubmit} collegeUuid={collegeUuid} profile={profie} colleges={colleges} events={events} selectedEventId={selectedEventId} setSelectedEventId={setSelectedEventId}/>
       <EventTable events={events} onDelete={handleDelete} onEdit={handleEdit} />
     </div>
   );

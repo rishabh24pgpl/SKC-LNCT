@@ -11,10 +11,9 @@ const NewsPage = ({ clientProps }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedNewsId, setSelectedNewsId] = useState(null);
   const {
-    schools = [],
-    schoolUuid = "",
+    colleges = [],
+    collegeUuid = "",
     profie = {},
-    newsList = [],
   } = clientProps;
   const [news, setNewsList] = useState(clientProps.newsList);
   const fetchNews = async () => {
@@ -77,8 +76,8 @@ const NewsPage = ({ clientProps }) => {
   return (
     <div className="news-page">
       <NewsForm
-        schools={schools}
-        schoolUuid={schoolUuid}
+        colleges={colleges}
+        collegeUuid={collegeUuid}
         profile={profie}
         selectedNewsId={selectedNewsId}
         onFormSubmit={handleFormSubmit}

@@ -2,7 +2,7 @@ import { api } from "@/app/lib/middleware/apiInceptor"
 import { ADDMISSONS } from ".."
 
 export const getAllAdmissions =async(payload) =>{
- let res = await api.get(ADDMISSONS)
+ let res = await api.get(`${ADDMISSONS}/all/`)
  if(res){
     return res.data.payload
  }

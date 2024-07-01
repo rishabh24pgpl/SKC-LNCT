@@ -48,6 +48,7 @@ export const deleteUser = async (uuid) => {
 export const loadProfile = async( ) =>{
   try {
     const res = await api.get(`${USERS}/profile`)
+
     return res.data.payload
   } catch (error) {
     handleError(error)
