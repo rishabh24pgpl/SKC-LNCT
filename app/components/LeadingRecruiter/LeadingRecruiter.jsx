@@ -54,7 +54,7 @@ export default function LeadingRecruiter({ title, content }) {
           </div>
         </div>
       </div>
-      <div className="text-center w-3/4 mx-auto border-blue-600 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-b-2xl ">
+      <div className="text-center w-3/4 mx-auto  ">
         <h1 className=" font-semibold text-4xl p-2 ">Leading Recruiters</h1>
         <p className="text-md pb-2">Hering Companys </p>
       </div>
