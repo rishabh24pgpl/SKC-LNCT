@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 import Counter from "@/app/components/Counter";
 import Card from "@/app/components/Card";
 import Seminar from "@/app/components/Seminar";
-import Notices from "@/app/components/News-Notices";
-import AbouttheInstitute from "@/app/components/AbouttheInstitute/AbouttheInstitute";
-import NumberOne from "@/app/components/NumberOne/NumberOne";
-import { ParallaxScroll } from "@/app/components/ParallaxScroll/ParallaxScroll";
+import Footer from "./components/Footer/Footer";
+import Notices from "./components/News-Notices";
+import AbouttheInstitute from "./components/AbouttheInstitute/AbouttheInstitute";
+import NumberOne from "./components/NumberOne/NumberOne";
+import { ParallaxScroll } from "./components/ParallaxScroll/ParallaxScroll";
+import { InfiniteMovingCardsDemo } from "./components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("postgraduate");
@@ -34,7 +36,7 @@ export default function Home() {
 
   // Function to toggle submenu
 
-  const images = ["/a-o.png", "/building.png", "/building2.png" ,"/mdsir2.jpg"];
+  const images = ["/a-o.png", "/building.png", "/building2.png", "/mdsir2.jpg"];
 
   const EventData = [
     {
@@ -267,206 +269,147 @@ export default function Home() {
           additionalCarouselData={additionalCarouselDataseminar}
         />
       </section>
-      <div className=" w-11/12 mx-auto">
-        <ParallaxScroll images={imagess} />
+      <div className=" w-full border-2">
+        <InfiniteMovingCardsDemo />
       </div>
+      {/* <div className=" w-11/12 mx-auto">
+        <ParallaxScroll images={imagess} />
+      </div> */}
       <section
-        className="academic-programe   mx-auto mt-10 flex justify-center     "
-        style={{
-          background: "url('/baggi.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="container  flex flex-col lg:flex-row items-center  bg-opacity-75 bg-blue-900 h-[580px]  ">
-          <nav className="nav flex-col lg:w-1/4 p-4">
-            <h2 className="text-3xl w-80 text-white  text-center font-semibold mb-6">
-              Academic Programme
-            </h2>
-            <ul className="space-y-2 bg-white rounded-xl p-4">
-              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
-                <button
-                  onClick={() => handleTabClick("undergraduate")}
-                  className={` p-4 nav-link ${
-                    activeTab === "undergraduate" ? "active" : ""
-                  }`}
-                  role="tab"
-                >
-                  UNDERGRADUATE
-                </button>
-              </li>
-              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
-                <button
-                  onClick={() => handleTabClick("postgraduate")}
-                  className={` p-4 nav-link ${
-                    activeTab === "postgraduate" ? "active" : ""
-                  }`}
-                  role="tab"
-                >
-                  POSTGRADUATE
-                </button>
-              </li>
-              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
-                <button
-                  onClick={() => handleTabClick("doctoral")}
-                  className={` p-4 nav-link ${
-                    activeTab === "doctoral" ? "active" : ""
-                  }`}
-                  role="tab"
-                >
-                  DOCTORAL
-                </button>
-              </li>
-              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
-                <button
-                  onClick={() => handleTabClick("executive")}
-                  className={` p-4 nav-link ${
-                    activeTab === "executive" ? "active" : ""
-                  }`}
-                  role="tab"
-                >
-                  EXECUTIVE PH.D.
-                </button>
-              </li>
-              <li className=" bg-white rounded-lg text-black hover:bg-blue-400">
-                <button
-                  onClick={() => handleTabClick("parttime")}
-                  className={` p-4 nav-link ${
-                    activeTab === "parttime" ? "active" : ""
-                  }`}
-                  role="tab"
-                >
-                  PART TIME PROGRAMMES
-                </button>
-              </li>
-            </ul>
-          </nav>
-          <div className="tab-content lg:w-3/4 p-4 ">
-            {activeTab === "undergraduate" && (
-              <article
-                className="tab-pane fade text-black"
-                id="category_tab1"
-                role="tabpanel"
-              >
-                <h2 className="text-white font-bold text-3xl ">
-                  UNDERGRADUATE
-                </h2>
-                <p className="text-white  text-justify">
-                  Admission to undergraduate courses is made in the autumn
-                  semester at the first-year level through JEE (Main) or similar
-                  test approved by NIT Council, the counselling for which is
-                  done by Joint Seat Allocation Authority (
-                  <a
-                    href="https://josaa.nic.in/"
-                    className="outside-link"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    JoSAA
-                  </a>
-                  ) and Central Seat Allocation Board (CSAB) or its equivalent
-                  approved by the NIT Council and/or Central Government.
-                  Besides, a specified number of foreign nationals selected
-                  under the policy of the Government of India may be admitted
-                  directly to the 1st-year of any of the programmes.
-                </p>
-              </article>
-            )}
-            {activeTab === "postgraduate" && (
-              <article
-                className="tab-pane fade active show text-black"
-                id="category_tab2"
-                role="tabpanel"
-              >
-                <h2 className="text-white font-bold text-3xl">POSTGRADUATE</h2>
-                <p>y</p>
-                <h4 className="text-white mt-5 ">M. Tech.</h4>
-                <p className="text-white text-justify">
-                  The courses leading to M. Tech. degree are open to candidates
-                  who have obtained the requisite qualification with 60% marks
-                  or 6.50 CGPA in aggregate in the qualifying examination.
-                  Admission for the GATE qualified candidates is made through
-                  Common Admission Process called Central Counselling for
-                  Masters of Technology (CCMT). Relaxation up to 5% of marks or
-                  0.5 CGPA is allowed by senate for sponsored candidates with
-                  proven research or profession experience.
-                </p>
-                {/* Add content for other postgraduate programs */}
-              </article>
-            )}
-            {activeTab === "doctoral" && (
-              <article
-                className="tab-pane fade text-black"
-                id="category_tab3"
-                role="tabpanel"
-              >
-                <h2 className="text-white font-bold text-3xl">DOCTORAL</h2>
-                <p className="text-white text-justify">
-                  The institute offers various research centric courses in
-                  various departments/ Centers like Post Doc, PhD, M.Tech
-                  research under various schemes with fellowship and sponsored
-                  programs like QIP and self financed.
-                </p>
-                <h4 className="text-white mb-4 font-bold text-3xl">
-                  Doctor of Philosophy (Ph.D.)
-                </h4>
-                <p className="text-white text-justify">
-                  The Institute provides facilities for research leading to the
-                  Degree of Doctor of Philosophy (PhD) in Engineering, Science,
-                  Management, Planning and Architecture, Humanities and Social
-                  Sciences in various disciplines. Candidates except the members
-                  of the Institute faculty, QIP scholars and scholars nominated
-                  by the Central Government have to be selected by Departmental
-                  Research Committee (DRC) on the basis of their academic
-                  background, performance in written test and/or interview.
-                </p>
-              </article>
-            )}
-            {activeTab === "executive" && (
-              <article
-                className="tab-pane fade text-black"
-                id="category_tab4"
-                role="tabpanel"
-              >
-                <h2 className="text-white font-bold  text-3xl">
-                  EXECUTIVE PH.D.
-                </h2>
-                <p className="text-white text-justify">
-                  NIT Rourkela has opened its doors for working professionals by
-                  offering programmes which are designed to enable them to
-                  pursue their doctorate degree while continuing in their
-                  Job/Profession in order to help them to accelerate their
-                  career. Candidates with minimum eligibility criteria as per
-                  NIT guidelines can apply and they will be selected based upon
-                  their academic background, performance in written test and/or
-                  interview.
-                </p>
-              </article>
-            )}
-            {activeTab === "parttime" && (
-              <article
-                className="tab-pane fade text-black"
-                id="category_tab5"
-                role="tabpanel"
-              >
-                <h2 className="text-white font-bold  text-3xl">
-                  PART TIME PROGRAMMES
-                </h2>
-                <p className="text-white text-justify">
-                  NIT Rourkela has opened its doors for working professionals.
-                  These programmes are designed to enable them to pursue higher
-                  study while continuing in their Job/Profession in order to
-                  help them to accelerate their career.
-                </p>
-              </article>
-            )}
-          </div>
-        </div>
-      </section>
+  className="academic-programme mx-auto mt-10 flex justify-center"
+  style={{
+    background: "url('/baggi.jpg')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+  }}
+>
+  <div className="container flex flex-col lg:flex-row items-center bg-opacity-75 bg-blue-900 h-auto lg:h-[580px] p-4">
+    <nav className="nav flex flex-col lg:w-1/4 w-full lg:items-start items-center p-4">
+      <h2 className="text-3xl w-80 text-white text-center font-semibold mb-6">
+        Academic Programme
+      </h2>
+      <ul className="space-y-2 bg-white rounded-xl p-4 w-full lg:w-auto">
+        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+          <button
+            onClick={() => handleTabClick("undergraduate")}
+            className={`p-4 w-full lg:w-auto text-left nav-link ${
+              activeTab === "undergraduate" ? "active" : ""
+            }`}
+            role="tab"
+          >
+            UNDERGRADUATE
+          </button>
+        </li>
+        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+          <button
+            onClick={() => handleTabClick("postgraduate")}
+            className={`p-4 w-full lg:w-auto text-left nav-link ${
+              activeTab === "postgraduate" ? "active" : ""
+            }`}
+            role="tab"
+          >
+            POSTGRADUATE
+          </button>
+        </li>
+        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+          <button
+            onClick={() => handleTabClick("doctoral")}
+            className={`p-4 w-full lg:w-auto text-left nav-link ${
+              activeTab === "doctoral" ? "active" : ""
+            }`}
+            role="tab"
+          >
+            DOCTORAL
+          </button>
+        </li>
+        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+          <button
+            onClick={() => handleTabClick("executive")}
+            className={`p-4 w-full lg:w-auto text-left nav-link ${
+              activeTab === "executive" ? "active" : ""
+            }`}
+            role="tab"
+          >
+            EXECUTIVE PH.D.
+          </button>
+        </li>
+        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+          <button
+            onClick={() => handleTabClick("parttime")}
+            className={`p-4 w-full lg:w-auto text-left nav-link ${
+              activeTab === "parttime" ? "active" : ""
+            }`}
+            role="tab"
+          >
+            PART TIME PROGRAMMES
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div className="tab-content lg:w-3/4 w-full p-4">
+      {activeTab === "undergraduate" && (
+        <article className="tab-pane fade text-black" role="tabpanel">
+          <h2 className="text-white font-bold text-3xl">UNDERGRADUATE</h2>
+          <p className="text-white text-justify">
+            Admission to undergraduate courses is made in the autumn semester at the first-year level through JEE (Main) or similar test approved by NIT Council, the counselling for which is done by Joint Seat Allocation Authority (
+            <a
+              href="https://josaa.nic.in/"
+              className="outside-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              JoSAA
+            </a>
+            ) and Central Seat Allocation Board (CSAB) or its equivalent approved by the NIT Council and/or Central Government. Besides, a specified number of foreign nationals selected under the policy of the Government of India may be admitted directly to the 1st-year of any of the programmes.
+          </p>
+        </article>
+      )}
+      {activeTab === "postgraduate" && (
+        <article className="tab-pane fade active show text-black" role="tabpanel">
+          <h2 className="text-white font-bold text-3xl">POSTGRADUATE</h2>
+          <h4 className="text-white mt-5">M. Tech.</h4>
+          <p className="text-white text-justify">
+            The courses leading to M. Tech. degree are open to candidates who have obtained the requisite qualification with 60% marks or 6.50 CGPA in aggregate in the qualifying examination. Admission for the GATE qualified candidates is made through Common Admission Process called Central Counselling for Masters of Technology (CCMT). Relaxation up to 5% of marks or 0.5 CGPA is allowed by senate for sponsored candidates with proven research or profession experience.
+          </p>
+          {/* Add content for other postgraduate programs */}
+        </article>
+      )}
+      {activeTab === "doctoral" && (
+        <article className="tab-pane fade text-black" role="tabpanel">
+          <h2 className="text-white font-bold text-3xl">DOCTORAL</h2>
+          <p className="text-white text-justify">
+            The institute offers various research centric courses in various departments/ Centers like Post Doc, PhD, M.Tech research under various schemes with fellowship and sponsored programs like QIP and self financed.
+          </p>
+          <h4 className="text-white mb-4 font-bold text-3xl">Doctor of Philosophy (Ph.D.)</h4>
+          <p className="text-white text-justify">
+            The Institute provides facilities for research leading to the Degree of Doctor of Philosophy (PhD) in Engineering, Science, Management, Planning and Architecture, Humanities and Social Sciences in various disciplines. Candidates except the members of the Institute faculty, QIP scholars and scholars nominated by the Central Government have to be selected by Departmental Research Committee (DRC) on the basis of their academic background, performance in written test and/or interview.
+          </p>
+        </article>
+      )}
+      {activeTab === "executive" && (
+        <article className="tab-pane fade text-black" role="tabpanel">
+          <h2 className="text-white font-bold text-3xl">EXECUTIVE PH.D.</h2>
+          <p className="text-white text-justify">
+            NIT Rourkela has opened its doors for working professionals by offering programmes which are designed to enable them to pursue their doctorate degree while continuing in their Job/Profession in order to help them to accelerate their career. Candidates with minimum eligibility criteria as per NIT guidelines can apply and they will be selected based upon their academic background, performance in written test and/or interview.
+          </p>
+        </article>
+      )}
+      {activeTab === "parttime" && (
+        <article className="tab-pane fade text-black" role="tabpanel">
+          <h2 className="text-white font-bold text-3xl">PART TIME PROGRAMMES</h2>
+          <p className="text-white text-justify">
+            NIT Rourkela has opened its doors for working professionals. These programmes are designed to enable them to pursue higher study while continuing in their Job/Profession in order to help them to accelerate their career.
+          </p>
+        </article>
+      )}
+    </div>
+  </div>
+</section>
+
 
       <AbouttheInstitute />
 
-      <section class=" flex  h-[300px] w-11/12 mx-auto mt-10  ">
+      <section class=" flex  lg:h-[300px] w-11/12 mx-auto mt-10 lg:flex-row flex-col  ">
         <div class="items flex-1 w-full bg-cyan-900 text-white p-6 pt-14 text-center  ">
           <h2 className="font-semibold text-2xl">Thought of the Day</h2>
           <h5 className="font-semibold text-xl py-5 text-justify">
@@ -587,11 +530,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-11/12 mx-auto">
+      <section className="lg:w-11/12 w-full mx-auto">
         <div className=" bg-slate-900">
           <div
             //
-            className="flex "
+            className="flex lg:flex-row flex-col "
             style={{
               backgroundImage: "url('/HomeBg.svg')",
               backgroundRepeat: "no-repeat",
@@ -614,26 +557,26 @@ export default function Home() {
                 height={650}
               />
             </div>
-            <div className="md:w-full lg:w-1/2 sm:w-full  flex flex-col justify-center  ">
-              <div className="w-ful rounded-md  sm:p-4  md:p-4 lg:p-5 p-8 shadow-none  border-black grid md:grid-cols-1 lg:grid-cols-2   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple">
-                <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap  ">
+            <div className="w-full flex flex-col justify-center p-4">
+              <div className="w-full rounded-md p-4 lg:p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-5 justify-center items-center shadow-none border border-black dark:bg-dpurple">
+                <div className="flex flex-col justify-center items-center w-full">
                   <Card
                     title="Department"
                     content="10"
                     imageUrl="/department.png"
                   />
                 </div>
-                <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
-                  <Card title="Faculty" content=" 70+" imageUrl="/staff.png" />
+                <div className="flex flex-col justify-center items-center w-full">  
+                  <Card title="Faculty" content="70+" imageUrl="/staff.png" />
                 </div>
-                <div className=" flex-col justify-center items-center inline-flex sm:w-full md:w-1/3 flex-wrap ">
+                <div className="flex flex-col justify-center items-center w-full">
                   <Card
-                    title="Faculty"
+                    title="Students"
                     content="3050+"
                     imageUrl="/student-icon.png"
                   />
                 </div>
-                <div className="  flex-col justify-center items-center inline-flex sm:w-full md:w-1/3  flex-wrap">
+                <div className="flex flex-col justify-center items-center w-full">
                   <Card title="Faculty" content="100" imageUrl="/faculty.png" />
                 </div>
               </div>

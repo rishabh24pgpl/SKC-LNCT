@@ -286,7 +286,7 @@ export default function Footer() {
                 Rights Reserved.
               </div>
               <div class="item-othtes-links ">
-                <ul className="flex px-4 gap-4 text-sm">
+                <ul className="flex lg:flex-row flex-col px-4 gap-4 text-sm">
                   <li className="p-2">
                     <a href="/Home/TermCondition">Terms &amp; Conditions</a>
                   </li>
@@ -295,7 +295,7 @@ export default function Footer() {
                   </li>
                   <li className="p-2">
                     <a href="/Home/PrivacyPolicy"> Privacy Policy</a>
-                  </li>
+                  </li> 
                 </ul>
               </div>
             </div>
