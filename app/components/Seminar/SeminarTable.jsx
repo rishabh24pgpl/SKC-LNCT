@@ -1,5 +1,5 @@
 
-// components/NewsTable/NewsTable.jsx
+// components/seminarTable/seminarTable.jsx
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import Pagination from '@/app/components/Pagination/Pagination'; // Import your Pagination component
@@ -22,7 +22,7 @@ const SeminarTable = ({ seminarList=[], onDelete, onEdit }) => {
     setSelectedSeminarId(uuid);
     setIsDeleteModalOpen(true);
   };
-
+console.log(seminarList,'seminar dataaaa')
   const handleEdit = (uuid) => {
     onEdit(uuid);
   };
@@ -62,7 +62,7 @@ const SeminarTable = ({ seminarList=[], onDelete, onEdit }) => {
             </tr>
           </thead>
           <tbody>
-            {paginatedSeminarList.map((news, index) => (
+            {paginatedSeminarList.map((seminar, index) => (
               <tr
                 key={index}
                 className={`${index % 2 === 0
@@ -71,12 +71,12 @@ const SeminarTable = ({ seminarList=[], onDelete, onEdit }) => {
                 } border-b dark:border-gray-700`}
               >
                 <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  {news.title}
+                  {seminar.title}
                 </td>
-                <td className="px-6 py-4">  {moment(news.endDate).format('YYYY-MM-DD HH:mm:ss')}</td>
+                <td className="px-6 py-4">  {moment(seminar.endDate).format('YYYY-MM-DD HH:mm:ss')}</td>
                 <td className="px-6 py-4">
                   <button
-                    onClick={() => handleDelete(news.uuid)}
+                    onClick={() => handleDelete(seminar.uuid)}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Delete
@@ -84,7 +84,7 @@ const SeminarTable = ({ seminarList=[], onDelete, onEdit }) => {
                 </td>
                 <td className="px-6 py-4">
                   <button
-                    onClick={() => handleEdit(news.uuid)}
+                    onClick={() => handleEdit(seminar.uuid)}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Edit

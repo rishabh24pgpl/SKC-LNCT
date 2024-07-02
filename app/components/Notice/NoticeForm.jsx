@@ -6,6 +6,8 @@ import Notification from "@/app/components/Toast/Notification";
 import { NOTICEINITIAL, ADMIN } from "@/app/lib/constants/index";
 import moment from "moment";
 import { uploadImg } from "@/app/lib/services/files/fileServices";
+import useDropdown from "../hooks/useDropDown";
+import { first } from "lodash";
 
 const fields = [
   { name: "title", label: "Title", type: "text", placeholder: "Enter Title" },
@@ -39,6 +41,14 @@ const NoticeForm = ({
     ...NOTICEINITIAL,
     endDate: moment().format("YYYY-MM-DDTHH:mm:ss"),
   });
+
+  const { colleges = [], collegeUuid = "", profile = {} } = others;
+
+  const [organization, OrganizationDropDown, setOrganization] = useDropdown(
+    "College",
+    collegeUuid || first(colleges).value,
+    others?.colleges || []
+  );
 
   const [isEditMode, setIsEditMode] = useState(false);
   const [prevImagePreview, setPrevImagePreview] = useState(null);
@@ -143,14 +153,14 @@ const NoticeForm = ({
           file: imgRes ? imgRes : notice.file,
           endDate: formattedDate,
           uuid: selectedNoticeId,
-          // organizationUuid: organization || schoolUuid,
+          collegeUuid: organization || collegeUuid,
         });
       } else {
         const res=await addNotice({
           ...notice,
           file: imgRes,
           endDate: formattedDate,
-          // organizationUuid: organization || schoolUuid,
+          collegeUuid: organization || collegeUuid,
         });
 
         const formData = {
@@ -257,6 +267,7 @@ const NoticeForm = ({
                 )}
               </div>
             ))}
+             {profile.userType === ADMIN && <OrganizationDropDown/>}
           </div>
           {isEditMode ? (
             <div className="flex">

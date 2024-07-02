@@ -10,8 +10,8 @@ const NewsPage = ({ clientProps }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const {
-    schools = [],
-    schoolUuid = "",
+    colleges = [],
+    collegeUuid = "",
     profie = {},
     noticeList = [],
   } = clientProps;
@@ -23,7 +23,6 @@ const NewsPage = ({ clientProps }) => {
       setIsLoading(true);
       const noticeData = await getAllNotice();
       setNoticeList(noticeData);
-      console.log(noticeList);
     } catch (error) {
       console.error("Error fetching news:", error);
     } finally {
@@ -84,8 +83,8 @@ const NewsPage = ({ clientProps }) => {
         onFormSubmit={handleFormSubmit}
         setSelectedNoticeId={setSelectedNoticeId}
         noticeList={notice}
-        schools={schools}
-        schoolUuid={schoolUuid}
+        colleges={colleges}
+        collegeUuid={collegeUuid}
         profile={profie}
       />
       <NoticeTable

@@ -12,7 +12,8 @@ export const NOTICEINITIAL = {
   title: "",
   file: "",
   description: "",
-  endDate: ""
+  endDate: "",
+  collegeUuid:""
 };
 
 export const ERR_MSG_PREFIX = "The following fields are blank:";
@@ -23,7 +24,7 @@ export const NEWSINITAIL = {
   description: "",
   imageUrl: "",
   publishedDate: moment().format("YYYY-MM-DD HH:mm:ss"),
-  // OrganizationUuid: ""
+  collegeUuid:""
 };
 
 
@@ -45,7 +46,8 @@ export const EVENTS_INITIAL = {
   startDate: "2024-05-04T15:52:51.463Z",
   endDate: "2024-05-07T15:52:51.463Z",
   type: "",
-  registrationRequired: false
+  registrationRequired: false,
+  collegeUuid:""
 };
 
 export const SEMINARINITIAL = {

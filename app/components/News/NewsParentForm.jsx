@@ -14,6 +14,7 @@ const NewsPage = ({ clientProps }) => {
     colleges = [],
     collegeUuid = "",
     profie = {},
+    newsList=[]
   } = clientProps;
   const [news, setNewsList] = useState(clientProps.newsList);
   const fetchNews = async () => {

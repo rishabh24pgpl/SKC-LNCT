@@ -19,7 +19,7 @@ export const EVENTS_INITIAL = {
   endDate: "2024-05-07T15:52:51.463Z",
   type: "",
   registrationRequired: false,
-  OrganizationUuid: "",
+  collegeUuid: "",
 };
 const fields = [
   { name: "title", label: "Title", type: "text", placeholder: "Enter Title" },
@@ -102,7 +102,7 @@ export default function NewsForm({
           endDate: moment(selectedEvent.endDate).format("YYYY-MM-DDTHH:mm:ss"),
           location: selectedEvent.location,
           category: selectedEvent.category,
-          OrganizationUuid: selectedEvent.OrganizationUuid,
+          collegeUuid: selectedEvent.collegeUuid,
           type: selectedEvent.type,
           registrationRequired: selectedEvent.registrationRequired,
           capacity: selectedEvent.capacity,
@@ -191,13 +191,13 @@ export default function NewsForm({
           startDate: formattedDate,
           endDate: formattedDate,
           uuid: selectedEventId, // Corrected duplicated uuid property
-          OrganizationUuid: organization || collegeUuid,
+          collegeUuid: organization || collegeUuid,
         });
       } else {
         res = await addEvent({
           ...eventData,
           imageUrl: imgRes,
-          OrganizationUuid: organization || collegeUuid,
+          collegeUuid: organization || collegeUuid,
         });
       }
 

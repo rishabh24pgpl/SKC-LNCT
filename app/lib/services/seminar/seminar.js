@@ -14,7 +14,7 @@ export const addSeminar = async (payload) => {
 
 export const getAllSeminar = async () => {
     try {
-      const res = await api.get(SEMINAR);
+      const res = await api.get(`${SEMINAR}/all/627c481f-9c20-47bf-997e-894481c903f2`);
       return res.data.payload.data;
     } catch (error) {
       handleError(error);

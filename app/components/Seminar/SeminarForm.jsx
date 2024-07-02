@@ -4,12 +4,13 @@ import { addSeminar, updateSeminar } from "@/app/lib/services/seminar/seminar";
 import Loader from "@/app/components/Loader/Loader";
 import Notification from "@/app/components/Toast/Notification";
 import {
-
   ADMIN,
   SEMINARINITIAL,
 } from "@/app/lib/constants/index";
 import moment from "moment";
 import { uploadImg } from "@/app/lib/services/files/fileServices";
+import useDropdown from "../hooks/useDropDown";
+import { first } from "lodash";
 
 const fields = [
   { name: "title", label: "Title", type: "text", placeholder: "Enter Title" },
@@ -67,6 +68,13 @@ const SeminarForm = ({
     ...SEMINARINITIAL,
     endDate: moment().format("YYYY-MM-DDTHH:mm:ss"),
   });
+  const { colleges = [], collegeUuid = "", profile = {} } = others;
+
+  const [organization, OrganizationDropDown, setOrganization] = useDropdown(
+    "College",
+    collegeUuid || first(colleges).value,
+    others?.colleges || []
+  );
 
   const [isEditMode, setIsEditMode] = useState(false);
   const [prevImagePreview, setPrevImagePreview] = useState(null);
@@ -153,8 +161,8 @@ const SeminarForm = ({
     e.preventDefault();
     setError({ msg: "", type: "" });
     try {
-        setIsLoading(true);
-       
+      setIsLoading(true);
+
 
       if (!validateForm()) return;
 
@@ -174,27 +182,20 @@ const SeminarForm = ({
         await updateSeminar({
           ...seminar,
           imageUrl: imgRes ? imgRes : seminar.imageUrl,
-
+          collegeUuid: organization || collegeUuid,
           uuid: selectedSeminarId,
         });
       } else {
-        const res = await addSeminar({
+        await addSeminar({
           ...SEMINARINITIAL,
           file: imgRes,
           endDate: formattedDate,
+          collegeUuid: organization || collegeUuid,
           // organizationUuid: organization || schoolUuid,
         });
 
-        const formData = {
-          title: "fgdhs",
-          file: "C:\\fakepath\\account4.jpg",
-          description: "dcbxhs",
-          publishedDate: "2024-05-08",
-          endDate: "2024-05-09",
-        };
 
         // const res = await addNotice(formData);
-        console.log(res.data.payload, "hhhhhhhhhhhhh");
       }
 
       onFormSubmit();
@@ -272,9 +273,8 @@ const SeminarForm = ({
                 ) : (
                   <input
                     name={field.name}
-                    className={`p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black ${
-                      validationErrors[field.name] ? "border-red-500" : ""
-                    }`}
+                    className={`p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black ${validationErrors[field.name] ? "border-red-500" : ""
+                      }`}
                     id={field.name}
                     type={field.type}
                     value={seminar[field.name]}
@@ -290,6 +290,7 @@ const SeminarForm = ({
                 )}
               </div>
             ))}
+            {profile.userType === ADMIN && <OrganizationDropDown />}
           </div>
           {isEditMode ? (
             <div className="flex">

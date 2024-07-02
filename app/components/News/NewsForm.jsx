@@ -7,6 +7,7 @@ import { ADMIN, NEWSINITAIL } from "@/app/lib/constants/index";
 import moment from "moment";
 import { uploadImg } from "@/app/lib/services/files/fileServices";
 import { first } from "lodash";
+import useDropdown from "../hooks/useDropDown";
 
 const fields = [
   { name: "title", label: "Title", type: "text", placeholder: "Enter Title" },
@@ -41,6 +42,12 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
     ...NEWSINITAIL,
     publishedDate: moment().format("YYYY-MM-DDTHH:mm:ss"),
   });
+  const { colleges = [], collegeUuid = "", profile = {} } = others;
+  const [organization, OrganizationDropDown, setOrganization] = useDropdown(
+    "College",
+    collegeUuid || first(colleges).value,
+    others?.colleges || []
+  );
   const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
@@ -118,13 +125,14 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
             ...newsData,
             publishedDate: formattedDate,
             uuid: selectedNewsId,
-            
+            collegeUuid: organization || collegeUuid,
+
           })
         : await addNews({
             ...newsData,
             imageUrl: imgRes,
             publishedDate: formattedDate,
-           
+            collegeUuid: organization || collegeUuid,
           });
       onFormSubmit();
     } catch (error) {
@@ -184,7 +192,7 @@ const NewsForm = ({ selectedNewsId,setSelectedNewsId, onFormSubmit, newsList, ..
                   )}
               </div>
             ))}
-            
+              {profile.userType === ADMIN && <OrganizationDropDown />}
           </div>
           {isEditMode ? (
             <div className="flex">

@@ -25,7 +25,7 @@ export const updateEvent = async (payload) => {
 
 export const getEvent = async () => {
     try {
-        const res = await api.get(EVENTS);
+        const res = await api.get(`${EVENTS}/all/627c481f-9c20-47bf-997e-894481c903f2`);
         return res.data.payload.data;
       } catch (error) {
         handleError(error);

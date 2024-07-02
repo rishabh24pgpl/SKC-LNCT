@@ -27,9 +27,9 @@ async function AdminDashboard(props) {
       clientProps.admissions = await getAllAdmissions();
     }
     clientProps.users = await getUsers({ limit: 5, page: 1 });
-    clientProps.seminar = await getAllSeminar();
-    clientProps.news = await getAllNews();
-    clientProps.notice = await getAllNotice();
+    clientProps.seminar = await getAllSeminar(collegeUuid);
+    clientProps.news = await getAllNews(collegeUuid);
+    clientProps.notice = await getAllNotice(collegeUuid);
     clientProps.event = await getEvent({ collegeUuid, limit: 5, page: 1 });
 
     clientProps.isFailed = false;

@@ -12,6 +12,7 @@ export default async function page() {
   clientProps.isFailed = isFailed;
   let college = await getCollegeDetails();
   let collegeUuid = college.uuid
+ 
   if (!isFailed) {
     let colleges = [];
     
@@ -20,7 +21,6 @@ export default async function page() {
       collegeUuid = "";
       colleges = await getCollege();
 
-      console.log(colleges,'hbdnmnjfgfkjghhgjgjhghjh')
       clientProps.colleges = colleges.map(({ uuid, name }) => ({
         value: uuid,
         label: name,

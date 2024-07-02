@@ -12,10 +12,9 @@ const NewsPage = ({ clientProps }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const {
-    schools = [],
-    schoolUuid = "",
+    colleges = [],
+    collegeUuid = "",
     profie = {},
-    seminarList = [],
   } = clientProps;
   const [seminar, setSeminarList] = useState(clientProps?.seminarList);
   const [selectedSeminarId, setSelectedSeminarId] = useState(null);
@@ -86,8 +85,8 @@ const NewsPage = ({ clientProps }) => {
         onFormSubmit={handleFormSubmit}
         setSelectedSeminarId={setSelectedSeminarId}
         seminarList={seminar}
-        schools={schools}
-        schoolUuid={schoolUuid}
+        colleges={colleges}
+        collegeUuid={collegeUuid}
         profile={profie}
       />
       <SeminarTable
