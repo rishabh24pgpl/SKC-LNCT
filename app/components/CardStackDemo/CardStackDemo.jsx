@@ -25,7 +25,7 @@ const CARDS = [
       designation: "Web Developer",
       content: (
         <p>
-          A ship in port is safe, but that's not what ships are built for. Sail
+          A ship in port is safe, but that&apos;s not what ships are built for. Sail
           out to sea and do new things.
         </p>
       ),
