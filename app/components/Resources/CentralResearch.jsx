@@ -66,7 +66,7 @@ export default function CentralResearch() {
         </div>
       </div>
       <section>
-        <div className=" mt-32 h-72 mx-auto  bg-cyan-500    sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple  mb-12">
+        <div className=" mt-32 h-72 mx-auto  bg-cyan-500    sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dblue  mb-12">
           <div className=" ">
             <Counter
               initialValue={0}
@@ -127,14 +127,14 @@ export default function CentralResearch() {
           <div className=''>
             <img className='w-80' src="ar-1.jpg" alt="" />
             <div className='ml-16 justify-center mt-4'>
-              <h2 className='uppercase text-purple-900 font-bold'>tittle of the machine</h2>
+              <h2 className='uppercase text-blue-900 font-bold'>tittle of the machine</h2>
               <p>description of the machine</p>
             </div>
           </div>
           <div className=''>
             <img className='w-80' src="ar-1.jpg" alt="" />
             <div className='ml-16 justify-center mt-4'>
-              <h2 className='uppercase text-purple-900 font-bold'>tittle of the machine</h2>
+              <h2 className='uppercase text-blue-900 font-bold'>tittle of the machine</h2>
               <p>description of the machine</p>
             </div>
           </div>

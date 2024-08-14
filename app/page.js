@@ -436,7 +436,7 @@ export default function Home() {
             backgroundSize: "cover",
           }}
         >
-          <div className=" w-8/9   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dpurple  ">
+          <div className=" w-8/9   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dblue  ">
             <div className="  ">
               <Counter
                 initialValue={0}
@@ -482,7 +482,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className=" rounded-b-md   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dpurple  mb-12">
+          <div className=" rounded-b-md   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dblue  mb-12">
             <div className=" ">
               <Counter
                 initialValue={0}
@@ -558,7 +558,7 @@ export default function Home() {
               />
             </div>
             <div className="w-full flex flex-col justify-center p-4">
-              <div className="w-full rounded-md p-4 lg:p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-5 justify-center items-center shadow-none border border-black dark:bg-dpurple">
+              <div className="w-full rounded-md p-4 lg:p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-5 justify-center items-center shadow-none border border-black dark:bg-dblue">
                 <div className="flex flex-col justify-center items-center w-full">
                   <Card
                     title="Department"

@@ -154,7 +154,7 @@ const MyComponent = () => {
       </div>
 
       <section className=" w-11/12 mx-auto">
-        <div className=" w-8/9 rounded-t-md  sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dpurple   bg-blue-400">
+        <div className=" w-8/9 rounded-t-md  sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dblue   bg-blue-400">
           <div className="  ">
             <Counter
               initialValue={0}
@@ -201,7 +201,7 @@ const MyComponent = () => {
             />
           </div>
         </div>
-        <div className=" rounded-b-md   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dpurple  mb-12 bg-blue-400">
+        <div className=" rounded-b-md   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dblue  mb-12 bg-blue-400">
           <div className=" ">
             <Counter
               initialValue={0}

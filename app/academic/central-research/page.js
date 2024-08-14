@@ -45,7 +45,7 @@ export default function page() {
         </div>
 
         <section>
-          <div className="w-full mx-auto  rounded-full py-10   border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple my-4">
+          <div className="w-full mx-auto  rounded-full py-10   border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dblue my-4">
             <div className=" ">
               <Counter
                 initialValue={0}

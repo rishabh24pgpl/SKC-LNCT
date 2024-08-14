@@ -24,7 +24,7 @@ export default function DeptEr({ dept }) {
       title: "postgraduate students",
       value: "60",
       textColor: "text-red-600",
-      color: "bg-purple-500",
+      color: "bg-blue-500",
       speed: "35",
     },
     {

@@ -23,7 +23,7 @@ const NewsPage = ({ clientProps }) => {
     try {
       setIsLoading(true);
       const seminarData = await getAllSeminar();
-      setSeminarList(noticeData);
+      setSeminarList(seminarData);
       console.log(seminar);
     } catch (error) {
       console.error("Error fetching news:", error);

@@ -16,7 +16,7 @@ export default function Rules_Regulations() {
         <RuleCard bgcolor="bg-gray-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-blue-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-pink-200" link="/" heading="heading"/>
-        <RuleCard bgcolor="bg-purple-200" link="/" heading="heading"/>
+        <RuleCard bgcolor="bg-blue-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-lime-200" link="/" heading="heading"/>
         <RuleCard bgcolor="bg-blue-200" link="/" heading="heading"/>
       

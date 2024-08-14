@@ -215,7 +215,7 @@ const EventDetail = ({ newsData, schoolUuid = "" }) => {
       <div className="m-10 font-bold">
         <Link
           href="/newsCard"
-          className="border-2 bg-purple-500 py-4 px-20 rounded-lg"
+          className="border-2 bg-blue-500 py-4 px-20 rounded-lg"
         >
           All Archives
         </Link>
