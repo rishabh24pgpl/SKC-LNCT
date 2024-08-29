@@ -6,8 +6,8 @@ import Counter from "@/app/components/Counter";
 export default function CentralResearch() {
   return (
     <div>
-      <div>
-        <div className='h-8 bg-cyan-500 p-1 flex'>
+      {/* <div> */}
+        {/* <div className='h-8 bg-cyan-500 p-1 flex'>
           <div className='flex ml-24 mt-1'>
             <div className='flex '>
               <img className='h-4 mt-0' src="clock.png" alt="" />
@@ -25,8 +25,8 @@ export default function CentralResearch() {
           <div className='h-5 '>
             <a className='bg-red-600 text-white text-[14px] py-[3px] px-[10px] rounded-[4px] ml-56' href="">Login for External users</a>
           </div>
-        </div>
-        <div className='flex mt-2'>
+        </div> */}
+        {/* <div className='flex mt-2'>
           <div className='ml-96 flex'>
             <div>
               <img className='h-14 mr-2' src="logo1.jpeg" alt="" />
@@ -39,7 +39,7 @@ export default function CentralResearch() {
           </div>
          
         </div>
-      </div>
+      </div> */}
       <div >
         <img className='h-72 w-full' src="banner2.jpg" alt="" />
       </div>
