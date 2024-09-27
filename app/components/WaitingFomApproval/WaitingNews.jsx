@@ -106,7 +106,7 @@ export default function WaitingForApproval({news}) {
               <td className="px-6 py-4">
               <button
                     onClick={() => handleStatusChange(news.uuid, 'REJECTED')}
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    className="font-medium text-cyan-600 dark:text-cyan-500 hover:underline"
                   >
                     Reject
                   </button>

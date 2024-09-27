@@ -74,7 +74,7 @@ const EventDetail = ({ newsData, schoolUuid = "" }) => {
           </div>
           <form
             onSubmit={handleSubmit}
-            className="space-y-4 bg-white p-4  w-full md:w-full shadow-md flex flex-col border-indigo-200 rounded-xl "
+            className="space-y-4 bg-white p-4  w-full md:w-full shadow-md flex flex-col border-cyan-200 rounded-xl "
           >
             <h1 className=" text-xl bg-clip-text bg-gradient-to-r to-yellow-600 from-pink-400">
               Admisson Form
@@ -178,17 +178,17 @@ const EventDetail = ({ newsData, schoolUuid = "" }) => {
                           {item.type}
                         </h1>
                         {item.type === "event" && (
-                          <h1 className="px-4 text-blue-900">
+                          <h1 className="px-4 text-cyan-900">
                             {moment(item.startDate).format("MMMM DD, YYYY")}
                           </h1>
                         )}
                         {item.type === "notice" && (
-                          <h1 className="px-4 text-blue-900">
+                          <h1 className="px-4 text-cyan-900">
                             {moment(item.publishedDate).format("MMMM DD, YYYY")}
                           </h1>
                         )}
                         {item.type === "news" && (
-                          <h1 className="px-4 text-blue-900">
+                          <h1 className="px-4 text-cyan-900">
                             {moment(item.publishedDate).format("MMMM DD, YYYY")}
                           </h1>
                         )}
@@ -215,7 +215,7 @@ const EventDetail = ({ newsData, schoolUuid = "" }) => {
       <div className="m-10 font-bold">
         <Link
           href="/newsCard"
-          className="border-2 bg-blue-500 py-4 px-20 rounded-lg"
+          className="border-2 bg-cyan-500 py-4 px-20 rounded-lg"
         >
           All Archives
         </Link>

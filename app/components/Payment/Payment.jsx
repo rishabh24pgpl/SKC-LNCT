@@ -23,7 +23,7 @@ export default function Payment() {
            </div>
            <div className='text-gray-800 text-center'>
           <h1>Thank You </h1>
-          <h1 className='text-blue-500'>Clink here to return home page  </h1>
+          <h1 className='text-cyan-500'>Clink here to return home page  </h1>
           </div>
     </div>
     </>

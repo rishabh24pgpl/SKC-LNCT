@@ -4,7 +4,7 @@ import React from "react";
 export default function LeadingRecruiter({ title, content }) {
   return (
     <>
-      <div className="relative bg-gradient-to-r from-blue-700 via-red-700 to-red-500 text-white overflow-hidden -z-10 ">
+      <div className="relative bg-gradient-to-r from-cyan-700 via-red-700 to-red-500 text-white overflow-hidden -z-10 ">
         {/* SVG Waves */}
         <svg
           id="wave"

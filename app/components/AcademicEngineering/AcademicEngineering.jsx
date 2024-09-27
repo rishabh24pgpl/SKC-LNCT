@@ -8,7 +8,7 @@ export default function AcademicEngineering() {
     <>
       <div className="w-full flex h-[650px]  ">
         <div className="w-[850px] h-full flex flex-col justify-center items-center p-4 ">
-          <h1 className="text-4xl font-semibold flex items-center text-blue-600 ">
+          <h1 className="text-4xl font-semibold flex items-center text-cyan-600 ">
             Engineering at -LNCT INDORE
           </h1>
           <p className="text-black text-justify pt-2">
@@ -25,8 +25,8 @@ export default function AcademicEngineering() {
           <Image src="/mainImg.jpeg" alt="img" fill />
         </div>
       </div>
-      <h1 className="text-3xl bg-blue-600 p-6  text-white "> DEPARTMENT</h1>
-      <div className="w-full grid grid-cols-3 justify-around   bg-blue-600 p-4">
+      <h1 className="text-3xl bg-cyan-600 p-6  text-white "> DEPARTMENT</h1>
+      <div className="w-full grid grid-cols-3 justify-around   bg-cyan-600 p-4">
         <div className="mx-auto p-4">
           <Image src="/bme.png" alt="img" width={80} height={80} />
           <h1 className="text-xl font-semibold w-80 ">
@@ -64,18 +64,18 @@ export default function AcademicEngineering() {
       </div>
       <section>
         <div className=" flex flex-col justify-center  mx-auto items-center p-10">
-          <h1 className="text-blue-600 font-light  text-center  text-4xl">
+          <h1 className="text-cyan-600 font-light  text-center  text-4xl">
             Engineering @ NITR at a glance
           </h1>
         </div>
-        <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dblue  mb-12">
+        <div className="w-11/12 mx-auto  rounded-full   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dcyan  mb-12">
           <div className=" ">
             <Counter
               initialValue={0}
               targetValue={2000}
               speed={0.001}
               text="Seed"
-              textColor="text-blue-600"
+              textColor="text-cyan-600"
               title="First Counter"
               color="bg-[#bd5638]"
             />
@@ -117,7 +117,7 @@ export default function AcademicEngineering() {
         </div>
       </section>
       <div className=" flex flex-col justify-center  mx-auto items-center p-10">
-        <h1 className="text-blue-600 font-light  text-center  text-4xl">
+        <h1 className="text-cyan-600 font-light  text-center  text-4xl">
           Engineering is not only about making things work, but about making
           things work better.
         </h1>

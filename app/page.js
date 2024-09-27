@@ -239,7 +239,8 @@ export default function Home() {
   ];
 
   return (
-    <div className=" text-white">
+    <div className="w-full aspect-[3/5] mx-auto">
+    <div className="text-white">
       <div className="md:w-full lg:w-full sm:w-full w-full">
         <Image
           className="duration-500 w-full min-h-[500px] max-h-[500px]"
@@ -249,10 +250,10 @@ export default function Home() {
           height={650}
         />
       </div>
-
+  
       <NumberOne
         img="/number-1.png"
-        title="WHY  LNCT"
+        title="WHY LNCT"
         content="Today, LNCT Group is one of the Largest and most preferred Educational Group for Engineering, Management, Pharmacy, Medical with ISO-9001 certification and NBA accreditation for many Engineering courses.. Bright young students from all across the country are coming to fulfill their dream in this group."
       />
       <section className="  w-11/12 mx-auto">
@@ -283,13 +284,13 @@ export default function Home() {
     backgroundSize: "cover",
   }}
 >
-  <div className="container flex flex-col lg:flex-row items-center bg-opacity-75 bg-blue-900 h-auto lg:h-[580px] p-4">
+  <div className="container flex flex-col lg:flex-row items-center bg-opacity-75 bg-cyan-900 h-auto lg:h-[580px] p-4">
     <nav className="nav flex flex-col lg:w-1/4 w-full lg:items-start items-center p-4">
       <h2 className="text-3xl w-80 text-white text-center font-semibold mb-6">
         Academic Programme
       </h2>
       <ul className="space-y-2 bg-white rounded-xl p-4 w-full lg:w-auto">
-        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+        <li className="bg-white rounded-lg text-black hover:bg-cyan-400">
           <button
             onClick={() => handleTabClick("undergraduate")}
             className={`p-4 w-full lg:w-auto text-left nav-link ${
@@ -300,7 +301,7 @@ export default function Home() {
             UNDERGRADUATE
           </button>
         </li>
-        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+        <li className="bg-white rounded-lg text-black hover:bg-cyan-400">
           <button
             onClick={() => handleTabClick("postgraduate")}
             className={`p-4 w-full lg:w-auto text-left nav-link ${
@@ -311,7 +312,7 @@ export default function Home() {
             POSTGRADUATE
           </button>
         </li>
-        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+        <li className="bg-white rounded-lg text-black hover:bg-cyan-400">
           <button
             onClick={() => handleTabClick("doctoral")}
             className={`p-4 w-full lg:w-auto text-left nav-link ${
@@ -322,7 +323,7 @@ export default function Home() {
             DOCTORAL
           </button>
         </li>
-        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+        <li className="bg-white rounded-lg text-black hover:bg-cyan-400">
           <button
             onClick={() => handleTabClick("executive")}
             className={`p-4 w-full lg:w-auto text-left nav-link ${
@@ -333,7 +334,7 @@ export default function Home() {
             EXECUTIVE PH.D.
           </button>
         </li>
-        <li className="bg-white rounded-lg text-black hover:bg-blue-400">
+        <li className="bg-white rounded-lg text-black hover:bg-cyan-400">
           <button
             onClick={() => handleTabClick("parttime")}
             className={`p-4 w-full lg:w-auto text-left nav-link ${
@@ -420,7 +421,7 @@ export default function Home() {
             <i>--Michael Springer--</i>
           </h5>
         </div>
-        <div class="item flex-1 w-full bg-blue-900 p-6 pt-14  items-center text-center ">
+        <div class="item flex-1 w-full bg-cyan-900 p-6 pt-14  items-center text-center ">
           <h2 className="font-semibold text-2xl">Word of the Day</h2>
           <h5 className="font-semibold text-xl py-5">कार्यात्मक</h5>
           <h5 className="font-semibold text-2xl">FUNCTIONAL</h5>
@@ -436,14 +437,14 @@ export default function Home() {
             backgroundSize: "cover",
           }}
         >
-          <div className=" w-8/9   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dblue  ">
+          <div className=" w-8/9   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dcyan  ">
             <div className="  ">
               <Counter
                 initialValue={0}
                 targetValue={2000}
                 speed={0.001}
                 text="Highest Package"
-                textColor="text-blue-600"
+                textColor="text-cyan-600"
                 title="First Counter"
                 color=""
               />
@@ -482,14 +483,14 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className=" rounded-b-md   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dblue  mb-12">
+          <div className=" rounded-b-md   sm:p-4  md:p-4 lg:p-5 p-4  border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1  justify-center items-center   dark:bg-dcyan  mb-12">
             <div className=" ">
               <Counter
                 initialValue={0}
                 targetValue={2000}
                 speed={0.001}
                 text="NIRF All India Rank"
-                textColor="text-blue-600"
+                textColor="text-cyan-600"
                 title="First Counter"
                 color=""
               />
@@ -558,7 +559,7 @@ export default function Home() {
               />
             </div>
             <div className="w-full flex flex-col justify-center p-4">
-              <div className="w-full rounded-md p-4 lg:p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-5 justify-center items-center shadow-none border border-black dark:bg-dblue">
+              <div className="w-full rounded-md p-4 lg:p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-5 justify-center items-center shadow-none border border-black dark:bg-dcyan">
                 <div className="flex flex-col justify-center items-center w-full">
                   <Card
                     title="Department"
@@ -584,6 +585,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 }

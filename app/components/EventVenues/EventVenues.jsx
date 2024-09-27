@@ -17,7 +17,7 @@ export default function EventVenues() {
     <div className="w-5/6 mx-auto">
       <h1 className="pt-1 px-20 text-md">
         
-        <Link href="/" className="text-blue-500">
+        <Link href="/" className="text-cyan-500">
           Home
         </Link>
         /Event Venues
