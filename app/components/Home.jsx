@@ -7,8 +7,8 @@ import Card from "@/app/components/Card";
 import Seminar from "@/app/components/Seminar";
 import Notices from "@/app/components/News-Notices";
 import AbouttheInstitute from "@/app/components/AbouttheInstitute/AbouttheInstitute";
-import NumberOne from "./components/NumberOne/NumberOne";
-import { InfiniteMovingCardsDemo } from "./components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo";
+import NumberOne from "@/app/components/NumberOne/NumberOne";
+import { InfiniteMovingCardsDemo } from "@/app/components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("postgraduate");
