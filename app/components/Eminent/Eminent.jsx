@@ -2,8 +2,6 @@
 import EminmentSlider from "@/app/SliderAlumni/page";
 import Image from "next/image";
 import React from "react";
-import { CardStackDemo } from "@/app/components/CardStackDemo/CardStackDemo";
-
 import StickyScrollRevealDemo from "@/app/components/StickyScrollRevealDemo/StickyScrollRevealDemo";
 
 export default function Eminent() {
@@ -86,9 +84,6 @@ export default function Eminent() {
 
       <EminmentSlider />
 
-
-
-     <CardStackDemo/>
      <StickyScrollRevealDemo/>
       <section className="w-full mx-auto text-white"
         style={{
