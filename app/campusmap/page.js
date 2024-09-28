@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function page() {
   return (
     <>
-     <div className=" text-blue-600   relative  w-full h-[450px]  mx-auto border-2">
+     <div className=" text-cyan-600   relative  w-full h-[450px]  mx-auto border-2">
           <Image src="/clg.jpg" alt="" fill />
           </div>
       <CampusMap

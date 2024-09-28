@@ -23,7 +23,7 @@ export default function page() {
         <div className="w-full flex px-5 py-5  gap-5">
           <div className="w-2/3 ">
             <div className="p-10">
-              <h2 className=" tracking-[10px] text-lg text-blue-700">WELCOME TO</h2>
+              <h2 className=" tracking-[10px] text-lg text-cyan-700">WELCOME TO</h2>
               <h1 className="my-6 text-4xl  font-bold"> LNCT INDORE</h1>
 
               <p className=" mt-2 font-extralight text-sm  text-justify">

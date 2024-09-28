@@ -15,8 +15,8 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
       pageNumbers.push(
         <li key={i}>
           <button
-            className={`px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple ${
-              i === currentPage ? 'bg-purple-600 text-white dark:text-gray-800' : ''
+            className={`px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-cyan ${
+              i === currentPage ? 'bg-cyan-600 text-white dark:text-gray-800' : ''
             }`}
             onClick={() => handleClick(i)}
           >
@@ -40,7 +40,7 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
           <ul className="inline-flex items-center">
             <li>
               <button
-                className="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
+                className="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-cyan"
                 aria-label="Previous"
                 onClick={() => handleClick(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -57,7 +57,7 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
             {renderPageNumbers()}
             <li>
               <button
-                className="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
+                className="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-cyan"
                 aria-label="Next"
                 onClick={() => handleClick(currentPage + 1)}
                 disabled={currentPage === totalPages}

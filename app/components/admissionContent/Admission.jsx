@@ -61,7 +61,7 @@ const AdmissionForm = () => {
             <div className="flex flex-col md:flex-row md:justify-around items-center bg-cover">
             <form
                 onSubmit={handleSubmit}
-                className="space-y-4 bg-white p-6 w-full md:w-80 lg:w-[600px] border-2 shadow-md flex flex-col border-indigo-200 rounded-xl"
+                className="space-y-4 bg-white p-6 w-full md:w-80 lg:w-[600px] border-2 shadow-md flex flex-col border-cyan-200 rounded-xl"
               >
                 <h1 className="text-xl bg-clip-text bg-gradient-to-r to-yellow-600 from-pink-400">
                   Admission Form
@@ -166,7 +166,7 @@ const AdmissionForm = () => {
               
                 <button
                   type="submit"
-                  style={{ background: "blue", color: "white" }}
+                  style={{ background: "cyan", color: "white" }}
                   className="px-4 py-2 rounded-md"
                 >
                   Submit
@@ -175,7 +175,7 @@ const AdmissionForm = () => {
 
               <div className="flex flex-col justify-center items-center mt-5 md:mt-0 max-w-3xl">
                 <h1 className="mb-4 text-center text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-blue-400">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r to-cyan-600 from-cyan-400">
                     Just a Few More Steps
                   </span>
 
@@ -190,7 +190,7 @@ const AdmissionForm = () => {
                 <button
                   type="button"
                   className="text-white  hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-200 shadow-lg shadow-green-100 dark:shadow-lg dark:shadow-green-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                  style={{ background: "blue" }}
+                  style={{ background: "cyan" }}
                 >
                   <Link href="/about"> About Us</Link>
                 </button>

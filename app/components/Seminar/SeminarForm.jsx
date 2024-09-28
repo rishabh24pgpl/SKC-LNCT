@@ -122,7 +122,7 @@ const SeminarForm = ({
     if (name === "imageUrl") {
       setSeminarData((prev) => ({
         ...prev,
-        file: target.files.length > 0 ? target.files[0] : null,
+        imageUrl: target.files.length > 0 ? target.files[0] : null,
       }));
     } else {
       setError({ msg: "", type: "" });
@@ -157,63 +157,109 @@ const SeminarForm = ({
     setPrevImagePreviewText("Previously Used Image");
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setError({ msg: "", type: "" });
+  //   try {
+  //     setIsLoading(true);
+
+
+  //     if (!validateForm()) return;
+
+  //     const formattedDate = moment(seminar.endDate).toISOString();
+  //     let imgRes = null;
+
+  //     if (seminar.imageUrl && seminar.imageUrl !== prevImagePreview) {
+  //       imgRes = await uploadImg({
+  //         img: seminar.file,
+  //         category: "SEMINARINITIAL",
+  //       });
+  //       setPrevImagePreview(seminar.file); // Update previous image preview if a new image is uploaded
+  //       setPrevImagePreviewText("Current Image"); // Update text for current image
+  //     }
+
+  //     if (isEditMode) {
+  //       await updateSeminar({
+  //         ...seminar,
+  //         imageUrl: imgRes ? imgRes : seminar.imageUrl,
+  //         collegeUuid: organization || collegeUuid,
+  //         uuid: selectedSeminarId,
+  //       });
+  //     } else {
+  //       await addSeminar({
+  //         ...SEMINARINITIAL,
+  //         file: imgRes,
+  //         endDate: formattedDate,
+  //         collegeUuid: organization || collegeUuid,
+  //         // organizationUuid: organization || schoolUuid,
+  //       });
+
+
+  //       // const res = await addNotice(formData);
+  //     }
+
+  //     onFormSubmit();
+  //   } catch (error) {
+  //     setError({ msg: error.message || "An error occurred", type: "error" });
+  //     console.error("Error submitting form:", error);
+  //   } finally {
+  //     setIsLoading(false);
+  //     setSeminarData({
+  //       ...SEMINARINITIAL,
+  //       endDate: moment().format("YYYY-MM-DDTHH:mm"),
+  //     });
+  //     const fileInput = document.getElementById("file");
+  //     if (fileInput) {
+  //       fileInput.value = ""; // Reset value to empty string
+  //     }
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return; // If form validation fails, don't submit
+
+    let imgRes = await uploadImg({ img: seminar.imageUrl, category: "seminar" });
+    if (imgRes) {
+      const formattedDate = moment(seminar.endDate).toISOString();
+      setSeminarData(seminar);
+    } else {
+      //TODO: handle failure
+    }
     setError({ msg: "", type: "" });
+
+    const formattedDate = moment(seminar.endDate).toISOString();
     try {
       setIsLoading(true);
+      const res = selectedSeminarId
+        ? await updateSeminar({
+            ...SEMINARINITIAL,
+            endDate: formattedDate,
+            uuid: selectedSeminarId,
+            collegeUuid: organization || collegeUuid,
 
-
-      if (!validateForm()) return;
-
-      const formattedDate = moment(seminar.endDate).toISOString();
-      let imgRes = null;
-
-      if (seminar.imageUrl && seminar.imageUrl !== prevImagePreview) {
-        imgRes = await uploadImg({
-          img: seminar.file,
-          category: "SEMINARINITIAL",
-        });
-        setPrevImagePreview(seminar.file); // Update previous image preview if a new image is uploaded
-        setPrevImagePreviewText("Current Image"); // Update text for current image
-      }
-
-      if (isEditMode) {
-        await updateSeminar({
-          ...seminar,
-          imageUrl: imgRes ? imgRes : seminar.imageUrl,
-          collegeUuid: organization || collegeUuid,
-          uuid: selectedSeminarId,
-        });
-      } else {
-        await addSeminar({
-          ...SEMINARINITIAL,
-          file: imgRes,
-          endDate: formattedDate,
-          collegeUuid: organization || collegeUuid,
-          // organizationUuid: organization || schoolUuid,
-        });
-
-
-        // const res = await addNotice(formData);
-      }
-
+          })
+        : await addSeminar({
+            ...seminar,
+            imageUrl: imgRes,
+            endDate: formattedDate,
+            collegeUuid: organization || collegeUuid,
+          });
       onFormSubmit();
     } catch (error) {
       setError({ msg: error.message || "An error occurred", type: "error" });
-      console.error("Error submitting form:", error);
     } finally {
       setIsLoading(false);
-      setSeminarData({
-        ...SEMINARINITIAL,
-        endDate: moment().format("YYYY-MM-DDTHH:mm"),
-      });
-      const fileInput = document.getElementById("file");
-      if (fileInput) {
-        fileInput.value = ""; // Reset value to empty string
-      }
+      setSeminarData({ ...seminar });
+    }
+    const fileInput = document.getElementById("imageUrl");
+    if (fileInput) {
+      fileInput.value = ""; // Reset value to empty string
     }
   };
+
+
+
 
   const validateForm = () => {
     const errors = {};
@@ -236,61 +282,42 @@ const SeminarForm = ({
           className="w-11/12 rounded-lg flex flex-col justify-center items-center bg-bgreen opacity-75 p-5"
           onSubmit={handleSubmit}
         >
-          <div className="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
-            <div></div>
+          <div className="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ">
             {fields.map((field) => (
-              <div key={field.name} className="w-full flex flex-col py-2 px-4">
+              <div
+                key={field.name}
+                className="w-full flex justify-center py-2 px-4 flex-col"
+              >
                 <label
                   htmlFor={field.name}
-                  className="w-32 md:w-40 lg:w-40 p-2 text-xl font-bold"
+                  className={`w-32 md:w-40 lg:w-40 p-2 text-lg font-bold`}
                 >
                   {field.label}
                 </label>
-                {field.type === "file" ? (
-                  <>
-                    <input
-                      ref={fileInputRef}
-                      name={field.name}
-                      className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
-                      id={field.name}
-                      type={field.type}
-                      onChange={handleChange}
-                      required
-                    />
-                    {prevImagePreview && (
-                      <div>
-                        <p className="font-medium text-lg mt-5">
-                          {prevImagePreviewText}
-                        </p>
-                        <img
-                          src={prevImagePreview}
-                          alt={prevImagePreviewText}
-                          style={{ maxWidth: "100px", marginTop: "10px" }}
-                        />
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <input
-                    name={field.name}
-                    className={`p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black ${validationErrors[field.name] ? "border-red-500" : ""
-                      }`}
-                    id={field.name}
-                    type={field.type}
-                    value={seminar[field.name]}
-                    onChange={handleChange}
-                    placeholder={field.placeholder}
-                    required
-                  />
-                )}
-                {validationErrors[field.name] && (
-                  <span className="text-red-500 text-sm mt-1">
-                    {validationErrors[field.name]}
-                  </span>
-                )}
+                <input
+                  ref={fileInputRef}
+                  name={field.name}
+                  className="p-2 border border-gray-300 rounded-lg mb-2 focus:outline-none focus:border-gray-600 text-black"
+                  id={field.name}
+                  type={field.type}
+                  value={
+                    field.name === "imageUrl"
+                      ? seminar[field.name]?.File?.filename
+                      : seminar[field.name]
+                  }
+                  onChange={handleChange}
+                  placeholder={field.placeholder}
+                  required
+                />
+                {validationErrors[field.name] &&
+                  seminar[field.name].trim() === "" && (
+                    <span className="text-red-500 text-sm mt-1">
+                      {validationErrors[field.name]}
+                    </span>
+                  )}
               </div>
             ))}
-            {profile.userType === ADMIN && <OrganizationDropDown />}
+              {profile.userType === ADMIN && <OrganizationDropDown />}
           </div>
           {isEditMode ? (
             <div className="flex">
@@ -310,7 +337,7 @@ const SeminarForm = ({
           ) : (
             <button
               onClick={handleSubmit}
-              className="w-20 my-5 mx-auto font-bold p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 bg-blue-400 text-white"
+              className="w-20 my-5 mx-auto font-bold p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 bg-cyan-400 text-white"
             >
               Submit
             </button>

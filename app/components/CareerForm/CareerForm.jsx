@@ -298,7 +298,7 @@ const CareerForm = () => {
                     accept="application/pdf, image/*"
                     onChange={(e) => handleClientDataChange(e, 'file')}
                     required
-                    className="mt-2 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="mt-2 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500 sm:text-sm"
                   />
                   {fileError && <p className="text-red-500">{fileError}</p>}
                 </div>

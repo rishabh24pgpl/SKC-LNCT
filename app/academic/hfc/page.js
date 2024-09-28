@@ -11,7 +11,7 @@ export default function page() {
       <div className="w-full mx-auto flex relative mt-2 ">
         <div className="w-2/3 px-20 py-1 ">
           <div className="my-4">
-            <h1 className=" text-blue-600 text-lg font-bold my-2">
+            <h1 className=" text-cyan-600 text-lg font-bold my-2">
               HPC(Sankha)
             </h1>
             <p className=" text-justify">
@@ -26,7 +26,7 @@ export default function page() {
             </p>
           </div>
           <div className="my-4">
-            <h1 className=" text-blue-600 text-lg font-bold my-2">
+            <h1 className=" text-cyan-600 text-lg font-bold my-2">
               HPC(Sankha)
             </h1>
             <p className=" text-justify">
