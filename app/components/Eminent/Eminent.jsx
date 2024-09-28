@@ -1,8 +1,7 @@
 import EminmentSlider from "@/app/SliderAlumni/page";
 import Image from "next/image";
 import React from "react";
-import CardStack from "../Card-stack/Card-stack";
-import { CardStackDemo } from "../CardStackDemo/CardStackDemo";
+import { CardStackDemo } from "@/app/components/CardStackDemo/CardStackDemo";
 
 import StickyScrollRevealDemo from "../StickyScrollRevealDemo/StickyScrollRevealDemo";
 
