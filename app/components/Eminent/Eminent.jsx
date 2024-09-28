@@ -1,10 +1,10 @@
-'use client'
+
 import EminmentSlider from "@/app/SliderAlumni/page";
 import Image from "next/image";
 import React from "react";
 import { CardStackDemo } from "@/app/components/CardStackDemo/CardStackDemo";
 
-import StickyScrollRevealDemo from "../StickyScrollRevealDemo/StickyScrollRevealDemo";
+import StickyScrollRevealDemo from "@/app/components/StickyScrollRevealDemo/StickyScrollRevealDemo";
 
 export default function Eminent() {
   
