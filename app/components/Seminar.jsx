@@ -100,7 +100,7 @@ const Seminar = ({ carouselData, additionalCarouselData }) => {
           </ul>
         </div>
         <div className="flex justify-center items-center">
-          <div className="w-[400px] h-full rounded-xl">
+          <div className="w-[390px] h-full rounded-xl">
             <Slider {...settings} ref={(slider) => setSlider1(slider)}>
               {firstHalfEventData.map((item, index) => (
                 <div
@@ -136,14 +136,16 @@ const Seminar = ({ carouselData, additionalCarouselData }) => {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <div className="w-[400px] h-full  rounded-xl">
+          <div className="w-[390px] h-full  rounded-xl">
             <Slider {...settings} ref={(slider) => setSlider2(slider)}>
               {secondHalfEventData.map((item, index) => (
                 <div
                   key={index}
                   className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96"
                 >
+
                   <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-cyan-gray-500 shadow-cyan-gray-500/40">
+
                     <img
                       src={item.imageUrl}
                       alt={item.title}

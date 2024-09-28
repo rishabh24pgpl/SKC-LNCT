@@ -22,7 +22,7 @@ export default function page() {
               <p className=" py-2 text-gray-200 p-1">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
                 cumque repellendus id dolore quidem quod, assumenda voluptate,
-                nisi sequi delectus, magnam cum veritatis molestiae incidunt
+                nisi sequi delectus, magnam cuma veritatis molestiae incidunt
                 autem repudiandae? Voluptates, doloribus modi autem odio magni
                 eum neque obcaecati cupiditate excepturi placeat porro a
                 repellat quasi iure expedita impedit molestiae cumque. Ratione
