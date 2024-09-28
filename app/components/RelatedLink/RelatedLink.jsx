@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import React from "react";
-import { IoIosArrowForward } from "react-icons/io";
+import  IoIosArrowForward  from "react-icons/io";
 
 export default function RelatedLink() {
   const links = [
