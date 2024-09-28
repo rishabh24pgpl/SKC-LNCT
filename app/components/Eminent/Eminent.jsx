@@ -1,3 +1,4 @@
+'use client'
 import EminmentSlider from "@/app/SliderAlumni/page";
 import Image from "next/image";
 import React from "react";
