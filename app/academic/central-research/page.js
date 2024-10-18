@@ -13,7 +13,7 @@ export default function page() {
     <div>
       <SliderMain images={images} />
       <div className="w-10/12 p-20 mx-auto  flex flex-col gap-4 ">
-        <h1 className=" text-center text-3xl font-bold text-blue-600">
+        <h1 className=" text-center text-3xl font-bold text-cyan-600">
           CENTRAL RESEARCH FACILITY
         </h1>
         <h2 className=" text-center">
@@ -45,14 +45,14 @@ export default function page() {
         </div>
 
         <section>
-          <div className="w-full mx-auto  rounded-full py-10   border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dpurple my-4">
+          <div className="w-full mx-auto  rounded-full py-10   border-black grid md:grid-cols-1 lg:grid-cols-4   sm:grid-cols-1 gap-5  justify-center items-center   dark:bg-dcyan my-4">
             <div className=" ">
               <Counter
                 initialValue={0}
                 targetValue={12}
                 speed={0.001}
                 text="DEPARTMENTS UNDER"
-                textColor="text-blue-600"
+                textColor="text-cyan-600"
                 title="First Counter"
                 color="bg-[#bd5638]"
                 textsize="text-base"
@@ -104,7 +104,7 @@ export default function page() {
             <div className=" flex justify-center items-center">
               <FaLocationDot
                 size={50}
-                className=" text-blue-400 bg-white rounded-full  p-2 "
+                className=" text-cyan-400 bg-white rounded-full  p-2 "
               />
             </div>
             <div className=" flex  flex-col">
@@ -120,7 +120,7 @@ export default function page() {
             <div className=" flex justify-center items-center">
               <MdEmail
                 size={50}
-                className=" text-blue-400 bg-white rounded-full  p-2 "
+                className=" text-cyan-400 bg-white rounded-full  p-2 "
               />
             </div>
             <div className=" flex  flex-col">
@@ -134,7 +134,7 @@ export default function page() {
             <div className=" flex justify-center items-center">
               <FaHeadphones
                 size={50}
-                className=" text-blue-400 bg-white rounded-full  p-2 "
+                className=" text-cyan-400 bg-white rounded-full  p-2 "
               />
             </div>
             <div className=" flex  flex-col">

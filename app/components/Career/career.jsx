@@ -85,7 +85,7 @@ export default function Career() {
             className="flex flex-col justify-between border-solid border-2 border-orange-100 p-10 shadow-2xl"
           >
             <div className="flex justify-between items-center sm:flex justify-between items-center flex-wrap">
-              <div className="text-lg font-semibold text-bookmark-blue flex space-x-1 items-center mb-2">
+              <div className="text-lg font-semibold text-bookmark-cyan flex space-x-1 items-center mb-2">
                 <svg
                   className="w-7 h-7 text-gray-700"
                   fill="currentColor"
@@ -141,7 +141,7 @@ export default function Career() {
               <div className="mt-5">
                 <Link
                   href={`/careerform/?college=${college}&&jobUuid=${career.uuid}`}
-                  className="mr-2 my-1 uppercase tracking-wider px-2 text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer"
+                  className="mr-2 my-1 uppercase tracking-wider px-2 text-cyan-600 border-cyan-600 hover:bg-cyan-600 hover:text-white border text-sm font-semibold rounded py-1 transition transform duration-500 cursor-pointer"
                 >
                   Apply
                 </Link>
@@ -158,7 +158,7 @@ export default function Career() {
             key={number + 1}
             onClick={() => paginate(number + 1)}
             className={`mx-2 px-3 py-1 border rounded-md ${
-              currentPage === number + 1 ? "bg-blue-500 text-white" : "bg-white text-blue-500"
+              currentPage === number + 1 ? "bg-cyan-500 text-white" : "bg-white text-cyan-500"
             }`}
           >
             {number + 1}

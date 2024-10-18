@@ -5,7 +5,7 @@ export default function NumberOne({img,title,content}) {
   return (
    <>
    
-    <div className="relative bg-gradient-to-r from-blue-900 via-cyan-800 to-cyan-800 text-white overflow-hidden -z-10 ">
+    <div className="relative bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-800 text-white overflow-hidden -z-10 ">
           {/* SVG Waves */}
           <svg
             id="wave"

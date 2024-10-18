@@ -11,7 +11,7 @@ export default function TimeTable() {
       </div>
      
       
-      <h1 className=" font-semibold text-4xl border-b-2 p-8 text-center w-3/4 mx-auto border-blue-600">
+      <h1 className=" font-semibold text-4xl border-b-2 p-8 text-center w-3/4 mx-auto border-cyan-600">
       Time Table
       </h1>
       <div className="w-full mx-auto pt-5 pb-10 ml-15">
@@ -22,7 +22,7 @@ export default function TimeTable() {
               <h1 className="text-xl pb-2 text-center">
                 Click Here to Download 👇
               </h1>
-              <button className="bg-blue-600 mx-auto flex justify-center items-center w-2/3 hover:bg-blue-500 text-center p-5 rounded-2xl text-white">
+              <button className="bg-cyan-600 mx-auto flex justify-center items-center w-2/3 hover:bg-cyan-500 text-center p-5 rounded-2xl text-white">
                 Download
               </button>
             </div>

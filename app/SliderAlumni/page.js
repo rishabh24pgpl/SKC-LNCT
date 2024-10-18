@@ -44,7 +44,7 @@ export default function EminmentSlider() {
 
   return (
     <div className="w-11/12 mx-auto">
-      <h2 className="text-3xl text-center font-bold">Distinguished alumni awardees</h2>
+      <h2 className="text-3xl text-center font-bold">Distinguished alumni awardees </h2>
       <div className="overflow-hidden">
         <ImgSlider images={images} />
       </div>

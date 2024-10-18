@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from '@/app/components/Home'
+import InternalQuality from '@/app/components/InternalQuality'
 
 export default function page() {
   return (
    <>
-   <Home/>
+   <InternalQuality/>
    </>
   )
 }

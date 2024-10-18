@@ -15,7 +15,6 @@ const EventSection = () => {
     Aos.init({ duration: 800 });
   }, []);
   const cardDetails = [
-    // ... your card details remain unchanged
     {
       id: 1,
       image: "/events/cricket/_DSC0025.JPG",

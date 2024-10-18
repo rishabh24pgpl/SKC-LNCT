@@ -1,10 +1,8 @@
+
 import EminmentSlider from "@/app/SliderAlumni/page";
 import Image from "next/image";
 import React from "react";
-import CardStack from "../Card-stack/Card-stack";
-import { CardStackDemo } from "../CardStackDemo/CardStackDemo";
-
-import StickyScrollRevealDemo from "../StickyScrollRevealDemo/StickyScrollRevealDemo";
+import StickyScrollRevealDemo from "@/app/components/StickyScrollRevealDemo/StickyScrollRevealDemo";
 
 export default function Eminent() {
   
@@ -14,23 +12,27 @@ export default function Eminent() {
       <div className="w-full h-80 bg-cover capitalize flex justify-center items-center"
         style={{ backgroundImage: `url('/about-banner.jpg')` }}>
         <h2 className="font-bold text-3xl w-4/5 uppercase text-center text-white">
+
           Alumni Cell - LNCT INDORE | Central India&apos;s No. 1 Engineering Institute - Indore
+
         </h2>
       </div>
 
       <div className="flex flex-col md:flex-row justify-around  m-10 p-10 w-11/12 mx-auto">
         <div className="w-full md:w-1/2 mb-6 md:mb-0">
-          <h1 className="text-blue-600  text-4xl">About</h1>
+          <h1 className="text-cyan-600  text-4xl">About</h1>
           <p className="text-2xl">
             We serve as a bridge between the university and the alumni.
           </p>
           <p>
             The Medi-Caps Alumni Association serves as a bridge between the
             university past, present, and future. Our alumni network is a
+
             crucial stakeholder, actively contributing to the university&apos;s
             developmental activities. By fostering closer ties between our
             alumni, students, and the university, we can enrich the student
             experience and expand our university&apos;s development. Our diverse
+
             alumni community includes over 20,000 graduates who have gone on to
             work for prestigious companies like Oracle, Microsoft, and IBM, as
             well as serving in various government positions, including IAS, IES,
@@ -86,9 +88,6 @@ export default function Eminent() {
 
       <EminmentSlider />
 
-
-
-     <CardStackDemo/>
      <StickyScrollRevealDemo/>
       <section className="w-full mx-auto text-white"
         style={{
@@ -103,7 +102,7 @@ export default function Eminent() {
           alumni@lnct.ac.in
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-2 pt-10 pb-2">
-          <div className="text-white rounded-xl p-3 bg-blue-500 px-10 hover:bg-blue-400 hover:text-black">
+          <div className="text-white rounded-xl p-3 bg-cyan-500 px-10 hover:bg-cyan-400 hover:text-black">
             Join us
           </div>
           <div className="bg-black rounded-xl p-3 px-10 hover:bg-gray-800 hover:text-white">

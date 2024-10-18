@@ -44,7 +44,7 @@ const NoticeForm = () => {
             name="title"
             value={formData.title}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"
           />
         </div>
         <div className="mb-4">
@@ -59,7 +59,7 @@ const NoticeForm = () => {
             id="file"
             name="file"
             onChange={handleChange}
-            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"
           />
         </div>
         <div className="mb-4">
@@ -74,7 +74,7 @@ const NoticeForm = () => {
             name="description"
             value={formData.description}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"
           ></textarea>
         </div>
         <div className="mb-4">
@@ -90,7 +90,7 @@ const NoticeForm = () => {
             name="publishedDate"
             value={formData.publishedDate}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"
           />
         </div>
         <div className="mb-4">
@@ -106,12 +106,12 @@ const NoticeForm = () => {
             name="endDate"
             value={formData.endDate}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 p-2 w-full border-gray-300 rounded-md focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"
           />
         </div>
         <button
           type="submit"
-          className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
+          className="bg-cyan-500 text-white px-4 py-2 rounded-md hover:bg-cyan-600 focus:outline-none focus:bg-cyan-600"
         >
           Submit
         </button>
