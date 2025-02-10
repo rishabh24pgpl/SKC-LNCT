@@ -9,7 +9,7 @@ export default function AbouttheInstitute() {
             About the Institute
           </h1>
           <p className="  lg:px-10 lg:pb-4 p-3">
-          Lakshmi Narain College of Technology, Indore (LNCT) is one of the leading private Technical and Professional institutes in Indore today, having campus in lush green out skirts of Indore. LNCT Indore was founded in 2004 by "H.K. Education Trust, Bhopal" and all the courses of the institute are approved by AICTE Delhi, Govt. of India. Department of the Technical Education, Govt. of M.P. and are affiliated to Rajiv Gandhi Proudyogikis Vishwavidyalaya, Technical Unsiversity of Madhya Pradesh and Devi Ahiliya Vishwavidyalaya (University) Indore.
+          Lakshmi Narain College of Technology, Indore (LNCT) is one of the leading private Technical and Professional institutes in Indore today, having campus in lush green out skirts of Indore. LNCT Indore was founded in 2004 by H.K. Education Trust, Bhopal and all the courses of the institute are approved by AICTE Delhi, Govt. of India. Department of the Technical Education, Govt. of M.P. and are affiliated to Rajiv Gandhi Proudyogikis Vishwavidyalaya, Technical Unsiversity of Madhya Pradesh and Devi Ahiliya Vishwavidyalaya (University) Indore.
 
 For the undergraduate courses, the admission is through the national-level engineering entrance examination: AIEEE and MPPET. For the postgraduate courses, the entry is through GATE for MTech, NIMCET for MCA or through an institute-conducted entrance test.
           </p>

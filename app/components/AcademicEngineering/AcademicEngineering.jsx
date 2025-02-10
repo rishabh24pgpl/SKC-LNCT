@@ -13,7 +13,7 @@ export default function AcademicEngineering() {
           </h1>
           <p className="text-black text-justify pt-2">
             {" "}
-            Lakshmi Narain College of Technology (LNCT) is renowned for its comprehensive academic programs designed to foster innovation, research, and professional excellence. With a strong focus on engineering, technology, management, and applied sciences, LNCT offers a variety of undergraduate, postgraduate, and doctoral programs that blend rigorous academics with hands-on learning. The institution emphasizes state-of-the-art facilities, experienced faculty, and industry-aligned curricula, ensuring students gain the technical expertise and soft skills required for global competitiveness. LNCT's academic framework is further enriched by partnerships with leading organizations, fostering opportunities for internships, research, and career placements
+            Lakshmi Narain College of Technology (LNCT) is renowned for its comprehensive academic programs designed to foster innovation, research, and professional excellence. With a strong focus on engineering, technology, management, and applied sciences, LNCT offers a variety of undergraduate, postgraduate, and doctoral programs that blend rigorous academics with hands-on learning. The institution emphasizes state-of-the-art facilities, experienced faculty, and industry-aligned curricula, ensuring students gain the technical expertise and soft skills required for global competitiveness. LNCTs academic framework is further enriched by partnerships with leading organizations, fostering opportunities for internships, research, and career placements
           </p>
         </div>
         <div className="w-full  relative -z-10 ">

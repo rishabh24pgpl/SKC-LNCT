@@ -28,7 +28,7 @@ export default function LeadingRecruiter({ title, content }) {
               Lakshmi Narain College of Technology (LNCT) has established itself as a premier institute for nurturing industry-ready professionals, attracting top recruiters from diverse sectors. 
               Renowned companies like Wipro, IBM, Datapure, and eVitamins consistently recognize the exceptional talent and skills of LNCT graduates, offering them opportunities to excel in dynamic roles. 
               With a robust curriculum, state-of-the-art facilities, and dedicated placement support, LNCT ensures students are equipped to meet industry demands. 
-              The college's strong focus on innovation, technical expertise, and soft skills development makes it a preferred destination for leading recruiters seeking to build their future-ready workforce.
+              The colleges strong focus on innovation, technical expertise, and soft skills development makes it a preferred destination for leading recruiters seeking to build their future-ready workforce.
               </h1>
             </div>
           </div>
