@@ -5,13 +5,14 @@ export default function page() {
   return (
     <>
       <div
-        className="w-full h-96 flex justify-center  items-center"
+        className="w-full h-36 flex justify-center  items-center"
         style={{
-          backgroundImage: "url('/logo1.png')",
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
           backgroundSize: "cover",
         }}
       >
-        <h1 className=" uppercase font-bold text-5xl">chairperson</h1>
+        <h1 className=" uppercase font-bold text-5xl">Chairperson</h1>
       </div>
       <div className="w-full  border-2 p-20 ">
         <div className=" flex  rounded-xl bg-sky-100">

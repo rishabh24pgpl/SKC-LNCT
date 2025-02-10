@@ -16,7 +16,7 @@ export default function Navbar() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const collegeNames = ["LNCT ", " एलएनसीटी "];
+  const collegeNames = ["Lakshmi Narain College Of Technology ", " लक्ष्मी नारायण कॉलेज ऑफ टेक्नोलॉजी "];
 
   useEffect(() => {
     // Update isSmallScreen state on window resize
@@ -56,10 +56,10 @@ export default function Navbar() {
           name: "Vision and Mission",
           link: "/institute/mission_vision",
         },
-        {
-          name: "Former Directors",
-          link: "/institute/former_directors",
-        },
+        // {
+        //   name: "Former Directors",
+        //   link: "/institute/former_directors",
+        // },
         {
           name: "Campus and Facilities",
           link: "/institute/campus_facilities",
@@ -83,10 +83,6 @@ export default function Navbar() {
         //   link: "/institute/senate",
         // },
         {
-          name: "Principal",
-          link: "/principal",
-        },
-        {
           name: "Chairperson",
           link: "/institute/chairperson",
         },
@@ -95,13 +91,19 @@ export default function Navbar() {
           link: "/institute/director",
         },
         {
-          name: "Finance Committee",
-          link: "/institute/fc",
+          name: "Principal",
+          link: "/principal",
         },
-        {
-          name: "Building and Work Committee",
-          link: "/institute/bwc",
-        },
+        
+        
+        // {
+        //   name: "Finance Committee",
+        //   link: "/institute/fc",
+        // },
+        // {
+        //   name: "Building and Work Committee",
+        //   link: "/institute/bwc",
+        // },
       ],
     },
     {
@@ -367,22 +369,19 @@ export default function Navbar() {
               name: "Vision and Mission",
               link: "/institute/mission_vision",
             },
-            {
-              name: "Former Directors",
-              link: "/institute/former_directors",
-            },
-            {
-              name: "Governence",
-              link: "/institute/former_directors",
-            },
+            // {
+            //   name: "Former Directors",
+            //   link: "/institute/former_directors",
+            // },
+            // {
+            //   name: "Governence",
+            //   link: "/institute/former_directors",
+            // },
             {
               name: "Campus and Facilities",
               link: "/institute/campus_facilities",
             },
-            {
-              name: "Contact Us",
-              link: "/institute/contact",
-            },
+            
           ],
         },
         {
@@ -397,10 +396,6 @@ export default function Navbar() {
             //   link: "/institute/senate",
             // },
             {
-              name: "Principal",
-              link: "/principal",
-            },
-            {
               name: "Chairperson",
               link: "/institute/chairperson",
             },
@@ -409,13 +404,18 @@ export default function Navbar() {
               link: "/institute/director",
             },
             {
-              name: "Finance Committee",
-              link: "/institute/fc",
+              name: "Principal",
+              link: "/principal",
             },
-            {
-              name: "Building and Work Committee",
-              link: "/institute/bwc",
-            },
+            
+            // {
+            //   name: "Finance Committee",
+            //   link: "/institute/fc",
+            // },
+            // {
+            //   name: "Building and Work Committee",
+            //   link: "/institute/bwc",
+            // },
           ],
         },
         {
@@ -452,10 +452,10 @@ export default function Navbar() {
         {
           name: "Academic",
           subchild: [
-            {
-              name: "Academic Overview",
-              link: "/academic/overview",
-            },
+            // {
+            //   name: "Academic Overview",
+            //   link: "/academic/overview",
+            // },
             {
               name: "Academic Programs",
               link: "/academic/programs",
@@ -468,10 +468,10 @@ export default function Navbar() {
               name: "Academic Calendar",
               link: "/academic/calender",
             },
-            {
-              name: "Curriculum and Syllabus",
-              link: "/academic/syllabus",
-            },
+            // {
+            //   name: "Curriculum and Syllabus",
+            //   link: "/academic/syllabus",
+            // },
           ],
         },
         {
@@ -510,25 +510,25 @@ export default function Navbar() {
               name: "Central Research Facility",
               link: "/academic/central-research",
             },
-            {
-              name: "High Performance Computing",
-              link: "/academic/hfc",
-            },
+            // {
+            //   name: "High Performance Computing",
+            //   link: "/academic/hfc",
+            // },
           ],
         },
-        {
-          name: "Technical Service Units",
-          subchild: [
-            {
-              name: "Health Care",
-              link: "/health-center",
-            },
-            {
-              name: "Lawn and Garden",
-              link: "/academic/lawn",
-            },
-          ],
-        },
+        // {
+        //   name: "Technical Service Units",
+        //   subchild: [
+        //     {
+        //       name: "Health Care",
+        //       link: "/health-center",
+        //     },
+        //     {
+        //       name: "Lawn and Garden",
+        //       link: "/academic/lawn",
+        //     },
+        //   ],
+        // },
       ],
     },
     {
@@ -539,7 +539,7 @@ export default function Navbar() {
           subchild: [
             {
               name: "Why LNCT",
-              link: "/why_lnct",
+              link: "/why_skclnct",
             },
             {
               name: "Gallery",
@@ -549,10 +549,10 @@ export default function Navbar() {
               name: "Campus Life",
               link: "/student/campuslife",
             },
-            {
-              name: "Academic Programs",
-              link: "/academic/programs",
-            },
+            // {
+            //   name: "Academic Programs",
+            //   link: "/academic/programs",
+            // },
             {
               name: "Admission Process",
               link: "/admission",
@@ -562,21 +562,21 @@ export default function Navbar() {
         {
           name: "Existing Students",
           subchild: [
-            {
-              name: "Rules and Regulations",
-              link: "/students/rules_regulations",
-            },
+            // {
+            //   name: "Rules and Regulations",
+            //   link: "/students/rules_regulations",
+            // },
             {
               name: "Academic Calendar",
               link: "/academic/calender",
             },
-            {
-              name: "Time Table",
-              link: "/institute/former_directors",
-            },
+            // {
+            //   name: "Time Table",
+            //   link: "/institute/former_directors",
+            // },
             {
               name: "Online Fee Payment",
-              link: "https://www.pratibhaglobalschool.com/payments/login/40e032b8-a995-47ab-a854-c3aec4812c0e",
+              link: "/academic/onlinefee",
             },
           ],
         },
@@ -665,31 +665,46 @@ export default function Navbar() {
       ],
     },
     {
-      main: "Resources",
+      main: "Contact Us",
       child: [
         {
-          name: "Resources",
+          name:"",
           subchild: [
             {
-              name: "Central Research Facility",
-              link: "/crf",
+              name: "Contact Us",
+              link: "/institute/contact",
             },
-            {
-              name: "Centre for Technology Innovation and Industry Relations",
-              link: "/relations",
-            },
-            {
-              name: "High Performance Computing",
-              link: "/highpc",
-            },
-            {
-              name: "Industrial Consultancy",
-              link: "/ic",
-            },
-          ],
-        },
-      ],
-    },
+          ]
+
+        }
+      ]
+    }
+    // {
+    //   main: "Resources",
+    //   child: [
+    //     {
+    //       name: "Resources",
+    //       subchild: [
+    //         {
+    //           name: "Central Research Facility",
+    //           link: "/crf",
+    //         },
+    //         {
+    //           name: "Centre for Technology Innovation and Industry Relations",
+    //           link: "/relations",
+    //         },
+    //         {
+    //           name: "High Performance Computing",
+    //           link: "/highpc",
+    //         },
+    //         {
+    //           name: "Industrial Consultancy",
+    //           link: "/ic",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
   ];
 
   useEffect(() => {

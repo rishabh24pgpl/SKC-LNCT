@@ -18,35 +18,32 @@ export default function TIIR() {
         
 
 
-            <div className=" w-full h-80 bg-cover capitalize flex justify-center items-center "
-                style={{ backgroundImage: `url('about-banner.jpg')` }}>
-               
-                <h2 className="font-bold text-4xl uppercase  text-white" >
-                    TECHNOLOGY INNOVATION AND INDUSTRY RELATIONS
-                </h2>
-                
-
-            </div>
+            <div
+        className="w-full h-36 flex justify-center  items-center"
+        style={{
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
+          backgroundSize: "cover",
+        }}
+      >
+        <h1 className=" uppercase font-bold text-5xl">Technology Innovation and Industry Relations</h1>
+      </div>
             <div className='grid grid-cols-3 gap-[70px] '>
                 <div className='col-span-2 text-justify ml-24 mt-20 '>
-                    <h4 className='text-red-900 text-[20px] font-bold'> Technology Innovation and Industry Relations (TIIR)</h4>
-                    <p className='text-[12px]'> NIT Rourkela, with its intellectual capital, the human resource, the library, the laboratories and equipment, and its tradition of scholarship, is an ocean of knowledge that is waiting to be tapped by the engineers and entrepreneurs in industry for creation of wealth and welfare of humanity. The interface between the institute and the industry, the interface between the ocean of knowledge and the continents of application is the Centre for Technology Innovation and Industry Relations, TIIR for short, the Sanskrit word for the shore of a large body of water. TIIR is aimed at providing a forum to promote and facilitate activities in a manner that will not only take NIT research to Industry and Society, but also will bring the knowledge and experience of the Industry to enrich the academic programmes of the Institute.
+                    <h4 className='text-red-900 text-[20px] mt-2 mb-2  font-bold'> Technology Innovation and Industry Relations (TIIR)</h4>
+                    <p className='text-[14px]'> At Lakshmi Narain College of Technology (LNCT) Indore, the Technology Innovation and Industry Relations (TIIR) cell is a vibrant hub that fosters a culture of innovation, entrepreneurship, and collaboration with industry partners. TIIR is designed to bridge the gap between academia and industry, providing a platform for students, faculty, and industry experts to come together and develop innovative solutions to real-world problems. Through TIIR, LNCT Indore aims to promote technology-based innovation, entrepreneurship, and job creation, while also enhancing the college's industry connect and reputation. The cell organizes various events, workshops, and challenges throughout the year, such as hackathons, ideathons, and innovation competitions, to encourage students to think out-of-the-box and develop innovative solutions. Additionally, TIIR provides resources, mentorship, and funding support to students and faculty to help them transform their ideas into successful startups, thereby creating a ecosystem that promotes innovation, entrepreneurship, and industry-academia collaboration. By leveraging the power of TIIR, LNCT Indore is poised to become a leading institution in the region, known for its innovative and industry-relevant programs, and its ability to produce talented and entrepreneurial graduates who can make a meaningful impact in the world.
                     </p>
-                    <h4 className='text-red-900 text-[20px] font-bold'>TIIR: A New Paradigm</h4>
-                    <p className='text-[12px]'>An institution of higher learning in the field of technology is distinguished from similarly placed institutions in liberal studies – science, commerce, arts and social sciences, as well as from engineering colleges that impart essential skills in engineering profession and shop flow management. NITs, like IITs and other technical universities, are seats of learning and innovation, some of which must be directed towards development of products and processes that contribute directly to creation of wealth and wellbeing of the society. This objective is best achieved by close collaboration with industry, government departments and comparable organizations including hospitals, municipalities and philanthropic institutions.
-
-                        While many universities in the world, particularly those in North America, Europe and Pacific–RIM countries are strongly linked to industry, those in India have largely remained insulated from it. This situation has led not only to extreme poverty and backwardness of our people but also to loss of entire generations of valuable human resource. This trend needs to be reversed; and the time to do it is NOW.
-
-                        NIT, Rourkela is all set to contribute a small part to nation building by bringing its faculty and students closer to industry. It aims at creating an environment where hundreds of professors and thousands of students will be carrying out research on subjects directly relevant to and funded by industry. The establishment of the Centre for Technology Innovation and Industry Relations (TIIR) is an effort in that direction
+                    <h4 className='text-red-900 text-[20px] mt-2 mb-2 font-bold'>TIIR: A New Paradigm</h4>
+                    <p className='text-[14px]'>LNCT Indore proudly introduces TIIR: A New Paradigm, an innovative initiative designed to revolutionize the landscape of technology and entrepreneurship education. TIIR (Technology Innovation and Incubation Resource) embodies LNCT Indore’s commitment to fostering a dynamic ecosystem where students, faculty, and industry experts collaborate to transform groundbreaking ideas into viable startups and impactful solutions. By integrating cutting-edge facilities, mentorship programs, and robust industry partnerships, TIIR empowers aspiring innovators to navigate the complexities of modern technology challenges effectively. This new paradigm not only enhances the academic experience but also bridges the gap between theoretical knowledge and practical application, positioning LNCT Indore at the forefront of nurturing the next generation of pioneers and leaders in the global technology arena.
                     </p>
-                    <h4 className='text-red-900 text-[20px] font-bold'>Functions and Scopes of TIIR</h4>
+                    <h4 className='text-red-900 text-[20px] mt-2 mb-2 font-bold'>Functions and Scopes of TIIR</h4>
                     <ul className='m-5 mb-20 text-[14px]'>
                         <li><span>&#10003;</span>Provide facilities for translation of scientific ideas to real products or services.</li>
                         <li><span>&#10003;</span> The facilities will include laboratories, pilot plants, workshops and small production centres or factories. They will be made available to –
                             <br /> <li className='ml-20 text-[14px]'> <span>&#8594;</span> Faculty, staff and students of the institute with ideas on marketable products or processes, who would like to eventually set up their own business,</li>
                             <br /> <li className='ml-20 text-[14px]'> <span>&#8594;</span> Faculty and students of the institute collaborating with external financiers, entrepreneurs and technocrats in setting up business, </li>
                             <br /><li className='ml-20 text-[14px]'> <span>&#8594;</span> External business enterprises (with or without an internal stake holder) interested in using the intellectual resources of NITR. </li></li>
-                        <li> <span>&#10003;</span>   Showcase the intellectual capital, R&D infrastructure, flexible curricula, student projects, library and ICT facilities, sports and student activities of NIT Rourkela before industries, Government and Society.</li>
+                        <li> <span>&#10003;</span>   Showcase the intellectual capital, R&D infrastructure, flexible curricula, student projects, library and ICT facilities, sports and student activities of LNCT Indore before industries, Government and Society.</li>
                         <li> <span>&#10003;</span>  nvite major industrial houses and small technical entrepreneurs to set up their R&D and product development centres in TIIR and take proactive measures to convince potential participants on the merits of joining TIIR.</li>
                         <li> <span>&#10003;</span> Coordinate with industry organizations such as CII, FICCI, Assocham and others in creating awareness among industry leaders on the merits of setting up R&D centres and incubation facilities in TIIR and thus exploit the intellectual powerhouse of NIT.</li>
                         <li> <span>&#10003;</span>  Invite and lobby with Government departments such as Defence, Space, Atomic Energy, Steel & Mines, Agriculture, Environment and Forests etc. for setting up full-fledged R&D centres in NIT campus.</li>

@@ -9,6 +9,7 @@ import { FaHeadphones } from "react-icons/fa6";
 import { FaRoad } from "react-icons/fa";
 import { IoMdTrain } from "react-icons/io";
 import { IoAirplane } from "react-icons/io5";
+import Link from "next/link";
 
 export default function Contact() {
   const images = ["/baggi.jpg", "/mainImg.jpeg", "/baggi.jpg"];
@@ -16,7 +17,17 @@ export default function Contact() {
 
   return (
     <>
-      <SliderMain images={images} heading="Contact Us" />
+    <div
+        className="w-full h-36 flex justify-center  items-center"
+        style={{
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
+          backgroundSize: "cover",
+        }}
+      >
+        <h1 className=" uppercase font-bold text-5xl">Contact Us</h1>
+      </div>
+      {/* <SliderMain images={images} heading="Contact Us" /> */}
 
       <div className="w-full mx-auto flex relative">
         <div className="w-2/3 px-10 pt-[36px] ">
@@ -33,7 +44,7 @@ export default function Contact() {
                   Address
                 </h1>
                 <h2 className=" text-xs">
-                   LNCT, INDORE, Madhya Pradesh
+                   LNCT Near Rewati Range Sanwer Road , INDORE, Madhya Pradesh
                 </h2>
               </div>
             </div>
@@ -48,7 +59,7 @@ export default function Contact() {
                 <h1 className="text-black text-lg font-semibold capitalize">
                   Email
                 </h1>
-                <h2 className=" text-xs">lnct@gmailcom</h2>
+                <h2 className=" text-xs">admission@lnctindore.com</h2>
               </div>
             </div>
             <div className=" w-64 h-20  p-2 flex gap-3 rounded-lg bg-gray-100">
@@ -62,13 +73,19 @@ export default function Contact() {
                 <h1 className="text-black text-lg font-semibold capitalize">
                   Phone Number
                 </h1>
-                <h2 className=" text-xs">(0661) 246 - 2020 / 2002</h2>
+                <h2 className=" text-xs">+91-97524-10847</h2>
               </div>
             </div>
           </div>
           <div className="w-full   p-2 flex justify-between gap-2  ">
-            <div className="w-1/2 "></div>
-            <div className="w-1/2  bg-gray-100 p-2">
+          <div className="w-full ">
+            <Link target="_blank" href="https://maps.app.goo.gl/WBJLTsz1pFNZCf5g9">
+            <Image
+            src="/lnctmap.png" alt='map' width={500} height={500} className=" w-full " 
+            />
+            </Link>
+            </div>
+            {/* <div className="w-1/2  bg-gray-100 p-2">
               <h1 className="p-2 text-black font-semibold text-xl my-3 ">
                 How to Reach  LNCT
               </h1>
@@ -121,7 +138,7 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="w-full flex justify-center items-center p-4">
             <table className="">

@@ -5,9 +5,10 @@ export default function page() {
     return (
         <>
             <div
-                className="w-full h-96 flex justify-center  items-center"
+                className="w-full h-36 flex justify-center  items-center"
                 style={{
-                    backgroundImage: "url('/logo1.png')",
+                    // backgroundImage: "url('/logo1.png')",
+                    backgroundColor: "#1889a2",
                     backgroundSize: "cover",
                 }}
             >
@@ -18,7 +19,7 @@ export default function page() {
                     <div className="w-1/3 flex flex-col gap-2 bg-cyan-300">
                         <div className="w-full h-72 border-2 relative overflow-hidden">
                             <Image
-                                src="/principal.jpeg"
+                                src="/"
                                 alt="chairman"
                                 width="500"
                                 height="500"
@@ -26,9 +27,11 @@ export default function page() {
                             />
                         </div>
                         <div>
-                            <h1 className="py-2 px-10 font-bold text-2xl">DR.PIYUSH P. MOGHE</h1>
+                            <h1 className="py-2 px-10 font-bold text-2xl">DR. Prakash Bahrani</h1>
                             <h2 className="py-2 px-10 text-lg">Principal -Lnct</h2>
                             <h3 className="py-2 px-10 ">Associate Professor</h3>
+                            <h3 className="py-2 px-10 ">Email: - principal.lnct@lnctindore.com</h3>
+                            <h3 className="py-2 px-10 ">Mobile No: - 9829172244 / 7976856601</h3>
                         </div>
                     </div>
                     <div className="w-2/3 p-10">
@@ -49,24 +52,26 @@ export default function page() {
 
 
                         </p>
-                        <p>
+                        <>
                             <h1>
 
                                 Warm regards,
                             </h1>
                             <h1>
 
-                                DR.PIYUSH P. MOGHE
+                                Dr.Prakash Bahrani
                             </h1>
                             <h1>
 
-                                Principal
+                                Principal-Lnct Indore
                             </h1>
                             <h1>
-
-                                -Lnct Indore
+                                Qualification: - B.E, M.Tech Ph.d
                             </h1>
-                        </p>
+                            <h1>
+                            Experience: - 19 Years Academic 7 years Industry
+                            </h1>
+                        </>
 
 
                     </div>

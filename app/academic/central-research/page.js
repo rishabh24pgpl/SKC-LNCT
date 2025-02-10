@@ -11,7 +11,17 @@ export default function page() {
   const images = ["/ar-3.jpg"];
   return (
     <div>
-      <SliderMain images={images} />
+      <div
+        className="w-full h-36 flex justify-center  items-center"
+        style={{
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
+          backgroundSize: "cover",
+        }}
+      >
+        <h1 className=" uppercase font-bold text-5xl">Central Research Facility</h1>
+      </div>
+      {/* <SliderMain images={images} /> */}
       <div className="w-10/12 p-20 mx-auto  flex flex-col gap-4 ">
         <h1 className=" text-center text-3xl font-bold text-cyan-600">
           CENTRAL RESEARCH FACILITY
@@ -26,20 +36,14 @@ export default function page() {
           </div>
           <div className="w-1/2 ">
             <p className=" text-justify">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-              quas temporibus, consectetur ipsa, provident repudiandae voluptas
-              quaerat minus, voluptatem fuga est pariatur tenetur similique
-              accusamus dolore optio exercitationem veniam aliquam nemo? Aliquam
-              inventore corrupti nesciunt harum cum repellendus, libero
-              reprehenderit, quas repellat suscipit commodi voluptas?
+            The Central Research Facility (CRF) at Lakshmi Narain College of Technology (LNCT) in Indore is a cutting-edge resource center dedicated to fostering innovation and advancing scientific knowledge.
+            Equipped with state-of-the-art instrumentation and technology, the CRF supports a wide array of research activities across multiple disciplines, including materials science, biotechnology, chemical engineering, and information technology.
+            The facility is designed to promote interdisciplinary collaboration, enabling researchers, faculty, 
+            and students to engage in groundbreaking projects that address real-world challenges.
             </p>
             <p className=" text-justify">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-              quas temporibus, consectetur ipsa, provident repudiandae voluptas
-              quaerat minus, voluptatem fuga est pariatur tenetur similique
-              accusamus dolore optio exercitationem veniam aliquam nemo? Aliquam
-              inventore corrupti nesciunt harum cum repellendus, libero
-              reprehenderit, quas repellat suscipit commodi voluptas?
+            The CRF offers a range of services, including analytical testing, computational modeling, and advanced manufacturing, all supported by a team of highly skilled technicians and scientists. 
+            By providing a platform for high-quality research, the CRF plays a crucial role in enhancing the academic and research profile of LNCT, contributing to the development of innovative solutions and the training of the next generation of researchers and industry leaders.
             </p>
           </div>
         </div>

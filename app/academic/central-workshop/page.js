@@ -7,7 +7,17 @@ export default function page() {
     const images = ["/baggi.jpg", "/mainImg.jpeg", "/baggi.jpg"];
   return (
     <div>
-      <SliderMain images={images}/>
+      <div
+        className="w-full h-36 flex justify-center  items-center"
+        style={{
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
+          backgroundSize: "cover",
+        }}
+      >
+        <h1 className=" uppercase font-bold text-5xl">Central Workshop</h1>
+      </div>
+      {/* <SliderMain images={images}/> */}
       <div className="w-full mx-auto flex relative mt-2  font-semibold text-lg">
           <div className="w-2/3 px-20 ">
             
@@ -22,19 +32,7 @@ export default function page() {
                  Welcome to Central Workshop
                 </h1>
                 <p className=" py-3 text-sm">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Nobis cumque repellendus id dolore quidem quod, assumenda
-                  voluptate, nisi sequi delectus, magnam cum veritatis molestiae
-                  incidunt autem repudiandae? Voluptates, doloribus modi autem
-                  odio magni eum neque obcaecati cupiditate excepturi placeat
-                  porro a repellat quasi iure expedita impedit molestiae cumque.
-                  Ratione dolore nobis numquam, atque ipsum totam quae explicabo
-                  quam earum commodi illum. Nostrum iusto fugit, quae harum
-                  temporibus omnis unde saepe at ab eos, praesentium id nam.
-                  Amet numquam repellendus maiores pariatur error a magni
-                  exercitationem, fugit facere animi, laudantium, aliquam ipsum
-                  adipisci quibusdam sit necessitatibus hic deleniti! Tenetur,
-                  libero culpa.
+                The Central Workshop at Lakshmi Narain College of Technology (LNCT) is a state-of-the-art facility designed to provide students and faculty with a comprehensive hands-on learning environment. Equipped with the latest machinery and tools, the workshop supports a wide range of engineering disciplines, including mechanical, electrical, and electronics. It serves as a critical hub for practical training, where students can apply theoretical knowledge to real-world problems, fostering innovation and creativity. The workshop is staffed by experienced technicians and instructors who guide students through various projects, from basic fabrication and assembly to advanced prototyping and testing. Additionally, the Central Workshop plays a vital role in the college's research activities, offering a collaborative space for interdisciplinary projects and industry partnerships.
                 </p>
               </div>
             </div>
@@ -50,9 +48,9 @@ export default function page() {
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">Student Projects</h2>
-          <p className="mb-6">In this section, we highlight the incredible projects that students have completed during our workshops. From innovative gadgets to artistic creations, these projects demonstrate the talent and creativity of our students. Browse through the gallery to see whats possible at our workshop!</p>
+          <p className="mb-6">In this section, we highlight the incredible projects that students have completed during our workshops. From innovative gadgets to artistic creations, these projects demonstrate the talent and creativity of our students.This Buggy was designed and made by our talented students of mechanical and electrical department students under the guidance of faculty and experts.</p>
           <div className="relative w-full h-96">
-            <Image src="/ar-2.jpg" alt="Student Projects Image" layout="fill" objectFit="cover" className="rounded-lg" />
+            <Image src="/baggi.jpg" alt="Student Projects Image" layout="fill" objectFit="cover" className="rounded-lg" />
           </div>
         </section>
 

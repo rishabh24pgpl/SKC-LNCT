@@ -7,14 +7,15 @@ export default function page() {
   return (
     <>
    
-      <div
-        className="w-full border-2 h-96 flex justify-center  items-center"
+   <div
+        className="w-full h-36 flex justify-center  items-center"
         style={{
-          backgroundImage: "url('/clg.jpg')",
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
           backgroundSize: "cover",
         }}
       >
-        <h1 className=" uppercase font-bold text-5xl">welcome to -LNCT</h1>
+        <h1 className=" uppercase font-bold text-5xl">Welcome To LNCT</h1>
       </div>
       <div
         className="w-full h-screen  "
@@ -27,37 +28,15 @@ export default function page() {
               <h1 className="my-6 text-4xl  font-bold"> LNCT INDORE</h1>
 
               <p className=" mt-2 font-extralight text-sm  text-justify">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore totam nesciunt illum, voluptatem obcaecati ut iure
-                accusamus illo reiciendis, commodi quam? Veniam asperiores
-                maiores distinctio consectetur, ratione eius, sunt voluptatum,
-                voluptatem tempore ipsa iusto dignissimos voluptates eum
-                commodi? Eius nobis odio doloribus ipsa, ducimus quos vitae
-                mollitia. Recusandae, mollitia omnis? Quasi, amet numquam
-                voluptatum culpa in voluptas cumque laborum atque iste qui quo
-                harum quis, sed praesentium eius tempore? Perferendis beatae
-                nostrum debitis ad, tempora iusto iure dicta provident illum
-                doloremque aesentium iusto natus aut laudantium animi eligendi
-                veritatis architecto suscipit? Expedita voluptates quae placeat,
-                sed libero, recusandae sequi assumenda est impedit, suscipit aut
-                quisquam animi fugit! Libero ducimus ipsa non, nemo laboriosam
-                minima distinctio doloribus ratione
+                
+ 
+ LNCT colleges is first and largest educational group in central India founded and established in 1999 from Bhopal and privileged as the first, self-financed Institute of Madhya Pradesh.
+Being biggest group in technical and professional studies, SKC LNCT group is running successfully with 13 units in different fields of Engineering, Pharmacy, Management, Medical, Homeopathy, Dentistry, and Nursing and under graduate courses.
+SKC LNCT Group started from capital of Madhya Pradesh and spread area of engineering in 2004 at business capital of Madhya Pradesh, Indore. LNCT Indore was founded in 2004 by “H.K. Education Trust, Bhopal” and all the courses of the institute are approved by AICTE New Delhi, Govt. of India, New Delhi, Department of Technical Education, Govt. of Madhya Pradesh and are affiliated to Rajiv Gandhi Proudyogiki Vishwavidhyalaya, Technical University of Madhya Pradesh, and the MBA programmers are affiliated to Devi Ahilya Vishwavidhyalaya Indore.
               </p>
 
               <p className=" mt-2 font-extralight text-sm text-justify">
-                incidunt, excepturi deleniti fugit corrupti numquam at natus
-                quidem assumenda sed fugiat quibusdam quis voluptate blanditiis?
-                Consectetur iure ut, dolorum est magnam assumenda? Eum culpa,
-                cum facere nesciunt, quia, fuga voluptatem facilis magnam
-                quibusdam corporis ab pariatur voluptates. Ipsum iste mollitia
-                repellendus. Omnis, alias. Quasi aliquid vitae at qui
-                voluptatibus ea ipsum maxime adipisci doloribus quo, tenetur
-                quisquam laborum officia labore harum accusantium neque quod cum
-                modi quos, similique provident inventore perspiciatis quis?
-                Ipsum enim quis cupiditate, sapiente ullam nam numquam atque
-                voluptates itaque temporibus vel minus veniam recusandae
-                laudantium laboriosam eaque id neque earum, quaerat nisi dolore
-                ratione.
+              The Group is committed in highest excellence of professionalism among students for their brighter future. The brand has a strong motivation towards innovation in curriculum implementation. It further aspires to be a part of education revolution in Technical education, impacting futuristic technologies in Indian framework. In this process it aims to be one of the finest providers of job oriented education in India. The Group zests towards creating mindfully creative individuals who can contribute to the development of human community. As a part of this zeal, the group intends to promote entrepreneurial nerve in the budding scholars and involve in research and development through constructive partnership with the industry titans.
               </p>
             </div>
           </div>
