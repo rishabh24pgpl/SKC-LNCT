@@ -6,7 +6,17 @@ export default function CDC() {
     const images = ["/cdc-1.jpg.webp"];
   return (
    <>
-   <SliderMain images={images} heading="CDC" />
+   <div
+        className="w-full h-36 flex justify-center  items-center"
+        style={{
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
+          backgroundSize: "cover",
+        }}
+      >
+        <h1 className=" uppercase font-bold text-5xl">Career Development Cell</h1>
+      </div>
+   {/* <SliderMain images={images} heading="CDC" /> */}
    <h1 className=" p-10 text-4xl text-center   font-semibold ">
          Career Development Cell<span className="text-red-500"> At  LNCT</span>
         </h1>

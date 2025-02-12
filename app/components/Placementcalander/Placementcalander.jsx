@@ -6,7 +6,17 @@ export default function Placementcalander() {
   const images=[];
   return (
     <>
-     <SliderMain images={images} />
+    <div
+        className="w-full h-36 flex justify-center  items-center"
+        style={{
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
+          backgroundSize: "cover",
+        }}
+      >
+        <h1 className=" uppercase font-bold text-5xl">Placement Calender</h1>
+      </div>
+     {/* <SliderMain images={images} /> */}
       <h1 className=" font-semibold text-4xl border-b-2 p-8 text-center w-3/4 mx-auto border-cyan-600 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-b-2xl">
         Placement Process
       </h1>

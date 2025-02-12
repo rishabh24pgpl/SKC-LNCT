@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React,{useState} from "react";
 import SliderMain from "../SliderMain/SliderMain";
 import Image from "next/image";
 import Counter from "@/app/components/Counter";
@@ -9,42 +9,45 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Slider from "../Slider/Slider";
 import { head } from "lodash";
+import FacultyCard from "../FacultyCard/FacultyCard";
+import Curriculumn from "../Curriculumn/Curriculumn";
+// import { useState } from "react/cjs/react.development";
 
-export default function DeptEr({ dept }) {
+export default function DeptEr({ dept,deps }) {
   const images = ["/ar-3.jpg"];
   const counter = [
     {
       title: "undergraduate students",
       value: "120",
-      textColor: "text-red-600",
+      textColor: "text-blue-800",
       color: "bg-red-500",
       speed: "40",
     },
     {
       title: "postgraduate students",
       value: "60",
-      textColor: "text-red-600",
-      color: "bg-cyan-500",
+      textColor: "text-blue-800",
+      color: "bg-[#FF3344]",
       speed: "35",
     },
     {
       title: "doctoral students",
       value: "30",
-      textColor: "text-red-600",
+      textColor: "text-blue-800",
       color: "bg-pink-500",
       speed: "30",
     },
     {
       title: "recent job offers",
       value: "300",
-      textColor: "text-red-600",
-      color: "bg-yellow-500",
+      textColor: "text-blue-800",
+      color: "bg-[#FF3344]",
       speed: "30",
     },
     {
       title: "faculties",
       value: "60",
-      textColor: "text-red-600",
+      textColor: "text-blue-800",
       color: "bg-teal-500",
       speed: "30",
     },
@@ -226,17 +229,122 @@ export default function DeptEr({ dept }) {
       break;
   }
 
+ const [active, setActive] = useState(0)
+
+
+
+ let deptImgs;
+ let mission;
+ let vision;
+ 
+ switch (deps) {
+   case "me":
+     deptImgs = "/civil-img.jpg";
+     mission = "The Commerce Department's mission for students is to empower future business leaders with strong foundations in economics, finance, and trade. We focuses on building practical skills, fostering entrepreneurship, and preparing students for global careers in business. Through hands-on learning, industry exposure, and digital innovation, students are equipped to thrive in the fast-paced world of commerce and drive economic growth.";
+     vision = "The vision of the Commerce Department is to create a hub of future-ready business leaders by providing innovative education, fostering entrepreneurial spirit, and driving global business insights. It aims to shape students into dynamic professionals through cutting-edge curricular, industry partnerships, and digital transformation, while continuously evolving as a center for commerce research and economic development.";
+     break;
+   
+   case "cse":
+     deptImgs = "/mechanical-img.jpg";
+     mission = "The mission of the Science Department is to provide a dynamic and rigorous academic environment that fosters curiosity, critical thinking, and scientific inquiry. We are committed to equipping students with a strong foundation in scientific principles and the skills needed to excel in research, innovation, and practical applications of science. By offering hands-on laboratory experiences, interdisciplinary learning opportunities, and exposure to cutting-edge technologies, we aim to develop scientifically literate graduates who are prepared to address real-world challenges. Our department strives to cultivate a passion for discovery, problem-solving, and ethical responsibility in the pursuit of knowledge that benefits society";
+     vision = "The vision of the Science Department is to be a leader in scientific education and research, recognized for fostering innovation, collaboration, and a deep understanding of the natural world. We aspire to create an academic community where students and faculty engage in transformative learning and groundbreaking research that pushes the boundaries of scientific knowledge. Through our commitment to excellence, interdisciplinary approaches, and global awareness, we aim to produce graduates who are not only proficient in their scientific disciplines but also capable of addressing complex global challenges, contributing to sustainable development, and improving the quality of life for future generations.";
+     break;
+   
+   case "ece":
+     deptImgs = "/mechanical-img.jpg";
+     mission = "Making the arts accessible, inclusive, and meaningful through diverse approaches to creative and technological innovation, integrated with visual, oral, and written communication.";
+     vision = "The Department of Art and Design will lead in promoting the visual arts by fostering critical and creative thinking, artistic expression, effective communication, cultural awareness, and community engagement.";
+     break;
+   
+   case "eet":
+     deptImgs = "/mechanical-img.jpg";
+     mission = "To provide technical education that will create mechanical engineers who contribute to the industry and society.";
+     vision = "To be a leader in mechanical engineering education, offering innovative solutions for the advancement of technology.";
+     break;
+   
+   case "it":
+     deptImgs = "/mechanical-img.jpg";
+     mission = "To provide technical education that will create mechanical engineers who contribute to the industry and society.";
+     vision = "To be a leader in mechanical engineering education, offering innovative solutions for the advancement of technology.";
+     break;
+   
+  //  case "og":
+  //    deptImgs = "/mechanical-img.jpg";
+  //    mission = "To provide technical education that will create mechanical engineers who contribute to the industry and society.";
+  //    vision = "To be a leader in mechanical engineering education, offering innovative solutions for the advancement of technology.";
+  //    break;
+   
+  //  case "pm":
+  //    deptImgs = "/mechanical-img.jpg";
+  //    mission = "To provide technical education that will create mechanical engineers who contribute to the industry and society.";
+  //    vision = "To be a leader in mechanical engineering education, offering innovative solutions for the advancement of technology.";
+  //    break;
+   
+  //  case "pfm":
+  //    deptImgs = "/mechanical-img.jpg";
+  //    mission = "To provide technical education that will create mechanical engineers who contribute to the industry and society.";
+  //    vision = "To be a leader in mechanical engineering education, offering innovative solutions for the advancement of technology.";
+  //    break;
+   
+  //  case "rep":
+  //    deptImgs = "/mechanical-img.jpg";
+  //    mission = "To provide technical education that will create mechanical engineers who contribute to the industry and society.";
+  //    vision = "To be a leader in mechanical engineering education, offering innovative solutions for the advancement of technology.";
+  //    break;
+   
+  //  case "pharm":
+  //    deptImgs = "/mechanical-img.jpg";
+  //    mission = "To provide technical education that will create mechanical engineers who contribute to the industry and society.";
+  //    vision = "To be a leader in mechanical engineering education, offering innovative solutions for the advancement of technology.";
+  //    break;
+   
+  //  case "anotomy":
+  //    deptImgs = "/mechanical-img.jpg";
+  //    mission = "To provide technical education that will create mechanical engineers who contribute to the industry and society.";
+  //    vision = "To be a leader in mechanical engineering education, offering innovative solutions for the advancement of technology.";
+  //    break;
+   
+  //  case "surgery":
+  //    deptImgs = "/electrical-img.jpg";
+  //    mission = "To produce skilled electrical engineers who can innovate and contribute to the development of sustainable energy solutions.";
+  //    vision = "To lead in electrical engineering education and research for a sustainable and technologically advanced future.";
+  //    break;
+   
+   default:
+     deptImgs = "/default-img.jpg";
+     mission = "Default Mission";
+     vision = "Default Vision";
+ }
+
+
+
+
+ const buttons=[
+  'About The Department','Course-curriculmn','Mission-Vision','Faculty','Academic Programmes'
+ ]
   return (
+    <>
+    
     <div>
       <SliderMain images={images} heading={dept} />
+      <div className='mt-10 flex items-center gap-5'>
+      {
+        buttons.map((item,index)=>(
+          <button onClick={()=>setActive(index)} className='border-2 p-4 rounded-lg bg-cyan-500 hover:bg-cyan-700' key={index}>{item}</button>
+        ))
+      }
+      </div>
+      
       <div className="w-full   ">
-        <div className="w-full flex px-20 py-10  gap-7">
+        {
+          active===0 && (
+            <div className="w-full flex px-20 py-10  gap-7">
           <div className="w-2/3 ">
-            <div className="p-10">
-              <h2 className=" text-4xl text-cyan-700 my-5">
+            <div className="pt-3 pb-5">
+              <h2 className=" text-4xl text-cyan-800 my-5">
                 About the Department
               </h2>
-              <div className="w-full   mt-5">
+              {/* <div className="w-full   mt-5">
                 <div className="w-full grid grid-cols-3 gap-5 ">
                   {counter.map((count) => (
                     <DeptCounter
@@ -250,9 +358,9 @@ export default function DeptEr({ dept }) {
                     />
                   ))}
                 </div>
-              </div>
+              </div> */}
 
-              <p className=" mt-5 font-extralight text-sm  text-justify  h-[160px]">
+              <p className=" mt-2 font-extralight text-sm  text-justify  h-[160px]">
                 {aboutDept}
               </p>
             </div>
@@ -268,7 +376,17 @@ export default function DeptEr({ dept }) {
             </div>
           </div>
         </div>
-        <div className="w-full flex px-20 py-4 gap-7">
+          )
+        }
+        {
+          active===1 && (
+            <div><Curriculumn/></div>
+          )
+        }
+        {
+          active===2 && (
+            <div>
+              <div className="w-full flex px-20 py-4 gap-7">
           <div className="w-3/5 h-[580px]">
             <div className="relative h-full">
               <Image
@@ -279,60 +397,35 @@ export default function DeptEr({ dept }) {
               />
             </div>
           </div>
-          <div className="w-2/5  flex flex-col gap-10 py-20 justify-between ">
-            <div className="w-11/12 mx-auto  flex flex-col gap-4">
-              <div className="flex  items-center gap-2">
-                <Image src="/mission-icon.png" width={70} height={20} alt="h" />{" "}
-                <h1 className="text-2xl font-bold">Mission</h1>
-              </div>
-              <div>
-                <p className="text-sm font-extralight">
-                  To impart knowledge and equip students with skills for
-                  generating quality civil engineering professionals with high
-                  ethical standards; carry out innovative research and
-                  consultancy projects to design, build and maintain civil
-                  engineering infrastructure ensuring environmental health and
-                  quality life.
-                </p>
-              </div>
-            </div>
-            <div className="w-11/12 mx-auto  flex flex-col gap-4">
-              <div className="flex  items-center gap-2">
-                <Image src="/vision-icon.png" width={70} height={20} alt="h" />{" "}
-                <h1 className="text-2xl font-bold">Vision</h1>
-              </div>
-              <div>
-                <p className="text-sm font-extralight">
-                  To become frontier in civil engineering education and
-                  research, which will serve the society with most sustainable
-                  infrastructure and superior environmental health.
-                </p>
-              </div>
-            </div>
-          </div>
+          <div className="w-2/5 flex flex-col gap-10 py-20 justify-between">
+                  <div className="w-11/12 mx-auto flex flex-col gap-4">
+                    <div className="flex items-center gap-2">
+                      <Image src="/mission-icon.png" width={70} height={20} alt="Mission Icon" />
+                      <h1 className="text-2xl font-bold">Mission</h1>
+                    </div>
+                    <div>
+                      <p className="text-sm font-extralight">{mission}</p>
+                    </div>
+                  </div>
+                  <div className="w-11/12 mx-auto flex flex-col gap-4">
+                    <div className="flex items-center gap-2">
+                      <Image src="/vision-icon.png" width={70} height={20} alt="Vision Icon" />
+                      <h1 className="text-2xl font-bold">Vision</h1>
+                    </div>
+                    <div>
+                      <p className="text-sm font-extralight">{vision}</p>
+                    </div>
+                  </div>
+                </div>
         </div>
-
-        <div className="w-full flex flex-col px-20 gap-4 py-6">
-          <h1 className="text-4xl text-cyan-500 font-bold p-2">
-            Academic Programmes
-          </h1>
-          <div className="w-full flex justify-center gap-20 ">
-            <ProgramCard
-              course={"Undergraduate"}
-              bgcolor={"bg-cyan-400"}
-              admission={"JEE"}
-              dept={"civil engineering"}
-            />
-            <ProgramCard
-              course={"Post-Graduate"}
-              bgcolor={"bg-cyan-600"}
-              admission={"JEE"}
-              dept={"civil engineering"}
-            />
-          </div>
-        </div>
-        <div className="w-full flex flex-col px-20 gap-4 py-6 ">
-          <h1 className="font-bold text-4xl text-cyan-500">
+            </div>
+          )
+        }
+        {
+          active===3 && (
+            <>
+            <div className="w-full flex flex-col px-20 gap-4 py-6 ">
+          <h1 className="font-bold text-4xl text-cyan-700">
             Head Of Department
           </h1>
           <div className="flex justify-between gap-10">
@@ -354,45 +447,98 @@ export default function DeptEr({ dept }) {
               </div>
             </div>
             <div className="w-1/2  flex flex-col justify-center items-center">
-              <p className="p-5 text-3xl text-center">
-                {" "}
-                {slogan}
-              </p>
+              <p className="p-5 text-3xl text-center"> {slogan}</p>
               <h1 className=" italic  text-2xl">- {author}</h1>
             </div>
           </div>
         </div>
-        <div className="w-full p-2"></div>
-      </div>
-      <div className=" w-10/12 mx-auto p-10">
-        <h1 className="py-3 text-center text-3xl text-cyan-500 font-bold">
-          List of Faculties
-        </h1>
-        <div className="overflow-x-auto">
-          <table className="table-auto min-w-full">
-            <thead>
-              <tr className=" border-b ">
-                <th className="px-2 py-3 text-left">Name</th>
-                <th className="px-2 py-3 text-left">Designation</th>
-                <th className="px-2 py-3 text-left">Qualification</th>
-                <th className="px-2 py-3 text-left">Experience</th>
-              </tr>
-            </thead>
-            <tbody>
-              {faculties.map((faculty, index) => (
-                <tr key={index} className="border-b">
-                  <td className="px-2 py-3">{faculty.name}</td>
-                  <td className="px-2 py-3">{faculty.position}</td>
-                  <td className="px-2 py-3">{faculty.degree}</td>
-                  <td className="px-2 py-3">{faculty.experience}</td>
-                </tr>
-              ))}
+        <h1 className="text-3xl text-center font-semibold border-b">Faculty at LNCPS</h1>
+        <div className=" grid ">
+        <div>
+          {faculties.map((faculty, index) => (
+            <div
+              className=" mt-1 mb-5  p-2  rounded-lg shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] "
+              key={index}
+            >
+              <div className=" flex gap-6 ">
+                <div className="w-48 h-40   relative  overflow-hidden rounded-lg">
+                  <Image
+                    src={faculty.image}
+                    alt="Img Not Found"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className=" py-4">
+                  <h1 className="my-2 font-bold text-lg mt-1">
+                    <span className="font-semibold"> Name : </span>{" "}
+                    {faculty.name}
+                  </h1>
+                  <h1 className="text-sm mt-1">
+                    <span className="font-semibold"> Designation : </span>{" "}
+                    {faculty.position}
+                  </h1>
+                  <h2 className="text-sm">
+                    <span className="font-semibold"> Qualification : </span>{" "}
+                    {faculty.degree}
+                  </h2>
+                  <h3 className="text-sm mt-1">
+                    <span className="font-semibold"> Experience : </span>{" "}
+                    {faculty.experience}
+                  </h3>
+                  <h3 className="text-sm mt-1">
+                    <span className="font-semibold"> Gmail </span>
+                    {faculty.email}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          ))}
 
-              {/* Add more rows as needed */}
-            </tbody>
-          </table>
+          {/* Add more rows as needed */}
         </div>
       </div>
+            </>
+          )
+        }
+        {
+          active===4 && (
+            <>
+            <div className="w-full flex flex-col px-20 gap-4 py-6">
+          <h1 className="text-4xl text-cyan-700 font-bold p-2">
+            Academic Programmes
+          </h1>
+          <div className="w-full flex justify-center gap-20 ">
+            <ProgramCard
+              course={"Undergraduate"}
+              bgcolor={"bg-cyan-800"}
+              admission={"12th pass "}
+              dept={"B.Sc(physics,chemistry,maths,computer-science and biotechnology) B.com(computerapplication,taxation,economics) B.A(psyhcology,english literautre,history ,economics) BBA(Hr,Finance,marketing)"}
+            />
+            {/* <ProgramCard
+              course={"Post-Graduate"}
+              bgcolor={"bg-blue-800"}
+              admission={"JEE"}
+              dept={"civil engineering"}
+            /> */}
+          </div>
+        </div>
+            </>
+          )
+        }
+        
+        
+
+        
+        
+        {/* <div className="w-full p-2"></div> */}
+      </div>
+      <div>
+      
     </div>
+      
+      
+    </div>
+    </>
   );
 }

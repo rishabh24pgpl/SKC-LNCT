@@ -9,17 +9,14 @@ export default function AbouttheInstitute() {
             About the Institute
           </h1>
           <p className="  lg:px-10 lg:pb-4 p-3">
-            NIT Rourkela is one of the premier national level institutions for
-            technical education in the country and is funded by the Government
-            of India. The Government of India has elevated the Regional
-            Engineering College, Rourkela to a university under the name of
-            National Institute of Technology, Rourkela.
+          Lakshmi Narain College of Technology, Indore (LNCT) is one of the leading private Technical and Professional institutes in Indore today, having campus in lush green out skirts of Indore. LNCT Indore was founded in 2004 by H.K. Education Trust, Bhopal and all the courses of the institute are approved by AICTE Delhi, Govt. of India. Department of the Technical Education, Govt. of M.P. and are affiliated to Rajiv Gandhi Proudyogikis Vishwavidyalaya, Technical Unsiversity of Madhya Pradesh and Devi Ahiliya Vishwavidyalaya (University) Indore.
+
+For the undergraduate courses, the admission is through the national-level engineering entrance examination: AIEEE and MPPET. For the postgraduate courses, the entry is through GATE for MTech, NIMCET for MCA or through an institute-conducted entrance test.
           </p>
           <p className="  lg:px-10 lg:pb-5 border-b p-3 ">
             The main objective of the Institute is to produce quality Engineers
             and Scientists in Graduate and Post-Graduate levels in various
-            branches of Engineering and Science. The Institute is managed by
-            the.
+            branches of Engineering and Science. 
           </p>
           <div className="flex lg:flex-row flex-col mt-3 lg:mt-0 ">
             <div className=" lg:p-10 p-3  flex items-start">
@@ -74,7 +71,7 @@ export default function AbouttheInstitute() {
                 society and be .
               </p>
             </div>
-            <div className="w-full  flex justify-around items-end ">
+            <div className="w-96  flex items-end ">
               <img src="/founderr.png" alt="" className=" w-full" />
             </div>
           </div>

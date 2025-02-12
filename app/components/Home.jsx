@@ -556,8 +556,8 @@ export default function Home() {
                 height={650}
               />
             </div>
-            <div className="w-full flex flex-col justify-center p-4">
-              <div className="w-full rounded-md p-4 lg:p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-5 justify-center items-center shadow-none border border-black dark:bg-dcyan">
+            <div className="w-full flex flex-col justify-center p-4 pb-4">
+              <div className="w-full rounded-md p-4  lg:p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-5 justify-center items-center shadow-none border border-black dark:bg-dcyan">
                 <div className="flex flex-col justify-center items-center w-full">
                   <Card
                     title="Department"

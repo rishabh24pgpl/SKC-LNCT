@@ -24,7 +24,12 @@ const Monument = () => {
     {
       id: 3,
       title: "Guiding Principles",
-      content: "Greatest reward as founders of LNCT Indore, Suresh Kumar Chowksey has been the steady progress the college has made in establishing itself as one of the finest institutions of learning. Our next goal will be to establish its presence on a national level. We feel proud of the achievements of our college through the collective efforts of our faculty and students and they deserve our heartfelt gratitude. LNCT Indore has created an exciting but disciplined student-centric environment of academic excellence, reflected in academic results and great placements year after year. Our engineering program links knowledge to practice and skill from the very beginning, which makes it easy for students to transition into successful working professionals in later life. In addition to maintaining high academic standards, most students go through industry certifications and internships to give them a real-life feel of technology.",
+      content: "Greatest reward as founders of LNCT Indore, Suresh Kumar Chowksey has been the steady progress the college has made in establishing itself as one of the finest institutions of learning. Our next goal will be to establish its presence on a national level. We feel proud of the achievements of our college through the collective efforts of our faculty and students and they deserve our heartfelt gratitude. LNCT Indore has created an exciting but disciplined student-centric environment of academic excellence, reflected in academic results and great placements year after year. Our engineering program links knowledge to practice and skill from the very beginning, which makes it easy for students to transition into successful working professionals in later life.",
+// console.log("Active section:", activeSection);
+// console.log("Sections:", sections);.log("Sections:", sections);dered");
+// console.log("Active section.log("Active section:", activeSection);
+// console.log("Sections:", sections);veSection);
+// console.log("Sections:", sections);",
       img: "/rules.jpg",
     }
 

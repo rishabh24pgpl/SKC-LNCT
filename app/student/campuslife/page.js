@@ -6,7 +6,17 @@ export default function page() {
     const images=[]
   return (
     <>
-    <SliderMain images={images} heading="Campus and Facilities" />
+    <div
+        className="w-full h-36 flex justify-center  items-center"
+        style={{
+          // backgroundImage: "url('/logo1.png')",
+          backgroundColor: "#1889a2",
+          backgroundSize: "cover",
+        }}
+      >
+        <h1 className=" uppercase font-bold text-5xl">Campus Life</h1>
+      </div>
+    {/* <SliderMain images={images} heading="Campus and Facilities" /> */}
     <div className="p-10">
       <CampusMap
         heading1="Our buildings"
